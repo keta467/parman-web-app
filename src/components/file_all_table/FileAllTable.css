@@ -1,0 +1,38 @@
+.tablewrapper{
+  overflow: auto;
+  width: 80%;
+  height: 80vh;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tablewrapper table{
+  margin: 0;
+  border-spacing: 0;
+  border-top: 1px solid #999;
+  border-left: 1px solid #999;
+}
+
+.tablewrapper td{
+  white-space: nowrap;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background: #FFF;
+  padding: 5px;
+}
+
+.tablewrapper th{
+  white-space: nowrap;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background: #f2f2f2;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#module_list_header th{
+  z-index: 1;
+  background: #A9D08E;
+  cursor: pointer;
+}
