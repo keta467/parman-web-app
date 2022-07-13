@@ -1,8 +1,21 @@
 import React from 'react';
 import Topbar from '../../components/topbar/Topbar';
+import TreeView from '../../components/treeview/TreeView';
 import "./ManageReleagePackage.css";
+import { Folder, File } from "../../myclass.js";
 
 export default function ManageReleagePackage({ titletext }) {
+  
+  function ToggleFolder(id){
+    setFolders((prevState) =>
+      prevState.map((value) => (value.id === id ? new Folder(value.id, value.name, value.childs, !value.isOpen, ToggleFolder) : value))
+    );
+  }
+
+  const [folders, setFolders] = React.useState([
+    new Folder(1, "AAAAAAAAA", [new File("aaa", "A", null)], true, ToggleFolder),
+    new Folder(2, "BBBBBBB", [new File("222", "B", null),new File("333", "B", null)], true, ToggleFolder)]);
+
   return (
     <>
       <Topbar titletext={titletext} />
@@ -17,7 +30,7 @@ export default function ManageReleagePackage({ titletext }) {
           </ul>
         </div>
         <div className='managereleagepackagetreeview'>
-          treeview
+          <TreeView folders={folders}/>
         </div>
         <div className='managereleagepackagesearchview'>
           <div className='searcharea'>

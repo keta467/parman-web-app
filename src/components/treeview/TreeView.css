@@ -1,0 +1,21 @@
+.mytreeview{
+  padding: 5px;
+}
+
+.myfiletree span.folder {
+  background: url(/public/images/folder.gif) 0 0 no-repeat;
+}
+
+.mytreeview li {
+  list-style:none;
+  background: url(/public/images/treeview-default-line.gif) 0 0 no-repeat;
+}
+
+.myfiletree li {
+    padding: 0px 0 2px 16px;
+}
+
+.myfiletree span.folder, .myfiletree span.file {
+    padding: 1px 0 1px 16px;
+    display: block;
+}

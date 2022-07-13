@@ -7,3 +7,9 @@
   display: flex;
   border: 1px solid #999;
 }
+
+.ViewfileSeparatetreeviewwrapper{
+  flex: 4;
+  border-right: 1px solid #999;
+  overflow: auto;
+}
