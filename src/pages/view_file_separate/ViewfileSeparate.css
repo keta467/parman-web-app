@@ -1,0 +1,8 @@
+.viewfileseparatewrapper{
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  border: 1px solid #999;
+}

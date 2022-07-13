@@ -1,18 +1,7 @@
-import {React, useEffect, useState} from 'react'
+import {React, useEffect} from 'react'
 import "./FileAllTable.css"
 
 export default function FileAllTable({ modulelist, pclist}) {
-
-  // var modulelist = ["IniPatch.bat", "Start.bat", "TaskKill.bat"];
-
-  // var pc1 = {name:"ANTSリモコンPC", versions: ["3.0.1.9","3.0.1.9","3.0.1.9"]}
-  // var pc2 = {name:"バックアップリモコンPC", versions: ["3.0.2.0","3.0.1.9","3.0.1.9"]}
-  // var pc3 = {name:"GSリモコンPC", versions: ["3.0.2.0","3.0.1.8","3.0.1.9"]}
-
-  // const [pclist, setFruits] = useState([pc1, pc2, pc3])
-  // setFruits([pc3,pc2,pc1])
-
-  //var pclist = [pc1, pc2, pc3];
 
   ///
   /// マウスオーバーイベントを追加する
@@ -62,7 +51,7 @@ export default function FileAllTable({ modulelist, pclist}) {
   });
 
   return (
-    <div className='tablewrapper'>
+    <div className='filealltablewrapper'>
       <table id='module_list'>
         <thead id='module_list_header'>
           <tr>

@@ -1,4 +1,4 @@
-.tablewrapper{
+.filealltablewrapper{
   overflow: auto;
   width: 80%;
   height: 80vh;
@@ -6,14 +6,14 @@
   margin-left: auto;
   margin-right: auto;
 }
-.tablewrapper table{
+.filealltablewrapper table{
   margin: 0;
   border-spacing: 0;
   border-top: 1px solid #999;
   border-left: 1px solid #999;
 }
 
-.tablewrapper td{
+.filealltablewrapper td{
   white-space: nowrap;
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
@@ -21,7 +21,7 @@
   padding: 5px;
 }
 
-.tablewrapper th{
+.filealltablewrapper th{
   white-space: nowrap;
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
@@ -35,4 +35,9 @@
   z-index: 1;
   background: #A9D08E;
   cursor: pointer;
+}
+
+#module_list_header th:first-child{
+  z-index: 2;
+  cursor:auto;
 }

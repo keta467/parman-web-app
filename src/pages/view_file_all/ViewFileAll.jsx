@@ -1,17 +1,17 @@
 import React from 'react'
 import FileAllTable from '../../components/file_all_table/FileAllTable';
 import Topbar from '../../components/topbar/Topbar'
-import { moduleList ,installVersionInfo} from '../../dummyData';
+import { installModulesInfo ,installVersionInfo} from '../../dummyData';
 import "./ViewFileAll.css";
 
 export default function ViewFileAll({ titletext }) {
 
   //モジュールリストの作成
   var modulelist = [];
-  for(var i = 0; i < moduleList.data.length; i++){
-    modulelist.push(moduleList.data[i][1]);
+  for(var i = 0; i < installModulesInfo.data.length; i++){
+    modulelist.push(installModulesInfo.data[i].module);
   }
-
+  
   //PCリストの作成
   var pclist = [];
   for(var i = 0; i < installVersionInfo.data.length; i++){

@@ -290,3 +290,754 @@ export const installVersionInfo = {"data": [
 	, ["入力機", "MASinp6", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9", "3.0.1.9"]
 ]};
 
+export const installModulesInfo = {"data": [
+		{
+			"folder": "batch",
+			"module": "IniPatch.bat"
+		},
+		{
+			"folder": "batch",
+			"module": "Start.bat"
+		},
+		{
+			"folder": "batch",
+			"module": "TaskKill.bat"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "App.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "BackgroundDBMigration.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "BackgroundDBMigration.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DBCuttingBack.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DBCuttingBack.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DBMigration.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DBMigration.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DemandGroupEdit.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DemandGroupEdit.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DrawHistory.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DrawHistory.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DrawHistoryMANTS.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DrawHistoryMANTS.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DrawHistoryMANTS4K.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DrawHistoryMANTS4K.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DrawReviseCheck.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "DrawReviseCheck.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FeeInputFlip2.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FeeInputFlip2.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FeeInputOtherCl2.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FeeInputOtherCl2.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FeeMain.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FeeMain.exe.Config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FlipDemandMainte.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FlipDemandMainte.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FlipMigration.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FlipMigration.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FlipOutputCsv.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "FlipOutputCsv.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "ProgMaintenance.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "ProgMaintenance.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "SCSLibDbFee.dll"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "SlnLibFee.dll"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "UserMaintenance.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "UserMaintenance.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "WorkReport.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "WorkReport.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "WorkReportMANTS.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "WorkReportMANTS.exe.config"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "WorkReportMANTS4K.exe"
+		},
+		{
+			"folder": "TelopManagedSubSystem",
+			"module": "WorkReportMANTS4K.exe.config"
+		},
+		{
+			"folder": "ExcelMaster",
+			"module": "AllTotal.xlsx"
+		},
+		{
+			"folder": "ExcelMaster",
+			"module": "DemandReport.xlsx"
+		},
+		{
+			"folder": "ExcelMaster",
+			"module": "Total.xlsx"
+		},
+		{
+			"folder": "old",
+			"module": "Total.xlsx"
+		},
+		{
+			"folder": "old",
+			"module": "Total_base.xlsx"
+		},
+		{
+			"folder": "settings",
+			"module": "Cal.jpg"
+		},
+		{
+			"folder": "settings",
+			"module": "IPAddressTable_DrawHistory.txt"
+		},
+		{
+			"folder": "settings",
+			"module": "RoomColor.ini"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図(BS)_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図(BS)_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図(BS)_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図(BS)_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図(BS4K)_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図(BS4K)_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図(BS4K)_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図(BS4K)_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_地図_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ(BS)_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ(BS)_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ(BS)_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ(BS)_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ(BS4K)_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ(BS4K)_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ(BS4K)_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ(BS4K)_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_提供ロゴ_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ(BS)_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ(BS)_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ(BS)_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ(BS)_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ(BS4K)_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ(BS4K)_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ(BS4K)_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ(BS4K)_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ_BS朝日編成制作ビジネス部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ_CS事業部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ_スポーツ局.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_本編ＣＧ_編成部.html"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_集計表_BS朝日編成制作ビジネス部.xlsx"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_集計表_CS事業部.xlsx"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_集計表_スポーツ局.xlsx"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_集計表_編成部.xlsx"
+		},
+		{
+			"folder": "Total",
+			"module": "2021_05_集計表_編成部02.xlsx"
+		},
+		{
+			"folder": "Total",
+			"module": "DemandReport202105.xlsx"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_地図(BS)_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_地図(BS4K)_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_地図_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_提供ロゴ(BS)_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_提供ロゴ(BS4K)_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_提供ロゴ_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_本編ＣＧ(BS)_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_本編ＣＧ(BS4K)_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_本編ＣＧ_編成部.html"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_集計表_編成部.xlsx"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "2021_05_集計表_編成部_02.xlsx"
+		},
+		{
+			"folder": "1.0.0.4",
+			"module": "DemandReport202105.xlsx"
+		},
+		{
+			"folder": "Wav",
+			"module": "2_GS_r.wav"
+		},
+		{
+			"folder": "Wav",
+			"module": "Cal.jpg"
+		},
+		{
+			"folder": "Wav",
+			"module": "DrawReviseCheck.WAV"
+		},
+		{
+			"folder": "Wav",
+			"module": "ichika.WAV"
+		},
+		{
+			"folder": "Wav",
+			"module": "IPAddressTable_DrawHistory.txt"
+		},
+		{
+			"folder": "Wav",
+			"module": "miseiri.WAV"
+		},
+		{
+			"folder": "Wav",
+			"module": "notify.wav"
+		},
+		{
+			"folder": "Wav",
+			"module": "RoomColor.txt"
+		},
+		{
+			"folder": "Wav",
+			"module": "Thumbs.db"
+		},
+		{
+			"folder": "batch",
+			"module": "IniPatch.bat"
+		},
+		{
+			"folder": "batch",
+			"module": "Start.bat"
+		},
+		{
+			"folder": "batch",
+			"module": "TaskKill.bat"
+		},
+		{
+			"folder": "CBCollaborator",
+			"module": "CBCollaborator.exe"
+		},
+		{
+			"folder": "Common",
+			"module": "BBXCTRL.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ChargeDBMan.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "DisplayOrderEx.exe"
+		},
+		{
+			"folder": "Common",
+			"module": "ImageFactoryComp.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ImageUtility.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "IPTableAccessor.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ItemFinder.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "JournalDecorator.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "LambdaCodecs64.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "MaterialCode.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "MaterialCodeANB.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "MountWindowANB.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "NeonCalendarCtrl.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "NeonLowResoBGCtrl.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "NeonUserManager.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "OrderDialog.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ProcIniManager.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ProfileComp.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ProgramTreeSelector.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ProgTreeView.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ReviseChecker.exe"
+		},
+		{
+			"folder": "Common",
+			"module": "ReviseClientLib.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ReviseFileViewCtrl.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SceneXmlAccess.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SelectSozaiDialogCompEx.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SelectStageButtonsANB.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SeparatedStringComp.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SozaiAccAgent.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SozaiArrayComp.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SozaiChargeAttributeAccessor.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SozaiDetailViewCtrl.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SozaiInfoView.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SozaiListViewCtrl.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "SozaiThumbnail.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "StageSelectorANB.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "StageUtility.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "StageUtilityANB.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "StaticTelopCopy.exe"
+		},
+		{
+			"folder": "Common",
+			"module": "StaticTelopCtrl.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "STelopExecutor.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "TextDiffXML.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "ThumbnailDialog.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "TVAsahi_Reviser64.dll"
+		},
+		{
+			"folder": "Common",
+			"module": "TVAsahi_StateMan.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ChatListView.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ChatListViewContainer.exe"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ClausePropDialogComp.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ClientSideDispOpe64.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ClockPropDialogComp.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "FrontDesk.exe"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ItemFilterANB.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "LambdaCodecs64.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "LoginDialogComp.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ManagePropDialogComp.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "MaterialCodeDialogComp.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "MaterialCounter.exe"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "MaterialHandlerEX.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "MaterialPropDialogComp.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "NormaMainte.exe"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "PrintPropertyDialog.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ProgramPropDialogComp.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "SelectStageButtonsEX.dll"
+		},
+		{
+			"folder": "FrontDesk",
+			"module": "ThumbnailPrintCompANB.dll"
+		},
+		{
+			"folder": "ProgCopyEx",
+			"module": "ProgCopyEX3.exe"
+		},
+		{
+			"folder": "SceneEditorAgent",
+			"module": "DiffViewCtrl.dll"
+		},
+		{
+			"folder": "SceneEditorAgent",
+			"module": "SceneEditorAgent.exe"
+		},
+		{
+			"folder": "SceneEditorAgent",
+			"module": "SEAIF.dll"
+		},
+		{
+			"folder": "SceneEditorAgent",
+			"module": "SEAPlugin.dll"
+		}
+	]
+}

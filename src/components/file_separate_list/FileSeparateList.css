@@ -1,0 +1,27 @@
+.fileseparatelistwrapper{
+  flex: 4;
+  border-right: 1px solid #999;
+  overflow: auto;
+}
+
+.treeview{
+  padding: 5px;
+}
+
+.filetree span.folder {
+  background: url(/public/images/folder.gif) 0 0 no-repeat;
+}
+
+.treeview li {
+  list-style:none;
+  background: url(/public/images/treeview-default-line.gif) 0 0 no-repeat;
+}
+
+.filetree li {
+    padding: 0px 0 2px 16px;
+}
+
+.filetree span.folder, .filetree span.file {
+    padding: 1px 0 1px 16px;
+    display: block;
+}
