@@ -1,6 +1,7 @@
 import React from 'react'
 import "./FileSeparateList.css"
 import { installModulesInfo } from '../../dummyData';
+import { SelectModuleNameContext } from '../providers/SelectModuleNameProvider';
 
 export default function FileSeparateList() {
   class Folder {
@@ -33,6 +34,10 @@ export default function FileSeparateList() {
     }
   }
 
+  //リストで選択されているモジュール名を取得
+  const { setIsSelectModuleName } = React.useContext(SelectModuleNameContext);
+  
+
   //フォルダ構成を再現
   var folders = [];
   var nowfolder = new Folder(null, "", [], true);
@@ -57,9 +62,10 @@ export default function FileSeparateList() {
   }
 
   function SelectFile(name){
-    window.alert(name);
+    setIsSelectModuleName(name);
   }
 
+  
   return (
     <div className='fileseparatelistwrapper'>
       <ul className='filetree treeview'>
