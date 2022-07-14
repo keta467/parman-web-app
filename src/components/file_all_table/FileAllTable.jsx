@@ -43,31 +43,27 @@ export default function FileAllTable({ modulelist, pclist}) {
     }
   }
 
-
-
   // 初回レンダリング後と、useした値の更新後に自動で実行
   useEffect(() => {
     addMouseOverColoringEvent()
   });
 
   return (
-    <div className='filealltablewrapper'>
-      <table id='module_list'>
-        <thead id='module_list_header'>
+    <table id='filealltable'>
+      <thead id='module_list_header'>
+        <tr>
+          <th className='machinename'>マシン名</th>
+          {modulelist.map((module,index)=>(<th id={"th"+index}>{module}</th>))}
+        </tr>
+      </thead>
+      <tbody id='module_list_body'>
+        {pclist.map((pc, pcindex) => (
           <tr>
-            <th className='machinename'>マシン名</th>
-            {modulelist.map((module,index)=>(<th id={"th"+index}>{module}</th>))}
+            <th className='machinename'>{pc.name}</th>
+            {pc.versions.map((version, index)=>(<td className={'mouseeventtarget'+' row' + pcindex + ' col' + index}>{version}</td>))}
           </tr>
-        </thead>
-        <tbody id='module_list_body'>
-          {pclist.map((pc, pcindex) => (
-            <tr>
-              <th className='machinename'>{pc.name}</th>
-              {pc.versions.map((version, index)=>(<td className={'mouseeventtarget'+' row' + pcindex + ' col' + index}>{version}</td>))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
   )
 }

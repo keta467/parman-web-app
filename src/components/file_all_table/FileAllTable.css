@@ -1,27 +1,12 @@
-.filealltablewrapper{
-  overflow: auto;
-  width: 90%;
-  height: 75vh;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.filealltablewrapper table{
+
+#filealltable{
   margin: 0;
   border-spacing: 0;
   border-top: 1px solid #999;
   border-left: 1px solid #999;
 }
 
-.filealltablewrapper td{
-  white-space: nowrap;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
-  background: #FFF;
-  padding: 5px;
-}
-
-.filealltablewrapper th{
+#filealltable th{
   white-space: nowrap;
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
@@ -30,6 +15,15 @@
   top: 0;
   left: 0;
 }
+
+#filealltable td{
+  white-space: nowrap;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background: #FFF;
+  padding: 5px;
+}
+
 
 #module_list_header th{
   z-index: 1;

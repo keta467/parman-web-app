@@ -1,5 +1,5 @@
 .managemachinebuttonwrapper{
-  width: 90%;
+  width: 70%;
   text-align: right;
   margin: auto;
   margin-top: 30px;
@@ -7,45 +7,9 @@
 
 .managemachinetablewrapper{
   overflow: auto;
-  width: 90%;
+  width: 70%;
   height: 75vh;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.managemachinetablewrapper table{
-  border-spacing: 0;
-  border-top: 1px solid #999;
-  border-left: 1px solid #999;
-  width: 100%;
-}
-
-.managemachinetablewrapper thead{
-  border-top: 1px solid #999;
-}
-
-.managemachinetablewrapper td{
-  white-space: nowrap;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
-  padding: 5px;
-}
-
-.managemachinetablewrapper tr {
-  background-color: #e2efda;
-}
-
-.managemachinetablewrapper tbody tr:nth-child(2n) {
-  background-color: #c6e0b4;
-}
-
-.managemachinetablewrapper th{
-  white-space: nowrap;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
-  background: white;
-  position: sticky;
-  top: 0;
-  left: 0;
 }

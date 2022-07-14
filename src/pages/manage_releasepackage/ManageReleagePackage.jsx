@@ -3,6 +3,7 @@ import Topbar from '../../components/topbar/Topbar';
 import TreeView from '../../components/treeview/TreeView';
 import "./ManageReleagePackage.css";
 import { Folder, File } from "../../myclass.js";
+import "../../components/colortable.css";
 
 export default function ManageReleagePackage({ titletext }) {
   
@@ -38,8 +39,8 @@ export default function ManageReleagePackage({ titletext }) {
             <button style={{"margin-left":"5px"}}>検索</button>
           </div>
 
-          <div className='managereleagepackagesearchviewtable'>
-            <table>
+          <div className='managereleagepackagesearchviewtablewrapper'>
+            <table className='colortable'>
               <thead>
                 <tr>
                   <th><input type="checkbox" name="" id="" /></th>

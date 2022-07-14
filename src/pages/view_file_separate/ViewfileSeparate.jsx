@@ -1,7 +1,5 @@
 import React from 'react'
-import FileSeparateList from '../../components/file_separate_list/FileSeparateList';
 import FileSeparateTable from '../../components/file_separate_table/FileSeparateTable';
-import { SelectModuleNameProvider } from '../../components/providers/SelectModuleNameProvider';
 import Topbar from '../../components/topbar/Topbar'
 import "./ViewfileSeparate.css";
 import { Folder, File } from "../../myclass.js";
@@ -17,7 +15,7 @@ export default function ViewfileSeparate({ titletext }) {
   }
 
   function SelectFile(name){
-    window.alert(name)
+    setstr(name);
   }
   
   //フォルダ構成を再現
@@ -36,18 +34,19 @@ export default function ViewfileSeparate({ titletext }) {
 
   const [foldersstate, setFolders] = React.useState(folders);
 
+  const [str, setstr] = React.useState("moduletest.dll");
+
   return (
     <>
       <Topbar titletext={titletext} />
-      <SelectModuleNameProvider>
-        <div className='viewfileseparatewrapper'>
-          {/* <FileSeparateList /> */}
-          <div className='ViewfileSeparatetreeviewwrapper'>
-            <TreeView folders={foldersstate}/>
-          </div>
-          <FileSeparateTable />
+      <div className='viewfileseparatewrapper'>
+        <div className='ViewfileSeparatetreeviewwrapper'>
+          <TreeView folders={foldersstate}/>
         </div>
-      </SelectModuleNameProvider>
+        <div className='viewfileseparatetableviewwrapper'>
+            <FileSeparateTable selectmodulename={str} />
+        </div>
+      </div>
     </>
   )
 }

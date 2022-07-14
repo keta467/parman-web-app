@@ -1,44 +1,8 @@
-.fileseparatetablewrapper{
-  flex: 8;
-}
-
-.wrap{
+.fileseparatetablewrap{
   overflow: auto;
   width: 80%;
   height: 65vh;
   margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.wrap table{
-  border-spacing: 0;
-  border-top: 1px solid #999;
-  border-left: 1px solid #999;
-  width: 100%;
-}
-
-.wrap td{
-  white-space: nowrap;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
-  padding: 5px;
-}
-
-.wrap tr {
-  background-color: #e2efda;
-}
-
-.wrap tbody tr:nth-child(2n) {
-  background-color: #c6e0b4;
-}
-
-.wrap th{
-  white-space: nowrap;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
-  background: white;
-  position: sticky;
-  top: 0;
-  left: 0;
 }

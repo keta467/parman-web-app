@@ -25,22 +25,16 @@ export default function ViewFileAll({ titletext }) {
     pclist.push({name:pcname, versions:pcversions});
   }
 
-  //console.log("確認");
-  // for(var i = 0; i < modulelist.length; i++){
-  //   console.log(modulelist[i]);
-  // }
-  // for(var i = 0; i < pclist.length; i++){
-  //   console.log(pclist[i].versions[0]);
-  // }
-
 
   return (
     <>
       <Topbar titletext={titletext} />
-      <div className='buttonwrapper'>
+      <div className='viewfileallbuttonwrapper'>
         <button>更新</button>
       </div>
-      <FileAllTable modulelist={modulelist} pclist={pclist} />
+      <div className="viewfilealltablewrapper">
+        <FileAllTable modulelist={modulelist} pclist={pclist} />
+      </div>
     </>
   )
 }
