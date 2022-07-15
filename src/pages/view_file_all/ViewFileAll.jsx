@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react'
 import FileAllTable from '../../components/file_all_table/FileAllTable';
 import Topbar from '../../components/topbar/Topbar'
@@ -25,12 +26,22 @@ export default function ViewFileAll({ titletext }) {
     pclist.push({name:pcname, versions:pcversions});
   }
 
+  const clickbutton = async () => {
+    try{
+      //API
+      const response = await axios.get("http://3.137.85.73:1234/manage/api/version");
+      console.log(response.data);
+    }catch(err){
+      console.log(err)
+    }
+  };
+
 
   return (
     <>
       <Topbar titletext={titletext} />
       <div className='viewfileallbuttonwrapper'>
-        <button>更新</button>
+        <button onClick={clickbutton}>更新</button>
       </div>
       <div className="viewfilealltablewrapper">
         <FileAllTable modulelist={modulelist} pclist={pclist} />

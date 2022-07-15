@@ -143,7 +143,7 @@ export default function Manage_Machine_Table() {
       </thead>
       <tbody>
         {isTableData.map((value, index)=>(
-        <tr draggable="true" className="dragitem" id={index} key={index}>
+        <tr onClick={()=>{window.alert("modal表示")}} draggable="true" className="dragitem" id={index} key={index}>
           <td id={index}>{value.pcname}</td>
           <td id={index}>{value.nickname}</td>
           <td id={index}>{value.ip}</td>
