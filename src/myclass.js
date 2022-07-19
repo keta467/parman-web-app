@@ -12,9 +12,9 @@ export class Folder {
       for(var i = 0; i < this.childs.length; i++){
         chilsarr.push(this.childs[i].getscript());
       }
-      return <><span class="folder" onClick={() => this.onclickfunc(this.id)}>{this.name}</span><ul>{chilsarr}</ul></>
+      return <><span className="folder" onClick={() => this.onclickfunc(this.id)}>{this.name}</span><ul>{chilsarr}</ul></>
     }else{
-      return <><span class="folder" onClick={() => this.onclickfunc(this.id)}>{this.name}</span></>
+      return <><span className="folder" onClick={() => this.onclickfunc(this.id)}>{this.name}</span></>
     }
   }
 }
@@ -29,9 +29,10 @@ export class File {
     if(this.onclickfunc == null){
       return <li>{this.name}</li>
     }else{
-      return <a href='javascript:void(0)' onClick={() => this.onclickfunc(this.name)}><li>{this.name}</li></a>
+      //return <a href='javascript:void(0)' onClick={() => this.onclickfunc(this.name)} ><li>{this.name}</li></a>
+      return <li ><span onClick={() => this.onclickfunc(this.name)} className="filebox">{this.name}</span></li>
+      return <li className="fileli" onClick={() => this.onclickfunc(this.name)}><span className="filesize"><span className="fileborder">{this.name}</span></span></li>
     }
-    
   }
 }
 

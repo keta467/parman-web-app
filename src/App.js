@@ -1,19 +1,18 @@
 import Home from './pages/home/Home';
 import ViewFileAll from './pages/view_file_all/ViewFileAll';
-import ManageReleagePackage from './pages/manage_releasepackage/ManageReleagePackage';
+import ManagePackage from './pages/manage_package/ManagePackage';
 import ManageMachine from './pages/manage_machine/ManageMachine';
 import ViewfileSeparate from './pages/view_file_separate/ViewfileSeparate';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-
     <Router>
       <Routes>
         <Route path="/" element={<Home titletext={"管理画面"}/>} />
       </Routes>
       <Routes>
-        <Route path="/manage_releasepackage" element={<ManageReleagePackage titletext={"パッケージ情報"} />} />
+        <Route path="/manage_package" element={<ManagePackage titletext={"パッケージ情報"} />} />
       </Routes>
       <Routes>
         <Route path="/manage_machine" element={<ManageMachine titletext={"端末管理"} />} />

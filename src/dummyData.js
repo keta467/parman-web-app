@@ -1,30 +1,60 @@
-export const Users = [
-  {
-    id: 1,
-    profilePicture: "/person/1.jpeg",
-    username: "ShinCode",
-  },
-  {
-    id: 2,
-    profilePicture: "/person/2.jpeg",
-    username: "Yamaki",
-  },
-  {
-    id: 3,
-    profilePicture: "/person/3.jpeg",
-    username: "Koga",
-  },
-  {
-    id: 4,
-    profilePicture: "/person/4.jpeg",
-    username: "Matukubo",
-  },
-  {
-    id: 5,
-    profilePicture: "/person/5.jpeg",
-    username: "Kikukawa",
-  },
-];
+export const packageList = {"data": [
+    {
+      name: "クライアントリリース#1_20220101",
+    },
+    {
+      name: "クライアントリリース#2_20220101",
+    },
+    {
+      name: "クライアントリリース#3_20220101",
+    },
+    {
+      name: "クライアントリリース#4_20220101",
+    },
+    {
+      name: "クライアントリリース#5_20220101",
+    },
+    {
+      name: "クライアントリリース#6_20220101",
+    },
+    {
+      name: "クライアントリリース#7_20220101",
+    },
+    {
+      name: "クライアントリリース#8_20220101",
+    },
+    {
+      name: "クライアントリリース#9_20220101",
+    },
+    {
+      name: "クライアントリリース#10_20220101",
+    },
+    {
+      name: "クライアントリリース#11_20220101",
+    },
+    {
+      name: "クライアントリリース#12_20220101",
+    },
+    {
+      name: "クライアントリリース#13_20220101",
+    },
+    {
+      name: "クライアントリリース#14_20220101",
+    },
+    {
+      name: "クライアントリリース#15_20220101",
+    },
+    {
+      name: "クライアントリリース#16_20220101",
+    },
+    {
+      name: "クライアントリリース#17_20220101",
+    },
+    {
+      name: "クライアントリリース#18_20220101",
+    },
+  ]
+};
 
 export const Posts = [
   {
@@ -1041,3 +1071,5 @@ export const installModulesInfo = {"data": [
 		}
 	]
 }
+
+

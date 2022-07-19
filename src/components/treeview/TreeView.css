@@ -4,19 +4,32 @@
 }
 
 .myfiletree span.folder {
-  background: url(/public/images/folder.gif) 0 0 no-repeat;
+  background: url(/public/images/folder.gif) 0 7px no-repeat;
 }
 
 .mytreeview li {
   list-style:none;
-  background: url(/public/images/treeview-default-line.gif) 0 0 no-repeat;
+  background: url(/public/images/myline.png) 0 0 no-repeat;
 }
 
 .myfiletree li {
-    padding: 0px 0 2px 16px;
+    padding: 0px 0px 2px 16px;
 }
 
 .myfiletree span.folder, .myfiletree span.file {
     padding: 1px 0 1px 16px;
     display: block;
+  
+}
+
+.filebox{
+  /* color: blue; */
+  margin-bottom: -2px;
+  margin-top: -2px;
+  display:inline-block;
+  width: 80%;
+  word-wrap: break-word;
+  border: 2px solid #333333;
+  padding-left: 5px;
+  padding-top: 3px;
 }

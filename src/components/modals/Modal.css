@@ -6,39 +6,51 @@
   height: 100vh;
 }
 
-.modalContent{
+.modal{
+  z-index: 1001;
+  position: fixed;
+
   width: 40%;
   height: 270px;
   margin-top: 20vh;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 30%;
   background-color: white;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 
-  padding: 10px;
-  
+  padding-top: 35px;
+  padding-bottom: 20px;
 }
 
-#inputtextwrapper{
+.modal p{
+  font-weight: bold;
+}
+
+.modal #textarea{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#inputtextwrapper input[type="text"]{
-  width: 100%;
+.modal #textarea input[type="text"]{
+  width: 99%;
   margin-bottom: 10px;
 }
 
-#closebuttonwrapper{
+.modal #buttonarea{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: end;
   color: red;
 }
 
-#closebuttonwrapper button{
+.modal #buttonarea input[type="checkbox"]{
+  margin-right: 5px;
+}
+
+.modal #buttonarea button{
   margin-left: 10px;
-  margin-right: 10px;
 }

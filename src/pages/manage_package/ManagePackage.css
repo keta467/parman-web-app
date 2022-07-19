@@ -1,4 +1,4 @@
-.managereleagepackagewrapper{
+.managepackagewrapper{
   display: flex;
   margin-top: 40px;
   margin-left: auto;
@@ -9,33 +9,33 @@
   border: 1px solid #999;
 }
 
-.managereleagepackagelist{
+.managepackagelist{
   flex: 3;
   border-right: 1px solid #999;
   overflow: auto;
 }
-.managereleagepackagetreeview{
+.managepackagetreeview{
   flex: 3;
   border-right: 1px solid #999;
 }
-.managereleagepackagesearchview{
+.managepackagesearchview{
   flex: 6;
   border-right: 1px solid #999;
 }
 
 
 
-.managereleagepackagelist ul{
+.managepackagelist ul{
   list-style:none;
   padding:0;
 }
 
-.managereleagepackagelist li{
+.managepackagelist li{
   font-size: 18px;
   background-color: #e2efda;
 }
 
-.managereleagepackagelist ul li:nth-child(2n) {
+.managepackagelist ul li:nth-child(2n) {
   background-color: #c6e0b4;
 }
 
@@ -47,7 +47,7 @@
   margin-right: auto;
 }
 
-.managereleagepackagesearchviewtablewrapper{
+.managepackagesearchviewtablewrapper{
   overflow: auto;
   width: 80%;
   height: 65vh;
