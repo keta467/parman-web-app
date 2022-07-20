@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react'
-import FileAllTable from '../../components/file_all_table/FileAllTable';
+import FileAllTable from '../../components/tables/file_all_table/FileAllTable';
 import { DebugModeContext } from '../../components/providers/DebugModeProvider';
 import Topbar from '../../components/topbar/Topbar'
 import { installModulesInfo ,installVersionInfo} from '../../dummyData';

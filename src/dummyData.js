@@ -56,52 +56,44 @@ export const packageList = {"data": [
   ]
 };
 
-export const Posts = [
-  {
-    id: 1,
-    desc: "コツコツの積み重ねが大事。",
-    photo: "/post/1.jpeg",
-    date: "5分前",
-    userId: 1,
-    like: 20,
-    comment: 4,
-  },
-  {
-    id: 2,
-    desc: "MERNスタックが楽しすぎる",
-    photo: "/post/2.jpeg",
-    date: "2分前",
-    userId: 2,
-    like: 140,
-    comment: 13,
-  },
-  {
-    id: 3,
-    desc: "ShinCodeさんの解説が分かりやすい。",
-    photo: "/post/3.jpeg",
-    date: "10分前",
-    userId: 3,
-    like: 230,
-    comment: 29,
-  },
-  {
-    id: 4,
-    photo: "/post/4.jpeg",
-    date: "1分前",
-    userId: 4,
-    like: 10,
-    comment: 1,
-  },
-  {
-    id: 5,
-    desc: "定期的に散歩した方が生産性が上がる。",
-    photo: "/post/5.jpeg",
-    date: "1分前",
-    userId: 5,
-    like: 100,
-    comment: 3,
-  },
-];
+export const TreeData1 = {"data": [
+  {folderid:1, foldername:"batch", module:"IniPatch.bat"},
+  {folderid:1, foldername:"batch", module:"IniPatch2.bat"},
+  {folderid:1, foldername:"batch", module:"IniPatch3.bat"},
+  {folderid:2, foldername:"CBCollaborator", module:"CBCollaborator.exe"},
+  {folderid:2, foldername:"CBCollaborator", module:"CBCollaborator2.exe"},
+  {folderid:2, foldername:"CBCollaborator", module:"CBCollaborator3.exe"},
+  {folderid:3, foldername:"batch", module:"test1.bat"},
+  {folderid:3, foldername:"batch", module:"test1.bat"},
+  {folderid:3, foldername:"batch", module:"test1.bat"},
+  {folderid:3, foldername:"batch", module:"test1.bat"},
+  {folderid:4, foldername:"batch", module:"test1.bat"},
+  {folderid:4, foldername:"batch", module:"test1.bat"},
+  {folderid:5, foldername:"batch", module:"test1.bat"},
+  ]
+};
+
+export const foldersdummydata = {"data": [
+  {folderid:1, foldername:"folder1", parentfolderid:0},
+  {folderid:1, foldername:"folder2", parentfolderid:0},
+  {folderid:1, foldername:"folder3", parentfolderid:0},
+  {folderid:2, foldername:"folder4", parentfolderid:0},
+  {folderid:2, foldername:"folder5", parentfolderid:0},
+  {folderid:2, foldername:"folder6", parentfolderid:0},
+  ]
+};
+
+export const ReleasedList = {"data": [
+  {check: false, name:"inp1", nickname:"1サブT1T1", ip:"192.168.1.1", date:"2022年8月9日"},
+  {check: true, name:"inp2", nickname:"1サブT1T2", ip:"192.168.1.1", date:"2022年8月9日"},
+  {check: false, name:"inp3", nickname:"1サブT1T3", ip:"192.168.1.1", date:"2022年8月9日"},
+  {check: false, name:"inp4", nickname:"1サブT1T4", ip:"192.168.1.1", date:"2022年8月9日"},
+  {check: true, name:"inp5", nickname:"1サブT1T5", ip:"192.168.1.1", date:"2022年8月9日"},
+  {check: false, name:"inp6", nickname:"1サブT1T6", ip:"192.168.1.1", date:"2022年8月9日"},
+  ]
+};
+
+
 
 export const moduleList = {"data": [
 	["Common", "AudioMan64.dll"]

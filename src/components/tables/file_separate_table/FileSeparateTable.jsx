@@ -1,5 +1,6 @@
 import React from 'react'
 import "./FileSeparateTable.css"
+import "..//colortable.css";
 
 export default function FileSeparateTable({selectmodulename}) {
   

@@ -27,7 +27,16 @@ export class File {
   }  
   getscript(){
     if(this.onclickfunc == null){
-      return <li>{this.name}</li>
+      //return <li>{this.name}　ba-jon</li>
+      return( 
+      <li >
+        <div className="filebox2">
+          <span className="box1">{this.name}</span>
+          <span className="v-line"></span>
+          <span className="box2">3.0.2.0</span>
+        </div>
+      </li>
+      )
     }else{
       //return <a href='javascript:void(0)' onClick={() => this.onclickfunc(this.name)} ><li>{this.name}</li></a>
       return <li ><span onClick={() => this.onclickfunc(this.name)} className="filebox">{this.name}</span></li>

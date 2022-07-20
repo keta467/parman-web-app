@@ -3,9 +3,8 @@ import Topbar from '../../components/topbar/Topbar';
 import TreeView from '../../components/treeview/TreeView';
 import "./ManagePackage.css";
 import { Folder, File } from "../../myclass.js";
-import "../../components/colortable.css";
-import ManagePackageTable from '../../components/manage_package_table/ManagePackageTable';
-import { packageList } from '../../dummyData.js';
+import ManagePackageTable from '../../components/tables/manage_package_table/ManagePackageTable';
+import { packageList, TreeData1 , ReleasedList } from '../../dummyData.js';
 import { DebugModeContext } from '../../components/providers/DebugModeProvider';
 
 export default function ManagePackage({ titletext }) {
@@ -18,12 +17,10 @@ export default function ManagePackage({ titletext }) {
     );
   }
 
-  const [folders, setFolders] = React.useState([
-    new Folder(1, "AAAAAAAAA", [new File("aaa", "A", null)], true, ToggleFolder),
-    new Folder(2, "BBBBBBB", [new File("222", "B", null),new File("333", "B", null)], true, ToggleFolder)]);
 
   const [packages, setPackages] = React.useState([]);
-
+  const [folders, setFolders] = React.useState([]);
+  const [isPCList, setIsPCList] = React.useState([]);
 
   async function createlistdata(){
     var packagelist = [];
@@ -36,8 +33,66 @@ export default function ManagePackage({ titletext }) {
     setPackages(packagelist);
   }
 
+  async function createtreedata(){
+    var folderlist = [];
+    if(isDebugMode){
+      var nowfolder = new Folder(null, "", [], true, null);
+      for(var i = 0; i < TreeData1.data.length; i++){
+        if(TreeData1.data[i].folderid != nowfolder.id){
+          folderlist.push(nowfolder);
+          nowfolder = new Folder(TreeData1.data[i].folderid, TreeData1.data[i].foldername, [], true, ToggleFolder);
+        }
+        nowfolder.childs.push(new File(TreeData1.data[i].module, TreeData1.data[i].foldername, null))
+      }
+      nowfolder.childs.push(new Folder(100, "testfolder", [
+        new File("file1", "testfolder", null),
+        new File("file2", "testfolder", null)
+      ], true, ToggleFolder));
+      folderlist.push(nowfolder);
+      folderlist.shift();  
+    }else{
+
+    }
+    setFolders(folderlist);
+  }
+
+  async function createtabledata(){
+    var pclist = await gettabledata();
+    setIsPCList(pclist);
+  }
+
+  async function gettabledata(){
+    var pclist = [];
+    if(isDebugMode){
+      for(var i = 0; i < ReleasedList.data.length; i++){
+        pclist.push(ReleasedList.data[i]);
+      }
+    }else{
+
+    }
+    return pclist;
+  }
+
+  async function buttonclick(){
+    var element = document.getElementById("serchtext");
+    search(element.value)
+  }
+
+  async function search(keyword){
+    var pclist = [];
+    var data = await gettabledata();
+    for(var i = 0; i < data.length; i++){
+      if(data[i].name.includes(keyword)){
+        pclist.push(data[i]);
+      }
+    }
+    setIsPCList(pclist);
+  }  
+
   React.useEffect(() => {
     createlistdata();
+    createtreedata();
+    createtabledata();
   }, []);
 
   return (
@@ -54,12 +109,12 @@ export default function ManagePackage({ titletext }) {
         </div>
         <div className='managepackagesearchview'>
           <div className='searcharea'>
-            <input type="text" name="" id="" />
-            <button style={{"margin-left":"5px"}}>検索</button>
+            <input type="text" name="" id="serchtext" />
+            <button onClick={buttonclick} style={{"margin-left":"10px"}}>検索</button>
           </div>
 
           <div className='managepackagesearchviewtablewrapper'>
-           <ManagePackageTable />
+           <ManagePackageTable pclist={isPCList}/>
           </div>
         </div>
       </div>

@@ -17,6 +17,7 @@
 .managepackagetreeview{
   flex: 3;
   border-right: 1px solid #999;
+  overflow: auto
 }
 .managepackagesearchview{
   flex: 6;

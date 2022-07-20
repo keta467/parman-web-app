@@ -1,5 +1,5 @@
 import React from 'react'
-import Manage_Machine_Table from '../../components/manage_machine_table/Manage_Machine_Table';
+import Manage_Machine_Table from '../../components/tables/manage_machine_table/Manage_Machine_Table';
 import ModalAddMachine from '../../components/modals/ModalAddMachine';
 import ModalEditMachine from '../../components/modals/ModalEditMachine';
 import Topbar from '../../components/topbar/Topbar'
