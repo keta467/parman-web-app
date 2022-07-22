@@ -4,7 +4,7 @@ import TreeView from '../../components/treeview/TreeView';
 import "./ManagePackage.css";
 import { Folder, File } from "../../myclass.js";
 import ManagePackageTable from '../../components/tables/manage_package_table/ManagePackageTable';
-import { packageList, TreeData1 , ReleasedList } from '../../dummyData.js';
+import { packageList, TreeData1 , ReleasedList, TreeData2 } from '../../dummyData.js';
 import { DebugModeContext } from '../../components/providers/DebugModeProvider';
 
 export default function ManagePackage({ titletext }) {
