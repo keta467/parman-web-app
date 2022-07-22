@@ -11,9 +11,9 @@ export default function ManagePackage({ titletext }) {
 
   const { isDebugMode } = React.useContext(DebugModeContext);
   
-  function ToggleFolder(id){
+  function ToggleFolder(){
     setFolders((prevState) =>
-      prevState.map((value) => (value.id === id ? new Folder(value.id, value.name, value.childs, !value.isOpen, ToggleFolder) : value))
+      prevState.map((value) => (new Folder(null,null,null,null,null,null,value)))
     );
   }
 
@@ -33,27 +33,117 @@ export default function ManagePackage({ titletext }) {
     setPackages(packagelist);
   }
 
+
   async function createtreedata(){
     var folderlist = [];
     if(isDebugMode){
-      var nowfolder = new Folder(null, "", [], true, null);
-      for(var i = 0; i < TreeData1.data.length; i++){
-        if(TreeData1.data[i].folderid != nowfolder.id){
-          folderlist.push(nowfolder);
-          nowfolder = new Folder(TreeData1.data[i].folderid, TreeData1.data[i].foldername, [], true, ToggleFolder);
+        ///
+        ///フォルダを全て生成
+        ///
+        for(var i = 0; i < TreeData2.data.length; i++){
+          const str = TreeData2.data[i].path;
+          const regex = /([^\\]*)\\/g;
+          const foldersInPath = str.match(regex);
+          for(var j = 0; j < foldersInPath.length; j++){
+            //パス
+            var count = 0;
+            var Path = "";
+            var ParentFolderPath = "";
+            for(var k = 0; k < str.length; k++){
+
+              if(count == j + 1){
+                  break;
+              }
+
+              Path += str[k]
+              if(str[k] == '\\'){
+                count = count + 1;
+                if(count == j){
+                  ParentFolderPath = Path;
+                }
+              }
+            }
+            //重複チェック
+            var isok = true;
+            for(var k = 0; k < folderlist.length; k++){
+              if(folderlist[k].Path == Path && folderlist[k].name == foldersInPath[j].replace('\\', '')){
+                isok = false;
+                break;
+              }
+            }
+            //新規フォルダの場合
+            if(isok){
+              if(j == 0){
+                folderlist.push(new Folder(folderlist.length + 1, foldersInPath[j].replace('\\', ''), true, 0, Path, ToggleFolder))
+              }else{
+                //親フォルダIDを見つけ出す
+                var parentfolderid = 0;
+                for(var k = 0; k < folderlist.length; k++){
+                  //もしパスから自分を抜いたパスとパスが一致するフォルダの場合
+                  if(folderlist[k].Path == ParentFolderPath){
+                    parentfolderid = folderlist[k].id;
+                    break;
+                  }
+                }
+                folderlist.push(new Folder(folderlist.length + 1, foldersInPath[j].replace('\\', ''), true, parentfolderid, Path, ToggleFolder))
+              } 
+              console.log(`e ${folderlist[folderlist.length - 1].Path}`)
+            }
+          }        
         }
-        nowfolder.childs.push(new File(TreeData1.data[i].module, TreeData1.data[i].foldername, null))
-      }
-      nowfolder.childs.push(new Folder(100, "testfolder", [
-        new File("file1", "testfolder", null),
-        new File("file2", "testfolder", null)
-      ], true, ToggleFolder));
-      folderlist.push(nowfolder);
-      folderlist.shift();  
+        var files = [];
+        for(var i = 0; i < TreeData2.data.length; i++){
+          const str = TreeData2.data[i].path;
+
+          var datas = str.match(/\\[^\\]*/g);
+          const filename = datas[datas.length-1].replace('\\', '');
+
+          datas = str.match(/([^\\]*)\\/g);
+          var parentfolderid;
+          for(var j = 0; j < folderlist.length; j++){
+            if(folderlist[j].Path == str.replace(filename, "")){
+              parentfolderid = folderlist[j].id
+            }
+          }
+
+          const Path = TreeData2.data[i].path;
+
+          files.push(new File(filename, parentfolderid, Path, null))
+
+        }        
+        //フォルダにファイルを入れる
+        for(var i = 0; i < folderlist.length; i++){
+          for(var j = 0; j < files.length; j++){
+            if(folderlist[i].id == files[j].parentfolderid){
+              folderlist[i].addchild(files[j])
+            }
+          }
+        }    
+        
+        //フォルダにフォルダを入れる
+        for(var i = 0; i < folderlist.length; i++){
+          for(var j = 0; j < folderlist.length; j++){
+            if(folderlist[i].id == folderlist[j].parentfolderid){
+              folderlist[i].addchild(folderlist[j])
+            }
+          }
+        }               
+        //並べ替え
+        for(var i = 0; i < folderlist.length; i++){
+          folderlist[i].narabekae();
+        }       
     }else{
 
     }
-    setFolders(folderlist);
+    console.log("この数" + folderlist[0].childs.length)
+    for(var i = 0; i < folderlist.length; i++){
+      console.log()
+      if(folderlist[i].Path == "D:\\lambda\\"){
+        setFolders(folderlist[i].childs);
+        break;
+      }
+    }
+    
   }
 
   async function createtabledata(){
