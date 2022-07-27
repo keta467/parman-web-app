@@ -1,0 +1,85 @@
+.mytreeview{
+  padding: 5px;
+}
+
+.mytreeview ul {
+  padding-bottom: 8px;
+}
+
+.mytreeview li {
+  list-style:none;
+}
+
+.mytreeview span.folder {
+  user-select: none;
+  cursor:pointer;
+  background: url(../../assets/folder.gif) 0 7px no-repeat;
+  padding-left: 18px;
+  white-space: nowrap;
+}
+
+.mytreeview span.folder:hover{
+  color: red;
+}
+
+.mytreeview a{
+  text-decoration: none;
+}
+
+.mytreeview a:hover{
+ text-decoration: underline;
+}
+
+.mytreeview span.closefolder {
+  background: url(../../assets/folder-closed.gif) 0 7px no-repeat;
+}
+
+.mytreeview .treeitem {
+  background: url(../../assets/myline.png) 0px 0 no-repeat, url(../../assets/連結用.png) 0 7px repeat-y;
+  padding-left: 15px;
+  
+}
+
+.mytreeview .filebox{
+  width: 300px;
+  word-wrap: break-word;
+  border: 2px solid #333333;
+  margin-bottom: -2px;
+  margin-top: -2px;
+  padding-left: 5px;
+}
+
+
+.mytreeview .filebox a{
+  color: blue;
+}
+
+.mytreeview .filevarsionbox{
+  width: 300px;
+  display:grid;
+  grid-template-columns: 70% 1px 30%;
+  border: 2px solid #333333;
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+
+.mytreeview .box1{
+  word-wrap: break-word;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.mytreeview .v-line{
+  border-left: 2px solid #333333;
+  height: auto;
+}
+
+.mytreeview .box2{
+  word-wrap: break-word;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

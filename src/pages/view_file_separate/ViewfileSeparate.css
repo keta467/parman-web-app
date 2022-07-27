@@ -1,0 +1,29 @@
+.viewfileseparatewrapper{
+  width: 90%;
+  height: 80vh;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  border: 1px solid #999;
+}
+
+.ViewfileSeparatetreeviewwrapper{
+  flex: 4;
+  border-right: 1px solid #999;
+  overflow: auto;
+}
+
+.viewfileseparatetableviewwrapper{
+  flex: 8;
+}
+
+.fileseparatetablewrap{
+  overflow: auto;
+  width: 80%;
+  max-width: 80%;
+  height: 65vh;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
