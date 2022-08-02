@@ -1,19 +1,19 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   devtool: "eval-source-map",
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    assetModuleFilename: '[name][ext]'
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    assetModuleFilename: "[name][ext]",
   },
   devServer: {
-    port: 3000,
+    port: 3001,
     historyApiFallback: true,
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve(__dirname, "dist"),
     },
   },
   module: {
@@ -25,10 +25,10 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/react"]
-            }
-          }
-        ]
+              presets: ["@babel/react"],
+            },
+          },
+        ],
       },
       {
         test: /\.css/,
@@ -36,14 +36,14 @@ module.exports = {
           "style-loader",
           {
             loader: "css-loader",
-            options: { url: true }
-          }
-        ]
+            options: { url: true },
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
+        type: "asset/resource",
       },
-    ]
+    ],
   },
 };

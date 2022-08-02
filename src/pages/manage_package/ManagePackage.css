@@ -1,4 +1,4 @@
-.managepackagewrapper{
+.managepackagewrapper {
   display: flex;
   margin-top: 40px;
   margin-left: auto;
@@ -9,28 +9,24 @@
   border: 1px solid #999;
 }
 
-.managepackagelistwrapper{
+.managepackagelistwrapper {
   flex: 3;
   border-right: 1px solid #999;
   overflow: auto;
   text-overflow: ellipsis;
 }
 
-.managepackagetreeview{
+.managepackagetreeview {
   flex: 4;
   border-right: 1px solid #999;
   overflow: auto;
 }
-.managepackagesearchview{
+.managepackagesearchview {
   flex: 6;
   border-right: 1px solid #999;
 }
 
-
-
-
-
-.searcharea{
+.searcharea {
   width: 90%;
   height: auto;
   margin-top: 30px;
@@ -38,7 +34,7 @@
   margin-right: auto;
 }
 
-.managepackagesearchviewtablewrapper{
+.managepackagesearchviewtablewrapper {
   overflow: auto;
   width: 90%;
   height: 65vh;
@@ -47,6 +43,6 @@
   margin-right: auto;
 }
 
-.searcharea input[type="text"]{
+.searcharea input[type="text"] {
   margin-right: 10px;
 }
