@@ -10,7 +10,7 @@ module.exports = {
     assetModuleFilename: "[name][ext]",
   },
   devServer: {
-    port: 3001,
+    port: 3000,
     historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, "dist"),

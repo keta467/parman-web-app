@@ -1,4 +1,4 @@
-.viewfileseparatewrapper{
+.viewfileseparatewrapper {
   width: 90%;
   height: 80vh;
   margin-top: 40px;
@@ -8,17 +8,17 @@
   border: 1px solid #999;
 }
 
-.ViewfileSeparatetreeviewwrapper{
+.ViewfileSeparatetreeviewwrapper {
   flex: 4;
   border-right: 1px solid #999;
   overflow: auto;
 }
 
-.viewfileseparatetableviewwrapper{
+.viewfileseparatetableviewwrapper {
   flex: 8;
 }
 
-.fileseparatetablewrap{
+.fileseparatetablewrap {
   overflow: auto;
   width: 80%;
   max-width: 80%;
@@ -26,4 +26,10 @@
   margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#fileseparatetablewrapbutton {
+  text-align: right;
+  margin-bottom: 10px;
+  white-space: nowrap;
 }

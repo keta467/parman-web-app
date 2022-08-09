@@ -6,6 +6,7 @@ export default function Home({ titletext }) {
   return (
     <>
       <Topbar titletext={titletext} />
+      {/* <Tab /> */}
     </>
-  )
+  );
 }

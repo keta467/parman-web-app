@@ -1,30 +1,47 @@
-.topbarContainer{
-  background-color: #70AD47;
+.topbarContainer {
+  background-color: #70ad47;
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-  position:sticky;
+  position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.topbarLeft{
-  color: white;
+.topbartab {
+  display: flex;
+  margin-top: 33px;
+  margin-right: 20px;
   font-weight: bold;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
-.topbarRight{
-  margin-right: 20px;
+.topbartab a {
+  color: black;
+  cursor: default;
+  text-decoration: none;
 }
 
-.titletext{
-  font-size: 27px;
+.topbartabbutton {
+  padding: 3px;
+  padding-right: 7px;
+  padding-left: 7px;
+  border-left: 1px dashed black;
+  width: 200px;
+  text-align: center;
 }
 
-.topbarbutton{
-  margin-right: 20px;
+.toptabbuttonright {
+  border-right: 1px dashed black;
 }
 
+.selecttopbartabbutton {
+  border-bottom: 4px solid rgb(231, 135, 90);
+}
+
+.topbarbuttonswraper {
+  margin-right: 200px;
+  white-space: nowrap;
+}
