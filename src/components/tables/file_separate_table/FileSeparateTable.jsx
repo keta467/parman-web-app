@@ -1,11 +1,10 @@
-import React from 'react'
-import "./FileSeparateTable.css"
+import React from "react";
+import "./FileSeparateTable.css";
 import "..//colortable.css";
 
-export default function FileSeparateTable({selectmodulename}) {
-  
+export default function FileSeparateTable({}) {
   return (
-    <table className='colortable'>
+    <table className="colortable">
       <thead>
         <tr>
           <th>端末名</th>
@@ -46,5 +45,5 @@ export default function FileSeparateTable({selectmodulename}) {
         </tr>
       </tbody>
     </table>
-  )
+  );
 }

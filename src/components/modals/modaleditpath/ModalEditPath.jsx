@@ -12,6 +12,10 @@ export default function ModalEditPath({ isShowModal, setIsShowModal }) {
     setIsPathList([...isPathList, ""]);
   };
 
+  const DeletePath = (pathindex) => {
+    setIsPathList(isPathList.filter((value, index) => index !== pathindex));
+  };
+
   const [isPathList, setIsPathList] = React.useState([
     "D:Lambda",
     "D:/lambda/binv2",
@@ -26,11 +30,16 @@ export default function ModalEditPath({ isShowModal, setIsShowModal }) {
           <div className="modal" id="modaleditpathmodal">
             <div id="modaleditpathbuttonareatextarea">
               {isPathList.map((path, pathindex) => (
-                <div>
+                <div key={path + pathindex}>
                   <p>収集先{pathindex + 1}</p>
                   <div className="df">
-                    <input type="text" value={path} />
-                    <button className="pathdeletebutton1">削除</button>
+                    <input type="text" defaultValue={path} />
+                    <button
+                      className="pathdeletebutton1"
+                      onClick={(event) => DeletePath(pathindex)}
+                    >
+                      削除
+                    </button>
                   </div>
                 </div>
               ))}

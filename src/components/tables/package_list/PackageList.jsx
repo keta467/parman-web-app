@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
 import "./PackageList.css";
 
-export default function PackageList({packages}) {
-
+export default function PackageList({ packages }) {
   const [ispackages, setIsPackages] = React.useState(packages);
+  const [isselectp, setIssselectp] = React.useState(
+    "クライアントリリース#1_20220101"
+  );
 
   var startindex = "";
 
@@ -11,11 +13,13 @@ export default function PackageList({packages}) {
   /// マウスオーバーイベントを追加する
   ///
   function addMouseOverColoringEvent() {
-
     var materialTd = document.getElementsByClassName("dragitem");
-    console.log(materialTd.length)
-    for (var materialNumber = 0; materialNumber < materialTd.length; materialNumber++) {
-     
+    console.log(materialTd.length);
+    for (
+      var materialNumber = 0;
+      materialNumber < materialTd.length;
+      materialNumber++
+    ) {
       materialTd[materialNumber].addEventListener("drag", mydrag);
 
       materialTd[materialNumber].addEventListener("dragover", mydragover);
@@ -24,98 +28,115 @@ export default function PackageList({packages}) {
 
       materialTd[materialNumber].addEventListener("drop", mudrop);
     }
-  }  
+  }
 
   function mydrag(event) {
-    console.log("drag")
+    console.log("drag");
     startindex = event.target.id;
-  };
+  }
 
   function mydragover(event) {
-    event.preventDefault();       
+    event.preventDefault();
 
     let rect = this.getBoundingClientRect();
-    if ((event.clientY - rect.top) < (this.clientHeight / 2)) {
+    if (event.clientY - rect.top < this.clientHeight / 2) {
       //マウスカーソルの位置が要素の半分より上
-      for(var i = 0; i < this.children.length; i++){
-        this.children[i].style.borderTop = '2px solid blue';
-        this.children[i].style.borderBottom  = '1px solid #999';
+      for (var i = 0; i < this.children.length; i++) {
+        this.children[i].style.borderTop = "2px solid blue";
+        this.children[i].style.borderBottom = "1px solid #999";
       }
     } else {
       //マウスカーソルの位置が要素の半分より下
-      for(var i = 0; i < this.children.length; i++){
-       this.children[i].style.borderTop = '1px solid #999';
-       this.children[i].style.borderBottom  = '2px solid blue';
+      for (var i = 0; i < this.children.length; i++) {
+        this.children[i].style.borderTop = "1px solid #999";
+        this.children[i].style.borderBottom = "2px solid blue";
       }
     }
-  };
+  }
 
   function mydragleave(event) {
-
-    for(var i = 0; i < this.children.length; i++){
-      this.children[i].style.borderTop = '1px solid #999';
-      this.children[i].style.borderBottom = '1px solid #999';
+    for (var i = 0; i < this.children.length; i++) {
+      this.children[i].style.borderTop = "1px solid #999";
+      this.children[i].style.borderBottom = "1px solid #999";
     }
-  };
+  }
 
   function mudrop(event) {
-    console.log("drop")
+    console.log("drop");
     event.preventDefault();
     let elm_drag = ispackages[startindex];
 
     var toindex = event.target.id;
-    
+
     let rect = this.getBoundingClientRect();
-    if ((event.clientY - rect.top) < (this.clientHeight / 2)) {
+    if (event.clientY - rect.top < this.clientHeight / 2) {
       //マウスカーソルの位置が要素の半分より上
       ispackages.splice(startindex, 1);
 
-      if(Number(startindex) < Number(toindex)){
+      if (Number(startindex) < Number(toindex)) {
         ispackages.splice(Number(toindex) - 1, 0, elm_drag);
-      }else{
+      } else {
         ispackages.splice(Number(toindex), 0, elm_drag);
       }
     } else {
       //マウスカーソルの位置が要素の半分より下
       ispackages.splice(startindex, 1);
 
-      if(Number(startindex) < Number(toindex)){
+      if (Number(startindex) < Number(toindex)) {
         ispackages.splice(Number(toindex), 0, elm_drag);
-      }else{
+      } else {
         ispackages.splice(Number(toindex) + 1, 0, elm_drag);
       }
     }
 
     var newarr = [];
-    for(var i = 0; i < ispackages.length; i++){
+    for (var i = 0; i < ispackages.length; i++) {
       newarr.push(ispackages[i]);
     }
-    setIsPackages(newarr);        
+    setIsPackages(newarr);
 
-    for(var i = 0; i < this.children.length; i++){
-      this.children[i].style.borderTop = '1px solid #999';
-      this.children[i].style.borderBottom = '1px solid #999';
+    for (var i = 0; i < this.children.length; i++) {
+      this.children[i].style.borderTop = "1px solid #999";
+      this.children[i].style.borderBottom = "1px solid #999";
     }
-  }  
+  }
 
-  function rowckick(name){
-    window.alert(name)
+  function rowckick(name) {
+    setIssselectp(name);
   }
 
   //初回レンダリング後
   React.useEffect(() => {
-    addMouseOverColoringEvent()
+    addMouseOverColoringEvent();
   }, []);
 
   return (
-    <table className='managepackagetable colortable'>
-      <tbody className='managepackagetabletbody'>
-        {ispackages.map((value, index)=>(
-        <tr onClick={()=>(rowckick(value.name))}  draggable="true" className="dragitem" id={index} key={index} >
-          <td id={index}>{value.name}</td>
-        </tr>
-        ))}
+    <table className="managepackagetable colortable">
+      <tbody className="managepackagetabletbody">
+        {ispackages.map((value, index) =>
+          value.name == isselectp ? (
+            <tr
+              onClick={() => rowckick(value.name)}
+              draggable="true"
+              className="dragitem selectpackage"
+              id={index}
+              key={index}
+            >
+              <td id={index}>{value.name}</td>
+            </tr>
+          ) : (
+            <tr
+              onClick={() => rowckick(value.name)}
+              draggable="true"
+              className="dragitem"
+              id={index}
+              key={index}
+            >
+              <td id={index}>{value.name}</td>
+            </tr>
+          )
+        )}
       </tbody>
     </table>
-  )
+  );
 }

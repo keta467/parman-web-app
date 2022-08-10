@@ -1,4 +1,2 @@
-
-
 # node_modulesディレクトリ配下の更新をコミットしないようにする
 node_modules/
