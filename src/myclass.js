@@ -1,28 +1,69 @@
 export class Folder {
-  constructor(id, name, childs, isOpen, onclickfunc){
+  constructor(id, name, isOpen, parentfolderid, Path, ToggleFolder, folder){
+    this.type = "folder"
     this.id = id;
     this.name = name;
     this.isOpen = isOpen;
-    this.childs = childs;
-    this.onclickfunc = onclickfunc;
+    this.childs = [];
+    this.ToggleFolder = ToggleFolder;
+    this.parentfolderid = parentfolderid
+    this.Path = Path
+
+    if(folder != null){
+      this.type = folder.type; 
+      this.id = folder.id;
+      this.name = folder.name;
+      this.isOpen = folder.isOpen;
+      this.childs = folder.childs;
+      this.ToggleFolder = folder.ToggleFolder;
+      this.parentfolderid = folder.parentfolderid;
+      this.Path = folder.Path;
+    }
   }  
+
   getscript(){
     if(this.isOpen){
       var chilsarr = [];
       for(var i = 0; i < this.childs.length; i++){
         chilsarr.push(this.childs[i].getscript());
       }
-      return <><span className="folder" onClick={() => this.onclickfunc(this.id)}>{this.name}</span><ul>{chilsarr}</ul></>
+      return <><span className="folder" onClick={() => this.onclickfunc()}>{this.name}</span><ul>{chilsarr}</ul></>
     }else{
-      return <><span className="folder" onClick={() => this.onclickfunc(this.id)}>{this.name}</span></>
+      return <><span className="folder" onClick={() => this.onclickfunc()}>{this.name}</span></>
     }
   }
+
+  addchild(child){
+    this.childs.push(child);
+  }
+
+  onclickfunc(){
+    this.isOpen = !this.isOpen;
+    this.ToggleFolder();
+  }
+
+  narabekae(){
+    var newarr = []
+    for(var i = 0; i < this.childs.length; i++){
+      if(this.childs[i].type == "folder"){
+        newarr.push(this.childs[i])
+      }
+    }
+    for(var i = 0; i < this.childs.length; i++){
+      if(this.childs[i].type == "file"){
+        newarr.push(this.childs[i])
+      }
+    }
+    this.childs = newarr;
+  }  
 }
 
 export class File {
-  constructor(name, folder, onclickfunc){
+  constructor(name, parentfolderid, Path, onclickfunc){
+    this.type = "file"
     this.name = name;
-    this.folder = folder;
+    this.parentfolderid = parentfolderid;
+    this.Path = Path;
     this.onclickfunc = onclickfunc;
   }  
   getscript(){
