@@ -1,38 +1,18 @@
-/* .managepackagelist{
-  list-style:none;
-  padding:0;
-  user-select:none;
-}
-
-.managepackagelist li{
-  cursor: pointer;
-  font-size: 18px;
-  background-color: #e2efda;
-}
-
-.managepackagelist li:hover{
-  font-weight: bold;
-}
-
-.managepackagelist li:nth-child(2n) {
-  background-color: #c6e0b4;
-} */
-.managepackagetable{
+.managepackagetable {
   white-space: nowrap;
-  
 }
 
-.managepackagetabletbody td{
+.managepackagetabletbody td {
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.managepackagetable tr:hover{
+.managepackagetable tr:hover {
   font-weight: bold;
-  /* text-decoration: underline; */
 }
 
-
-/* .managepackagetable tr:hover{
- text-decoration: underline;
-} */
+.selectpackage {
+  background-color: red !important;
+  color: white !important;
+  font-weight: bold !important;
+}

@@ -13,8 +13,6 @@ export default function ViewfileSeparate({ titletext }) {
 
   const [folders, setFolders] = React.useState([]);
 
-  const [str, setstr] = React.useState("moduletest.dll");
-
   function ToggleFolder() {
     setFolders((prevState) =>
       prevState.map(
@@ -23,8 +21,18 @@ export default function ViewfileSeparate({ titletext }) {
     );
   }
 
-  function SelectFile(name) {
-    setstr(name);
+  function SelectFile(Path) {
+    //ここで全てのパスを知れる？
+    var elems = document.getElementsByClassName("filebox");
+    for (var i = 0; i < elems.length; i++) {
+      if (Path == elems[i].id) {
+        elems[i].style.backgroundColor = "red";
+        elems[i].firstElementChild.style.color = "white";
+      } else {
+        elems[i].style.backgroundColor = "white";
+        elems[i].firstElementChild.style.color = "blue";
+      }
+    }
   }
 
   async function createtreedata() {
@@ -119,7 +127,7 @@ export default function ViewfileSeparate({ titletext }) {
           }
         }
 
-        const Path = TreeData2.data[i].path;
+        const Path = TreeData2.data[i].path; //全文パス
 
         files.push(new File(filename, parentfolderid, Path, SelectFile));
       }
@@ -187,7 +195,7 @@ export default function ViewfileSeparate({ titletext }) {
                 収集先編集
               </button>
             </div>
-            <FileSeparateTable selectmodulename={str} />
+            <FileSeparateTable />
           </div>
         </div>
       </div>

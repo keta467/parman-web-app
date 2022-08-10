@@ -104,8 +104,13 @@ export class File {
     } else {
       return (
         <li key={this.Path}>
-          <div className="filebox">
-            <a href={void 0} onClick={() => this.onclickfunc(this.name)}>
+          <div className="filebox" id={this.Path}>
+            <a
+              href={void 0}
+              onClick={() => {
+                this.onclickfunc(this.Path);
+              }}
+            >
               {this.name}
             </a>
           </div>
