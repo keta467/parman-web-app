@@ -14,12 +14,12 @@ export default function Topbar({ titletext }) {
     <div className="topbarContainer">
       <div className="topbartab">
         <Link className="atag" to="/manage_package">
-          {titletext == "パッケージ情報" ? (
+          {titletext == "パッケージ管理" ? (
             <div className="topbartabbutton selecttopbartabbutton">
-              パッケージ情報
+              パッケージ管理
             </div>
           ) : (
-            <div className="topbartabbutton">パッケージ情報</div>
+            <div className="topbartabbutton">パッケージ管理</div>
           )}
         </Link>
         <Link className="atag" to="/manage_machine">
@@ -65,7 +65,7 @@ export default function Topbar({ titletext }) {
         </span>
       )}
       <div className="topbarbuttonswraper">
-        <button>パッケージ同期</button>
+        <button className="mybutton">パッケージ同期</button>
       </div>
     </div>
   );

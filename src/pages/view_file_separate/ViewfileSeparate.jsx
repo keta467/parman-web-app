@@ -6,6 +6,7 @@ import { Folder, File } from "../../myclass.js";
 import TreeView from "../../components/treeview/TreeView.jsx";
 import { installModulesInfo, TreeData2 } from "../../dummyData.js";
 import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
+import ModalEditPath from "../../components/modals/modaleditpath/ModalEditPath.jsx";
 
 export default function ViewfileSeparate({ titletext }) {
   const { isDebugMode } = React.useContext(DebugModeContext);
@@ -161,18 +162,30 @@ export default function ViewfileSeparate({ titletext }) {
     createtreedata();
   }, []);
 
+  const [isShowModalAddMachine, setIsShowModalAddMachine] =
+    React.useState(false);
+
+  const ClickAddButton = () => {
+    setIsShowModalAddMachine(true);
+  };
+
   return (
     <>
       <Topbar titletext={titletext} />
+      <ModalEditPath
+        isShowModal={isShowModalAddMachine}
+        setIsShowModal={setIsShowModalAddMachine}
+      />
       <div className="viewfileseparatewrapper">
         <div className="ViewfileSeparatetreeviewwrapper">
           <TreeView folders={folders} />
         </div>
         <div className="viewfileseparatetableviewwrapper">
           <div className="fileseparatetablewrap">
-            {/* {str} */}
             <div id="fileseparatetablewrapbutton">
-              <button>収集先編集</button>
+              <button className="mybutton" onClick={ClickAddButton}>
+                収集先編集
+              </button>
             </div>
             <FileSeparateTable selectmodulename={str} />
           </div>

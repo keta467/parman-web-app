@@ -30,21 +30,21 @@ export class Folder {
         chilsarr.push(this.childs[i].getscript());
       }
       return (
-        <>
+        <div key={this.id}>
           <div className="plus" onClick={() => this.onclickfunc()}></div>
-          <div key={this.id} className="treeitem">
+          <div className="treeitem">
             <span className="folder" onClick={() => this.onclickfunc()}>
               {this.name}
             </span>
             <ul>{chilsarr}</ul>
           </div>
-        </>
+        </div>
       );
     } else {
       return (
-        <>
-          <div className="minus" onClick={() => this.onclickfunc()}></div>{" "}
-          <div key={this.id} className="treeitem">
+        <div key={this.id}>
+          <div className="minus" onClick={() => this.onclickfunc()}></div>
+          <div className="treeitem">
             <span
               className="folder closefolder"
               onClick={() => this.onclickfunc()}
@@ -52,7 +52,7 @@ export class Folder {
               {this.name}
             </span>
           </div>
-        </>
+        </div>
       );
     }
   }
@@ -105,7 +105,7 @@ export class File {
       return (
         <li key={this.Path}>
           <div className="filebox">
-            <a href="#" onClick={() => this.onclickfunc(this.name)}>
+            <a href={void 0} onClick={() => this.onclickfunc(this.name)}>
               {this.name}
             </a>
           </div>

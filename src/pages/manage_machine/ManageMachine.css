@@ -1,11 +1,11 @@
-.managemachinebuttonwrapper{
+.managemachinebuttonwrapper {
   width: 70%;
   text-align: right;
   margin: auto;
   margin-top: 30px;
 }
 
-.managemachinetablewrapper{
+.managemachinetablewrapper {
   overflow: auto;
   width: 70%;
   height: 75vh;

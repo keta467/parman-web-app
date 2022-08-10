@@ -200,7 +200,6 @@ export default function ManagePackage({ titletext }) {
   return (
     <>
       <Topbar titletext={titletext} />
-      {/* <Tab /> */}
       <div className="managepackagewrapper">
         <div className="managepackagelistwrapper">
           <PackageList packages={returnpackages()} />
@@ -211,7 +210,9 @@ export default function ManagePackage({ titletext }) {
         <div className="managepackagesearchview">
           <div className="searcharea">
             <input type="text" name="" id="serchtext" />
-            <button onClick={buttonclick}>検索</button>
+            <button className="mybutton" onClick={buttonclick}>
+              検索
+            </button>
           </div>
           <div className="managepackagesearchviewtablewrapper">
             <ManagePackageTable pclist={isPCList} />

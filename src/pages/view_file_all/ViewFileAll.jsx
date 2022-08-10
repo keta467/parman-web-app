@@ -90,7 +90,9 @@ export default function ViewFileAll({ titletext }) {
       <Topbar titletext={titletext} />
       {/* <Tab /> */}
       <div className="viewfileallbuttonwrapper">
-        <button onClick={createtabledata}>更新</button>
+        <button className="mybutton" onClick={createtabledata}>
+          更新
+        </button>
       </div>
       <div className="viewfilealltablewrapper">
         <FileAllTable modulelist={isModulelist} pclist={isPCList} />

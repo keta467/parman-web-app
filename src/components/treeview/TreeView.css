@@ -105,3 +105,8 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.filebox a {
+  cursor: pointer;
+  user-select: none;
+}

@@ -6,15 +6,16 @@ import Topbar from "../../components/topbar/Topbar.jsx";
 import "./ManageMachine.css";
 
 export default function ManageMachine({ titletext }) {
-  const [isShowModal, setIsShowModal] = React.useState(false);
+  const [isShowModalAddMachine, setIsShowModalAddMachine] =
+    React.useState(false);
 
-  const [isShowModalEditMachine, setIsShowModalEditMachine] = React.useState({
+  const [isEditMachineForModal, setIsEditMachineForModal] = React.useState({
     isShowModal: false,
     machineInfo: { text: "aaa" },
   });
 
   const ClickAddButton = () => {
-    setIsShowModal(true);
+    setIsShowModalAddMachine(true);
   };
 
   function createTableData() {
@@ -37,23 +38,23 @@ export default function ManageMachine({ titletext }) {
   return (
     <>
       <Topbar titletext={titletext} />
-      {/* <Tab /> */}
       <ModalAddMachine
-        isShowModal={isShowModal}
-        setIsShowModal={setIsShowModal}
+        isShowModal={isShowModalAddMachine}
+        setIsShowModal={setIsShowModalAddMachine}
       />
       <ModalEditMachine
-        isShowModal={isShowModalEditMachine}
-        setIsShowModal={setIsShowModalEditMachine}
+        MachineData={isEditMachineForModal}
+        setIsShowModal={setIsEditMachineForModal}
       />
       <div className="managemachinebuttonwrapper">
-        <button onClick={ClickAddButton}>追加</button>
+        <button className="mybutton" onClick={ClickAddButton}>
+          追加
+        </button>
       </div>
       <div className="managemachinetablewrapper">
         <Manage_Machine_Table
           tableData={createTableData()}
-          isShowModal={isShowModalEditMachine}
-          setIsShowModal={setIsShowModalEditMachine}
+          setIsShowModal={setIsEditMachineForModal}
         />
       </div>
     </>
