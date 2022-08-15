@@ -1,15 +1,19 @@
-.viewfileallbuttonwrapper{
+.viewfileallbuttonwrapper {
   width: 90%;
   text-align: right;
   margin: auto;
   margin-top: 40px;
 }
 
-.viewfilealltablewrapper{
+.viewfilealltablewrapper {
   overflow: auto;
   width: 90%;
   height: 75vh;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#redobutton {
+  margin-right: 10px;
 }

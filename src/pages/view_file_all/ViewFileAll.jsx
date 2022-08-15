@@ -90,8 +90,16 @@ export default function ViewFileAll({ titletext }) {
       <Topbar titletext={titletext} />
       {/* <Tab /> */}
       <div className="viewfileallbuttonwrapper">
-        <button className="mybutton" onClick={createtabledata}>
-          更新
+        <button id="redobutton" className="mybutton" onClick={createtabledata}>
+          再表示
+        </button>
+        <button
+          className="mybutton"
+          onClick={() => {
+            console.log("最新バージョン取得");
+          }}
+        >
+          最新バージョン取得
         </button>
       </div>
       <div className="viewfilealltablewrapper">
