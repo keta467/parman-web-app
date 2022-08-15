@@ -1,0 +1,31 @@
+import React from "react";
+import "./PackageAlert.css";
+
+export default function PackageAlert({ isShowAlert, setIsShowAlert }) {
+  const CloseAlert = () => {
+    setIsShowAlert(false);
+  };
+
+  return (
+    <>
+      {isShowAlert ? (
+        <>
+          <div id="packagealert">
+            <div id="packagealertmessagewrapper">
+              このパッケージは更新されています。
+            </div>
+            <button
+              id="packagealertbutton"
+              className="mybutton"
+              onClick={CloseAlert}
+            >
+              取り込み
+            </button>
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
+    </>
+  );
+}

@@ -2,47 +2,28 @@ import React from "react";
 import "./FileSeparateTable.css";
 import "..//colortable.css";
 
-export default function FileSeparateTable({}) {
+export default function FileSeparateTable({ FileList }) {
   return (
-    <table className="colortable">
+    <table className="nomaltable">
       <thead>
         <tr>
           <th>端末名</th>
           <th>端末名称</th>
           <th>IPアドレス</th>
           <th>製品バージョン</th>
-          <th>リリース日時</th>
+          <th>ファイル更新日時</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>inp1</td>
-          <td>1サブT1T2</td>
-          <td>192.168.2.2</td>
-          <td>Y.Y.Y.Y</td>
-          <td>8月8日</td>
-        </tr>
-        <tr>
-          <td>inp1</td>
-          <td>1サブT1T2</td>
-          <td>192.168.2.2</td>
-          <td>Y.Y.Y.Y</td>
-          <td>8月8日</td>
-        </tr>
-        <tr>
-          <td>inp1</td>
-          <td>1サブT1T2</td>
-          <td>192.168.2.2</td>
-          <td>Y.Y.Y.Y</td>
-          <td>8月8日</td>
-        </tr>
-        <tr>
-          <td>inp1</td>
-          <td>1サブT1T2</td>
-          <td>192.168.2.2</td>
-          <td>Y.Y.Y.Y</td>
-          <td>8月8日</td>
-        </tr>
+        {FileList.map((file, index) => (
+          <tr key={`${file.name}${index}`}>
+            <td>{file.name}</td>
+            <td>{file.nickname}</td>
+            <td>{file.ip}</td>
+            <td>{file.version}</td>
+            <td className="releasedatet">{file.date}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );

@@ -4,7 +4,7 @@ import Topbar from "../../components/topbar/Topbar.jsx";
 import "./ViewfileSeparate.css";
 import { Folder, File } from "../../myclass.js";
 import TreeView from "../../components/treeview/TreeView.jsx";
-import { installModulesInfo, TreeData2 } from "../../dummyData.js";
+import { installModulesInfo, TreeData2, FileList } from "../../dummyData.js";
 import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
 import ModalEditPath from "../../components/modals/modaleditpath/ModalEditPath.jsx";
 
@@ -12,6 +12,8 @@ export default function ViewfileSeparate({ titletext }) {
   const { isDebugMode } = React.useContext(DebugModeContext);
 
   const [folders, setFolders] = React.useState([]);
+
+  const [isFilePath, setIsFilePath] = React.useState("");
 
   function ToggleFolder() {
     setFolders((prevState) =>
@@ -21,18 +23,18 @@ export default function ViewfileSeparate({ titletext }) {
     );
   }
 
-  function SelectFile(Path) {
-    //ここで全てのパスを知れる？
+  function SetFilePath(Path) {
     var elems = document.getElementsByClassName("filebox");
     for (var i = 0; i < elems.length; i++) {
       if (Path == elems[i].id) {
-        elems[i].style.backgroundColor = "red";
+        elems[i].style.backgroundColor = "#F06060";
         elems[i].firstElementChild.style.color = "white";
       } else {
         elems[i].style.backgroundColor = "white";
         elems[i].firstElementChild.style.color = "blue";
       }
     }
+    setIsFilePath(Path); //どのファイルか記録
   }
 
   async function createtreedata() {
@@ -129,7 +131,7 @@ export default function ViewfileSeparate({ titletext }) {
 
         const Path = TreeData2.data[i].path; //全文パス
 
-        files.push(new File(filename, parentfolderid, Path, SelectFile));
+        files.push(new File(filename, parentfolderid, Path, SetFilePath));
       }
       //フォルダにファイルを入れる
       for (var i = 0; i < folderlist.length; i++) {
@@ -170,6 +172,11 @@ export default function ViewfileSeparate({ titletext }) {
     createtreedata();
   }, []);
 
+  //フォルダ変更時に実行
+  React.useEffect(() => {
+    SetFilePath(isFilePath);
+  }, [folders]);
+
   const [isShowModalAddMachine, setIsShowModalAddMachine] =
     React.useState(false);
 
@@ -195,7 +202,7 @@ export default function ViewfileSeparate({ titletext }) {
                 収集先編集
               </button>
             </div>
-            <FileSeparateTable />
+            <FileSeparateTable FileList={FileList.data} />
           </div>
         </div>
       </div>
