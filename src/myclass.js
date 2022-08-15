@@ -64,6 +64,7 @@ export class Folder {
   onclickfunc() {
     this.isOpen = !this.isOpen;
     this.ToggleFolder();
+    //this.SelectFile();
   }
 
   narabekae() {

@@ -1,13 +1,12 @@
-.colortable{
+.colortable {
   border-spacing: 0;
   border-top: 1px solid #999;
   border-left: 1px solid #999;
   width: 100%;
-  table-layout: fixed
+  table-layout: fixed;
 }
 
-
-.colortable td{
+.colortable td {
   word-wrap: break-word;
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
@@ -23,7 +22,7 @@
   background-color: #c6e0b4;
 }
 
-.colortable th{
+.colortable th {
   white-space: nowrap;
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;

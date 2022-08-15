@@ -7,6 +7,7 @@ import ManagePackageTable from "../../components/tables/manage_package_table/Man
 import { packageList, ReleasedList, TreeData2 } from "../../dummyData.js";
 import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
 import PackageList from "../../components/tables/package_list/PackageList.jsx";
+import PackageAlert from "../../components/alert/package_alert/PackageAlert.jsx";
 
 export default function ManagePackage({ titletext }) {
   const { isDebugMode } = React.useContext(DebugModeContext);
@@ -21,6 +22,7 @@ export default function ManagePackage({ titletext }) {
 
   const [folders, setFolders] = React.useState([]);
   const [isPCList, setIsPCList] = React.useState([]);
+  const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(true);
 
   function returnpackages() {
     if (isDebugMode) {
@@ -200,6 +202,10 @@ export default function ManagePackage({ titletext }) {
   return (
     <>
       <Topbar titletext={titletext} />
+      <PackageAlert
+        isShowAlert={isShowPackageAlert}
+        setIsShowAlert={setIsShowPackageAlert}
+      />
       <div className="managepackagewrapper">
         <div className="managepackagelistwrapper">
           <PackageList packages={returnpackages()} />
@@ -208,7 +214,7 @@ export default function ManagePackage({ titletext }) {
           <TreeView folders={folders} />
         </div>
         <div className="managepackagesearchview">
-          <div className="searcharea">
+          <div id="searchareawrapper">
             <input type="text" name="" id="serchtext" />
             <button className="mybutton" onClick={buttonclick}>
               検索
