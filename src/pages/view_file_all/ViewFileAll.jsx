@@ -88,7 +88,6 @@ export default function ViewFileAll({ titletext }) {
   return (
     <>
       <Topbar titletext={titletext} />
-      {/* <Tab /> */}
       <div className="viewfileallbuttonwrapper">
         <button id="redobutton" className="mybutton" onClick={createtabledata}>
           再表示
