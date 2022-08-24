@@ -23,7 +23,6 @@
   width: 80%;
   max-width: 80%;
   height: 65vh;
-  margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -32,4 +31,13 @@
   text-align: right;
   margin-bottom: 10px;
   white-space: nowrap;
+}
+
+#shuushuusakibutton {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }

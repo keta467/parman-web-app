@@ -35,18 +35,22 @@ export default function ManagePackageTable({ pclist }) {
       </thead>
       <tbody>
         {pclist.map((pc, index) => (
-          <tr key={index}>
-            {pc.check ? (
+          <tr key={pc.ID}>
+            {pc.RELEASED ? (
               <td className="redtext bold">済</td>
             ) : (
               <td>
-                <input type="checkbox" className="mycheckbox" />
+                <input
+                  type="checkbox"
+                  className="mycheckbox"
+                  defaultChecked={pc.IS_TARGET_TERMINAL}
+                />
               </td>
             )}
-            <td>{pc.name}</td>
-            <td>{pc.nickname}</td>
-            <td>{pc.ip}</td>
-            <td className="releasedatet">{pc.date}</td>
+            <td>{pc.NAME}</td>
+            <td>{pc.DISPLAY_NAME}</td>
+            <td>{pc.IP_ADDRESS}</td>
+            <td className="releasedatet">{pc.RELEASE_DATE}</td>
           </tr>
         ))}
       </tbody>

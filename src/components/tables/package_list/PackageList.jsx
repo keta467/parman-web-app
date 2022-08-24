@@ -3,9 +3,7 @@ import "./PackageList.css";
 
 export default function PackageList({ packages }) {
   const [ispackages, setIsPackages] = React.useState(packages);
-  const [isselectp, setIssselectp] = React.useState(
-    "クライアントリリース#1_20220101"
-  );
+  const [isselectp, setIssselectp] = React.useState(packages[0].NAME);
 
   var startindex = "";
 
@@ -114,25 +112,25 @@ export default function PackageList({ packages }) {
     <table className="managepackagetable colortable">
       <tbody className="managepackagetabletbody">
         {ispackages.map((value, index) =>
-          value.name == isselectp ? (
+          value.NAME == isselectp ? (
             <tr
-              onClick={() => rowckick(value.name)}
+              onClick={() => rowckick(value.NAME)}
               draggable="true"
               className="dragitem selectpackage"
               id={index}
-              key={index}
+              key={value.ID}
             >
-              <td id={index}>{value.name}</td>
+              <td id={index}>{value.NAME}</td>
             </tr>
           ) : (
             <tr
-              onClick={() => rowckick(value.name)}
+              onClick={() => rowckick(value.NAME)}
               draggable="true"
               className="dragitem"
               id={index}
-              key={index}
+              key={value.ID}
             >
-              <td id={index}>{value.name}</td>
+              <td id={index}>{value.NAME}</td>
             </tr>
           )
         )}

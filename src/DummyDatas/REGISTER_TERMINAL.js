@@ -1,0 +1,4 @@
+﻿export const REGISTER_TERMINAL = {
+  API_NAME: "REGISTER_TERMINAL",
+  RESULT: 0,
+};

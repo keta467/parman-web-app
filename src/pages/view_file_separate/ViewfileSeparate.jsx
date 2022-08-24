@@ -7,6 +7,8 @@ import TreeView from "../../components/treeview/TreeView.jsx";
 import { installModulesInfo, TreeData2, FileList } from "../../dummyData.js";
 import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
 import ModalEditPath from "../../components/modals/modaleditpath/ModalEditPath.jsx";
+import { GET_INSTALLED_MODULE } from "../../DummyDatas/GET_INSTALLED_MODULE.js";
+import { GET_MODULE_INSTALLED_TERMINAL } from "../../DummyDatas/GET_MODULE_INSTALLED_TERMINAL.js";
 
 export default function ViewfileSeparate({ titletext }) {
   const { isDebugMode } = React.useContext(DebugModeContext);
@@ -14,6 +16,8 @@ export default function ViewfileSeparate({ titletext }) {
   const [folders, setFolders] = React.useState([]);
 
   const [isFilePath, setIsFilePath] = React.useState("");
+
+  const [isTerminals, setIsTerminals] = React.useState([]);
 
   function ToggleFolder() {
     setFolders((prevState) =>
@@ -38,13 +42,32 @@ export default function ViewfileSeparate({ titletext }) {
   }
 
   async function createtreedata() {
-    var folderlist = [];
+    var modulelist = [];
     if (isDebugMode) {
+      //モジュールリストの作成
+      for (var i = 0; i < GET_INSTALLED_MODULE.TERMINAL_LIST.length; i++) {
+        var terminal = GET_INSTALLED_MODULE.TERMINAL_LIST[i];
+        for (var j = 0; j < terminal.MODULE_LIST.length; j++) {
+          var okflag = true;
+          for (var k = 0; k < modulelist.length; k++) {
+            //既にモジュールリストにある場合
+            if (modulelist[k].MODULE_ID == terminal.MODULE_LIST[j].MODULE_ID) {
+              okflag = false;
+              break;
+            }
+          }
+          if (okflag == true) {
+            modulelist.push(terminal.MODULE_LIST[j]);
+          }
+        }
+      }
       ///
       ///フォルダを全て生成
       ///
-      for (var i = 0; i < TreeData2.data.length; i++) {
-        const str = TreeData2.data[i].path;
+      var folderlist = [];
+
+      for (var i = 0; i < modulelist.length; i++) {
+        const str = modulelist[i].INSTALL_PATH;
         const regex = /([^\\]*)\\/g;
         const foldersInPath = str.match(regex);
         for (var j = 0; j < foldersInPath.length; j++) {
@@ -114,24 +137,27 @@ export default function ViewfileSeparate({ titletext }) {
           }
         }
       }
+
       var files = [];
-      for (var i = 0; i < TreeData2.data.length; i++) {
-        const str = TreeData2.data[i].path;
-
-        var datas = str.match(/\\[^\\]*/g);
-        const filename = datas[datas.length - 1].replace("\\", "");
-
-        datas = str.match(/([^\\]*)\\/g);
+      for (var i = 0; i < modulelist.length; i++) {
         var parentfolderid;
         for (var j = 0; j < folderlist.length; j++) {
-          if (folderlist[j].Path == str.replace(filename, "")) {
+          if (
+            folderlist[j].Path ==
+            modulelist[i].INSTALL_PATH.replace(modulelist[i].MODULE_NAME, "")
+          ) {
             parentfolderid = folderlist[j].id;
           }
         }
 
-        const Path = TreeData2.data[i].path; //全文パス
-
-        files.push(new File(filename, parentfolderid, Path, SetFilePath));
+        files.push(
+          new File(
+            modulelist[i].MODULE_NAME,
+            parentfolderid,
+            modulelist[i].INSTALL_PATH,
+            SetFilePath
+          )
+        );
       }
       //フォルダにファイルを入れる
       for (var i = 0; i < folderlist.length; i++) {
@@ -167,6 +193,16 @@ export default function ViewfileSeparate({ titletext }) {
     }
   }
 
+  function createtabledata(INSTALL_PATH) {
+    if (INSTALL_PATH == "") {
+      return;
+    }
+    if (isDebugMode) {
+      setIsTerminals(GET_MODULE_INSTALLED_TERMINAL.TERMINAL_LIST);
+    } else {
+    }
+  }
+
   //初回レンダリング時に実行
   React.useEffect(() => {
     createtreedata();
@@ -176,6 +212,11 @@ export default function ViewfileSeparate({ titletext }) {
   React.useEffect(() => {
     SetFilePath(isFilePath);
   }, [folders]);
+
+  //フォルダ変更時に実行
+  React.useEffect(() => {
+    createtabledata(isFilePath);
+  }, [isFilePath]);
 
   const [isShowModalAddMachine, setIsShowModalAddMachine] =
     React.useState(false);
@@ -196,13 +237,14 @@ export default function ViewfileSeparate({ titletext }) {
           <TreeView folders={folders} />
         </div>
         <div className="viewfileseparatetableviewwrapper">
+          <div id="shuushuusakibutton">
+            <button className="mybutton" onClick={ClickAddButton}>
+              収集先編集
+            </button>
+          </div>
           <div className="fileseparatetablewrap">
-            <div id="fileseparatetablewrapbutton">
-              <button className="mybutton" onClick={ClickAddButton}>
-                収集先編集
-              </button>
-            </div>
-            <FileSeparateTable FileList={FileList.data} />
+            <div id="fileseparatetablewrapbutton"></div>
+            <FileSeparateTable Terminals={isTerminals} />
           </div>
         </div>
       </div>
