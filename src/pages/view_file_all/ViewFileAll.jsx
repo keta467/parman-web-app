@@ -5,6 +5,7 @@ import { DebugModeContext } from "../../components/providers/DebugModeProvider.j
 import Topbar from "../../components/topbar/Topbar.jsx";
 import { installModulesInfo, installVersionInfo } from "../../dummyData.js";
 import "./ViewFileAll.css";
+import { GET_INSTALLED_MODULE } from "../../DummyDatas/GET_INSTALLED_MODULE.js";
 
 export default function ViewFileAll({ titletext }) {
   const [isModulelist, setIsModulelist] = React.useState([]);
@@ -18,20 +19,36 @@ export default function ViewFileAll({ titletext }) {
 
     if (isDebugMode) {
       //モジュールリストの作成
-      for (var i = 0; i < installModulesInfo.data.length; i++) {
-        modulelist.push(installModulesInfo.data[i].module);
-      }
-      //PCリストの作成
-      for (var i = 0; i < installVersionInfo.data.length; i++) {
-        var module = installVersionInfo.data[i];
-
-        var pcname = module[1];
-        var pcversions = [];
-        for (var j = 2; j < module.length; j++) {
-          pcversions.push(module[j]);
+      for (var i = 0; i < GET_INSTALLED_MODULE.TERMINAL_LIST.length; i++) {
+        var terminal = GET_INSTALLED_MODULE.TERMINAL_LIST[i];
+        for (var j = 0; j < terminal.MODULE_LIST.length; j++) {
+          var okflag = true;
+          for (var k = 0; k < modulelist.length; k++) {
+            //既にモジュールリストにある場合
+            if (modulelist[k].MODULE_ID == terminal.MODULE_LIST[j].MODULE_ID) {
+              okflag = false;
+              break;
+            }
+          }
+          if (okflag == true) {
+            modulelist.push(terminal.MODULE_LIST[j]);
+          }
         }
-        pclist.push({ name: pcname, versions: pcversions });
       }
+
+      //PCリストの作成
+      // for (var i = 0; i < installVersionInfo.data.length; i++) {
+      //   var module = installVersionInfo.data[i];
+
+      //   var pcname = module[1];
+      //   var pcversions = [];
+      //   for (var j = 2; j < module.length; j++) {
+      //     pcversions.push(module[j]);
+      //   }
+      //   pclist.push({ name: pcname, versions: pcversions });
+      // }
+
+      pclist = GET_INSTALLED_MODULE.TERMINAL_LIST;
     } else {
       var modulesdata = await getmodules();
       //モジュールリストの作成

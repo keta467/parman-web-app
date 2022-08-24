@@ -4,16 +4,6 @@ import "./Manage_Machine_Table.css";
 export default function Manage_Machine_Table({ tableData, setIsShowModal }) {
   const [isTableData, setIsTableData] = React.useState(tableData);
 
-  // const [isTableData, setIsTableData] = React.useState(
-  //   [
-  //     {pcname:"1サブT1T2", nickname:"0", ip:"192.168.2.2"},
-  //     {pcname:"1サブT1T2", nickname:"1", ip:"192.168.2.2"},
-  //     {pcname:"1サブT1T2", nickname:"2", ip:"192.168.2.2"},
-  //     {pcname:"1サブT1T2", nickname:"3", ip:"192.168.2.2"},
-  //     {pcname:"1サブT1T2", nickname:"4", ip:"192.168.2.2"},
-  //   ]
-  // );
-
   var startindex = "";
 
   ///
@@ -111,6 +101,8 @@ export default function Manage_Machine_Table({ tableData, setIsShowModal }) {
   }
 
   const OpenModal = (index) => {
+    console.log("barfor");
+    console.log(isTableData[index]);
     var data = { isShowModal: true, machineInfo: isTableData[index] };
     setIsShowModal(data);
   };
@@ -138,9 +130,9 @@ export default function Manage_Machine_Table({ tableData, setIsShowModal }) {
             id={index}
             key={index}
           >
-            <td id={index}>{value.pcname}</td>
-            <td id={index}>{value.nickname}</td>
-            <td id={index}>{value.ip}</td>
+            <td id={index}>{value.NAME}</td>
+            <td id={index}>{value.DISPLAY_NAME}</td>
+            <td id={index}>{value.IP_ADDRESS}</td>
           </tr>
         ))}
       </tbody>

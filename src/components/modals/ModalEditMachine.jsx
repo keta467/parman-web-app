@@ -15,15 +15,24 @@ export default function ModalEditMachine({ MachineData, setIsShowModal }) {
             <div id="textarea">
               <div>
                 <p>端末名</p>
-                <input type="text" value={MachineData.machineInfo.pcname} />
+                <input
+                  type="text"
+                  defaultValue={MachineData.machineInfo.NAME}
+                />
               </div>
               <div>
                 <p>端末名称</p>
-                <input type="text" value={MachineData.machineInfo.nickname} />
+                <input
+                  type="text"
+                  defaultValue={MachineData.machineInfo.DISPLAY_NAME}
+                />
               </div>
               <div>
                 <p>IPアドレス</p>
-                <input type="text" value={MachineData.machineInfo.ip} />
+                <input
+                  type="text"
+                  defaultValue={MachineData.machineInfo.IP_ADDRESS}
+                />
               </div>
             </div>
             <div id="buttonarea">

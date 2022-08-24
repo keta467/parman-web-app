@@ -4,6 +4,9 @@ import ModalAddMachine from "../../components/modals/ModalAddMachine.jsx";
 import ModalEditMachine from "../../components/modals/ModalEditMachine.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import "./ManageMachine.css";
+import { GET_PACKAGE_TARGET_TERMINAL } from "../../DummyDatas/GET_PACKAGE_TARGET_TERMINAL.js";
+import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
+import { GET_TERMINALS } from "../../DummyDatas/GET_TERMINALS.js";
 
 export default function ManageMachine({ titletext }) {
   const [isShowModalAddMachine, setIsShowModalAddMachine] =
@@ -11,29 +14,22 @@ export default function ManageMachine({ titletext }) {
 
   const [isEditMachineForModal, setIsEditMachineForModal] = React.useState({
     isShowModal: false,
-    machineInfo: { text: "aaa" },
+    machineInfo: { text: "DDD" },
   });
+
+  const { isDebugMode } = React.useContext(DebugModeContext);
+
+  function createTableData() {
+    if (isDebugMode) {
+      return GET_TERMINALS.TERMINAL_LIST;
+    } else {
+      return [];
+    }
+  }
 
   const ClickAddButton = () => {
     setIsShowModalAddMachine(true);
   };
-
-  function createTableData() {
-    return [
-      { pcname: "inp0", nickname: "1サブT1T0", ip: "192.168.2.0" },
-      { pcname: "inp1", nickname: "1サブT1T1", ip: "192.168.2.1" },
-      { pcname: "inp2", nickname: "1サブT1T2", ip: "192.168.2.2" },
-      { pcname: "inp3", nickname: "1サブT1T3", ip: "192.168.2.3" },
-      { pcname: "inp4", nickname: "1サブT1T4", ip: "192.168.2.4" },
-      { pcname: "inp5", nickname: "1サブT1T5", ip: "192.168.2.5" },
-      { pcname: "inp6", nickname: "1サブT1T6", ip: "192.168.2.6" },
-      { pcname: "inp7", nickname: "1サブT1T7", ip: "192.168.2.7" },
-      { pcname: "inp8", nickname: "1サブT1T8", ip: "192.168.2.8" },
-      { pcname: "inp9", nickname: "1サブT1T9", ip: "192.168.2.9" },
-      { pcname: "inp10", nickname: "1サブT1T10", ip: "192.168.2.10" },
-      { pcname: "inp11", nickname: "1サブT1T11", ip: "192.168.2.11" },
-    ];
-  }
 
   return (
     <>
