@@ -3,6 +3,7 @@ import "./PackageAlert.css";
 
 export default function PackageAlert({ isShowAlert, setIsShowAlert }) {
   const CloseAlert = () => {
+    window.alert("更新パッケージ取り込み UPDATE_PACKAGE");
     setIsShowAlert(false);
   };
 

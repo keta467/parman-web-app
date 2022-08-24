@@ -58,10 +58,39 @@ export default function FileAllTable({ modulelist, pclist }) {
     <table id="filealltable">
       <thead id="module_list_header">
         <tr>
-          <th className="machinename">マシン名</th>
+          <th id="machinenameth" className="machinename">
+            <div
+              style={{ width: "200px", textAlign: "right", fontSize: "14px" }}
+            >
+              モジュール名
+            </div>
+            <div
+              style={{ width: "200px", textAlign: "left", fontSize: "14px" }}
+            >
+              マシン名
+            </div>
+          </th>
           {modulelist.map((module, index) => (
-            <th key={module.MODULE_ID} id={"th" + index}>
+            <th
+              key={module.MODULE_ID}
+              id={"th" + index}
+              onMouseOver={() => {
+                document.getElementById(module.INSTALL_PATH).style.display =
+                  "block";
+              }}
+              onMouseOut={() => {
+                document.getElementById(module.INSTALL_PATH).style.display =
+                  "none";
+              }}
+            >
               {module.MODULE_NAME}
+              <div
+                id={module.INSTALL_PATH}
+                className="description"
+                style={{ display: "none" }}
+              >
+                {module.INSTALL_PATH}
+              </div>
             </th>
           ))}
         </tr>
@@ -69,7 +98,9 @@ export default function FileAllTable({ modulelist, pclist }) {
       <tbody id="module_list_body">
         {pclist.map((pc, index) => (
           <tr key={index}>
-            <th className="machinename">{pc.TERMINAL_NAME}</th>
+            <th className="machinename">
+              <div className="machinenametext">{pc.TERMINAL_NAME}</div>
+            </th>
             {modulelist.map((module, mindex) => (
               <td
                 key={"ddd" + mindex}

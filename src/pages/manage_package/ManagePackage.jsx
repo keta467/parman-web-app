@@ -26,7 +26,7 @@ export default function ManagePackage({ titletext }) {
 
   const [folders, setFolders] = React.useState([]);
   const [isPCList, setIsPCList] = React.useState([]);
-  const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(true);
+  const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(false);
 
   function returnpackages() {
     if (isDebugMode) {
@@ -37,7 +37,6 @@ export default function ManagePackage({ titletext }) {
   }
 
   async function createtreedata() {
-    console.log(GET_MODULE_LIST_IN_PACKAGE);
     var folderlist = [];
     if (isDebugMode) {
       ///
@@ -235,9 +234,20 @@ export default function ManagePackage({ titletext }) {
     setIsPCList(pclist);
   }
 
+  function packagecheck() {
+    //一つでも更新されているファイルがあればアラートを表示
+    for (var i = 0; i < GET_MODULE_LIST_IN_PACKAGE.MODULE_LIST.length; i++) {
+      if (GET_MODULE_LIST_IN_PACKAGE.MODULE_LIST[i].DIFFERENCE == true) {
+        setIsShowPackageAlert(true);
+        break;
+      }
+    }
+  }
+
   React.useEffect(() => {
     createtreedata();
     createtabledata();
+    packagecheck();
   }, []);
 
   return (
