@@ -54,19 +54,25 @@ export default function Topbar({ titletext }) {
       </div>
 
       {isDebugMode ? (
-        <span className="redtext bold" onClick={click}>
-          {" "}
+        <span
+          className="redtext bold"
+          style={{ marginRight: "20px" }}
+          onClick={click}
+        >
           デバッグモードで稼働中
         </span>
       ) : (
-        <span className="whitetext bold" onClick={click}>
-          {" "}
+        <span
+          className="whitetext bold"
+          style={{ marginRight: "20px" }}
+          onClick={click}
+        >
           リリースモードで稼働中
         </span>
       )}
-      <div className="topbarbuttonswraper">
+      {/* <div className="topbarbuttonswraper">
         <button className="mybutton">パッケージ同期</button>
-      </div>
+      </div> */}
     </div>
   );
 }

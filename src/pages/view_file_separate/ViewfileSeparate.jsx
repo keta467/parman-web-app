@@ -183,14 +183,14 @@ export default function ViewfileSeparate({ titletext }) {
     } else {
     }
 
-    //Dのラムダ以下をセット
+    //親フォルダが０のみのフォルダをセット
+    var arrr = [];
     for (var i = 0; i < folderlist.length; i++) {
-      console.log();
-      if (folderlist[i].Path == "D:\\lambda\\") {
-        setFolders(folderlist[i].childs);
-        break;
+      if (folderlist[i].parentfolderid == 0) {
+        arrr.push(folderlist[i]);
       }
     }
+    setFolders(arrr);
   }
 
   function createtabledata(INSTALL_PATH) {

@@ -156,14 +156,14 @@ export default function ManagePackage({ titletext }) {
     } else {
     }
 
-    //Dのラムダ以下をセット
+    //親フォルダが０のみのフォルダをセット
+    var arrr = [];
     for (var i = 0; i < folderlist.length; i++) {
-      console.log();
-      if (folderlist[i].Path == "D:\\lambda\\") {
-        setFolders(folderlist[i].childs);
-        break;
+      if (folderlist[i].parentfolderid == 0) {
+        arrr.push(folderlist[i]);
       }
     }
+    setFolders(arrr);
   }
 
   async function createtabledata() {
@@ -253,6 +253,18 @@ export default function ManagePackage({ titletext }) {
   return (
     <>
       <Topbar titletext={titletext} />
+      <div
+        style={{
+          width: "96%",
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginTop: "30px",
+        }}
+      >
+        <button className="mybutton" onClick={buttonclick}>
+          パッケージ一括同期
+        </button>
+      </div>
 
       <div className="managepackagewrapper">
         <div className="managepackagelistwrapper">

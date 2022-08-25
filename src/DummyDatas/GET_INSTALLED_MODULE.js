@@ -96,6 +96,15 @@
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
           UPDATE_DATETIME: "2022/12/10 17:21",
         },
+        {
+          MODULE_ID: 11,
+          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          PRODUCT_VERSION: "",
+          FILE_VERSION: "3.0.1.9",
+          INSTALL_PATH:
+            "C:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
+          UPDATE_DATETIME: "2022/12/10 17:21",
+        },
       ],
     },
     {
