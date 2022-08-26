@@ -12,8 +12,6 @@ export default function Manage_Machine_Table({ tableData, setIsShowModal }) {
   function addMouseOverColoringEvent() {
     var materialTd = document.getElementsByClassName("dragitem");
 
-    console.log(materialTd.length);
-
     for (
       var materialNumber = 0;
       materialNumber < materialTd.length;
@@ -30,7 +28,6 @@ export default function Manage_Machine_Table({ tableData, setIsShowModal }) {
   }
 
   function mydrag(event) {
-    console.log("drag");
     startindex = event.target.id;
   }
 
@@ -61,7 +58,6 @@ export default function Manage_Machine_Table({ tableData, setIsShowModal }) {
   }
 
   function mudrop(event) {
-    console.log("drop");
     event.preventDefault();
     let elm_drag = isTableData[startindex];
 
@@ -101,8 +97,6 @@ export default function Manage_Machine_Table({ tableData, setIsShowModal }) {
   }
 
   const OpenModal = (index) => {
-    console.log("barfor");
-    console.log(isTableData[index]);
     var data = { isShowModal: true, machineInfo: isTableData[index] };
     setIsShowModal(data);
   };

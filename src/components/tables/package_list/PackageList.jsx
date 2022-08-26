@@ -12,7 +12,6 @@ export default function PackageList({ packages }) {
   ///
   function addMouseOverColoringEvent() {
     var materialTd = document.getElementsByClassName("dragitem");
-    console.log(materialTd.length);
     for (
       var materialNumber = 0;
       materialNumber < materialTd.length;
@@ -29,7 +28,6 @@ export default function PackageList({ packages }) {
   }
 
   function mydrag(event) {
-    console.log("drag");
     startindex = event.target.id;
   }
 
@@ -60,7 +58,6 @@ export default function PackageList({ packages }) {
   }
 
   function mudrop(event) {
-    console.log("drop");
     event.preventDefault();
     let elm_drag = ispackages[startindex];
 

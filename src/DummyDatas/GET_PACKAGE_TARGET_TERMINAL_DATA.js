@@ -1,4 +1,4 @@
-﻿export const GET_PACKAGE_TARGET_TERMINAL = {
+﻿export const GET_PACKAGE_TARGET_TERMINAL_DATA = {
   API_NAME: "GET_PACKAGE_TARGET_TERMINAL",
   TERMINAL_COUNT: 3,
   TERMINAL_LIST: [
@@ -15,7 +15,7 @@
       NAME: "inp3",
       DISPLAY_NAME: "1サブT1T3",
       IP_ADDRESS: "192.168.1.3",
-      RELEASE_DATE: "",
+      RELEASE_DATE: "2022/12/10 17:23",
       RELEASED: false,
     },
     {
