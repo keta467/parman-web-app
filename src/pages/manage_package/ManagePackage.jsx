@@ -15,9 +15,9 @@ import {
 
 export default function ManagePackage({ titletext }) {
   const PACKAGE_LIST = GET_PACKAGE_LIST().PACKAGE_LIST;
-  const [folders, setFolders] = React.useState([]);
+  const [isFolderList, setIsFolderList] = React.useState([]);
+  const [isTerminalList, setIsTerminalList] = React.useState([]);
   const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(false);
-  const [isPCList, setIsPCList] = React.useState([]);
 
   //
   // ツリーデータ作成
@@ -36,14 +36,19 @@ export default function ManagePackage({ titletext }) {
       setIsShowPackageAlert(true);
     }
 
-    setFolders(result[0]);
+    setIsFolderList(result[0]);
   }
 
   //
   // テーブルデータ作成
   //
   function createtabledata() {
-    var pclist = [];
+    setIsTerminalList(merge());
+  }
+
+  //データをマージする処理
+  function merge() {
+    var terminallist = [];
 
     const ALL_TERMINAL_LIST = GET_TERMINALS().TERMINAL_LIST;
     const TERGET_TERMINAL_LIST = GET_PACKAGE_TARGET_TERMINAL().TERMINAL_LIST;
@@ -63,7 +68,7 @@ export default function ManagePackage({ titletext }) {
           break;
         }
       }
-      pclist.push({
+      terminallist.push({
         ID: ALL_TERMINAL_LIST[i].ID,
         NAME: ALL_TERMINAL_LIST[i].NAME,
         DISPLAY_NAME: ALL_TERMINAL_LIST[i].DISPLAY_NAME,
@@ -73,12 +78,12 @@ export default function ManagePackage({ titletext }) {
         RELEASED: RELEASED,
       });
     }
-    setIsPCList(pclist);
+    return terminallist;
   }
 
   //フォルダを開閉させる処理
   function ToggleFolder() {
-    setFolders((prevState) =>
+    setIsFolderList((prevState) =>
       prevState.map(
         (value) => new Folder(null, null, null, null, null, null, value)
       )
@@ -95,19 +100,19 @@ export default function ManagePackage({ titletext }) {
     var element = document.getElementById("serchtext");
 
     const keyword = element.value.toUpperCase();
-    var pclist = [];
-    var data = gettabledata();
-    for (var i = 0; i < data.length; i++) {
+    var new_data = [];
+    const terminallist = merge();
+    for (var i = 0; i < terminallist.length; i++) {
       if (
-        data[i].NAME.toUpperCase().includes(keyword) ||
-        data[i].DISPLAY_NAME.toUpperCase().includes(keyword) ||
-        data[i].IP_ADDRESS.toUpperCase().includes(keyword) ||
-        data[i].RELEASE_DATE.toUpperCase().includes(keyword)
+        terminallist[i].NAME.toUpperCase().includes(keyword) ||
+        terminallist[i].DISPLAY_NAME.toUpperCase().includes(keyword) ||
+        terminallist[i].IP_ADDRESS.toUpperCase().includes(keyword) ||
+        terminallist[i].RELEASE_DATE.toUpperCase().includes(keyword)
       ) {
-        pclist.push(data[i]);
+        new_data.push(terminallist[i]);
       }
     }
-    setIsPCList(pclist);
+    setIsTerminalList(new_data);
   }
 
   React.useEffect(() => {
@@ -140,7 +145,7 @@ export default function ManagePackage({ titletext }) {
             isShowAlert={isShowPackageAlert}
             setIsShowAlert={setIsShowPackageAlert}
           />
-          <TreeView folders={folders} />
+          <TreeView folders={isFolderList} />
         </div>
         <div className="managepackagesearchview">
           <div id="searchareawrapper">
@@ -150,7 +155,7 @@ export default function ManagePackage({ titletext }) {
             </button>
           </div>
           <div className="managepackagesearchviewtablewrapper">
-            <ManagePackageTable pclist={isPCList} />
+            <ManagePackageTable pclist={isTerminalList} />
           </div>
         </div>
       </div>

@@ -1,11 +1,8 @@
 import React from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
-import { DebugModeContext } from "../providers/DebugModeProvider.jsx";
 
 export default function Topbar({ titletext }) {
-  const { isDebugMode, setIsDebugMode } = React.useContext(DebugModeContext);
-
   function click() {
     setIsDebugMode(!isDebugMode);
   }
@@ -52,27 +49,6 @@ export default function Topbar({ titletext }) {
           )}
         </Link>
       </div>
-
-      {isDebugMode ? (
-        <span
-          className="redtext bold"
-          style={{ marginRight: "20px" }}
-          onClick={click}
-        >
-          デバッグモードで稼働中
-        </span>
-      ) : (
-        <span
-          className="whitetext bold"
-          style={{ marginRight: "20px" }}
-          onClick={click}
-        >
-          リリースモードで稼働中
-        </span>
-      )}
-      {/* <div className="topbarbuttonswraper">
-        <button className="mybutton">パッケージ同期</button>
-      </div> */}
     </div>
   );
 }
