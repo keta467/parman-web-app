@@ -4,30 +4,20 @@ import ModalAddMachine from "../../components/modals/ModalAddMachine.jsx";
 import ModalEditMachine from "../../components/modals/ModalEditMachine.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import "./ManageMachine.css";
-import { GET_PACKAGE_TARGET_TERMINAL } from "../../DummyDatas/GET_PACKAGE_TARGET_TERMINAL.js";
-import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
-import { GET_TERMINALS } from "../../DummyDatas/GET_TERMINALS.js";
+import { GET_TERMINALS } from "../../api.js";
 
 export default function ManageMachine({ titletext }) {
+  const TERMINAL_LIST = GET_TERMINALS().TERMINAL_LIST;
+
   const [isShowModalAddMachine, setIsShowModalAddMachine] =
     React.useState(false);
 
   const [isEditMachineForModal, setIsEditMachineForModal] = React.useState({
     isShowModal: false,
-    machineInfo: { text: "DDD" },
+    machineInfo: { text: "inidata" },
   });
 
-  const { isDebugMode } = React.useContext(DebugModeContext);
-
-  function createTableData() {
-    if (isDebugMode) {
-      return GET_TERMINALS.TERMINAL_LIST;
-    } else {
-      return [];
-    }
-  }
-
-  const ClickAddButton = () => {
+  const ClickAdd = () => {
     setIsShowModalAddMachine(true);
   };
 
@@ -43,13 +33,13 @@ export default function ManageMachine({ titletext }) {
         setIsShowModal={setIsEditMachineForModal}
       />
       <div className="managemachinebuttonwrapper">
-        <button className="mybutton" onClick={ClickAddButton}>
+        <button className="mybutton" onClick={ClickAdd}>
           追加
         </button>
       </div>
       <div className="managemachinetablewrapper">
         <Manage_Machine_Table
-          tableData={createTableData()}
+          tableData={TERMINAL_LIST}
           setIsShowModal={setIsEditMachineForModal}
         />
       </div>

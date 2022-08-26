@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./FileAllTable.css";
 
-export default function FileAllTable({ modulelist, pclist }) {
+export default function FileAllTable({ ModuleList, TERMINAL_LIST }) {
   ///
   /// マウスオーバーイベントを追加する
   ///
@@ -70,7 +70,7 @@ export default function FileAllTable({ modulelist, pclist }) {
               マシン名
             </div>
           </th>
-          {modulelist.map((module, index) => (
+          {ModuleList.map((module, index) => (
             <th
               key={module.MODULE_ID}
               id={"th" + index}
@@ -96,23 +96,23 @@ export default function FileAllTable({ modulelist, pclist }) {
         </tr>
       </thead>
       <tbody id="module_list_body">
-        {pclist.map((pc, index) => (
+        {TERMINAL_LIST.map((terminal, index) => (
           <tr key={index}>
             <th className="machinename">
-              <div className="machinenametext">{pc.TERMINAL_NAME}</div>
+              <div className="machinenametext">{terminal.TERMINAL_NAME}</div>
             </th>
-            {modulelist.map((module, mindex) => (
+            {ModuleList.map((module, index2) => (
               <td
-                key={"ddd" + mindex}
+                key={"ddd" + index2}
                 className={
-                  "mouseeventtarget" + " row" + mindex + " col" + mindex
+                  "mouseeventtarget" + " row" + index2 + " col" + index2
                 }
               >
-                {pc.MODULE_LIST.find(
+                {terminal.MODULE_LIST.find(
                   (MODULE) => MODULE.MODULE_ID == module.MODULE_ID
                 ) == undefined
                   ? ""
-                  : pc.MODULE_LIST.find(
+                  : terminal.MODULE_LIST.find(
                       (MODULE) => MODULE.MODULE_ID == module.MODULE_ID
                     ).FILE_VERSION}
               </td>

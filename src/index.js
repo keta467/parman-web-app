@@ -1,14 +1,11 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
-import App from "./App"
-import { DebugModeProvider } from "./components/providers/DebugModeProvider.jsx";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <DebugModeProvider>
-      <App />
-    </DebugModeProvider>
+    <App />
   </React.StrictMode>
 );

@@ -20,7 +20,7 @@ export default function PackageAlert({ isShowAlert, setIsShowAlert }) {
               className="mybutton"
               onClick={CloseAlert}
             >
-              取り込み
+              このパッケージを同期
             </button>
           </div>
         </>

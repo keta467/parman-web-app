@@ -1,0 +1,4 @@
+﻿export const SET_PACKAGE_ORDER_DATA = {
+  API_NAME: "SET_PACKAGE_ORDER",
+  RESULT: 0,
+};
