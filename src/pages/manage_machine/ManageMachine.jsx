@@ -4,7 +4,6 @@ import ModalAddMachine from "../../components/modals/ModalAddMachine.jsx";
 import ModalEditMachine from "../../components/modals/ModalEditMachine.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import "./ManageMachine.css";
-import { GET_PACKAGE_TARGET_TERMINAL } from "../../DummyDatas/GET_PACKAGE_TARGET_TERMINAL.js";
 import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
 import { GET_TERMINALS } from "../../DummyDatas/GET_TERMINALS.js";
 

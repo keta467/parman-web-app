@@ -4,7 +4,6 @@ import Topbar from "../../components/topbar/Topbar.jsx";
 import "./ViewfileSeparate.css";
 import { Folder, File } from "../../myclass.js";
 import TreeView from "../../components/treeview/TreeView.jsx";
-import { installModulesInfo, TreeData2, FileList } from "../../dummyData.js";
 import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
 import ModalEditPath from "../../components/modals/modaleditpath/ModalEditPath.jsx";
 import { GET_INSTALLED_MODULE } from "../../DummyDatas/GET_INSTALLED_MODULE.js";

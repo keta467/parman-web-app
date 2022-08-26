@@ -3,7 +3,6 @@ import React from "react";
 import FileAllTable from "../../components/tables/file_all_table/FileAllTable.jsx";
 import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
-import { installModulesInfo, installVersionInfo } from "../../dummyData.js";
 import "./ViewFileAll.css";
 import { GET_INSTALLED_MODULE } from "../../DummyDatas/GET_INSTALLED_MODULE.js";
 

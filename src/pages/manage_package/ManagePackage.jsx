@@ -4,14 +4,13 @@ import TreeView from "../../components/treeview/TreeView.jsx";
 import "./ManagePackage.css";
 import { Folder, File } from "../../myclass.js";
 import ManagePackageTable from "../../components/tables/manage_package_table/ManagePackageTable.jsx";
-import { ReleasedList } from "../../dummyData.js";
 import { DebugModeContext } from "../../components/providers/DebugModeProvider.jsx";
 import PackageList from "../../components/tables/package_list/PackageList.jsx";
 import PackageAlert from "../../components/alert/package_alert/PackageAlert.jsx";
-import { GET_PACKAGE_LIST } from "../../DummyDatas/GET_PACKAGE_LIST.js";
 import { GET_MODULE_LIST_IN_PACKAGE } from "../../DummyDatas/GET_MODULE_LIST_IN_PACKAGE.js";
 import { GET_PACKAGE_TARGET_TERMINAL } from "../../DummyDatas/GET_PACKAGE_TARGET_TERMINAL.js";
 import { GET_TERMINALS } from "../../DummyDatas/GET_TERMINALS.js";
+import { GET_PACKAGE_LIST } from "../../api.js";
 
 export default function ManagePackage({ titletext }) {
   const { isDebugMode } = React.useContext(DebugModeContext);
@@ -27,14 +26,6 @@ export default function ManagePackage({ titletext }) {
   const [folders, setFolders] = React.useState([]);
   const [isPCList, setIsPCList] = React.useState([]);
   const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(false);
-
-  function returnpackages() {
-    if (isDebugMode) {
-      return GET_PACKAGE_LIST.PACKAGE_LIST;
-    } else {
-      return [];
-    }
-  }
 
   async function createtreedata() {
     var folderlist = [];
@@ -268,7 +259,7 @@ export default function ManagePackage({ titletext }) {
 
       <div className="managepackagewrapper">
         <div className="managepackagelistwrapper">
-          <PackageList packages={returnpackages()} />
+          <PackageList packages={GET_PACKAGE_LIST()} />
         </div>
         <div className="managepackagetreeview">
           <PackageAlert
