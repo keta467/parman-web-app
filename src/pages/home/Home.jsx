@@ -1,10 +1,10 @@
 import React from "react";
 import Topbar from "../../components/topbar/Topbar.jsx";
 
-export default function Home({ titletext }) {
+export default function Home({ TitleText }) {
   return (
     <>
-      <Topbar titletext={titletext} />
+      <Topbar TitleText={TitleText} />
     </>
   );
 }
