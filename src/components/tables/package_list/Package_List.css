@@ -1,0 +1,18 @@
+.managepackagetable {
+  white-space: nowrap;
+}
+
+.managepackagetabletbody td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.managepackagetable tr:hover {
+  font-weight: bold;
+}
+
+.selectpackage {
+  background-color: #f06060 !important;
+  color: white !important;
+  font-weight: bold !important;
+}

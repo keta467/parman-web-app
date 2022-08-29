@@ -1,0 +1,63 @@
+#modaleditpathmodal {
+  height: 410px;
+  margin-top: 15.5vh;
+  padding-top: 25px;
+}
+
+.df {
+  display: flex;
+}
+
+.pathdeletebutton1 {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 8px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.pathaddbutton1 {
+  background-color: rgb(59, 62, 236);
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 8px;
+  height: 30px;
+  margin-top: 5px;
+}
+
+#pathmodalbuttonsarea {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: end;
+  color: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+#modaleditpathbuttonarea1 {
+  flex: 0.6;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: end;
+}
+
+#modaleditpathbuttonareatextarea {
+  overflow: auto;
+  flex: 5;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#modaleditpathbuttonareatextarea input[type="text"] {
+  flex: 1;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}

@@ -1,0 +1,48 @@
+.managepackagewrapper {
+  display: flex;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 96%;
+  height: 80vh;
+
+  border: 1px solid #999;
+}
+
+.managepackagelistwrapper {
+  flex: 3;
+  border-right: 1px solid #999;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.managepackagetreeview {
+  flex: 4;
+  border-right: 1px solid #999;
+  overflow: auto;
+}
+.managepackagesearchview {
+  flex: 6;
+  border-right: 1px solid #999;
+}
+
+#searchareawrapper {
+  width: 90%;
+  height: auto;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.managepackagesearchviewtablewrapper {
+  overflow: auto;
+  width: 90%;
+  height: 65vh;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#searchareawrapper input[type="text"] {
+  margin-right: 10px;
+}
