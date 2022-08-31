@@ -155,9 +155,9 @@ export default function Manage_Package({ TitleText }) {
       isHandler1Dragging = false;
       isHandler2Dragging = false;
     });
-    boxA.style.width = "30%";
-    boxB.style.width = "40%";
-    boxC.style.width = "30%";
+    boxA.style.width = "25%";
+    boxB.style.width = "30%";
+    boxC.style.width = "45%";
   }
 
   React.useEffect(() => {
