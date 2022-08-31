@@ -103,7 +103,7 @@ export default function View_file_Separate({ TitleText }) {
     });
 
     document.addEventListener("mousemove", function (e) {
-      if (isHandler1Dragging) {
+      if (isHandler1Dragging && e.target === handler1) {
         boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
         boxB.style.width = boxB.clientWidth + 8 + "px";
       }
