@@ -103,7 +103,7 @@ export default function View_file_Separate({ TitleText }) {
     });
 
     document.addEventListener("mousemove", function (e) {
-      if (isHandler1Dragging && e.target === handler1) {
+      if (isHandler1Dragging) {
         boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
         boxB.style.width = boxB.clientWidth + 8 + "px";
       }
@@ -114,8 +114,8 @@ export default function View_file_Separate({ TitleText }) {
     });
 
     //初期サイズ
-    boxA.style.width = "40%";
-    boxB.style.width = "60%";
+    boxA.style.width = "50%";
+    boxB.style.width = "50%";
   }
 
   React.useEffect(() => {
