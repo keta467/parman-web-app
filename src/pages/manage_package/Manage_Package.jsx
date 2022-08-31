@@ -115,9 +115,55 @@ export default function Manage_Package({ TitleText }) {
     setIsTerminalList(new_data);
   }
 
+  var isHandler1Dragging = false;
+  var isHandler2Dragging = false;
+  ///
+  /// マウスオーバーイベントを追加する
+  ///
+  function addMouseOverColoringEvent() {
+    var handler1 = document.getElementById("managepackagehandler1");
+    var handler2 = document.getElementById("managepackagehandler2");
+    var wrapper = document.getElementById("managepackagewrapper");
+    var boxA = document.getElementById("managepackagebox1");
+    var boxB = document.getElementById("managepackagebox2");
+    var boxC = document.getElementById("managepackagebox3");
+    document.addEventListener("mousedown", function (e) {
+      if (e.target === handler1) {
+        isHandler1Dragging = true;
+      }
+      if (e.target === handler2) {
+        isHandler2Dragging = true;
+      }
+    });
+
+    document.addEventListener("mousemove", function (e) {
+      if (isHandler1Dragging) {
+        boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
+        boxB.style.width = boxB.clientWidth + 8 + "px";
+        boxC.style.width = boxC.clientWidth - 8 + "px";
+      }
+
+      if (isHandler2Dragging) {
+        boxA.style.width = boxA.clientWidth + "px";
+        boxB.style.width = boxB.clientWidth + "px";
+        boxC.style.width =
+          window.innerWidth - e.clientX - wrapper.offsetLeft - 23 + "px";
+      }
+    });
+
+    document.addEventListener("mouseup", function (e) {
+      isHandler1Dragging = false;
+      isHandler2Dragging = false;
+    });
+    boxA.style.width = "30%";
+    boxB.style.width = "40%";
+    boxC.style.width = "30%";
+  }
+
   React.useEffect(() => {
     createtreedata();
     createtabledata();
+    addMouseOverColoringEvent();
   }, []);
 
   return (
@@ -136,25 +182,31 @@ export default function Manage_Package({ TitleText }) {
         </button>
       </div>
 
-      <div className="managepackagewrapper">
-        <div className="managepackagelistwrapper">
+      <div id="managepackagewrapper">
+        <div id="managepackagebox1">
           <Package_List PackageList={PackageList} />
         </div>
-        <div className="managepackagetreeview">
+        <div className="handler" id="managepackagehandler1"></div>
+        <div id="managepackagebox2">
           <Package_Alert
             isShowAlert={isShowPackageAlert}
             setIsShowAlert={setIsShowPackageAlert}
           />
           <Tree_View FolderList={isFolderList} />
         </div>
-        <div className="managepackagesearchview">
+        <div className="handler" id="managepackagehandler2"></div>
+        <div id="managepackagebox3">
           <div id="searchareawrapper">
             <input type="text" name="" id="serchtext" />
-            <button className="mybutton" onClick={searchclick}>
+            <button
+              className="mybutton"
+              onClick={searchclick}
+              style={{ userSelect: "none" }}
+            >
               検索
             </button>
           </div>
-          <div className="managepackagesearchviewtablewrapper">
+          <div id="managepackagesearchviewtablewrapper">
             <Manage_Package_Table TerminalList={isTerminalList} />
           </div>
         </div>

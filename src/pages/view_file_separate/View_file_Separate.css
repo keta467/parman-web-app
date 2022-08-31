@@ -1,4 +1,4 @@
-.viewfileseparatewrapper {
+#viewfileseparatewrapper {
   width: 90%;
   height: 80vh;
   margin-top: 40px;
@@ -8,14 +8,16 @@
   border: 1px solid #999;
 }
 
-.ViewfileSeparatetreeviewwrapper {
-  flex: 4;
-  border-right: 1px solid #999;
+#viewfileseparatebox1 {
+  flex: auto;
   overflow: auto;
+  min-width: 10%;
 }
 
-.viewfileseparatetableviewwrapper {
-  flex: 8;
+#viewfileseparatebox2 {
+  flex: auto;
+  overflow: auto;
+  min-width: 10%;
 }
 
 .fileseparatetablewrap {
@@ -27,12 +29,6 @@
   margin-right: auto;
 }
 
-#fileseparatetablewrapbutton {
-  text-align: right;
-  margin-bottom: 10px;
-  white-space: nowrap;
-}
-
 #shuushuusakibutton {
   width: 80%;
   margin-left: auto;
@@ -40,4 +36,5 @@
   text-align: right;
   margin-top: 30px;
   margin-bottom: 10px;
+  user-select: none;
 }

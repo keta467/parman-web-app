@@ -87,9 +87,44 @@ export default function View_file_Separate({ TitleText }) {
     SetFilePath(isFilePath);
   }, [isFolderList]);
 
+  var isHandler1Dragging = false;
+  ///
+  /// マウスオーバーイベントを追加する
+  ///
+  function addMouseOverColoringEvent() {
+    var handler1 = document.getElementById("viewfileseparatehandler1");
+    var wrapper = document.getElementById("viewfileseparatewrapper");
+    var boxA = document.getElementById("viewfileseparatebox1");
+    var boxB = document.getElementById("viewfileseparatebox2");
+    document.addEventListener("mousedown", function (e) {
+      if (e.target === handler1) {
+        isHandler1Dragging = true;
+      }
+    });
+
+    document.addEventListener("mousemove", function (e) {
+      if (isHandler1Dragging) {
+        boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
+        boxB.style.width = boxB.clientWidth + 8 + "px";
+      }
+    });
+
+    document.addEventListener("mouseup", function (e) {
+      isHandler1Dragging = false;
+    });
+
+    //初期サイズ
+    boxA.style.width = "40%";
+    boxB.style.width = "60%";
+  }
+
   React.useEffect(() => {
     createtabledata(isFilePath);
   }, [isFilePath]);
+
+  React.useEffect(() => {
+    addMouseOverColoringEvent();
+  }, []);
 
   return (
     <>
@@ -98,18 +133,18 @@ export default function View_file_Separate({ TitleText }) {
         isShowModal={isShowModalEditPath}
         setIsShowModal={setIsShowModalEditPath}
       />
-      <div className="viewfileseparatewrapper">
-        <div className="ViewfileSeparatetreeviewwrapper">
+      <div id="viewfileseparatewrapper">
+        <div id="viewfileseparatebox1">
           <Tree_View FolderList={isFolderList} />
         </div>
-        <div className="viewfileseparatetableviewwrapper">
+        <div className="handler" id="viewfileseparatehandler1"></div>
+        <div id="viewfileseparatebox2">
           <div id="shuushuusakibutton">
             <button className="mybutton" onClick={ClickEditPath}>
               収集先編集
             </button>
           </div>
           <div className="fileseparatetablewrap">
-            <div id="fileseparatetablewrapbutton"></div>
             <File_Separate_Table TerminalList={isTerminalList} />
           </div>
         </div>
