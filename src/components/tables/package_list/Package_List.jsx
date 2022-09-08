@@ -2,12 +2,12 @@ import React from "react";
 import { GET_PACKAGE_LIST } from "../../../api";
 import "./Package_List.css";
 
-export default React.memo(function Package_List() {
+export default React.memo(function Package_List({
+  isSelectPackageId,
+  setIsSelectPackageId,
+}) {
   //パッケージのリスト
   const [isPackageList, setIsPackageList] = React.useState([]);
-
-  //選択中のパッケージ
-  const [isSelectPackage, setIsSelectPackage] = React.useState("");
 
   var startindex = "";
 
@@ -86,8 +86,8 @@ export default React.memo(function Package_List() {
   }
 
   //行クリック
-  function ClickRow(name) {
-    setIsSelectPackage(name);
+  function ClickRow(PackageID) {
+    setIsSelectPackageId(PackageID);
   }
 
   React.useEffect(() => {
@@ -97,34 +97,34 @@ export default React.memo(function Package_List() {
   return (
     <table className="managepackagetable colortable">
       <tbody className="managepackagetabletbody">
-        {isPackageList.map((value, index) =>
-          value.NAME == isSelectPackage ? (
+        {isPackageList.map((Package, index) =>
+          Package.ID == isSelectPackageId ? (
             <tr
-              onClick={() => ClickRow(value.NAME)}
+              onClick={() => ClickRow(Package.ID)}
               draggable="true"
               className="dragitem selectpackage"
               id={index}
-              key={value.ID}
+              key={Package.ID}
               onDrag={mydrag}
               onDragOver={mydragover}
               onDragLeave={mydragleave}
               onDrop={mydrop}
             >
-              <td id={index}>{value.NAME}</td>
+              <td id={index}>{Package.NAME}</td>
             </tr>
           ) : (
             <tr
-              onClick={() => ClickRow(value.NAME)}
+              onClick={() => ClickRow(Package.ID)}
               draggable="true"
               className="dragitem"
               id={index}
-              key={value.ID}
+              key={Package.ID}
               onDrag={mydrag}
               onDragOver={mydragover}
               onDragLeave={mydragleave}
               onDrop={mydrop}
             >
-              <td id={index}>{value.NAME}</td>
+              <td id={index}>{Package.NAME}</td>
             </tr>
           )
         )}

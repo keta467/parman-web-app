@@ -22,12 +22,11 @@ axios.defaults.baseURL = `http://${SERVER_IP}:${SERVER_PORT}/manage`;
 // });
 
 //
-//1.パッケージ一覧取得
+//1.パッケージ一覧取得〇
 //
 export function GET_PACKAGE_LIST() {
-  const Name = GET_PACKAGE_LIST.name;
   const Data = {};
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------1.パッケージ一覧取得-------------------`);
   console.log(Data);
   if (mode) {
     return GET_PACKAGE_LIST_DATA;
@@ -39,10 +38,13 @@ export function GET_PACKAGE_LIST() {
 //
 //3.パッケージ内モジュール一覧
 //
-export function GET_MODULE_LIST_IN_PACKAGE() {
-  const Name = GET_MODULE_LIST_IN_PACKAGE.name;
-  const Data = {};
-  console.log(`-----------------${Name}-------------------`);
+export function GET_MODULE_LIST_IN_PACKAGE(PACKAGE_ID) {
+  const Data = {
+    PACKAGE_ID: PACKAGE_ID,
+  };
+  console.log(
+    `-----------------3.パッケージ内モジュール一覧-------------------`
+  );
   console.log(Data);
   if (mode) {
     return GET_MODULE_LIST_IN_PACKAGE_DATA;
@@ -55,11 +57,10 @@ export function GET_MODULE_LIST_IN_PACKAGE() {
 //4.更新パッケージ取り込み
 //
 export async function UPDATE_PACKAGE(PACKAGE_ID) {
-  const Name = UPDATE_PACKAGE.name;
   const Data = {
     PACKAGE_ID: PACKAGE_ID,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------4.更新パッケージ取り込み-------------------`);
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };
@@ -74,12 +75,13 @@ export async function SET_PACKAGE_RELEASE_TERMINAL(
   PACKAGE_ID,
   RELEASE_TERMINALS
 ) {
-  const Name = SET_PACKAGE_RELEASE_TERMINAL.name;
   const Data = {
     PACKAGE_ID: PACKAGE_ID,
     RELEASE_TERMINAL: RELEASE_TERMINALS,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(
+    `-----------------5.パッケージリリース端末変更-------------------`
+  );
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };
@@ -90,10 +92,13 @@ export async function SET_PACKAGE_RELEASE_TERMINAL(
 //
 //6.パッケージ対応管理端末一覧
 //
-export function GET_PACKAGE_TARGET_TERMINAL() {
-  const Name = GET_PACKAGE_TARGET_TERMINAL.name;
-  const Data = {};
-  console.log(`-----------------${Name}-------------------`);
+export function GET_PACKAGE_TARGET_TERMINAL(PACKAGE_ID) {
+  const Data = {
+    PACKAGE_ID: PACKAGE_ID,
+  };
+  console.log(
+    `-----------------6.パッケージ対応管理端末一覧-------------------`
+  );
   console.log(Data);
   if (mode) {
     return GET_PACKAGE_TARGET_TERMINAL_DATA;
@@ -106,9 +111,8 @@ export function GET_PACKAGE_TARGET_TERMINAL() {
 //7.管理端末一覧
 //
 export function GET_TERMINALS() {
-  const Name = GET_TERMINALS.name;
   const Data = {};
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------7.管理端末一覧-------------------`);
   console.log(Data);
   if (mode) {
     return GET_TERMINALS_DATA;
@@ -121,12 +125,11 @@ export function GET_TERMINALS() {
 //8.端末順変更
 //
 export async function SET_TERMINAL_ORDER(TERMINAL_COUNT, TERMINAL_ORDER) {
-  const Name = SET_TERMINAL_ORDER.name;
   const Data = {
     TERMINAL_COUNT: TERMINAL_COUNT,
     TERMINAL_ORDER: TERMINAL_ORDER,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------8.端末順変更-------------------`);
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };
@@ -138,12 +141,11 @@ export async function SET_TERMINAL_ORDER(TERMINAL_COUNT, TERMINAL_ORDER) {
 //9.パッケージ順変更
 //
 export async function SET_PACKAGE_ORDER(PACKAGE_COUNT, PACKAGE_LIST) {
-  const Name = SET_PACKAGE_ORDER.name;
   const Data = {
     PACKAGE_COUNT: PACKAGE_COUNT,
     PACKAGE_LIST: PACKAGE_LIST,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------9.パッケージ順変更------------------`);
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };
@@ -155,13 +157,12 @@ export async function SET_PACKAGE_ORDER(PACKAGE_COUNT, PACKAGE_LIST) {
 //10.端末登録
 //
 export async function REGISTER_TERMINAL(NAME, DISPLAY_NAME, IP_ADDRESS) {
-  const Name = REGISTER_TERMINAL.name;
   const Data = {
     NAME: NAME,
     DISPLAY_NAME: DISPLAY_NAME,
     IP_ADDRESS: IP_ADDRESS,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------10.端末登録-------------------`);
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };
@@ -173,11 +174,10 @@ export async function REGISTER_TERMINAL(NAME, DISPLAY_NAME, IP_ADDRESS) {
 //11.端末削除
 //
 export async function REMOVE_TERMINAL(TERMINAL_ID) {
-  const Name = REMOVE_TERMINAL.name;
   const Data = {
     TERMINAL_ID: TERMINAL_ID,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------11.端末削除-------------------`);
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };
@@ -194,14 +194,13 @@ export async function UPDATE_TERMINAL(
   DISPLAY_NAME,
   IP_ADDRESS
 ) {
-  const Name = UPDATE_TERMINAL.name;
   const Data = {
     TERMINAL_ID: TERMINAL_ID,
     NAME: NAME,
     DISPLAY_NAME: DISPLAY_NAME,
     IP_ADDRESS: IP_ADDRESS,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------12.端末更新-------------------`);
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };
@@ -213,9 +212,8 @@ export async function UPDATE_TERMINAL(
 //14.端末モジュール一覧取得
 //
 export function GET_INSTALLED_MODULE() {
-  const Name = GET_INSTALLED_MODULE.name;
   const Data = {};
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------14.端末モジュール一覧取得-------------------`);
   console.log(Data);
   if (mode) {
     return GET_INSTALLED_MODULE_DATA;
@@ -228,11 +226,12 @@ export function GET_INSTALLED_MODULE() {
 //15.端末モジュールバージョン更新
 //
 export async function UPDATE_TERMINAL_MODULE_VERSION(TERMINAL_ID) {
-  const Name = UPDATE_TERMINAL_MODULE_VERSION.name;
   const Data = {
     TERMINAL_ID: TERMINAL_ID,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(
+    `-----------------15.端末モジュールバージョン更新-------------------`
+  );
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };
@@ -244,9 +243,8 @@ export async function UPDATE_TERMINAL_MODULE_VERSION(TERMINAL_ID) {
 //16.ファイル所有端末取得
 //
 export function GET_MODULE_INSTALLED_TERMINAL(INSTALL_PATH) {
-  const Name = GET_MODULE_INSTALLED_TERMINAL.name;
-  const Data = {};
-  console.log(`-----------------${Name}-------------------`);
+  const Data = { INSTALL_PATH: INSTALL_PATH };
+  console.log(`-----------------16.ファイル所有端末取得-------------------`);
   console.log(Data);
   if (mode) {
     return GET_MODULE_INSTALLED_TERMINAL_DATA;
@@ -256,12 +254,11 @@ export function GET_MODULE_INSTALLED_TERMINAL(INSTALL_PATH) {
 }
 
 //
-//17.収集パスの取得
+//17.収集パスの取得〇
 //
 export function GET_COLLECT_PATH() {
-  const Name = GET_COLLECT_PATH.name;
   const Data = {};
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------17.収集パスの取得-------------------`);
   console.log(Data);
   if (mode) {
     return GET_COLLECT_PATH_DATA;
@@ -273,12 +270,11 @@ export function GET_COLLECT_PATH() {
 //18.収集パスの設定
 //
 export async function SET_COLLECT_PATH(COLLECT_PATHS) {
-  const Name = SET_COLLECT_PATH.name;
   const Data = {
     COLLECT_PATH_COUNT: COLLECT_PATHS.length,
     COLLECT_PATH: COLLECT_PATHS,
   };
-  console.log(`-----------------${Name}-------------------`);
+  console.log(`-----------------18.収集パスの設定-------------------`);
   console.log(Data);
   if (mode) {
     return { API_NAME: Name, RESULT: 0 };

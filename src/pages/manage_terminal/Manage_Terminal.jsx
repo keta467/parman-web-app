@@ -7,8 +7,6 @@ import "./Manage_Terminal.css";
 import { GET_TERMINALS } from "../../api.js";
 
 export default React.memo(function Manage_Terminal({ TitleText }) {
-  const TerminalList = GET_TERMINALS().TERMINAL_LIST;
-
   //追加モーダル
   const [isShowModalAddTerminal, setIsShowModalAddTerminal] =
     React.useState(false);
@@ -44,7 +42,6 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
       </div>
       <div className="managemachinetablewrapper">
         <Manage_Terminal_Table
-          TerminalList={TerminalList}
           setIsShowModalEditTerminal={setIsShowModalEditTerminal}
           setIsSelectTerminal={setIsSelectTerminal}
         />

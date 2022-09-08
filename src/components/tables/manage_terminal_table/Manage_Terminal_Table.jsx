@@ -1,35 +1,14 @@
 import React from "react";
+import { GET_TERMINALS } from "../../../api";
 import "./Manage_Terminal_Table.css";
 
 export default function Manage_Terminal_Table({
-  TerminalList,
   setIsShowModalEditTerminal,
   setIsSelectTerminal,
 }) {
-  const [isTerminalList, setIsTerminalList] = React.useState(TerminalList);
+  const [isTerminalList, setIsTerminalList] = React.useState([]);
 
   var startindex = "";
-
-  ///
-  /// マウスオーバーイベントを追加する
-  ///
-  function addMouseOverColoringEvent() {
-    var materialTd = document.getElementsByClassName("dragitem");
-
-    for (
-      var materialNumber = 0;
-      materialNumber < materialTd.length;
-      materialNumber++
-    ) {
-      materialTd[materialNumber].addEventListener("drag", mydrag);
-
-      materialTd[materialNumber].addEventListener("dragover", mydragover);
-
-      materialTd[materialNumber].addEventListener("dragleave", mydragleave);
-
-      materialTd[materialNumber].addEventListener("drop", mudrop);
-    }
-  }
 
   function mydrag(event) {
     startindex = event.target.id;
@@ -38,37 +17,40 @@ export default function Manage_Terminal_Table({
   function mydragover(event) {
     event.preventDefault();
 
-    let rect = this.getBoundingClientRect();
-    if (event.clientY - rect.top < this.clientHeight / 2) {
+    const element = document.getElementById(event.target.id);
+    let rect = element.getBoundingClientRect();
+    if (event.clientY - rect.top < element.clientHeight / 2) {
       //マウスカーソルの位置が要素の半分より上
-      for (var i = 0; i < this.children.length; i++) {
-        this.children[i].style.borderTop = "2px solid blue";
-        this.children[i].style.borderBottom = "1px solid #999";
+      for (var i = 0; i < element.children.length; i++) {
+        element.children[i].style.borderTop = "2px solid blue";
+        element.children[i].style.borderBottom = "1px solid #999";
       }
     } else {
       //マウスカーソルの位置が要素の半分より下
-      for (var i = 0; i < this.children.length; i++) {
-        this.children[i].style.borderTop = "1px solid #999";
-        this.children[i].style.borderBottom = "2px solid blue";
+      for (var i = 0; i < element.children.length; i++) {
+        element.children[i].style.borderTop = "1px solid #999";
+        element.children[i].style.borderBottom = "2px solid blue";
       }
     }
   }
 
   function mydragleave(event) {
-    for (var i = 0; i < this.children.length; i++) {
-      this.children[i].style.borderTop = "1px solid #999";
-      this.children[i].style.borderBottom = "1px solid #999";
+    const element = document.getElementById(event.target.id);
+    for (var i = 0; i < element.children.length; i++) {
+      element.children[i].style.borderTop = "1px solid #999";
+      element.children[i].style.borderBottom = "1px solid #999";
     }
   }
 
-  function mudrop(event) {
+  function mydrop(event) {
     event.preventDefault();
     let elm_drag = isTerminalList[startindex];
 
     var toindex = event.target.id;
 
-    let rect = this.getBoundingClientRect();
-    if (event.clientY - rect.top < this.clientHeight / 2) {
+    const element = document.getElementById(event.target.id);
+    let rect = element.getBoundingClientRect();
+    if (event.clientY - rect.top < element.clientHeight / 2) {
       //マウスカーソルの位置が要素の半分より上
       isTerminalList.splice(startindex, 1);
 
@@ -94,9 +76,9 @@ export default function Manage_Terminal_Table({
     }
     setIsTerminalList(newarr);
 
-    for (var i = 0; i < this.children.length; i++) {
-      this.children[i].style.borderTop = "1px solid #999";
-      this.children[i].style.borderBottom = "1px solid #999";
+    for (var i = 0; i < element.children.length; i++) {
+      element.children[i].style.borderTop = "1px solid #999";
+      element.children[i].style.borderBottom = "1px solid #999";
     }
   }
 
@@ -107,7 +89,7 @@ export default function Manage_Terminal_Table({
 
   //初回レンダリング後
   React.useEffect(() => {
-    addMouseOverColoringEvent();
+    setIsTerminalList(GET_TERMINALS().TERMINAL_LIST);
   }, []);
 
   return (
@@ -127,6 +109,10 @@ export default function Manage_Terminal_Table({
             className="dragitem"
             id={index}
             key={Terminal.ID}
+            onDrag={mydrag}
+            onDragOver={mydragover}
+            onDragLeave={mydragleave}
+            onDrop={mydrop}
           >
             <td id={index}>{Terminal.NAME}</td>
             <td id={index}>{Terminal.DISPLAY_NAME}</td>

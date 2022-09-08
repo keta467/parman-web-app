@@ -6,6 +6,7 @@ import { Folder, ModulesToFoders } from "../../myclass.js";
 import Tree_View from "../../components/tree_view/Tree_View.jsx";
 import Modal_Edit_Path from "../../components/modals/modal_edit_path/Modal_Edit_Path.jsx";
 import {
+  GET_INSTALLED_MODULE,
   GET_MODULE_INSTALLED_TERMINAL,
   GET_MODULE_LIST_IN_PACKAGE,
 } from "../../api.js";
@@ -13,7 +14,7 @@ import {
 export default function View_file_Separate({ TitleText }) {
   const [isFolderList, setIsFolderList] = React.useState([]);
 
-  const [isFilePath, setIsFilePath] = React.useState("");
+  const [isInstallPath, setIsInstallPath] = React.useState("");
 
   const [isTerminalList, setIsTerminalList] = React.useState([]);
 
@@ -23,10 +24,29 @@ export default function View_file_Separate({ TitleText }) {
   // ツリーデータ作成
   //
   function createtreedata() {
-    const MODULE_LIST = GET_MODULE_LIST_IN_PACKAGE().MODULE_LIST;
+    const TERMINAL_LIST = GET_INSTALLED_MODULE().TERMINAL_LIST;
+    var modulelist = [];
+
+    //モジュールリストの作成
+    for (var i = 0; i < TERMINAL_LIST.length; i++) {
+      var terminal = TERMINAL_LIST[i];
+      for (var j = 0; j < terminal.MODULE_LIST.length; j++) {
+        var okflag = true;
+        for (var k = 0; k < modulelist.length; k++) {
+          //既にモジュールリストにある場合
+          if (modulelist[k].MODULE_ID == terminal.MODULE_LIST[j].MODULE_ID) {
+            okflag = false;
+            break;
+          }
+        }
+        if (okflag == true) {
+          modulelist.push(terminal.MODULE_LIST[j]);
+        }
+      }
+    }
 
     //フォルダを取得
-    var result = ModulesToFoders(MODULE_LIST);
+    var result = ModulesToFoders(modulelist);
 
     for (var i = 0; i < result[0].length; i++) {
       result[0][i].setclickfunc(ToggleFolder);
@@ -40,11 +60,12 @@ export default function View_file_Separate({ TitleText }) {
   //
   // テーブルデータ作成
   //
-  function createtabledata(INSTALL_PATH) {
-    if (INSTALL_PATH == "") {
+  function createtabledata() {
+    if (isInstallPath == "") {
       return;
     }
-    const TERMINAL_LIST = GET_MODULE_INSTALLED_TERMINAL().TERMINAL_LIST;
+    const TERMINAL_LIST =
+      GET_MODULE_INSTALLED_TERMINAL(isInstallPath).TERMINAL_LIST;
     setIsTerminalList(TERMINAL_LIST);
   }
 
@@ -69,7 +90,7 @@ export default function View_file_Separate({ TitleText }) {
         elems[i].firstElementChild.style.color = "blue";
       }
     }
-    setIsFilePath(Path); //どのファイルか記録
+    setIsInstallPath(Path); //どのファイルか記録
   }
 
   //収集先編集ボタン
@@ -84,7 +105,7 @@ export default function View_file_Separate({ TitleText }) {
 
   //フォルダ変更時に実行
   React.useEffect(() => {
-    SetFilePath(isFilePath);
+    SetFilePath(isInstallPath);
   }, [isFolderList]);
 
   var isHandler1Dragging = false;
@@ -119,8 +140,8 @@ export default function View_file_Separate({ TitleText }) {
   }
 
   React.useEffect(() => {
-    createtabledata(isFilePath);
-  }, [isFilePath]);
+    createtabledata(isInstallPath);
+  }, [isInstallPath]);
 
   React.useEffect(() => {
     addMouseOverColoringEvent();

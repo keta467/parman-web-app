@@ -8,7 +8,6 @@ import Package_List from "../../components/tables/package_list/Package_List.jsx"
 import Package_Alert from "../../components/alert/package_alert/Package_Alert.jsx";
 import {
   GET_MODULE_LIST_IN_PACKAGE,
-  GET_PACKAGE_LIST,
   GET_PACKAGE_TARGET_TERMINAL,
   GET_TERMINALS,
 } from "../../api.js";
@@ -18,11 +17,17 @@ export default React.memo(function Manage_Package({ TitleText }) {
   const [isTerminalList, setIsTerminalList] = React.useState([]);
   const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(false);
 
+  const [isSelectPackageId, setIsSelectPackageId] = React.useState(-1);
+
   //
   // ツリーデータ作成
   //
   function createtreedata() {
-    const MODULE_LIST = GET_MODULE_LIST_IN_PACKAGE().MODULE_LIST;
+    if (isSelectPackageId == -1) return;
+
+    console.log("ツリーデータ作成");
+    const MODULE_LIST =
+      GET_MODULE_LIST_IN_PACKAGE(isSelectPackageId).MODULE_LIST;
 
     //フォルダと更新情報を取得
     var result = ModulesToFoders(MODULE_LIST);
@@ -42,6 +47,10 @@ export default React.memo(function Manage_Package({ TitleText }) {
   // テーブルデータ作成
   //
   function createtabledata() {
+    if (isSelectPackageId == -1) return;
+
+    console.log("テーブルデータ作成");
+
     setIsTerminalList(merge());
   }
 
@@ -50,7 +59,8 @@ export default React.memo(function Manage_Package({ TitleText }) {
     var terminallist = [];
 
     const ALL_TERMINAL_LIST = GET_TERMINALS().TERMINAL_LIST;
-    const TERGET_TERMINAL_LIST = GET_PACKAGE_TARGET_TERMINAL().TERMINAL_LIST;
+    const TERGET_TERMINAL_LIST =
+      GET_PACKAGE_TARGET_TERMINAL(isSelectPackageId).TERMINAL_LIST;
 
     var IS_TARGET_TERMINAL;
     var RELEASE_DATE;
@@ -160,10 +170,13 @@ export default React.memo(function Manage_Package({ TitleText }) {
   }
 
   React.useEffect(() => {
-    createtreedata();
-    createtabledata();
     addMouseOverColoringEvent();
   }, []);
+
+  React.useEffect(() => {
+    createtreedata();
+    createtabledata();
+  }, [isSelectPackageId]);
 
   return (
     <>
@@ -183,13 +196,17 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
       <div id="managepackagewrapper">
         <div id="managepackagebox1">
-          <Package_List />
+          <Package_List
+            isSelectPackageId={isSelectPackageId}
+            setIsSelectPackageId={setIsSelectPackageId}
+          />
         </div>
         <div className="handler" id="managepackagehandler1"></div>
         <div id="managepackagebox2">
           <Package_Alert
             isShowAlert={isShowPackageAlert}
             setIsShowAlert={setIsShowPackageAlert}
+            isSelectPackageId={isSelectPackageId}
           />
           <Tree_View FolderList={isFolderList} />
         </div>
