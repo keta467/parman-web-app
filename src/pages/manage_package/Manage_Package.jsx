@@ -10,6 +10,7 @@ import {
   GET_MODULE_LIST_IN_PACKAGE,
   GET_PACKAGE_TARGET_TERMINAL,
   GET_TERMINALS,
+  UPDATE_PACKAGE,
 } from "../../api.js";
 
 export default React.memo(function Manage_Package({ TitleText }) {
@@ -22,12 +23,11 @@ export default React.memo(function Manage_Package({ TitleText }) {
   //
   // ツリーデータ作成
   //
-  function createtreedata() {
+  async function createtreedata() {
     if (isSelectPackageId == -1) return;
 
-    console.log("ツリーデータ作成");
-    const MODULE_LIST =
-      GET_MODULE_LIST_IN_PACKAGE(isSelectPackageId).MODULE_LIST;
+    const ResponseData = await GET_MODULE_LIST_IN_PACKAGE(isSelectPackageId);
+    const MODULE_LIST = ResponseData.MODULE_LIST;
 
     //フォルダと更新情報を取得
     var result = ModulesToFoders(MODULE_LIST);
@@ -46,21 +46,20 @@ export default React.memo(function Manage_Package({ TitleText }) {
   //
   // テーブルデータ作成
   //
-  function createtabledata() {
+  async function createtabledata() {
     if (isSelectPackageId == -1) return;
-
-    console.log("テーブルデータ作成");
-
-    setIsTerminalList(merge());
+    setIsTerminalList(await merge());
   }
 
   //データをマージする処理
-  function merge() {
+  async function merge() {
     var terminallist = [];
 
-    const ALL_TERMINAL_LIST = GET_TERMINALS().TERMINAL_LIST;
-    const TERGET_TERMINAL_LIST =
-      GET_PACKAGE_TARGET_TERMINAL(isSelectPackageId).TERMINAL_LIST;
+    const ResponceData = await GET_TERMINALS();
+    const ALL_TERMINAL_LIST = ResponceData.TERMINAL_LIST;
+
+    const ResponceData2 = await GET_PACKAGE_TARGET_TERMINAL(isSelectPackageId);
+    const TERGET_TERMINAL_LIST = ResponceData2.TERMINAL_LIST;
 
     var IS_TARGET_TERMINAL;
     var RELEASE_DATE;
@@ -101,16 +100,16 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
   //一括同期ボタン
   function doukiclick() {
-    window.alert("更新パッケージ取り込み UPDATE_PACKAGE");
+    UPDATE_PACKAGE(0);
   }
 
   //検索ボタン
-  function searchclick() {
+  async function searchclick() {
     var element = document.getElementById("serchtext");
 
     const keyword = element.value.toUpperCase();
     var new_data = [];
-    const terminallist = merge();
+    const terminallist = await merge();
     for (var i = 0; i < terminallist.length; i++) {
       if (
         terminallist[i].NAME.toUpperCase().includes(keyword) ||
@@ -223,7 +222,10 @@ export default React.memo(function Manage_Package({ TitleText }) {
             </button>
           </div>
           <div id="managepackagesearchviewtablewrapper">
-            <Manage_Package_Table TerminalList={isTerminalList} />
+            <Manage_Package_Table
+              TerminalList={isTerminalList}
+              isSelectPackageId={isSelectPackageId}
+            />
           </div>
         </div>
       </div>

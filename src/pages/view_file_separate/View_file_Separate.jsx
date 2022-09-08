@@ -8,7 +8,6 @@ import Modal_Edit_Path from "../../components/modals/modal_edit_path/Modal_Edit_
 import {
   GET_INSTALLED_MODULE,
   GET_MODULE_INSTALLED_TERMINAL,
-  GET_MODULE_LIST_IN_PACKAGE,
 } from "../../api.js";
 
 export default function View_file_Separate({ TitleText }) {

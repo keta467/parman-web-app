@@ -4,7 +4,6 @@ import Modal_Add_Terminal from "../../components/modals/Modal_Add_Terminal.jsx";
 import Modal_Edit_Terminal from "../../components/modals/Modal_Edit_Terminal.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import "./Manage_Terminal.css";
-import { GET_TERMINALS } from "../../api.js";
 
 export default React.memo(function Manage_Terminal({ TitleText }) {
   //追加モーダル
@@ -22,6 +21,8 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
   const ClickAdd = () => {
     setIsShowModalAddTerminal(true);
   };
+
+  //ここにクリエイトテーブルが理想ではある
 
   return (
     <>
@@ -44,6 +45,7 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
         <Manage_Terminal_Table
           setIsShowModalEditTerminal={setIsShowModalEditTerminal}
           setIsSelectTerminal={setIsSelectTerminal}
+          isShowModalAddTerminal={isShowModalAddTerminal}
         />
       </div>
     </>

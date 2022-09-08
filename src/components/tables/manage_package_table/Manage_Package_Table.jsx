@@ -1,20 +1,36 @@
 import React from "react";
 import "./Manage_Package_Table.css";
 import "../nomaltable.css";
+import { SET_PACKAGE_RELEASE_TERMINAL } from "../../../api";
 
-export default function Manage_Package_Table({ TerminalList }) {
+export default function Manage_Package_Table({
+  TerminalList,
+  isSelectPackageId,
+}) {
   function headercheckboxtoggle(event) {
+    var arr = [];
     if (event.target.checked) {
       var elems = document.getElementsByClassName("mycheckbox");
       for (var i = 0; i < elems.length; i++) {
         elems[i].checked = true;
+        arr.push({ ID: Number(elems[i].id), ENABLE: true });
       }
     } else {
       var elems = document.getElementsByClassName("mycheckbox");
       for (var i = 0; i < elems.length; i++) {
         elems[i].checked = false;
+        arr.push({ ID: Number(elems[i].id), ENABLE: false });
       }
     }
+    //パッケージリリース端末変更
+    SET_PACKAGE_RELEASE_TERMINAL(isSelectPackageId, arr);
+  }
+
+  function rowcheckboxtoggle(event) {
+    //パッケージリリース端末変更
+    SET_PACKAGE_RELEASE_TERMINAL(isSelectPackageId, [
+      { ID: Number(event.target.id), ENABLE: event.target.checked },
+    ]);
   }
 
   return (
@@ -34,16 +50,18 @@ export default function Manage_Package_Table({ TerminalList }) {
         </tr>
       </thead>
       <tbody>
-        {TerminalList.map((Terminal, index) => (
+        {TerminalList.map((Terminal) => (
           <tr key={Terminal.ID}>
             {Terminal.RELEASED ? (
               <td className="redtext bold">済</td>
             ) : (
               <td>
                 <input
+                  id={Terminal.ID}
                   type="checkbox"
                   className="mycheckbox"
                   defaultChecked={Terminal.IS_TARGET_TERMINAL}
+                  onChange={(event) => rowcheckboxtoggle(event)}
                 />
               </td>
             )}

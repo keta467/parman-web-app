@@ -1,4 +1,5 @@
 import React from "react";
+import { UPDATE_PACKAGE } from "../../../api";
 import "./Package_Alert.css";
 
 export default function Package_Alert({
@@ -7,7 +8,7 @@ export default function Package_Alert({
   isSelectPackageId,
 }) {
   const CloseAlert = () => {
-    window.alert("更新パッケージ取り込み UPDATE_PACKAGE" + isSelectPackageId);
+    UPDATE_PACKAGE(isSelectPackageId);
     setIsShowAlert(false);
   };
 

@@ -1,10 +1,11 @@
 import React from "react";
-import { GET_TERMINALS } from "../../../api";
+import { GET_TERMINALS, SET_TERMINAL_ORDER } from "../../../api";
 import "./Manage_Terminal_Table.css";
 
 export default function Manage_Terminal_Table({
   setIsShowModalEditTerminal,
   setIsSelectTerminal,
+  isShowModalAddTerminal,
 }) {
   const [isTerminalList, setIsTerminalList] = React.useState([]);
 
@@ -80,6 +81,13 @@ export default function Manage_Terminal_Table({
       element.children[i].style.borderTop = "1px solid #999";
       element.children[i].style.borderBottom = "1px solid #999";
     }
+
+    //端末順変更
+    var orderarr = [];
+    for (var i = 0; i < isTerminalList.length; i++) {
+      orderarr.push({ ID: isTerminalList[i].ID });
+    }
+    SET_TERMINAL_ORDER(orderarr);
   }
 
   const OpenModal = (index) => {
@@ -87,9 +95,14 @@ export default function Manage_Terminal_Table({
     setIsSelectTerminal(isTerminalList[index]);
   };
 
+  async function createtabledata() {
+    const ResponceData = await GET_TERMINALS();
+    setIsTerminalList(ResponceData.TERMINAL_LIST);
+  }
+
   //初回レンダリング後
   React.useEffect(() => {
-    setIsTerminalList(GET_TERMINALS().TERMINAL_LIST);
+    createtabledata();
   }, []);
 
   return (

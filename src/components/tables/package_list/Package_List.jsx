@@ -1,5 +1,5 @@
 import React from "react";
-import { GET_PACKAGE_LIST } from "../../../api";
+import { GET_PACKAGE_LIST, SET_PACKAGE_ORDER } from "../../../api";
 import "./Package_List.css";
 
 export default React.memo(function Package_List({
@@ -13,8 +13,6 @@ export default React.memo(function Package_List({
 
   function mydrag(event) {
     startindex = event.target.id;
-
-    event;
   }
 
   function mydragover(event) {
@@ -83,6 +81,9 @@ export default React.memo(function Package_List({
       element.children[i].style.borderTop = "1px solid #999";
       element.children[i].style.borderBottom = "1px solid #999";
     }
+
+    //パッケージ順変更
+    SET_PACKAGE_ORDER(isPackageList);
   }
 
   //行クリック
@@ -90,9 +91,19 @@ export default React.memo(function Package_List({
     setIsSelectPackageId(PackageID);
   }
 
+  //
+  //テーブル作成
+  //
+  async function createlistdata() {
+    const ResponseData = await GET_PACKAGE_LIST();
+    setIsPackageList(ResponseData.PACKAGE_LIST);
+  }
+
   React.useEffect(() => {
-    setIsPackageList(GET_PACKAGE_LIST().PACKAGE_LIST);
+    createlistdata();
   }, []);
+
+  React.useEffect(() => {}, [isPackageList]);
 
   return (
     <table className="managepackagetable colortable">
