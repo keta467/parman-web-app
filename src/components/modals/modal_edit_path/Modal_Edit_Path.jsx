@@ -1,4 +1,5 @@
 import React from "react";
+import { GET_COLLECT_PATH } from "../../../api";
 import "../Modal.css";
 import "./Modal_Edit_Path.css";
 
@@ -16,11 +17,12 @@ export default function Modal_Edit_Path({ isShowModal, setIsShowModal }) {
     setIsPathList(isPathList.filter((value, index) => index !== pathindex));
   };
 
-  const [isPathList, setIsPathList] = React.useState([
-    "D:Lambda",
-    "D:/lambda/binv2",
-    "C:Lambda",
-  ]);
+  const [isPathList, setIsPathList] = React.useState([]);
+
+  //初回レンダリング時に実行
+  React.useEffect(() => {
+    setIsPathList(GET_COLLECT_PATH().COLLECT_PATH);
+  }, []);
 
   return (
     <>

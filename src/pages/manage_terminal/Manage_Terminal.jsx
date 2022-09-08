@@ -6,7 +6,7 @@ import Topbar from "../../components/topbar/Topbar.jsx";
 import "./Manage_Terminal.css";
 import { GET_TERMINALS } from "../../api.js";
 
-export default function Manage_Terminal({ TitleText }) {
+export default React.memo(function Manage_Terminal({ TitleText }) {
   const TerminalList = GET_TERMINALS().TERMINAL_LIST;
 
   //追加モーダル
@@ -51,4 +51,4 @@ export default function Manage_Terminal({ TitleText }) {
       </div>
     </>
   );
-}
+});

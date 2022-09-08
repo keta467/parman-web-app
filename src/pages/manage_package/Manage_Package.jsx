@@ -13,8 +13,7 @@ import {
   GET_TERMINALS,
 } from "../../api.js";
 
-export default function Manage_Package({ TitleText }) {
-  const PackageList = GET_PACKAGE_LIST().PACKAGE_LIST;
+export default React.memo(function Manage_Package({ TitleText }) {
   const [isFolderList, setIsFolderList] = React.useState([]);
   const [isTerminalList, setIsTerminalList] = React.useState([]);
   const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(false);
@@ -184,7 +183,7 @@ export default function Manage_Package({ TitleText }) {
 
       <div id="managepackagewrapper">
         <div id="managepackagebox1">
-          <Package_List PackageList={PackageList} />
+          <Package_List />
         </div>
         <div className="handler" id="managepackagehandler1"></div>
         <div id="managepackagebox2">
@@ -213,4 +212,4 @@ export default function Manage_Package({ TitleText }) {
       </div>
     </>
   );
-}
+});

@@ -1,7 +1,10 @@
 import React from "react";
 import "./Modal.css";
 
-export default function Modal_Add_Terminal({ isShowModal, setIsShowModal }) {
+export default React.memo(function Modal_Add_Terminal({
+  isShowModal,
+  setIsShowModal,
+}) {
   const CloseModal = () => {
     setIsShowModal(false);
   };
@@ -44,4 +47,4 @@ export default function Modal_Add_Terminal({ isShowModal, setIsShowModal }) {
       )}
     </>
   );
-}
+});

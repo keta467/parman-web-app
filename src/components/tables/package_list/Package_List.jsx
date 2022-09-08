@@ -1,64 +1,47 @@
 import React from "react";
+import { GET_PACKAGE_LIST } from "../../../api";
 import "./Package_List.css";
 
-export default function Package_List({ PackageList }) {
+export default React.memo(function Package_List() {
   //パッケージのリスト
-  const [isPackageList, setIsPackageList] = React.useState(PackageList);
+  const [isPackageList, setIsPackageList] = React.useState([]);
 
   //選択中のパッケージ
-  const [isSelectPackage, setIsSelectPackage] = React.useState(
-    PackageList[0].NAME
-  );
+  const [isSelectPackage, setIsSelectPackage] = React.useState("");
 
   var startindex = "";
 
-  ///
-  /// マウスオーバーイベントを追加する
-  ///
-  function addMouseOverColoringEvent() {
-    var materialTd = document.getElementsByClassName("dragitem");
-    for (
-      var materialNumber = 0;
-      materialNumber < materialTd.length;
-      materialNumber++
-    ) {
-      materialTd[materialNumber].addEventListener("drag", mydrag);
-
-      materialTd[materialNumber].addEventListener("dragover", mydragover);
-
-      materialTd[materialNumber].addEventListener("dragleave", mydragleave);
-
-      materialTd[materialNumber].addEventListener("drop", mydrop);
-    }
-  }
-
   function mydrag(event) {
     startindex = event.target.id;
+
+    event;
   }
 
   function mydragover(event) {
     event.preventDefault();
 
-    let rect = this.getBoundingClientRect();
-    if (event.clientY - rect.top < this.clientHeight / 2) {
+    const element = document.getElementById(event.target.id);
+    let rect = element.getBoundingClientRect();
+    if (event.clientY - rect.top < rect.height / 2) {
       //マウスカーソルの位置が要素の半分より上
-      for (var i = 0; i < this.children.length; i++) {
-        this.children[i].style.borderTop = "2px solid blue";
-        this.children[i].style.borderBottom = "1px solid #999";
+      for (var i = 0; i < element.children.length; i++) {
+        element.children[i].style.borderTop = "2px solid blue";
+        element.children[i].style.borderBottom = "1px solid #999";
       }
     } else {
       //マウスカーソルの位置が要素の半分より下
-      for (var i = 0; i < this.children.length; i++) {
-        this.children[i].style.borderTop = "1px solid #999";
-        this.children[i].style.borderBottom = "2px solid blue";
+      for (var i = 0; i < element.children.length; i++) {
+        element.children[i].style.borderTop = "1px solid #999";
+        element.children[i].style.borderBottom = "2px solid blue";
       }
     }
   }
 
   function mydragleave(event) {
-    for (var i = 0; i < this.children.length; i++) {
-      this.children[i].style.borderTop = "1px solid #999";
-      this.children[i].style.borderBottom = "1px solid #999";
+    const element = document.getElementById(event.target.id);
+    for (var i = 0; i < element.children.length; i++) {
+      element.children[i].style.borderTop = "1px solid #999";
+      element.children[i].style.borderBottom = "1px solid #999";
     }
   }
 
@@ -68,8 +51,9 @@ export default function Package_List({ PackageList }) {
 
     var toindex = event.target.id;
 
-    let rect = this.getBoundingClientRect();
-    if (event.clientY - rect.top < this.clientHeight / 2) {
+    const element = document.getElementById(event.target.id);
+    let rect = element.getBoundingClientRect();
+    if (event.clientY - rect.top < element.clientHeight / 2) {
       //マウスカーソルの位置が要素の半分より上
       isPackageList.splice(startindex, 1);
 
@@ -95,9 +79,9 @@ export default function Package_List({ PackageList }) {
     }
     setIsPackageList(newarr);
 
-    for (var i = 0; i < this.children.length; i++) {
-      this.children[i].style.borderTop = "1px solid #999";
-      this.children[i].style.borderBottom = "1px solid #999";
+    for (var i = 0; i < element.children.length; i++) {
+      element.children[i].style.borderTop = "1px solid #999";
+      element.children[i].style.borderBottom = "1px solid #999";
     }
   }
 
@@ -106,9 +90,8 @@ export default function Package_List({ PackageList }) {
     setIsSelectPackage(name);
   }
 
-  //初回レンダリング後
   React.useEffect(() => {
-    addMouseOverColoringEvent();
+    setIsPackageList(GET_PACKAGE_LIST().PACKAGE_LIST);
   }, []);
 
   return (
@@ -122,6 +105,10 @@ export default function Package_List({ PackageList }) {
               className="dragitem selectpackage"
               id={index}
               key={value.ID}
+              onDrag={mydrag}
+              onDragOver={mydragover}
+              onDragLeave={mydragleave}
+              onDrop={mydrop}
             >
               <td id={index}>{value.NAME}</td>
             </tr>
@@ -132,6 +119,10 @@ export default function Package_List({ PackageList }) {
               className="dragitem"
               id={index}
               key={value.ID}
+              onDrag={mydrag}
+              onDragOver={mydragover}
+              onDragLeave={mydragleave}
+              onDrop={mydrop}
             >
               <td id={index}>{value.NAME}</td>
             </tr>
@@ -140,4 +131,4 @@ export default function Package_List({ PackageList }) {
       </tbody>
     </table>
   );
-}
+});
