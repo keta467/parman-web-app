@@ -1,9 +1,14 @@
 import React from "react";
+import { UPDATE_PACKAGE } from "../../../api";
 import "./Package_Alert.css";
 
-export default function Package_Alert({ isShowAlert, setIsShowAlert }) {
+export default function Package_Alert({
+  isShowAlert,
+  setIsShowAlert,
+  isSelectPackageId,
+}) {
   const CloseAlert = () => {
-    window.alert("更新パッケージ取り込み UPDATE_PACKAGE");
+    UPDATE_PACKAGE(isSelectPackageId);
     setIsShowAlert(false);
   };
 

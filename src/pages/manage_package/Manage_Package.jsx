@@ -8,22 +8,26 @@ import Package_List from "../../components/tables/package_list/Package_List.jsx"
 import Package_Alert from "../../components/alert/package_alert/Package_Alert.jsx";
 import {
   GET_MODULE_LIST_IN_PACKAGE,
-  GET_PACKAGE_LIST,
   GET_PACKAGE_TARGET_TERMINAL,
   GET_TERMINALS,
+  UPDATE_PACKAGE,
 } from "../../api.js";
 
-export default function Manage_Package({ TitleText }) {
-  const PackageList = GET_PACKAGE_LIST().PACKAGE_LIST;
+export default React.memo(function Manage_Package({ TitleText }) {
   const [isFolderList, setIsFolderList] = React.useState([]);
   const [isTerminalList, setIsTerminalList] = React.useState([]);
   const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(false);
 
+  const [isSelectPackageId, setIsSelectPackageId] = React.useState(-1);
+
   //
   // ツリーデータ作成
   //
-  function createtreedata() {
-    const MODULE_LIST = GET_MODULE_LIST_IN_PACKAGE().MODULE_LIST;
+  async function createtreedata() {
+    if (isSelectPackageId == -1) return;
+
+    const ResponseData = await GET_MODULE_LIST_IN_PACKAGE(isSelectPackageId);
+    const MODULE_LIST = ResponseData.MODULE_LIST;
 
     //フォルダと更新情報を取得
     var result = ModulesToFoders(MODULE_LIST);
@@ -42,16 +46,20 @@ export default function Manage_Package({ TitleText }) {
   //
   // テーブルデータ作成
   //
-  function createtabledata() {
-    setIsTerminalList(merge());
+  async function createtabledata() {
+    if (isSelectPackageId == -1) return;
+    setIsTerminalList(await merge());
   }
 
   //データをマージする処理
-  function merge() {
+  async function merge() {
     var terminallist = [];
 
-    const ALL_TERMINAL_LIST = GET_TERMINALS().TERMINAL_LIST;
-    const TERGET_TERMINAL_LIST = GET_PACKAGE_TARGET_TERMINAL().TERMINAL_LIST;
+    const ResponceData = await GET_TERMINALS();
+    const ALL_TERMINAL_LIST = ResponceData.TERMINAL_LIST;
+
+    const ResponceData2 = await GET_PACKAGE_TARGET_TERMINAL(isSelectPackageId);
+    const TERGET_TERMINAL_LIST = ResponceData2.TERMINAL_LIST;
 
     var IS_TARGET_TERMINAL;
     var RELEASE_DATE;
@@ -92,16 +100,16 @@ export default function Manage_Package({ TitleText }) {
 
   //一括同期ボタン
   function doukiclick() {
-    window.alert("更新パッケージ取り込み UPDATE_PACKAGE");
+    UPDATE_PACKAGE(0);
   }
 
   //検索ボタン
-  function searchclick() {
+  async function searchclick() {
     var element = document.getElementById("serchtext");
 
     const keyword = element.value.toUpperCase();
     var new_data = [];
-    const terminallist = merge();
+    const terminallist = await merge();
     for (var i = 0; i < terminallist.length; i++) {
       if (
         terminallist[i].NAME.toUpperCase().includes(keyword) ||
@@ -161,10 +169,13 @@ export default function Manage_Package({ TitleText }) {
   }
 
   React.useEffect(() => {
-    createtreedata();
-    createtabledata();
     addMouseOverColoringEvent();
   }, []);
+
+  React.useEffect(() => {
+    createtreedata();
+    createtabledata();
+  }, [isSelectPackageId]);
 
   return (
     <>
@@ -184,13 +195,17 @@ export default function Manage_Package({ TitleText }) {
 
       <div id="managepackagewrapper">
         <div id="managepackagebox1">
-          <Package_List PackageList={PackageList} />
+          <Package_List
+            isSelectPackageId={isSelectPackageId}
+            setIsSelectPackageId={setIsSelectPackageId}
+          />
         </div>
         <div className="handler" id="managepackagehandler1"></div>
         <div id="managepackagebox2">
           <Package_Alert
             isShowAlert={isShowPackageAlert}
             setIsShowAlert={setIsShowPackageAlert}
+            isSelectPackageId={isSelectPackageId}
           />
           <Tree_View FolderList={isFolderList} />
         </div>
@@ -207,10 +222,13 @@ export default function Manage_Package({ TitleText }) {
             </button>
           </div>
           <div id="managepackagesearchviewtablewrapper">
-            <Manage_Package_Table TerminalList={isTerminalList} />
+            <Manage_Package_Table
+              TerminalList={isTerminalList}
+              isSelectPackageId={isSelectPackageId}
+            />
           </div>
         </div>
       </div>
     </>
   );
-}
+});

@@ -1,36 +1,15 @@
 import React from "react";
+import { GET_PACKAGE_LIST, SET_PACKAGE_ORDER } from "../../../api";
 import "./Package_List.css";
 
-export default function Package_List({ PackageList }) {
+export default React.memo(function Package_List({
+  isSelectPackageId,
+  setIsSelectPackageId,
+}) {
   //パッケージのリスト
-  const [isPackageList, setIsPackageList] = React.useState(PackageList);
-
-  //選択中のパッケージ
-  const [isSelectPackage, setIsSelectPackage] = React.useState(
-    PackageList[0].NAME
-  );
+  const [isPackageList, setIsPackageList] = React.useState([]);
 
   var startindex = "";
-
-  ///
-  /// マウスオーバーイベントを追加する
-  ///
-  function addMouseOverColoringEvent() {
-    var materialTd = document.getElementsByClassName("dragitem");
-    for (
-      var materialNumber = 0;
-      materialNumber < materialTd.length;
-      materialNumber++
-    ) {
-      materialTd[materialNumber].addEventListener("drag", mydrag);
-
-      materialTd[materialNumber].addEventListener("dragover", mydragover);
-
-      materialTd[materialNumber].addEventListener("dragleave", mydragleave);
-
-      materialTd[materialNumber].addEventListener("drop", mydrop);
-    }
-  }
 
   function mydrag(event) {
     startindex = event.target.id;
@@ -39,37 +18,40 @@ export default function Package_List({ PackageList }) {
   function mydragover(event) {
     event.preventDefault();
 
-    let rect = this.getBoundingClientRect();
-    if (event.clientY - rect.top < this.clientHeight / 2) {
+    const element = document.getElementById(event.target.id);
+    let rect = element.getBoundingClientRect();
+    if (event.clientY - rect.top < rect.height / 2) {
       //マウスカーソルの位置が要素の半分より上
-      for (var i = 0; i < this.children.length; i++) {
-        this.children[i].style.borderTop = "2px solid blue";
-        this.children[i].style.borderBottom = "1px solid #999";
+      for (var i = 0; i < element.children.length; i++) {
+        element.children[i].style.borderTop = "2px solid blue";
+        element.children[i].style.borderBottom = "1px solid #999";
       }
     } else {
       //マウスカーソルの位置が要素の半分より下
-      for (var i = 0; i < this.children.length; i++) {
-        this.children[i].style.borderTop = "1px solid #999";
-        this.children[i].style.borderBottom = "2px solid blue";
+      for (var i = 0; i < element.children.length; i++) {
+        element.children[i].style.borderTop = "1px solid #999";
+        element.children[i].style.borderBottom = "2px solid blue";
       }
     }
   }
 
   function mydragleave(event) {
-    for (var i = 0; i < this.children.length; i++) {
-      this.children[i].style.borderTop = "1px solid #999";
-      this.children[i].style.borderBottom = "1px solid #999";
+    const element = document.getElementById(event.target.id);
+    for (var i = 0; i < element.children.length; i++) {
+      element.children[i].style.borderTop = "1px solid #999";
+      element.children[i].style.borderBottom = "1px solid #999";
     }
   }
 
-  function mydrop(event) {
+  async function mydrop(event) {
     event.preventDefault();
     let elm_drag = isPackageList[startindex];
 
     var toindex = event.target.id;
 
-    let rect = this.getBoundingClientRect();
-    if (event.clientY - rect.top < this.clientHeight / 2) {
+    const element = document.getElementById(event.target.id);
+    let rect = element.getBoundingClientRect();
+    if (event.clientY - rect.top < element.clientHeight / 2) {
       //マウスカーソルの位置が要素の半分より上
       isPackageList.splice(startindex, 1);
 
@@ -95,49 +77,70 @@ export default function Package_List({ PackageList }) {
     }
     setIsPackageList(newarr);
 
-    for (var i = 0; i < this.children.length; i++) {
-      this.children[i].style.borderTop = "1px solid #999";
-      this.children[i].style.borderBottom = "1px solid #999";
+    for (var i = 0; i < element.children.length; i++) {
+      element.children[i].style.borderTop = "1px solid #999";
+      element.children[i].style.borderBottom = "1px solid #999";
     }
+
+    //パッケージ順変更
+    const data = await SET_PACKAGE_ORDER(isPackageList);
+    console.log(data);
   }
 
   //行クリック
-  function ClickRow(name) {
-    setIsSelectPackage(name);
+  function ClickRow(PackageID) {
+    setIsSelectPackageId(PackageID);
   }
 
-  //初回レンダリング後
+  //
+  //テーブル作成
+  //
+  async function createlistdata() {
+    const ResponseData = await GET_PACKAGE_LIST();
+    setIsPackageList(ResponseData.PACKAGE_LIST);
+  }
+
   React.useEffect(() => {
-    addMouseOverColoringEvent();
+    createlistdata();
   }, []);
+
+  React.useEffect(() => {}, [isPackageList]);
 
   return (
     <table className="managepackagetable colortable">
       <tbody className="managepackagetabletbody">
-        {isPackageList.map((value, index) =>
-          value.NAME == isSelectPackage ? (
+        {isPackageList.map((Package, index) =>
+          Package.ID == isSelectPackageId ? (
             <tr
-              onClick={() => ClickRow(value.NAME)}
+              onClick={() => ClickRow(Package.ID)}
               draggable="true"
               className="dragitem selectpackage"
               id={index}
-              key={value.ID}
+              key={Package.ID}
+              onDrag={mydrag}
+              onDragOver={mydragover}
+              onDragLeave={mydragleave}
+              onDrop={mydrop}
             >
-              <td id={index}>{value.NAME}</td>
+              <td id={index}>{Package.NAME}</td>
             </tr>
           ) : (
             <tr
-              onClick={() => ClickRow(value.NAME)}
+              onClick={() => ClickRow(Package.ID)}
               draggable="true"
               className="dragitem"
               id={index}
-              key={value.ID}
+              key={Package.ID}
+              onDrag={mydrag}
+              onDragOver={mydragover}
+              onDragLeave={mydragleave}
+              onDrop={mydrop}
             >
-              <td id={index}>{value.NAME}</td>
+              <td id={index}>{Package.NAME}</td>
             </tr>
           )
         )}
       </tbody>
     </table>
   );
-}
+});

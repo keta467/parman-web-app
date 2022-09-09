@@ -6,27 +6,50 @@ import { Folder, ModulesToFoders } from "../../myclass.js";
 import Tree_View from "../../components/tree_view/Tree_View.jsx";
 import Modal_Edit_Path from "../../components/modals/modal_edit_path/Modal_Edit_Path.jsx";
 import {
+  GET_COLLECT_PATH,
+  GET_INSTALLED_MODULE,
   GET_MODULE_INSTALLED_TERMINAL,
-  GET_MODULE_LIST_IN_PACKAGE,
 } from "../../api.js";
 
 export default function View_file_Separate({ TitleText }) {
   const [isFolderList, setIsFolderList] = React.useState([]);
 
-  const [isFilePath, setIsFilePath] = React.useState("");
+  const [isInstallPath, setIsInstallPath] = React.useState("");
 
   const [isTerminalList, setIsTerminalList] = React.useState([]);
 
   const [isShowModalEditPath, setIsShowModalEditPath] = React.useState(false);
 
+  const [isPathList, setIsPathList] = React.useState([]);
+
   //
   // ツリーデータ作成
   //
-  function createtreedata() {
-    const MODULE_LIST = GET_MODULE_LIST_IN_PACKAGE().MODULE_LIST;
+  async function createtreedata() {
+    const ResponceData = await GET_INSTALLED_MODULE();
+    const TERMINAL_LIST = ResponceData.TERMINAL_LIST;
+    var modulelist = [];
+
+    //モジュールリストの作成
+    for (var i = 0; i < TERMINAL_LIST.length; i++) {
+      var terminal = TERMINAL_LIST[i];
+      for (var j = 0; j < terminal.MODULE_LIST.length; j++) {
+        var okflag = true;
+        for (var k = 0; k < modulelist.length; k++) {
+          //既にモジュールリストにある場合
+          if (modulelist[k].MODULE_ID == terminal.MODULE_LIST[j].MODULE_ID) {
+            okflag = false;
+            break;
+          }
+        }
+        if (okflag == true) {
+          modulelist.push(terminal.MODULE_LIST[j]);
+        }
+      }
+    }
 
     //フォルダを取得
-    var result = ModulesToFoders(MODULE_LIST);
+    var result = ModulesToFoders(modulelist);
 
     for (var i = 0; i < result[0].length; i++) {
       result[0][i].setclickfunc(ToggleFolder);
@@ -40,11 +63,12 @@ export default function View_file_Separate({ TitleText }) {
   //
   // テーブルデータ作成
   //
-  function createtabledata(INSTALL_PATH) {
-    if (INSTALL_PATH == "") {
+  async function createtabledata() {
+    if (isInstallPath == "") {
       return;
     }
-    const TERMINAL_LIST = GET_MODULE_INSTALLED_TERMINAL().TERMINAL_LIST;
+    const ResponceData = await GET_MODULE_INSTALLED_TERMINAL(isInstallPath);
+    const TERMINAL_LIST = ResponceData.TERMINAL_LIST;
     setIsTerminalList(TERMINAL_LIST);
   }
 
@@ -69,23 +93,16 @@ export default function View_file_Separate({ TitleText }) {
         elems[i].firstElementChild.style.color = "blue";
       }
     }
-    setIsFilePath(Path); //どのファイルか記録
+    setIsInstallPath(Path); //どのファイルか記録
   }
 
   //収集先編集ボタン
-  const ClickEditPath = () => {
+  async function ClickEditPath() {
+    const RespenceData = await GET_COLLECT_PATH();
+    setIsPathList(RespenceData.COLLECT_PATH);
+
     setIsShowModalEditPath(true);
-  };
-
-  //初回レンダリング時に実行
-  React.useEffect(() => {
-    createtreedata();
-  }, []);
-
-  //フォルダ変更時に実行
-  React.useEffect(() => {
-    SetFilePath(isFilePath);
-  }, [isFolderList]);
+  }
 
   var isHandler1Dragging = false;
   ///
@@ -114,17 +131,28 @@ export default function View_file_Separate({ TitleText }) {
     });
 
     //初期サイズ
-    boxA.style.width = "50%";
-    boxB.style.width = "50%";
+    boxA.style.width = "40%";
+    boxB.style.width = "60%";
   }
 
+  //初回レンダリング時
   React.useEffect(() => {
-    createtabledata(isFilePath);
-  }, [isFilePath]);
+    //リサイズイベント追加
+    addMouseOverColoringEvent();
+
+    //ツリー作成
+    createtreedata();
+  }, []);
 
   React.useEffect(() => {
-    addMouseOverColoringEvent();
-  }, []);
+    //テーブル作成
+    createtabledata();
+  }, [isInstallPath]);
+
+  //フォルダ変更時に実行
+  React.useEffect(() => {
+    SetFilePath(isInstallPath);
+  }, [isFolderList]);
 
   return (
     <>
@@ -132,6 +160,8 @@ export default function View_file_Separate({ TitleText }) {
       <Modal_Edit_Path
         isShowModal={isShowModalEditPath}
         setIsShowModal={setIsShowModalEditPath}
+        isPathList={isPathList}
+        setIsPathList={setIsPathList}
       />
       <div id="viewfileseparatewrapper">
         <div id="viewfileseparatebox1">
