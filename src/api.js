@@ -7,7 +7,7 @@ import { GET_TERMINALS_DATA } from "./DummyDatas/GET_TERMINALS_DATA";
 import { GET_COLLECT_PATH_DATA } from "./DummyDatas/GET_COLLECT_PATH_DATA";
 import axios from "axios";
 
-const DebugMode = false;
+const DebugMode = true;
 
 // const SERVER_IP = "3.137.85.73";
 // const SERVER_PORT = "3002";
