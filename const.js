@@ -1,5 +1,5 @@
 //デバッグモード true => ダミーデータ参照   false => API参照
-export const DebugMode = false;
+export const DebugMode = true;
 
 // 環境１　ip: localhost　port: 3002
 // 環境２　ip: 3.137.85.73　port: 3002
