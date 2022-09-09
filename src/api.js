@@ -7,10 +7,11 @@ import { GET_TERMINALS_DATA } from "./DummyDatas/GET_TERMINALS_DATA";
 import { GET_COLLECT_PATH_DATA } from "./DummyDatas/GET_COLLECT_PATH_DATA";
 import axios from "axios";
 
+//デバッグモード
 const DebugMode = true;
 
-// const SERVER_IP = "3.137.85.73";
-// const SERVER_PORT = "3002";
+//ip: 3.137.85.73　port: 3002
+//ip: localhost　port: 3002
 const SERVER_IP = "localhost";
 const SERVER_PORT = "3002";
 axios.defaults.baseURL = `http://${SERVER_IP}:${SERVER_PORT}`;
