@@ -43,7 +43,7 @@ export default React.memo(function Package_List({
     }
   }
 
-  function mydrop(event) {
+  async function mydrop(event) {
     event.preventDefault();
     let elm_drag = isPackageList[startindex];
 
@@ -83,7 +83,8 @@ export default React.memo(function Package_List({
     }
 
     //パッケージ順変更
-    SET_PACKAGE_ORDER(isPackageList);
+    const data = await SET_PACKAGE_ORDER(isPackageList);
+    console.log(data);
   }
 
   //行クリック

@@ -1,12 +1,30 @@
 import React from "react";
-import { GET_COLLECT_PATH } from "../../../api";
+import { SET_COLLECT_PATH } from "../../../api";
 import "../Modal.css";
 import "./Modal_Edit_Path.css";
 
-export default function Modal_Edit_Path({ isShowModal, setIsShowModal }) {
+export default function Modal_Edit_Path({
+  isShowModal,
+  setIsShowModal,
+  isPathList,
+  setIsPathList,
+}) {
   const CloseModal = () => {
     setIsShowModal(false);
   };
+
+  async function UpdateButton() {
+    const elems = document.getElementsByClassName("pathtext");
+    var arr = [];
+    for (var i = 0; i < elems.length; i++) {
+      if (elems[i].value != "") {
+        arr.push(elems[i].value);
+      }
+    }
+
+    await SET_COLLECT_PATH(arr);
+    setIsShowModal(false);
+  }
 
   //空欄のテキストエリアを追加
   const AddPath = () => {
@@ -16,13 +34,6 @@ export default function Modal_Edit_Path({ isShowModal, setIsShowModal }) {
   const DeletePath = (pathindex) => {
     setIsPathList(isPathList.filter((value, index) => index !== pathindex));
   };
-
-  const [isPathList, setIsPathList] = React.useState([]);
-
-  //初回レンダリング時に実行
-  React.useEffect(() => {
-    setIsPathList(GET_COLLECT_PATH().COLLECT_PATH);
-  }, []);
 
   return (
     <>
@@ -35,7 +46,11 @@ export default function Modal_Edit_Path({ isShowModal, setIsShowModal }) {
                 <div key={path + pathindex}>
                   <p>収集先{pathindex + 1}</p>
                   <div className="df">
-                    <input type="text" defaultValue={path} />
+                    <input
+                      className="pathtext"
+                      type="text"
+                      defaultValue={path}
+                    />
                     <button
                       className="pathdeletebutton1"
                       onClick={(event) => DeletePath(pathindex)}
@@ -50,7 +65,7 @@ export default function Modal_Edit_Path({ isShowModal, setIsShowModal }) {
               <button className="pathaddbutton1" onClick={AddPath}>
                 追加
               </button>
-              <button className="mybutton" onClick={CloseModal}>
+              <button className="mybutton" onClick={UpdateButton}>
                 更新
               </button>
             </div>

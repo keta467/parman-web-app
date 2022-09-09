@@ -5,6 +5,7 @@ import "./Modal.css";
 export default React.memo(function Modal_Add_Terminal({
   isShowModal,
   setIsShowModal,
+  createtabledata,
 }) {
   const CloseModal = () => {
     setIsShowModal(false);
@@ -21,6 +22,7 @@ export default React.memo(function Modal_Add_Terminal({
     }
 
     await REGISTER_TERMINAL(text1.value, text2.value, text3.value);
+    createtabledata();
 
     //連続で登録の場合
     if (document.getElementById("checkbox1").checked) {

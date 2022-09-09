@@ -6,6 +6,7 @@ export default function Modal_Edit_Terminal({
   isShowModal,
   setIsShowModal,
   SelectTerminal,
+  createtabledata,
 }) {
   const CloseModal = () => {
     setIsShowModal(false);
@@ -26,11 +27,13 @@ export default function Modal_Edit_Terminal({
       text2.value,
       text3.value
     );
+    createtabledata();
     CloseModal();
   }
 
   async function Remove() {
     await REMOVE_TERMINAL(SelectTerminal.ID);
+    createtabledata();
     CloseModal();
   }
 

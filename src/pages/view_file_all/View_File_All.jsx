@@ -2,7 +2,10 @@ import React from "react";
 import File_All_Table from "../../components/tables/file_all_table/File_All_Table.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import "./View_File_All.css";
-import { GET_INSTALLED_MODULE } from "../../api.js";
+import {
+  GET_INSTALLED_MODULE,
+  UPDATE_TERMINAL_MODULE_VERSION,
+} from "../../api.js";
 
 export default function View_File_All({ TitleText }) {
   const [isModulelist, setIsModulelist] = React.useState([]);
@@ -11,8 +14,9 @@ export default function View_File_All({ TitleText }) {
   //
   //　テーブル用データ作成
   //
-  function createtabledata() {
-    const TERMINAL_LIST = GET_INSTALLED_MODULE().TERMINAL_LIST;
+  async function createtabledata() {
+    const ResponceData = await GET_INSTALLED_MODULE();
+    const TERMINAL_LIST = ResponceData.TERMINAL_LIST;
     var modulelist = [];
 
     //モジュールリストの作成
@@ -37,6 +41,13 @@ export default function View_File_All({ TitleText }) {
     setIsModulelist(modulelist);
   }
 
+  //
+  //最新バージョン取得
+  //
+  function getnewversion() {
+    UPDATE_TERMINAL_MODULE_VERSION();
+  }
+
   //初回レンダリング後
   React.useEffect(() => {
     createtabledata();
@@ -49,7 +60,9 @@ export default function View_File_All({ TitleText }) {
         <button id="redobutton" className="mybutton" onClick={createtabledata}>
           再表示
         </button>
-        <button className="mybutton">最新バージョン取得</button>
+        <button className="mybutton" onClick={getnewversion}>
+          最新バージョン取得
+        </button>
       </div>
       <div className="viewfilealltablewrapper">
         <File_All_Table
