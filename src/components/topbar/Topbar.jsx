@@ -1,6 +1,7 @@
 import React from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
+import { BaseURL, DebugMode } from "../../../const";
 
 export default function Topbar({ TitleText }) {
   function click() {
@@ -49,6 +50,17 @@ export default function Topbar({ TitleText }) {
           )}
         </Link>
       </div>
+      {DebugMode ? (
+        <div className="bold" style={{ marginRight: "15px" }}>
+          <p>デバッグモードで稼働中</p>
+          <p>ダミーデータ参照</p>
+        </div>
+      ) : (
+        <div className="bold" style={{ marginRight: "15px" }}>
+          <p>リリースモード</p>
+          <p>API参照中: {BaseURL}</p>
+        </div>
+      )}
     </div>
   );
 }

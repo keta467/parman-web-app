@@ -6,14 +6,10 @@ import { GET_PACKAGE_TARGET_TERMINAL_DATA } from "./DummyDatas/GET_PACKAGE_TARGE
 import { GET_TERMINALS_DATA } from "./DummyDatas/GET_TERMINALS_DATA";
 import { GET_COLLECT_PATH_DATA } from "./DummyDatas/GET_COLLECT_PATH_DATA";
 import axios from "axios";
+import { BaseURL, DebugMode } from "../const";
 
-const DebugMode = true;
-
-// const SERVER_IP = "3.137.85.73";
-// const SERVER_PORT = "3002";
-const SERVER_IP = "localhost";
-const SERVER_PORT = "3002";
-axios.defaults.baseURL = `http://${SERVER_IP}:${SERVER_PORT}`;
+// axios　baseURL設定
+axios.defaults.baseURL = BaseURL;
 
 //
 //1.パッケージ一覧取得
