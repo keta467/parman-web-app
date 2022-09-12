@@ -51,24 +51,24 @@ export default function Manage_Package_Table({
       </thead>
       <tbody>
         {TerminalList.map((Terminal) => (
-          <tr key={Terminal.ID}>
-            {Terminal.RELEASED ? (
+          <tr key={Terminal.id}>
+            {Terminal.released ? (
               <td className="redtext bold">済</td>
             ) : (
               <td>
                 <input
-                  id={Terminal.ID}
+                  id={Terminal.id}
                   type="checkbox"
                   className="mycheckbox"
-                  defaultChecked={Terminal.IS_TARGET_TERMINAL}
+                  defaultChecked={Terminal.is_target_terminal}
                   onChange={(event) => rowcheckboxtoggle(event)}
                 />
               </td>
             )}
-            <td>{Terminal.NAME}</td>
-            <td>{Terminal.DISPLAY_NAME}</td>
-            <td>{Terminal.IP_ADDRESS}</td>
-            <td className="releasedatet">{Terminal.RELEASE_DATE}</td>
+            <td>{Terminal.name}</td>
+            <td>{Terminal.display_name}</td>
+            <td>{Terminal.ip_address}</td>
+            <td className="releasedatet">{Terminal.release_date}</td>
           </tr>
         ))}
       </tbody>

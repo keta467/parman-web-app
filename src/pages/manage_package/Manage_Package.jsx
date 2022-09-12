@@ -27,7 +27,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
     if (isSelectPackageId == -1) return;
 
     const ResponseData = await GET_MODULE_LIST_IN_PACKAGE(isSelectPackageId);
-    const MODULE_LIST = ResponseData.MODULE_LIST;
+    const MODULE_LIST = ResponseData.module_list;
 
     //フォルダと更新情報を取得
     var result = ModulesToFoders(MODULE_LIST);
@@ -56,34 +56,34 @@ export default React.memo(function Manage_Package({ TitleText }) {
     var terminallist = [];
 
     const ResponceData = await GET_TERMINALS();
-    const ALL_TERMINAL_LIST = ResponceData.TERMINAL_LIST;
+    const ALL_TERMINAL_LIST = ResponceData.terminal_list;
 
     const ResponceData2 = await GET_PACKAGE_TARGET_TERMINAL(isSelectPackageId);
-    const TERGET_TERMINAL_LIST = ResponceData2.TERMINAL_LIST;
+    const TERGET_TERMINAL_LIST = ResponceData2.terminal_list;
 
-    var IS_TARGET_TERMINAL;
-    var RELEASE_DATE;
-    var RELEASED;
+    var is_target_terminal;
+    var release_date;
+    var released;
     for (var i = 0; i < ALL_TERMINAL_LIST.length; i++) {
-      IS_TARGET_TERMINAL = false;
-      RELEASE_DATE = "";
-      RELEASED = false;
+      is_target_terminal = false;
+      release_date = "";
+      released = false;
       for (var j = 0; j < TERGET_TERMINAL_LIST.length; j++) {
-        if (ALL_TERMINAL_LIST[i].ID == TERGET_TERMINAL_LIST[j].ID) {
-          IS_TARGET_TERMINAL = true;
-          RELEASE_DATE = TERGET_TERMINAL_LIST[j].RELEASE_DATE;
-          RELEASED = TERGET_TERMINAL_LIST[j].RELEASED;
+        if (ALL_TERMINAL_LIST[i].id == TERGET_TERMINAL_LIST[j].id) {
+          is_target_terminal = true;
+          release_date = TERGET_TERMINAL_LIST[j].release_date;
+          released = TERGET_TERMINAL_LIST[j].released;
           break;
         }
       }
       terminallist.push({
-        ID: ALL_TERMINAL_LIST[i].ID,
-        NAME: ALL_TERMINAL_LIST[i].NAME,
-        DISPLAY_NAME: ALL_TERMINAL_LIST[i].DISPLAY_NAME,
-        IP_ADDRESS: ALL_TERMINAL_LIST[i].IP_ADDRESS,
-        IS_TARGET_TERMINAL: IS_TARGET_TERMINAL,
-        RELEASE_DATE: RELEASE_DATE,
-        RELEASED: RELEASED,
+        id: ALL_TERMINAL_LIST[i].id,
+        name: ALL_TERMINAL_LIST[i].name,
+        display_name: ALL_TERMINAL_LIST[i].display_name,
+        ip_address: ALL_TERMINAL_LIST[i].ip_address,
+        is_target_terminal: is_target_terminal,
+        release_date: release_date,
+        released: released,
       });
     }
     return terminallist;
@@ -112,10 +112,10 @@ export default React.memo(function Manage_Package({ TitleText }) {
     const terminallist = await merge();
     for (var i = 0; i < terminallist.length; i++) {
       if (
-        terminallist[i].NAME.toUpperCase().includes(keyword) ||
-        terminallist[i].DISPLAY_NAME.toUpperCase().includes(keyword) ||
-        terminallist[i].IP_ADDRESS.toUpperCase().includes(keyword) ||
-        terminallist[i].RELEASE_DATE.toUpperCase().includes(keyword)
+        terminallist[i].name.toUpperCase().includes(keyword) ||
+        terminallist[i].display_name.toUpperCase().includes(keyword) ||
+        terminallist[i].ip_address.toUpperCase().includes(keyword) ||
+        terminallist[i].release_date.toUpperCase().includes(keyword)
       ) {
         new_data.push(terminallist[i]);
       }
@@ -146,16 +146,26 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
     document.addEventListener("mousemove", function (e) {
       if (isHandler1Dragging) {
-        boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
-        boxB.style.width = boxB.clientWidth + 8 + "px";
-        boxC.style.width = boxC.clientWidth - 8 + "px";
+        const NEW_A = e.clientX - wrapper.offsetLeft;
+        const NEW_B = boxB.clientWidth + (boxA.clientWidth - NEW_A);
+        const NEW_C = boxC.clientWidth;
+
+        if (NEW_A < 200 || NEW_B < 200) return;
+        boxA.style.width = NEW_A + "px";
+        boxB.style.width = NEW_B + "px";
+        boxC.style.width = NEW_C + "px";
       }
 
       if (isHandler2Dragging) {
-        boxA.style.width = boxA.clientWidth + "px";
-        boxB.style.width = boxB.clientWidth + "px";
-        boxC.style.width =
-          window.innerWidth - e.clientX - wrapper.offsetLeft - 23 + "px";
+        const NEW_C = window.innerWidth - e.clientX - wrapper.offsetLeft;
+        const NEW_B = boxB.clientWidth + (boxC.clientWidth - NEW_C);
+        const NEW_A = boxA.clientWidth;
+
+        if (NEW_B < 200 || NEW_C < 200) return;
+
+        boxC.style.width = NEW_C + "px";
+        boxB.style.width = NEW_B + "px";
+        boxA.style.width = NEW_A + "px";
       }
     });
 
@@ -195,19 +205,23 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
       <div id="managepackagewrapper">
         <div id="managepackagebox1">
-          <Package_List
-            isSelectPackageId={isSelectPackageId}
-            setIsSelectPackageId={setIsSelectPackageId}
-          />
+          <div className="widthheightoverflow">
+            <Package_List
+              isSelectPackageId={isSelectPackageId}
+              setIsSelectPackageId={setIsSelectPackageId}
+            />
+          </div>
         </div>
         <div className="handler" id="managepackagehandler1"></div>
         <div id="managepackagebox2">
-          <Package_Alert
-            isShowAlert={isShowPackageAlert}
-            setIsShowAlert={setIsShowPackageAlert}
-            isSelectPackageId={isSelectPackageId}
-          />
-          <Tree_View FolderList={isFolderList} />
+          <div className="widthheightoverflow">
+            <Package_Alert
+              isShowAlert={isShowPackageAlert}
+              setIsShowAlert={setIsShowPackageAlert}
+              isSelectPackageId={isSelectPackageId}
+            />
+            <Tree_View FolderList={isFolderList} />
+          </div>
         </div>
         <div className="handler" id="managepackagehandler2"></div>
         <div id="managepackagebox3">

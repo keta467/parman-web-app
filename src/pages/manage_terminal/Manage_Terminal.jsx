@@ -101,7 +101,7 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
     //端末順変更
     var orderarr = [];
     for (var i = 0; i < isTerminalList.length; i++) {
-      orderarr.push({ ID: isTerminalList[i].ID });
+      orderarr.push({ ID: isTerminalList[i].id });
     }
 
     //端末順変更
@@ -115,7 +115,7 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
 
   async function createtabledata() {
     const ResponceData = await GET_TERMINALS();
-    setIsTerminalList(ResponceData.TERMINAL_LIST);
+    setIsTerminalList(ResponceData.terminal_list);
   }
 
   //初回レンダリング後
@@ -158,15 +158,15 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
                 draggable="true"
                 className="dragitem"
                 id={index}
-                key={Terminal.ID}
+                key={Terminal.id}
                 onDrag={mydrag}
                 onDragOver={mydragover}
                 onDragLeave={mydragleave}
                 onDrop={mydrop}
               >
-                <td id={index}>{Terminal.NAME}</td>
-                <td id={index}>{Terminal.DISPLAY_NAME}</td>
-                <td id={index}>{Terminal.IP_ADDRESS}</td>
+                <td id={index}>{Terminal.name}</td>
+                <td id={index}>{Terminal.display_name}</td>
+                <td id={index}>{Terminal.ip_address}</td>
               </tr>
             ))}
           </tbody>

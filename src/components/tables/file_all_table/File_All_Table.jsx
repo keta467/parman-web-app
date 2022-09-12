@@ -72,24 +72,24 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
           </th>
           {ModuleList.map((module, index) => (
             <th
-              key={module.MODULE_ID}
+              key={module.module_id}
               id={"th" + index}
               onMouseOver={() => {
-                document.getElementById(module.INSTALL_PATH).style.display =
+                document.getElementById(module.install_path).style.display =
                   "block";
               }}
               onMouseOut={() => {
-                document.getElementById(module.INSTALL_PATH).style.display =
+                document.getElementById(module.install_path).style.display =
                   "none";
               }}
             >
-              {module.MODULE_NAME}
+              {module.module_name}
               <div
-                id={module.INSTALL_PATH}
+                id={module.install_path}
                 className="description"
                 style={{ display: "none" }}
               >
-                {module.INSTALL_PATH}
+                {module.install_path}
               </div>
             </th>
           ))}
@@ -99,7 +99,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
         {TERMINAL_LIST.map((terminal, index) => (
           <tr key={index}>
             <th className="machinename">
-              <div className="machinenametext">{terminal.TERMINAL_NAME}</div>
+              <div className="machinenametext">{terminal.terminal_name}</div>
             </th>
             {ModuleList.map((module, index2) => (
               <td
@@ -108,13 +108,13 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
                   "mouseeventtarget" + " row" + index2 + " col" + index2
                 }
               >
-                {terminal.MODULE_LIST.find(
-                  (MODULE) => MODULE.MODULE_ID == module.MODULE_ID
+                {terminal.module_list.find(
+                  (MODULE) => MODULE.module_id == module.module_id
                 ) == undefined
                   ? ""
-                  : terminal.MODULE_LIST.find(
-                      (MODULE) => MODULE.MODULE_ID == module.MODULE_ID
-                    ).FILE_VERSION}
+                  : terminal.module_list.find(
+                      (MODULE) => MODULE.module_id == module.module_id
+                    ).file_version}
               </td>
             ))}
           </tr>

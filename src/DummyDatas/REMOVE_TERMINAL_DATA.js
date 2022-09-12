@@ -1,4 +1,0 @@
-﻿export const REMOVE_TERMINAL_DATA = {
-  API_NAME: "REMOVE_TERMINAL",
-  RESULT: 0,
-};

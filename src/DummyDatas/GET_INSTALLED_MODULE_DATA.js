@@ -1,964 +1,964 @@
 ﻿export const GET_INSTALLED_MODULE_DATA = {
-  API_NAME: "GET_INSTALLED_MODULE",
-  TERMINAL_COUNT: 10,
-  TERMINAL_LIST: [
+  api_name: "get_installed_module",
+  terminal_count: 10,
+  terminal_list: [
     {
-      TERMINAL_NAME: "inp1",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp1",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:21",
+          update_datetime: "2022/12/10 17:21",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp2",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp2",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:22",
+          update_datetime: "2022/12/10 17:22",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp3",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp3",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:23",
+          update_datetime: "2022/12/10 17:23",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp4",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp4",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:24",
+          update_datetime: "2022/12/10 17:24",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp5",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp5",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:25",
+          update_datetime: "2022/12/10 17:25",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp6",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp6",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:26",
+          update_datetime: "2022/12/10 17:26",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp7",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp7",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:27",
+          update_datetime: "2022/12/10 17:27",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp8",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp8",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:28",
+          update_datetime: "2022/12/10 17:28",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp9",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp9",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:29",
+          update_datetime: "2022/12/10 17:29",
         },
       ],
     },
     {
-      TERMINAL_NAME: "inp10",
-      MODULE_COUNT: 10,
-      MODULE_LIST: [
+      terminal_name: "inp10",
+      module_count: 10,
+      module_list: [
         {
-          MODULE_ID: 1,
-          MODULE_NAME: "animBuildIn.dll",
+          module_id: 1,
+          module_name: "animBuildIn.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 2,
-          MODULE_NAME: "animCamera.dll",
+          module_id: 2,
+          module_name: "animCamera.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animCamera.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 3,
-          MODULE_NAME: "animEvalMesh.dll",
+          module_id: 3,
+          module_name: "animEvalMesh.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animEvalMesh.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 4,
-          MODULE_NAME: "animImport.dll",
+          module_id: 4,
+          module_name: "animImport.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animImport.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 5,
-          MODULE_NAME: "animRefer.dll",
+          module_id: 5,
+          module_name: "animRefer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animRefer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 6,
-          MODULE_NAME: "AnimSeed.dll",
+          module_id: 6,
+          module_name: "AnimSeed.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\AnimSeed.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 7,
-          MODULE_NAME: "animSoccer.dll",
+          module_id: 7,
+          module_name: "animSoccer.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animSoccer.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 8,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 8,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x64\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 9,
-          MODULE_NAME: "IniPatch.dll",
+          module_id: 9,
+          module_name: "IniPatch.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\Bin.v2\\Common\\IniPatch\\x86\\IniPatch.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
         {
-          MODULE_ID: 10,
-          MODULE_NAME: "Microsoft.WindowsAPICodePack.Shell.dll",
+          module_id: 10,
+          module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
           PRODUCT_VERSION: "",
-          FILE_VERSION: "3.0.1.9",
-          INSTALL_PATH:
+          file_version: "3.0.1.9",
+          install_path:
             "D:\\lambda\\BinV2\\ProgEditorBudo\\Microsoft.WindowsAPICodePack.Shell.dll",
-          UPDATE_DATETIME: "2022/12/10 17:210",
+          update_datetime: "2022/12/10 17:210",
         },
       ],
     },

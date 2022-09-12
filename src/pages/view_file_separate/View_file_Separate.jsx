@@ -27,23 +27,23 @@ export default function View_file_Separate({ TitleText }) {
   //
   async function createtreedata() {
     const ResponceData = await GET_INSTALLED_MODULE();
-    const TERMINAL_LIST = ResponceData.TERMINAL_LIST;
+    const TERMINAL_LIST = ResponceData.terminal_list;
     var modulelist = [];
 
     //モジュールリストの作成
     for (var i = 0; i < TERMINAL_LIST.length; i++) {
       var terminal = TERMINAL_LIST[i];
-      for (var j = 0; j < terminal.MODULE_LIST.length; j++) {
+      for (var j = 0; j < terminal.module_list.length; j++) {
         var okflag = true;
         for (var k = 0; k < modulelist.length; k++) {
           //既にモジュールリストにある場合
-          if (modulelist[k].MODULE_ID == terminal.MODULE_LIST[j].MODULE_ID) {
+          if (modulelist[k].module_id == terminal.module_list[j].module_id) {
             okflag = false;
             break;
           }
         }
         if (okflag == true) {
-          modulelist.push(terminal.MODULE_LIST[j]);
+          modulelist.push(terminal.module_list[j]);
         }
       }
     }
@@ -68,7 +68,7 @@ export default function View_file_Separate({ TitleText }) {
       return;
     }
     const ResponceData = await GET_MODULE_INSTALLED_TERMINAL(isInstallPath);
-    const TERMINAL_LIST = ResponceData.TERMINAL_LIST;
+    const TERMINAL_LIST = ResponceData.terminal_list;
     setIsTerminalList(TERMINAL_LIST);
   }
 
@@ -99,7 +99,7 @@ export default function View_file_Separate({ TitleText }) {
   //収集先編集ボタン
   async function ClickEditPath() {
     const RespenceData = await GET_COLLECT_PATH();
-    setIsPathList(RespenceData.COLLECT_PATH);
+    setIsPathList(RespenceData.collect_path);
 
     setIsShowModalEditPath(true);
   }
@@ -121,8 +121,16 @@ export default function View_file_Separate({ TitleText }) {
 
     document.addEventListener("mousemove", function (e) {
       if (isHandler1Dragging) {
-        boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
-        boxB.style.width = boxB.clientWidth + 8 + "px";
+        // boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
+        // boxB.style.width = boxB.clientWidth + 8 + "px";
+
+        const NEW_A = e.clientX - wrapper.offsetLeft;
+        const NEW_B = boxB.clientWidth + (boxA.clientWidth - NEW_A);
+
+        if (NEW_A < 250 || NEW_B < 250) return;
+
+        boxA.style.width = NEW_A + "px";
+        boxB.style.width = NEW_B + "px";
       }
     });
 
@@ -165,7 +173,9 @@ export default function View_file_Separate({ TitleText }) {
       />
       <div id="viewfileseparatewrapper">
         <div id="viewfileseparatebox1">
-          <Tree_View FolderList={isFolderList} />
+          <div className="widthheightoverflow">
+            <Tree_View FolderList={isFolderList} />
+          </div>
         </div>
         <div className="handler" id="viewfileseparatehandler1"></div>
         <div id="viewfileseparatebox2">
