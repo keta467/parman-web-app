@@ -1,25 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
-import { DebugModeContext } from "../DebugModeContext";
+import { BASE_URL, DEBUG_MODE } from "../../api";
 
 export default function Topbar({ TitleText }) {
-  function click(e) {
-    setIsDebugMode({
-      DebugMode: !isDebugMode.DebugMode,
-      BaseURL: isDebugMode.BaseURL,
-    });
-  }
-
-  function change(e) {
-    setIsDebugMode({
-      DebugMode: isDebugMode.DebugMode,
-      BaseURL: e.target.value,
-    });
-  }
-
-  const { isDebugMode, setIsDebugMode } = useContext(DebugModeContext);
-
   return (
     <div className="topbarContainer">
       <div className="topbartab">
@@ -71,27 +55,15 @@ export default function Topbar({ TitleText }) {
           display: "flex",
         }}
       >
-        <button style={{ marginRight: "15px" }} onClick={click}>
-          切り替え
-        </button>
-        {isDebugMode.DebugMode ? (
+        {DEBUG_MODE ? (
           <div>
-            <p id="aiueo">デバッグモード</p>
+            <p>デバッグモード</p>
             <p>ダミーデータ参照</p>
           </div>
         ) : (
           <div>
-            <p id="aiueo">リリースモード</p>
-            <p>
-              API:{" "}
-              <input
-                id="takosuke"
-                onChange={change}
-                type="text"
-                defaultValue={isDebugMode.BaseURL}
-                style={{ width: "300px" }}
-              />
-            </p>
+            <p>リリースモード</p>
+            <p>API:{BASE_URL}</p>
           </div>
         )}
       </div>

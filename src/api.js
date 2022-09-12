@@ -6,10 +6,26 @@ import { GET_PACKAGE_TARGET_TERMINAL_DATA } from "./DummyDatas/GET_PACKAGE_TARGE
 import { GET_TERMINALS_DATA } from "./DummyDatas/GET_TERMINALS_DATA";
 import { GET_COLLECT_PATH_DATA } from "./DummyDatas/GET_COLLECT_PATH_DATA";
 import axios from "axios";
-import { BaseURL, DebugMode } from "../const";
+
+export const DEBUG_MODE = (() => {
+  const str = document.getElementById("debugmode_div").innerHTML;
+  if (typeof str != "string") {
+    return Boolean(str);
+  }
+  try {
+    var obj = JSON.parse(str.toLowerCase());
+    return obj == true;
+  } catch (e) {
+    return str != "";
+  }
+})();
+
+export const IP_ADDRESS = document.getElementById("ipaddress_div").innerHTML;
+export const PORT = document.getElementById("port_div").innerHTML;
+export const BASE_URL = `http://${IP_ADDRESS}:${PORT}`;
 
 // axios　baseURL設定
-axios.defaults.baseURL = BaseURL;
+axios.defaults.baseURL = BASE_URL;
 
 function GetMode() {
   if (document.getElementById("aiueo").innerHTML == "デバッグモード") {
@@ -32,7 +48,7 @@ export async function GET_PACKAGE_LIST() {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return GET_PACKAGE_LIST_DATA;
+  if (DEBUG_MODE) return GET_PACKAGE_LIST_DATA;
 
   try {
     const response = await axios.get("/GET_PACKAGE_LIST");
@@ -54,7 +70,7 @@ export async function GET_MODULE_LIST_IN_PACKAGE(PACKAGE_ID) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return GET_MODULE_LIST_IN_PACKAGE_DATA;
+  if (DEBUG_MODE) return GET_MODULE_LIST_IN_PACKAGE_DATA;
 
   try {
     const response = await axios.get("/GET_MODULE_LIST_IN_PACKAGE", {
@@ -79,7 +95,7 @@ export async function UPDATE_PACKAGE(PACKAGE_ID) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return { API_NAME: UPDATE_PACKAGE.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: UPDATE_PACKAGE.name, RESULT: 0 };
 
   try {
     const response = await axios.get("/UPDATE_PACKAGE", {
@@ -109,7 +125,7 @@ export async function SET_PACKAGE_RELEASE_TERMINAL(
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode())
+  if (DEBUG_MODE)
     return { API_NAME: SET_PACKAGE_RELEASE_TERMINAL.name, RESULT: 0 };
 
   try {
@@ -135,7 +151,7 @@ export async function GET_PACKAGE_TARGET_TERMINAL(PACKAGE_ID) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return GET_PACKAGE_TARGET_TERMINAL_DATA;
+  if (DEBUG_MODE) return GET_PACKAGE_TARGET_TERMINAL_DATA;
 
   try {
     const response = await axios.get("/GET_PACKAGE_TARGET_TERMINAL", {
@@ -158,7 +174,7 @@ export async function GET_TERMINALS() {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return GET_TERMINALS_DATA;
+  if (DEBUG_MODE) return GET_TERMINALS_DATA;
 
   try {
     const response = await axios.get("/GET_TERMINALS", Data);
@@ -182,7 +198,7 @@ export async function SET_TERMINAL_ORDER(TERMINAL_ORDER) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return { API_NAME: SET_TERMINAL_ORDER.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: SET_TERMINAL_ORDER.name, RESULT: 0 };
 
   try {
     const response = await axios.post("/SET_TERMINAL_ORDER", Data);
@@ -208,7 +224,7 @@ export async function SET_PACKAGE_ORDER(PACKAGE_LIST) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return { API_NAME: SET_PACKAGE_ORDER.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: SET_PACKAGE_ORDER.name, RESULT: 0 };
 
   try {
     const response = await axios.post("/SET_PACKAGE_ORDER", Data);
@@ -233,7 +249,7 @@ export async function REGISTER_TERMINAL(NAME, DISPLAY_NAME, IP_ADDRESS) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return { API_NAME: REGISTER_TERMINAL.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: REGISTER_TERMINAL.name, RESULT: 0 };
 
   try {
     const response = await axios.get("/REGISTER_TERMINAL", {
@@ -258,7 +274,7 @@ export async function REMOVE_TERMINAL(TERMINAL_ID) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return { API_NAME: REMOVE_TERMINAL.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: REMOVE_TERMINAL.name, RESULT: 0 };
 
   try {
     const response = await axios.get("/REMOVE_TERMINAL", {
@@ -291,7 +307,7 @@ export async function UPDATE_TERMINAL(
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return { API_NAME: UPDATE_TERMINAL.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: UPDATE_TERMINAL.name, RESULT: 0 };
 
   try {
     const response = await axios.get("/UPDATE_TERMINAL", {
@@ -314,7 +330,7 @@ export async function GET_INSTALLED_MODULE() {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return GET_INSTALLED_MODULE_DATA;
+  if (DEBUG_MODE) return GET_INSTALLED_MODULE_DATA;
 
   try {
     const response = await axios.get("/GET_INSTALLED_MODULE", {
@@ -339,7 +355,7 @@ export async function UPDATE_TERMINAL_MODULE_VERSION(TERMINAL_ID) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode())
+  if (DEBUG_MODE)
     return { API_NAME: UPDATE_TERMINAL_MODULE_VERSION.name, RESULT: 0 };
 
   try {
@@ -363,7 +379,7 @@ export async function GET_MODULE_INSTALLED_TERMINAL(INSTALL_PATH) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return GET_MODULE_INSTALLED_TERMINAL_DATA;
+  if (DEBUG_MODE) return GET_MODULE_INSTALLED_TERMINAL_DATA;
 
   try {
     const response = await axios.get("/GET_MODULE_INSTALLED_TERMINAL", {
@@ -386,7 +402,7 @@ export async function GET_COLLECT_PATH() {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return GET_COLLECT_PATH_DATA;
+  if (DEBUG_MODE) return GET_COLLECT_PATH_DATA;
 
   try {
     const response = await axios.get("/GET_COLLECT_PATH", {
@@ -412,7 +428,7 @@ export async function SET_COLLECT_PATH(COLLECT_PATHS) {
   console.log(Data);
 
   // デバッグモードの場合
-  if (GetMode()) return { API_NAME: SET_COLLECT_PATH.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: SET_COLLECT_PATH.name, RESULT: 0 };
 
   axios
     .post("/SET_COLLECT_PATH", Data)
