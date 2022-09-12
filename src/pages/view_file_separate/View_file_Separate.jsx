@@ -121,8 +121,16 @@ export default function View_file_Separate({ TitleText }) {
 
     document.addEventListener("mousemove", function (e) {
       if (isHandler1Dragging) {
-        boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
-        boxB.style.width = boxB.clientWidth + 8 + "px";
+        // boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
+        // boxB.style.width = boxB.clientWidth + 8 + "px";
+
+        const NEW_A = e.clientX - wrapper.offsetLeft;
+        const NEW_B = boxB.clientWidth + (boxA.clientWidth - NEW_A);
+
+        if (NEW_A < 250 || NEW_B < 250) return;
+
+        boxA.style.width = NEW_A + "px";
+        boxB.style.width = NEW_B + "px";
       }
     });
 
@@ -165,7 +173,9 @@ export default function View_file_Separate({ TitleText }) {
       />
       <div id="viewfileseparatewrapper">
         <div id="viewfileseparatebox1">
-          <Tree_View FolderList={isFolderList} />
+          <div className="widthheightoverflow">
+            <Tree_View FolderList={isFolderList} />
+          </div>
         </div>
         <div className="handler" id="viewfileseparatehandler1"></div>
         <div id="viewfileseparatebox2">

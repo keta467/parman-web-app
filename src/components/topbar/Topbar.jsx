@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Topbar.css";
 import { Link } from "react-router-dom";
-import { BaseURL, DebugMode } from "../../../const";
+import { DebugModeContext } from "../DebugModeContext";
 
 export default function Topbar({ TitleText }) {
-  function click() {
-    setIsDebugMode(!isDebugMode);
+  function click(e) {
+    setIsDebugMode({
+      DebugMode: !isDebugMode.DebugMode,
+      BaseURL: isDebugMode.BaseURL,
+    });
   }
+
+  function change(e) {
+    setIsDebugMode({
+      DebugMode: isDebugMode.DebugMode,
+      BaseURL: e.target.value,
+    });
+  }
+
+  const { isDebugMode, setIsDebugMode } = useContext(DebugModeContext);
 
   return (
     <div className="topbarContainer">
@@ -50,17 +62,39 @@ export default function Topbar({ TitleText }) {
           )}
         </Link>
       </div>
-      {DebugMode ? (
-        <div className="bold" style={{ marginRight: "15px" }}>
-          <p>デバッグモードで稼働中</p>
-          <p>ダミーデータ参照</p>
-        </div>
-      ) : (
-        <div className="bold" style={{ marginRight: "15px" }}>
-          <p>リリースモード</p>
-          <p>API参照中: {BaseURL}</p>
-        </div>
-      )}
+
+      <div
+        className="bold"
+        style={{
+          width: "500px",
+          marginRight: "15px",
+          display: "flex",
+        }}
+      >
+        <button style={{ marginRight: "15px" }} onClick={click}>
+          切り替え
+        </button>
+        {isDebugMode.DebugMode ? (
+          <div>
+            <p id="aiueo">デバッグモード</p>
+            <p>ダミーデータ参照</p>
+          </div>
+        ) : (
+          <div>
+            <p id="aiueo">リリースモード</p>
+            <p>
+              API:{" "}
+              <input
+                id="takosuke"
+                onChange={change}
+                type="text"
+                defaultValue={isDebugMode.BaseURL}
+                style={{ width: "300px" }}
+              />
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -146,16 +146,26 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
     document.addEventListener("mousemove", function (e) {
       if (isHandler1Dragging) {
-        boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
-        boxB.style.width = boxB.clientWidth + 8 + "px";
-        boxC.style.width = boxC.clientWidth - 8 + "px";
+        const NEW_A = e.clientX - wrapper.offsetLeft;
+        const NEW_B = boxB.clientWidth + (boxA.clientWidth - NEW_A);
+        const NEW_C = boxC.clientWidth;
+
+        if (NEW_A < 200 || NEW_B < 200) return;
+        boxA.style.width = NEW_A + "px";
+        boxB.style.width = NEW_B + "px";
+        boxC.style.width = NEW_C + "px";
       }
 
       if (isHandler2Dragging) {
-        boxA.style.width = boxA.clientWidth + "px";
-        boxB.style.width = boxB.clientWidth + "px";
-        boxC.style.width =
-          window.innerWidth - e.clientX - wrapper.offsetLeft - 23 + "px";
+        const NEW_C = window.innerWidth - e.clientX - wrapper.offsetLeft;
+        const NEW_B = boxB.clientWidth + (boxC.clientWidth - NEW_C);
+        const NEW_A = boxA.clientWidth;
+
+        if (NEW_B < 200 || NEW_C < 200) return;
+
+        boxC.style.width = NEW_C + "px";
+        boxB.style.width = NEW_B + "px";
+        boxA.style.width = NEW_A + "px";
       }
     });
 
@@ -195,19 +205,23 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
       <div id="managepackagewrapper">
         <div id="managepackagebox1">
-          <Package_List
-            isSelectPackageId={isSelectPackageId}
-            setIsSelectPackageId={setIsSelectPackageId}
-          />
+          <div className="widthheightoverflow">
+            <Package_List
+              isSelectPackageId={isSelectPackageId}
+              setIsSelectPackageId={setIsSelectPackageId}
+            />
+          </div>
         </div>
         <div className="handler" id="managepackagehandler1"></div>
         <div id="managepackagebox2">
-          <Package_Alert
-            isShowAlert={isShowPackageAlert}
-            setIsShowAlert={setIsShowPackageAlert}
-            isSelectPackageId={isSelectPackageId}
-          />
-          <Tree_View FolderList={isFolderList} />
+          <div className="widthheightoverflow">
+            <Package_Alert
+              isShowAlert={isShowPackageAlert}
+              setIsShowAlert={setIsShowPackageAlert}
+              isSelectPackageId={isSelectPackageId}
+            />
+            <Tree_View FolderList={isFolderList} />
+          </div>
         </div>
         <div className="handler" id="managepackagehandler2"></div>
         <div id="managepackagebox3">
