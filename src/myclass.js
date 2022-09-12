@@ -148,7 +148,7 @@ export function ModulesToFoders(MODULE_LIST) {
   //一つでも更新されているファイルがあればアラートを表示
   var flag = false;
   for (var i = 0; i < MODULE_LIST.length; i++) {
-    if (MODULE_LIST[i].DIFFERENCE == true) {
+    if (MODULE_LIST[i].differnce == true) {
       flag = true;
       break;
     }
@@ -159,7 +159,7 @@ export function ModulesToFoders(MODULE_LIST) {
   ///
   var folderlist = [];
   for (var i = 0; i < MODULE_LIST.length; i++) {
-    const str = MODULE_LIST[i].INSTALL_PATH;
+    const str = MODULE_LIST[i].install_path;
     const regex = /([^\\]*)\\/g;
     const foldersInPath = str.match(regex);
     for (var j = 0; j < foldersInPath.length; j++) {
@@ -230,7 +230,7 @@ export function ModulesToFoders(MODULE_LIST) {
   }
   var files = [];
   for (var i = 0; i < MODULE_LIST.length; i++) {
-    const str = MODULE_LIST[i].INSTALL_PATH;
+    const str = MODULE_LIST[i].install_path;
 
     var datas = str.match(/\\[^\\]*/g);
     const filename = datas[datas.length - 1].replace("\\", "");
@@ -243,7 +243,7 @@ export function ModulesToFoders(MODULE_LIST) {
       }
     }
 
-    const Path = MODULE_LIST[i].INSTALL_PATH;
+    const Path = MODULE_LIST[i].install_path;
 
     files.push(new File(filename, parentfolderid, Path));
   }

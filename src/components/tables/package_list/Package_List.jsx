@@ -97,7 +97,7 @@ export default React.memo(function Package_List({
   //
   async function createlistdata() {
     const ResponseData = await GET_PACKAGE_LIST();
-    setIsPackageList(ResponseData.PACKAGE_LIST);
+    setIsPackageList(ResponseData.package_list);
   }
 
   React.useEffect(() => {
@@ -110,33 +110,33 @@ export default React.memo(function Package_List({
     <table className="managepackagetable colortable">
       <tbody className="managepackagetabletbody">
         {isPackageList.map((Package, index) =>
-          Package.ID == isSelectPackageId ? (
+          Package.id == isSelectPackageId ? (
             <tr
-              onClick={() => ClickRow(Package.ID)}
+              onClick={() => ClickRow(Package.id)}
               draggable="true"
               className="dragitem selectpackage"
               id={index}
-              key={Package.ID}
+              key={Package.id}
               onDrag={mydrag}
               onDragOver={mydragover}
               onDragLeave={mydragleave}
               onDrop={mydrop}
             >
-              <td id={index}>{Package.NAME}</td>
+              <td id={index}>{Package.name}</td>
             </tr>
           ) : (
             <tr
-              onClick={() => ClickRow(Package.ID)}
+              onClick={() => ClickRow(Package.id)}
               draggable="true"
               className="dragitem"
               id={index}
-              key={Package.ID}
+              key={Package.id}
               onDrag={mydrag}
               onDragOver={mydragover}
               onDragLeave={mydragleave}
               onDrop={mydrop}
             >
-              <td id={index}>{Package.NAME}</td>
+              <td id={index}>{Package.name}</td>
             </tr>
           )
         )}

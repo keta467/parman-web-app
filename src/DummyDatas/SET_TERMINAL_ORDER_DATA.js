@@ -1,4 +1,0 @@
-﻿export const SET_TERMINAL_ORDER_DATA = {
-  API_NAME: "SET_TERMINAL_ORDER",
-  RESULT: 0,
-};

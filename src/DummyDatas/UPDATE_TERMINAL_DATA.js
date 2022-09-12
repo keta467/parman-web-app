@@ -1,4 +1,0 @@
-﻿export const UPDATE_TERMINAL_DATA = {
-  API_NAME: "UPDATE_TERMINAL",
-  RESULT: 0,
-};

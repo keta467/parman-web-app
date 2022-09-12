@@ -16,12 +16,12 @@ export default function File_Separate_Table({ TerminalList }) {
       </thead>
       <tbody>
         {TerminalList.map((Terminal) => (
-          <tr key={`${Terminal.ID}`}>
-            <td>{Terminal.NAME}</td>
-            <td>{Terminal.DISPLAY_NAME}</td>
-            <td>{Terminal.IP_ADDRESS}</td>
-            <td>{Terminal.FILE_VERSION}</td>
-            <td className="releasedatet">{Terminal.UPDATE_DATE_TIME}</td>
+          <tr key={`${Terminal.id}`}>
+            <td>{Terminal.name}</td>
+            <td>{Terminal.display_name}</td>
+            <td>{Terminal.ip_address}</td>
+            <td>{Terminal.file_version}</td>
+            <td className="releasedatet">{Terminal.update_date_time}</td>
           </tr>
         ))}
       </tbody>

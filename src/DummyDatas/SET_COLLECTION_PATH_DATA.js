@@ -1,4 +1,0 @@
-﻿export const SET_COLLECTION_PATH_DATA = {
-  API_NAME: "SET_COLLECTION_PATH",
-  RESULT: 0,
-};
