@@ -17,7 +17,6 @@ export default React.memo(function Manage_Package({ TitleText }) {
   const [isFolderList, setIsFolderList] = React.useState([]);
   const [isTerminalList, setIsTerminalList] = React.useState([]);
   const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(false);
-
   const [isSelectPackageId, setIsSelectPackageId] = React.useState(-1);
 
   //
@@ -89,14 +88,14 @@ export default React.memo(function Manage_Package({ TitleText }) {
     return terminallist;
   }
 
-  //フォルダを開閉させる処理
-  function ToggleFolder() {
+  // //フォルダを開閉させる処理
+  const ToggleFolder = React.useCallback(() => {
     setIsFolderList((prevState) =>
       prevState.map(
         (value) => new Folder(null, null, null, null, null, null, null, value)
       )
     );
-  }
+  });
 
   //一括同期ボタン
   function doukiclick() {

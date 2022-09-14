@@ -2,10 +2,10 @@ import React from "react";
 import { REMOVE_TERMINAL, UPDATE_TERMINAL } from "../../api";
 import "./Modal.css";
 
-export default function Modal_Edit_Terminal({
+export default React.memo(function Modal_Edit_Terminal({
   isShowModal,
   setIsShowModal,
-  SelectTerminal,
+  isSelectTerminal,
   createtabledata,
 }) {
   const CloseModal = () => {
@@ -22,7 +22,7 @@ export default function Modal_Edit_Terminal({
       return;
     }
     await UPDATE_TERMINAL(
-      SelectTerminal.ID,
+      isSelectTerminal.id,
       text1.value,
       text2.value,
       text3.value
@@ -32,7 +32,7 @@ export default function Modal_Edit_Terminal({
   }
 
   async function Remove() {
-    await REMOVE_TERMINAL(SelectTerminal.ID);
+    await REMOVE_TERMINAL(isSelectTerminal.id);
     createtabledata();
     CloseModal();
   }
@@ -49,7 +49,7 @@ export default function Modal_Edit_Terminal({
                 <input
                   id="textarea1"
                   type="text"
-                  defaultValue={SelectTerminal.NAME}
+                  defaultValue={isSelectTerminal.name}
                 />
               </div>
               <div>
@@ -57,7 +57,7 @@ export default function Modal_Edit_Terminal({
                 <input
                   id="textarea2"
                   type="text"
-                  defaultValue={SelectTerminal.DISPLAY_NAME}
+                  defaultValue={isSelectTerminal.display_name}
                 />
               </div>
               <div>
@@ -65,7 +65,7 @@ export default function Modal_Edit_Terminal({
                 <input
                   id="textarea3"
                   type="text"
-                  defaultValue={SelectTerminal.IP_ADDRESS}
+                  defaultValue={isSelectTerminal.ip_address}
                 />
               </div>
             </div>
@@ -84,4 +84,4 @@ export default function Modal_Edit_Terminal({
       )}
     </>
   );
-}
+});

@@ -113,10 +113,10 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
     setIsSelectTerminal(isTerminalList[index]);
   };
 
-  async function createtabledata() {
+  const createtabledata = React.useCallback(async () => {
     const ResponceData = await GET_TERMINALS();
     setIsTerminalList(ResponceData.terminal_list);
-  }
+  }, []);
 
   //初回レンダリング後
   React.useEffect(() => {
@@ -134,7 +134,7 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
       <Modal_Edit_Terminal
         isShowModal={isShowModalEditTerminal}
         setIsShowModal={setIsShowModalEditTerminal}
-        SelectTerminal={isSelectTerminal}
+        isSelectTerminal={isSelectTerminal}
         createtabledata={createtabledata}
       />
       <div className="managemachinebuttonwrapper">
