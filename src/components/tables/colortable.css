@@ -1,7 +1,5 @@
 .colortable {
   border-spacing: 0;
-  border-top: 1px solid #999;
-  border-left: 1px solid #999;
   width: 100%;
   table-layout: fixed;
 }
@@ -15,11 +13,11 @@
 }
 
 .colortable tr {
-  background-color: #e2efda;
+  background-color: #c5f0d3;
 }
 
 .colortable tbody tr:nth-child(2n) {
-  background-color: #c6e0b4;
+  background-color: #c5f0d3a4;
 }
 
 .colortable th {
@@ -27,6 +25,7 @@
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
   background: white;
+
   position: sticky;
   top: 0;
   left: 0;

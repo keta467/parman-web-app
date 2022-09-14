@@ -76,23 +76,27 @@ export default function View_file_Separate({ TitleText }) {
   function ToggleFolder() {
     setIsFolderList((prevState) =>
       prevState.map(
-        (value) => new Folder(null, null, null, null, null, null, value)
+        (value) => new Folder(null, null, null, null, null, null, null, value)
       )
     );
   }
 
   //ファイルの選択
   function SetFilePath(Path) {
-    var elems = document.getElementsByClassName("filebox");
+    var elems = document.getElementsByClassName("file_button");
     for (var i = 0; i < elems.length; i++) {
-      if (Path == elems[i].id) {
-        elems[i].style.backgroundColor = "#F06060";
-        elems[i].firstElementChild.style.color = "white";
-      } else {
-        elems[i].style.backgroundColor = "white";
-        elems[i].firstElementChild.style.color = "blue";
-      }
+      elems[i].style.backgroundColor = "";
+      elems[i].firstElementChild.style.color = "";
+      elems[i].firstElementChild.firstElementChild.style.filter = "";
     }
+    const SelectElem = document.getElementById(Path);
+    if (SelectElem != null) {
+      SelectElem.style.backgroundColor = "#F06060";
+      SelectElem.firstElementChild.style.color = "white";
+      SelectElem.firstElementChild.firstElementChild.style.filter =
+        "brightness(0) invert(1)";
+    }
+
     setIsInstallPath(Path); //どのファイルか記録
   }
 
@@ -139,8 +143,8 @@ export default function View_file_Separate({ TitleText }) {
     });
 
     //初期サイズ
-    boxA.style.width = "40%";
-    boxB.style.width = "60%";
+    boxA.style.width = "35%";
+    boxB.style.width = "65%";
   }
 
   //初回レンダリング時

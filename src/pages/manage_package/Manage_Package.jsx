@@ -93,7 +93,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
   function ToggleFolder() {
     setIsFolderList((prevState) =>
       prevState.map(
-        (value) => new Folder(null, null, null, null, null, null, value)
+        (value) => new Folder(null, null, null, null, null, null, null, value)
       )
     );
   }
