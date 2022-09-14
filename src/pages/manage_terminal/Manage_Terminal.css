@@ -8,7 +8,7 @@
 .managemachinetablewrapper {
   overflow: auto;
   width: 70%;
-  height: 75vh;
+  max-height: 78vh;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;

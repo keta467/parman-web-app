@@ -173,9 +173,9 @@ export default React.memo(function Manage_Package({ TitleText }) {
       isHandler1Dragging = false;
       isHandler2Dragging = false;
     });
-    boxA.style.width = "25%";
-    boxB.style.width = "30%";
-    boxC.style.width = "45%";
+    boxA.style.width = "22%";
+    boxB.style.width = "28%";
+    boxC.style.width = "50%";
   }
 
   React.useEffect(() => {
@@ -185,6 +185,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
   React.useEffect(() => {
     createtreedata();
     createtabledata();
+    document.getElementById("serchtext").value = ""; // 検索ボックスをリセット
   }, [isSelectPackageId]);
 
   return (
