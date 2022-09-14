@@ -72,17 +72,16 @@ export default function View_file_Separate({ TitleText }) {
     setIsTerminalList(TERMINAL_LIST);
   }
 
-  //フォルダの開閉
-  function ToggleFolder() {
+  // //フォルダを開閉させる処理
+  const ToggleFolder = React.useCallback(() => {
     setIsFolderList((prevState) =>
       prevState.map(
         (value) => new Folder(null, null, null, null, null, null, null, value)
       )
     );
-  }
+  });
 
-  //ファイルの選択
-  function SetFilePath(Path) {
+  const SetFilePath = React.useCallback((Path) => {
     var elems = document.getElementsByClassName("file_button");
     for (var i = 0; i < elems.length; i++) {
       elems[i].style.backgroundColor = "";
@@ -98,7 +97,7 @@ export default function View_file_Separate({ TitleText }) {
     }
 
     setIsInstallPath(Path); //どのファイルか記録
-  }
+  });
 
   //収集先編集ボタン
   async function ClickEditPath() {

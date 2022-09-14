@@ -49,16 +49,15 @@
 }
 
 .handler {
-  width: 4px;
+  width: 6px;
   padding: 0;
   cursor: ew-resize;
   flex: 0 0 auto;
-  background-color: gray;
   transition: 0.2s;
+  background-color: #999;
 }
 
 .handler:hover {
-  width: 4px;
   background-color: rgb(0, 102, 255);
 }
 
