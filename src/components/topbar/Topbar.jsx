@@ -47,24 +47,14 @@ export default function Topbar({ TitleText }) {
         </Link>
       </div>
 
-      <div
-        className="bold"
-        style={{
-          width: "500px",
-          marginRight: "15px",
-          display: "flex",
-        }}
-      >
+      <div className="mode_description">
         {DEBUG_MODE ? (
-          <div>
-            <p>デバッグモード</p>
-            <p>ダミーデータ参照</p>
-          </div>
+          <p>デバッグモード: ダミーデータ参照中</p>
         ) : (
-          <div>
-            <p>リリースモード</p>
-            <p>API:{BASE_URL}</p>
-          </div>
+          <>
+            <p>リリースモード: API参照中</p>
+            <p>{BASE_URL}</p>
+          </>
         )}
       </div>
     </div>

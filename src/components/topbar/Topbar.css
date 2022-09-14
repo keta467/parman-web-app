@@ -1,6 +1,6 @@
 .topbarContainer {
   background-color: #5ad382;
-  height: 70px;
+  height: 65px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,7 @@
 
 .topbartab {
   display: flex;
-  margin-top: 33px;
+  margin-top: 29px;
   margin-right: 20px;
   font-weight: bold;
   margin-left: 50px;
@@ -20,14 +20,14 @@
 
 .topbartab a {
   color: black;
-  cursor: default;
+  cursor: pointer;
   text-decoration: none;
 }
 
 .topbartabbutton {
   padding: 3px;
-  padding-right: 7px;
-  padding-left: 7px;
+  padding-right: 8px;
+  padding-left: 8px;
   border-left: 1px dashed black;
   width: 200px;
   text-align: center;
@@ -44,4 +44,14 @@
 .topbarbuttonswraper {
   margin-right: 200px;
   white-space: nowrap;
+}
+
+.mode_description {
+  height: 100%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  font-weight: bold;
 }

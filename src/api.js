@@ -22,7 +22,7 @@ export const DEBUG_MODE = (() => {
 
 export const IP_ADDRESS = document.getElementById("ipaddress_div").innerHTML;
 export const PORT = document.getElementById("port_div").innerHTML;
-export const BASE_URL = `http://${IP_ADDRESS}:${PORT}`;
+export const BASE_URL = `http://${IP_ADDRESS}:${PORT}/manage`;
 
 // axios　baseURL設定
 axios.defaults.baseURL = BASE_URL;
@@ -52,6 +52,8 @@ export async function GET_PACKAGE_LIST() {
 
   try {
     const response = await axios.get("/GET_PACKAGE_LIST");
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -76,6 +78,8 @@ export async function GET_MODULE_LIST_IN_PACKAGE(PACKAGE_ID) {
     const response = await axios.get("/GET_MODULE_LIST_IN_PACKAGE", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -101,6 +105,8 @@ export async function UPDATE_PACKAGE(PACKAGE_ID) {
     const response = await axios.get("/UPDATE_PACKAGE", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -132,6 +138,8 @@ export async function SET_PACKAGE_RELEASE_TERMINAL(
     const response = await axios.post("/SET_PACKAGE_RELEASE_TERMINAL", Data);
     console.log("↓Responce↓");
     console.log(response.data);
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -157,6 +165,8 @@ export async function GET_PACKAGE_TARGET_TERMINAL(PACKAGE_ID) {
     const response = await axios.get("/GET_PACKAGE_TARGET_TERMINAL", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -178,6 +188,8 @@ export async function GET_TERMINALS() {
 
   try {
     const response = await axios.get("/GET_TERMINALS", Data);
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -204,6 +216,8 @@ export async function SET_TERMINAL_ORDER(TERMINAL_ORDER) {
     const response = await axios.post("/SET_TERMINAL_ORDER", Data);
     console.log("↓Responce↓");
     console.log(response.data);
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -228,6 +242,8 @@ export async function SET_PACKAGE_ORDER(PACKAGE_LIST) {
 
   try {
     const response = await axios.post("/SET_PACKAGE_ORDER", Data);
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -255,6 +271,8 @@ export async function REGISTER_TERMINAL(NAME, DISPLAY_NAME, IP_ADDRESS) {
     const response = await axios.get("/REGISTER_TERMINAL", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -280,6 +298,8 @@ export async function REMOVE_TERMINAL(TERMINAL_ID) {
     const response = await axios.get("/REMOVE_TERMINAL", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -313,6 +333,8 @@ export async function UPDATE_TERMINAL(
     const response = await axios.get("/UPDATE_TERMINAL", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -336,6 +358,8 @@ export async function GET_INSTALLED_MODULE() {
     const response = await axios.get("/GET_INSTALLED_MODULE", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -362,6 +386,8 @@ export async function UPDATE_TERMINAL_MODULE_VERSION(TERMINAL_ID) {
     const response = await axios.get("/UPDATE_TERMINAL_MODULE_VERSION", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -385,6 +411,8 @@ export async function GET_MODULE_INSTALLED_TERMINAL(INSTALL_PATH) {
     const response = await axios.get("/GET_MODULE_INSTALLED_TERMINAL", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -408,6 +436,8 @@ export async function GET_COLLECT_PATH() {
     const response = await axios.get("/GET_COLLECT_PATH", {
       params: Data,
     });
+    console.log("↓Responce↓");
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -430,12 +460,12 @@ export async function SET_COLLECT_PATH(COLLECT_PATHS) {
   // デバッグモードの場合
   if (DEBUG_MODE) return { API_NAME: SET_COLLECT_PATH.name, RESULT: 0 };
 
-  axios
-    .post("/SET_COLLECT_PATH", Data)
-    .then(function (response) {
-      return response.data;
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  try {
+    const response = await axios.post("/SET_COLLECT_PATH", Data);
+    console.log("↓Responce↓");
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
 }
