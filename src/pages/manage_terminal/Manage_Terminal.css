@@ -2,14 +2,14 @@
   width: 70%;
   text-align: right;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .managemachinetablewrapper {
   overflow: auto;
   width: 70%;
-  max-height: 78vh;
-  margin-top: 15px;
+  max-height: 81vh;
+  margin-top: 13px;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid rgba(153, 153, 153, 0.6);

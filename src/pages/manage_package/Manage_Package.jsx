@@ -196,7 +196,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
           width: "96%",
           marginLeft: "auto",
           marginRight: "auto",
-          marginTop: "30px",
+          marginTop: "25px",
         }}
       >
         <button className="mybutton" onClick={doukiclick}>
