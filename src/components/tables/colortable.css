@@ -15,11 +15,13 @@
 }
 
 .colortable tr {
-  background-color: #e2efda;
+  /* background-color: #e2efda; */
+  background-color: #aeecc3;
 }
 
 .colortable tbody tr:nth-child(2n) {
-  background-color: #c6e0b4;
+  /* background-color: #c6e0b4; */
+  background-color: #aeecc3b0;
 }
 
 .colortable th {
@@ -27,6 +29,8 @@
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
   background: white;
+  /* background: #e9efc0; */
+
   position: sticky;
   top: 0;
   left: 0;

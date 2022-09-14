@@ -3,16 +3,16 @@
   module_count: 1153,
   module_list: [
     {
-      name: "animBuildIn.dll",
+      module_name: "animBuildIn.dll",
       product_version: "クライアントリリース#1",
-      file_version: "3.0.1.9",
+      file_version: "3.0.1.90",
       download_path: "D:\\lambda\\Bin.v2",
       install_path:
         "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation\\animBuildIn.dll",
       differnce: true,
     },
     {
-      name: "animCamera.dll",
+      module_name: "animCamera.dll",
       product_version: "クライアントリリース#2",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -21,7 +21,7 @@
       differnce: true,
     },
     {
-      name: "animEvalMesh.dll",
+      module_name: "animEvalMesh.dll",
       product_version: "クライアントリリース#3",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -30,7 +30,7 @@
       differnce: true,
     },
     {
-      name: "animImport.dll",
+      module_name: "animImport.dll",
       product_version: "クライアントリリース#4",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -39,7 +39,7 @@
       differnce: true,
     },
     {
-      name: "animRefer.dll",
+      module_name: "animRefer.dll",
       product_version: "クライアントリリース#5",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -48,7 +48,7 @@
       differnce: true,
     },
     {
-      name: "AnimSeed.dll",
+      module_name: "AnimSeed.dll",
       product_version: "クライアントリリース#6",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -57,7 +57,7 @@
       differnce: true,
     },
     {
-      name: "animSoccer.dll",
+      module_name: "animSoccer.dll",
       product_version: "クライアントリリース#7",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -66,7 +66,7 @@
       differnce: true,
     },
     {
-      name: "AnimUICamera.dll",
+      module_name: "AnimUICamera.dll",
       product_version: "クライアントリリース#8",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -75,7 +75,7 @@
       differnce: true,
     },
     {
-      name: "animUIEvalMesh.dll",
+      module_name: "animUIEvalMesh.dll",
       product_version: "クライアントリリース#9",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -84,7 +84,7 @@
       differnce: true,
     },
     {
-      name: "AnimUIImport.dll",
+      module_name: "AnimUIImport.dll",
       product_version: "クライアントリリース#10",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -93,7 +93,7 @@
       differnce: true,
     },
     {
-      name: "AnimUIRefer.dll",
+      module_name: "AnimUIRefer.dll",
       product_version: "クライアントリリース#11",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -102,7 +102,7 @@
       differnce: true,
     },
     {
-      name: "AnimUISeed.dll",
+      module_name: "AnimUISeed.dll",
       product_version: "クライアントリリース#12",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -111,7 +111,7 @@
       differnce: true,
     },
     {
-      name: "AnimUISoccer.dll",
+      module_name: "AnimUISoccer.dll",
       product_version: "クライアントリリース#13",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -120,7 +120,7 @@
       differnce: true,
     },
     {
-      name: "BrushBuildIn.dll",
+      module_name: "BrushBuildIn.dll",
       product_version: "クライアントリリース#14",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -129,7 +129,7 @@
       differnce: true,
     },
     {
-      name: "brushUIBuildIn.dll",
+      module_name: "brushUIBuildIn.dll",
       product_version: "クライアントリリース#15",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -138,7 +138,7 @@
       differnce: true,
     },
     {
-      name: "simpleIO.dll",
+      module_name: "simpleIO.dll",
       product_version: "クライアントリリース#16",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -146,7 +146,7 @@
       differnce: true,
     },
     {
-      name: "device4prismGL.dll",
+      module_name: "device4prismGL.dll",
       product_version: "クライアントリリース#17",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -155,7 +155,7 @@
       differnce: true,
     },
     {
-      name: "deviceCG.dll",
+      module_name: "deviceCG.dll",
       product_version: "クライアントリリース#18",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -163,7 +163,7 @@
       differnce: true,
     },
     {
-      name: "deviceCgFBO.dll",
+      module_name: "deviceCgFBO.dll",
       product_version: "クライアントリリース#19",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -172,7 +172,7 @@
       differnce: true,
     },
     {
-      name: "DeviceConFB.dll",
+      module_name: "DeviceConFB.dll",
       product_version: "クライアントリリース#20",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -181,7 +181,7 @@
       differnce: true,
     },
     {
-      name: "DeviceEmSDI.dll",
+      module_name: "DeviceEmSDI.dll",
       product_version: "クライアントリリース#21",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -190,7 +190,7 @@
       differnce: true,
     },
     {
-      name: "deviceFBO.dll",
+      module_name: "deviceFBO.dll",
       product_version: "クライアントリリース#22",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -199,7 +199,7 @@
       differnce: true,
     },
     {
-      name: "deviceFx4000SDI.dll",
+      module_name: "deviceFx4000SDI.dll",
       product_version: "クライアントリリース#23",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -208,7 +208,7 @@
       differnce: true,
     },
     {
-      name: "deviceFx4000SDIstub.dll",
+      module_name: "deviceFx4000SDIstub.dll",
       product_version: "クライアントリリース#24",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -217,7 +217,7 @@
       differnce: true,
     },
     {
-      name: "deviceFx4500SDI.dll",
+      module_name: "deviceFx4500SDI.dll",
       product_version: "クライアントリリース#25",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -226,7 +226,7 @@
       differnce: true,
     },
     {
-      name: "DeviceFx4600SDI.dll",
+      module_name: "DeviceFx4600SDI.dll",
       product_version: "クライアントリリース#26",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -235,7 +235,7 @@
       differnce: true,
     },
     {
-      name: "deviceNULL.dll",
+      module_name: "deviceNULL.dll",
       product_version: "クライアントリリース#27",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -244,7 +244,7 @@
       differnce: true,
     },
     {
-      name: "deviceNvAPI2.dll",
+      module_name: "deviceNvAPI2.dll",
       product_version: "クライアントリリース#28",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -253,7 +253,7 @@
       differnce: true,
     },
     {
-      name: "DeviceNvApi35.dll",
+      module_name: "DeviceNvApi35.dll",
       product_version: "クライアントリリース#29",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -262,7 +262,7 @@
       differnce: true,
     },
     {
-      name: "deviceNvApiSDI.dll",
+      module_name: "deviceNvApiSDI.dll",
       product_version: "クライアントリリース#30",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -271,7 +271,7 @@
       differnce: true,
     },
     {
-      name: "deviceOffScreen.dll",
+      module_name: "deviceOffScreen.dll",
       product_version: "クライアントリリース#31",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -280,7 +280,7 @@
       differnce: true,
     },
     {
-      name: "ornamentBuildIn.dll",
+      module_name: "ornamentBuildIn.dll",
       product_version: "クライアントリリース#32",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -289,7 +289,7 @@
       differnce: true,
     },
     {
-      name: "ornamentPolygon.dll",
+      module_name: "ornamentPolygon.dll",
       product_version: "クライアントリリース#33",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -298,7 +298,7 @@
       differnce: true,
     },
     {
-      name: "ornamentUIBuildIn.dll",
+      module_name: "ornamentUIBuildIn.dll",
       product_version: "クライアントリリース#34",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -307,7 +307,7 @@
       differnce: true,
     },
     {
-      name: "OrnamentUIPolygon.dll",
+      module_name: "OrnamentUIPolygon.dll",
       product_version: "クライアントリリース#35",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -316,7 +316,7 @@
       differnce: true,
     },
     {
-      name: "PrimBuildIn.dll",
+      module_name: "PrimBuildIn.dll",
       product_version: "クライアントリリース#36",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -325,7 +325,7 @@
       differnce: true,
     },
     {
-      name: "primCurve2D.dll",
+      module_name: "primCurve2D.dll",
       product_version: "クライアントリリース#37",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -334,7 +334,7 @@
       differnce: true,
     },
     {
-      name: "primImport.dll",
+      module_name: "primImport.dll",
       product_version: "クライアントリリース#38",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -343,7 +343,7 @@
       differnce: true,
     },
     {
-      name: "primParticle.dll",
+      module_name: "primParticle.dll",
       product_version: "クライアントリリース#39",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -352,7 +352,7 @@
       differnce: true,
     },
     {
-      name: "PrimUIBuildIn.dll",
+      module_name: "PrimUIBuildIn.dll",
       product_version: "クライアントリリース#40",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -361,7 +361,7 @@
       differnce: true,
     },
     {
-      name: "primUICurve2D.dll",
+      module_name: "primUICurve2D.dll",
       product_version: "クライアントリリース#41",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -370,7 +370,7 @@
       differnce: true,
     },
     {
-      name: "primUIImport.dll",
+      module_name: "primUIImport.dll",
       product_version: "クライアントリリース#42",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -379,7 +379,7 @@
       differnce: true,
     },
     {
-      name: "primUIparticle.dll",
+      module_name: "primUIparticle.dll",
       product_version: "クライアントリリース#43",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -388,7 +388,7 @@
       differnce: true,
     },
     {
-      name: "IniPatch.dll",
+      module_name: "IniPatch.dll",
       product_version: "クライアントリリース#44",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -396,7 +396,7 @@
       differnce: true,
     },
     {
-      name: "IniPatch.dll",
+      module_name: "IniPatch.dll",
       product_version: "クライアントリリース#45",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -404,7 +404,7 @@
       differnce: true,
     },
     {
-      name: "checkNIC.exe",
+      module_name: "checkNIC.exe",
       product_version: "クライアントリリース#46",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -412,7 +412,7 @@
       differnce: true,
     },
     {
-      name: "checkNIC_VIP.exe",
+      module_name: "checkNIC_VIP.exe",
       product_version: "クライアントリリース#47",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -420,7 +420,7 @@
       differnce: true,
     },
     {
-      name: "DateProgDel.exe",
+      module_name: "DateProgDel.exe",
       product_version: "クライアントリリース#48",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -428,7 +428,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#49",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -436,7 +436,7 @@
       differnce: true,
     },
     {
-      name: "DateFolderPredator.dll",
+      module_name: "DateFolderPredator.dll",
       product_version: "クライアントリリース#50",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -445,7 +445,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN3.dll",
+      module_name: "MATMAN3.dll",
       product_version: "クライアントリリース#51",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -454,7 +454,7 @@
       differnce: true,
     },
     {
-      name: "TerminalMan.dll",
+      module_name: "TerminalMan.dll",
       product_version: "クライアントリリース#52",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -463,7 +463,7 @@
       differnce: true,
     },
     {
-      name: "DateProgDelAgent.exe",
+      module_name: "DateProgDelAgent.exe",
       product_version: "クライアントリリース#53",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -472,7 +472,7 @@
       differnce: true,
     },
     {
-      name: "MyLogger.dll",
+      module_name: "MyLogger.dll",
       product_version: "クライアントリリース#54",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -481,7 +481,7 @@
       differnce: true,
     },
     {
-      name: "MyThread.dll",
+      module_name: "MyThread.dll",
       product_version: "クライアントリリース#55",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -490,7 +490,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3.dll",
+      module_name: "SSVIF3.dll",
       product_version: "クライアントリリース#56",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -499,7 +499,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#57",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -507,7 +507,7 @@
       differnce: true,
     },
     {
-      name: "DateProgDelAgent.exe",
+      module_name: "DateProgDelAgent.exe",
       product_version: "クライアントリリース#58",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -516,7 +516,7 @@
       differnce: true,
     },
     {
-      name: "MyLogger.dll",
+      module_name: "MyLogger.dll",
       product_version: "クライアントリリース#59",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -525,7 +525,7 @@
       differnce: true,
     },
     {
-      name: "MyThread.dll",
+      module_name: "MyThread.dll",
       product_version: "クライアントリリース#60",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -534,7 +534,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3.dll",
+      module_name: "SSVIF3.dll",
       product_version: "クライアントリリース#61",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -543,7 +543,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#62",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -552,7 +552,7 @@
       differnce: true,
     },
     {
-      name: "DateProgDelAgent.exe",
+      module_name: "DateProgDelAgent.exe",
       product_version: "クライアントリリース#63",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -561,7 +561,7 @@
       differnce: true,
     },
     {
-      name: "MyLogger.dll",
+      module_name: "MyLogger.dll",
       product_version: "クライアントリリース#64",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -570,7 +570,7 @@
       differnce: true,
     },
     {
-      name: "MyThread.dll",
+      module_name: "MyThread.dll",
       product_version: "クライアントリリース#65",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -579,7 +579,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3.dll",
+      module_name: "SSVIF3.dll",
       product_version: "クライアントリリース#66",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -588,7 +588,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#67",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -596,7 +596,7 @@
       differnce: true,
     },
     {
-      name: "DateProgDelAgent.exe",
+      module_name: "DateProgDelAgent.exe",
       product_version: "クライアントリリース#68",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -605,7 +605,7 @@
       differnce: true,
     },
     {
-      name: "MyLogger.dll",
+      module_name: "MyLogger.dll",
       product_version: "クライアントリリース#69",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -614,7 +614,7 @@
       differnce: true,
     },
     {
-      name: "MyThread.dll",
+      module_name: "MyThread.dll",
       product_version: "クライアントリリース#70",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -623,7 +623,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3.dll",
+      module_name: "SSVIF3.dll",
       product_version: "クライアントリリース#71",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -632,7 +632,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#72",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -641,7 +641,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe.dll",
+      module_name: "ClientSideDispOpe.dll",
       product_version: "クライアントリリース#73",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -649,7 +649,7 @@
       differnce: true,
     },
     {
-      name: "EasyOAGridSrv.dll",
+      module_name: "EasyOAGridSrv.dll",
       product_version: "クライアントリリース#74",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -657,7 +657,7 @@
       differnce: true,
     },
     {
-      name: "EasyPartsRegist.exe",
+      module_name: "EasyPartsRegist.exe",
       product_version: "クライアントリリース#75",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -665,7 +665,7 @@
       differnce: true,
     },
     {
-      name: "FrontDesk.exe",
+      module_name: "FrontDesk.exe",
       product_version: "クライアントリリース#76",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -673,7 +673,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs.dll",
+      module_name: "LambdaCodecs.dll",
       product_version: "クライアントリリース#77",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -681,7 +681,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib.dll",
+      module_name: "ReviseClientLib.dll",
       product_version: "クライアントリリース#78",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -689,7 +689,7 @@
       differnce: true,
     },
     {
-      name: "HistoryAgent.exe",
+      module_name: "HistoryAgent.exe",
       product_version: "クライアントリリース#79",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -697,7 +697,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#80",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -705,7 +705,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#81",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -713,7 +713,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#82",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -721,7 +721,7 @@
       differnce: true,
     },
     {
-      name: "watch2Dir.exe",
+      module_name: "watch2Dir.exe",
       product_version: "クライアントリリース#83",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -729,7 +729,7 @@
       differnce: true,
     },
     {
-      name: "watchDir.exe",
+      module_name: "watchDir.exe",
       product_version: "クライアントリリース#84",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -737,7 +737,7 @@
       differnce: true,
     },
     {
-      name: "WATCHSOZAISRVERR.exe",
+      module_name: "WATCHSOZAISRVERR.exe",
       product_version: "クライアントリリース#85",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -745,7 +745,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#86",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -753,7 +753,7 @@
       differnce: true,
     },
     {
-      name: "HistoryAgent.exe",
+      module_name: "HistoryAgent.exe",
       product_version: "クライアントリリース#87",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -761,7 +761,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#88",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -769,7 +769,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#89",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -777,7 +777,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrvANTS.dll",
+      module_name: "SozaiSrvANTS.dll",
       product_version: "クライアントリリース#90",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -785,7 +785,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrvANTS.exe",
+      module_name: "SozaiSrvANTS.exe",
       product_version: "クライアントリリース#91",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -793,7 +793,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrvGS.dll",
+      module_name: "SozaiSrvGS.dll",
       product_version: "クライアントリリース#92",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -801,7 +801,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrvGS.exe",
+      module_name: "SozaiSrvGS.exe",
       product_version: "クライアントリリース#93",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -809,7 +809,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#94",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -817,7 +817,7 @@
       differnce: true,
     },
     {
-      name: "watch2Dir.exe",
+      module_name: "watch2Dir.exe",
       product_version: "クライアントリリース#95",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -825,7 +825,7 @@
       differnce: true,
     },
     {
-      name: "watchDir.exe",
+      module_name: "watchDir.exe",
       product_version: "クライアントリリース#96",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -833,7 +833,7 @@
       differnce: true,
     },
     {
-      name: "WATCHSOZAISRVERR.exe",
+      module_name: "WATCHSOZAISRVERR.exe",
       product_version: "クライアントリリース#97",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -841,7 +841,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#98",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -849,7 +849,7 @@
       differnce: true,
     },
     {
-      name: "Microsoft.WindowsAPICodePack.dll",
+      module_name: "Microsoft.WindowsAPICodePack.dll",
       product_version: "クライアントリリース#99",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -858,7 +858,7 @@
       differnce: true,
     },
     {
-      name: "Microsoft.WindowsAPICodePack.Shell.dll",
+      module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
       product_version: "クライアントリリース#100",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -867,7 +867,7 @@
       differnce: true,
     },
     {
-      name: "ProgEditorBudo.exe",
+      module_name: "ProgEditorBudo.exe",
       product_version: "クライアントリリース#101",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -875,7 +875,7 @@
       differnce: true,
     },
     {
-      name: "NotifyReceiver.dll",
+      module_name: "NotifyReceiver.dll",
       product_version: "クライアントリリース#102",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -884,7 +884,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSearchAgent.exe",
+      module_name: "SozaiSearchAgent.exe",
       product_version: "クライアントリリース#103",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -893,7 +893,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#104",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -902,7 +902,7 @@
       differnce: true,
     },
     {
-      name: "NotifyReceiver.dll",
+      module_name: "NotifyReceiver.dll",
       product_version: "クライアントリリース#105",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -911,7 +911,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSearchAgent.exe",
+      module_name: "SozaiSearchAgent.exe",
       product_version: "クライアントリリース#106",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -920,7 +920,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#107",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -929,7 +929,7 @@
       differnce: true,
     },
     {
-      name: "HistoryAgent.exe",
+      module_name: "HistoryAgent.exe",
       product_version: "クライアントリリース#108",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -937,7 +937,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#109",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -945,7 +945,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#110",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -953,7 +953,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#111",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -961,7 +961,7 @@
       differnce: true,
     },
     {
-      name: "watch2Dir.exe",
+      module_name: "watch2Dir.exe",
       product_version: "クライアントリリース#112",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -969,7 +969,7 @@
       differnce: true,
     },
     {
-      name: "watchDir.exe",
+      module_name: "watchDir.exe",
       product_version: "クライアントリリース#113",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -977,7 +977,7 @@
       differnce: true,
     },
     {
-      name: "WATCHSOZAISRVERR.exe",
+      module_name: "WATCHSOZAISRVERR.exe",
       product_version: "クライアントリリース#114",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -985,7 +985,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#115",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -993,7 +993,7 @@
       differnce: true,
     },
     {
-      name: "HistoryAgent.exe",
+      module_name: "HistoryAgent.exe",
       product_version: "クライアントリリース#116",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1001,7 +1001,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#117",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1009,7 +1009,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#118",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1017,7 +1017,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#119",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1025,7 +1025,7 @@
       differnce: true,
     },
     {
-      name: "watch2Dir.exe",
+      module_name: "watch2Dir.exe",
       product_version: "クライアントリリース#120",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1033,7 +1033,7 @@
       differnce: true,
     },
     {
-      name: "watchDir.exe",
+      module_name: "watchDir.exe",
       product_version: "クライアントリリース#121",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1041,7 +1041,7 @@
       differnce: true,
     },
     {
-      name: "WATCHSOZAISRVERR.exe",
+      module_name: "WATCHSOZAISRVERR.exe",
       product_version: "クライアントリリース#122",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1049,7 +1049,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#123",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1057,7 +1057,7 @@
       differnce: true,
     },
     {
-      name: "AudioMan.dll",
+      module_name: "AudioMan.dll",
       product_version: "クライアントリリース#124",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1065,7 +1065,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#125",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1073,7 +1073,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2.dll",
+      module_name: "LambdaCodecs2.dll",
       product_version: "クライアントリリース#126",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1081,7 +1081,7 @@
       differnce: true,
     },
     {
-      name: "NeonSpCnv.exe",
+      module_name: "NeonSpCnv.exe",
       product_version: "クライアントリリース#127",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1089,7 +1089,7 @@
       differnce: true,
     },
     {
-      name: "RR_Neon.exe",
+      module_name: "RR_Neon.exe",
       product_version: "クライアントリリース#128",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1097,7 +1097,7 @@
       differnce: true,
     },
     {
-      name: "SpNeonCnv.exe",
+      module_name: "SpNeonCnv.exe",
       product_version: "クライアントリリース#129",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1105,7 +1105,7 @@
       differnce: true,
     },
     {
-      name: "LGGRAGNT.dll",
+      module_name: "LGGRAGNT.dll",
       product_version: "クライアントリリース#130",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1113,7 +1113,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeANB.dll",
+      module_name: "MaterialCodeANB.dll",
       product_version: "クライアントリリース#131",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1121,7 +1121,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN2.dll",
+      module_name: "MATMAN2.dll",
       product_version: "クライアントリリース#132",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1129,7 +1129,7 @@
       differnce: true,
     },
     {
-      name: "ProcLogger2.exe",
+      module_name: "ProcLogger2.exe",
       product_version: "クライアントリリース#133",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1137,7 +1137,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#134",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1145,7 +1145,7 @@
       differnce: true,
     },
     {
-      name: "StaticTelopCopy.exe",
+      module_name: "StaticTelopCopy.exe",
       product_version: "クライアントリリース#135",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1153,7 +1153,7 @@
       differnce: true,
     },
     {
-      name: "STelopExecutor.dll",
+      module_name: "STelopExecutor.dll",
       product_version: "クライアントリリース#136",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1161,7 +1161,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#137",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1169,7 +1169,7 @@
       differnce: true,
     },
     {
-      name: "WALRTSVC.exe",
+      module_name: "WALRTSVC.exe",
       product_version: "クライアントリリース#138",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1177,7 +1177,7 @@
       differnce: true,
     },
     {
-      name: "RecUws.dll",
+      module_name: "RecUws.dll",
       product_version: "クライアントリリース#139",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1185,7 +1185,7 @@
       differnce: true,
     },
     {
-      name: "UWSC.exe",
+      module_name: "UWSC.exe",
       product_version: "クライアントリリース#140",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1193,7 +1193,7 @@
       differnce: true,
     },
     {
-      name: "AudioMan.dll",
+      module_name: "AudioMan.dll",
       product_version: "クライアントリリース#141",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1201,7 +1201,7 @@
       differnce: true,
     },
     {
-      name: "AutoMatPropDialogComp.dll",
+      module_name: "AutoMatPropDialogComp.dll",
       product_version: "クライアントリリース#142",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1209,7 +1209,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#143",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1217,7 +1217,7 @@
       differnce: true,
     },
     {
-      name: "BBXCTRL.dll",
+      module_name: "BBXCTRL.dll",
       product_version: "クライアントリリース#144",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1225,7 +1225,7 @@
       differnce: true,
     },
     {
-      name: "Binarist.exe",
+      module_name: "Binarist.exe",
       product_version: "クライアントリリース#145",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1233,7 +1233,7 @@
       differnce: true,
     },
     {
-      name: "CatalogOperator.dll",
+      module_name: "CatalogOperator.dll",
       product_version: "クライアントリリース#146",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1241,7 +1241,7 @@
       differnce: true,
     },
     {
-      name: "CellMaster.exe",
+      module_name: "CellMaster.exe",
       product_version: "クライアントリリース#147",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1249,7 +1249,7 @@
       differnce: true,
     },
     {
-      name: "cg.dll",
+      module_name: "cg.dll",
       product_version: "クライアントリリース#148",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1257,7 +1257,7 @@
       differnce: true,
     },
     {
-      name: "cgGL.dll",
+      module_name: "cgGL.dll",
       product_version: "クライアントリリース#149",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1265,7 +1265,7 @@
       differnce: true,
     },
     {
-      name: "CGServerIFComp.exe",
+      module_name: "CGServerIFComp.exe",
       product_version: "クライアントリリース#150",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1273,7 +1273,7 @@
       differnce: true,
     },
     {
-      name: "CGServerIFCompEx.dll",
+      module_name: "CGServerIFCompEx.dll",
       product_version: "クライアントリリース#151",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1281,7 +1281,7 @@
       differnce: true,
     },
     {
-      name: "CharsEdit4.dll",
+      module_name: "CharsEdit4.dll",
       product_version: "クライアントリリース#152",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1289,7 +1289,7 @@
       differnce: true,
     },
     {
-      name: "ChgAttrForm.dll",
+      module_name: "ChgAttrForm.dll",
       product_version: "クライアントリリース#153",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1297,7 +1297,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompSTDInput.dll",
+      module_name: "ClausePropDialogCompSTDInput.dll",
       product_version: "クライアントリリース#154",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1305,7 +1305,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHK.dll",
+      module_name: "ClausePropDialogCompTHK.dll",
       product_version: "クライアントリリース#155",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1313,7 +1313,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHKInput.dll",
+      module_name: "ClausePropDialogCompTHKInput.dll",
       product_version: "クライアントリリース#156",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1321,7 +1321,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHKProd.dll",
+      module_name: "ClausePropDialogCompTHKProd.dll",
       product_version: "クライアントリリース#157",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1329,7 +1329,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe.dll",
+      module_name: "ClientSideDispOpe.dll",
       product_version: "クライアントリリース#158",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1337,7 +1337,7 @@
       differnce: true,
     },
     {
-      name: "ColSlc.dll",
+      module_name: "ColSlc.dll",
       product_version: "クライアントリリース#159",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1345,7 +1345,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrder.exe",
+      module_name: "DisplayOrder.exe",
       product_version: "クライアントリリース#160",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1353,7 +1353,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrgText.exe",
+      module_name: "DisplayOrgText.exe",
       product_version: "クライアントリリース#161",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1361,7 +1361,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrgTextRev2.exe",
+      module_name: "DisplayOrgTextRev2.exe",
       product_version: "クライアントリリース#162",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1369,7 +1369,7 @@
       differnce: true,
     },
     {
-      name: "EasyPartsRegist.exe",
+      module_name: "EasyPartsRegist.exe",
       product_version: "クライアントリリース#163",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1377,7 +1377,7 @@
       differnce: true,
     },
     {
-      name: "001.exe",
+      module_name: "001.exe",
       product_version: "クライアントリリース#164",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1385,7 +1385,7 @@
       differnce: true,
     },
     {
-      name: "EventWatcher.exe",
+      module_name: "EventWatcher.exe",
       product_version: "クライアントリリース#165",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1393,7 +1393,7 @@
       differnce: true,
     },
     {
-      name: "FileBackupper.exe",
+      module_name: "FileBackupper.exe",
       product_version: "クライアントリリース#166",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1401,7 +1401,7 @@
       differnce: true,
     },
     {
-      name: "FileExport2.exe",
+      module_name: "FileExport2.exe",
       product_version: "クライアントリリース#167",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1409,7 +1409,7 @@
       differnce: true,
     },
     {
-      name: "fontSupply.dll",
+      module_name: "fontSupply.dll",
       product_version: "クライアントリリース#168",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1417,7 +1417,7 @@
       differnce: true,
     },
     {
-      name: "FrameInOutSelectDlg.dll",
+      module_name: "FrameInOutSelectDlg.dll",
       product_version: "クライアントリリース#169",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1425,7 +1425,7 @@
       differnce: true,
     },
     {
-      name: "frameManager.dll",
+      module_name: "frameManager.dll",
       product_version: "クライアントリリース#170",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1433,7 +1433,7 @@
       differnce: true,
     },
     {
-      name: "GetResultRevise.dll",
+      module_name: "GetResultRevise.dll",
       product_version: "クライアントリリース#171",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1441,7 +1441,7 @@
       differnce: true,
     },
     {
-      name: "glew32.dll",
+      module_name: "glew32.dll",
       product_version: "クライアントリリース#172",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1449,7 +1449,7 @@
       differnce: true,
     },
     {
-      name: "GridDevice.dll",
+      module_name: "GridDevice.dll",
       product_version: "クライアントリリース#173",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1457,7 +1457,7 @@
       differnce: true,
     },
     {
-      name: "himeEdit.dll",
+      module_name: "himeEdit.dll",
       product_version: "クライアントリリース#174",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1465,7 +1465,7 @@
       differnce: true,
     },
     {
-      name: "himeInput.dll",
+      module_name: "himeInput.dll",
       product_version: "クライアントリリース#175",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1473,7 +1473,7 @@
       differnce: true,
     },
     {
-      name: "hwConfMan.dll",
+      module_name: "hwConfMan.dll",
       product_version: "クライアントリリース#176",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1481,7 +1481,7 @@
       differnce: true,
     },
     {
-      name: "ijl15.dll",
+      module_name: "ijl15.dll",
       product_version: "クライアントリリース#177",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1489,7 +1489,7 @@
       differnce: true,
     },
     {
-      name: "ImageFactoryComp.dll",
+      module_name: "ImageFactoryComp.dll",
       product_version: "クライアントリリース#178",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1497,7 +1497,7 @@
       differnce: true,
     },
     {
-      name: "ImImport.dll",
+      module_name: "ImImport.dll",
       product_version: "クライアントリリース#179",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1505,7 +1505,7 @@
       differnce: true,
     },
     {
-      name: "IniPatch.dll",
+      module_name: "IniPatch.dll",
       product_version: "クライアントリリース#180",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1513,7 +1513,7 @@
       differnce: true,
     },
     {
-      name: "ItemFilterANB.dll",
+      module_name: "ItemFilterANB.dll",
       product_version: "クライアントリリース#181",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1521,7 +1521,7 @@
       differnce: true,
     },
     {
-      name: "ItemFilterOA.dll",
+      module_name: "ItemFilterOA.dll",
       product_version: "クライアントリリース#182",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1529,7 +1529,7 @@
       differnce: true,
     },
     {
-      name: "ItemFinder.dll",
+      module_name: "ItemFinder.dll",
       product_version: "クライアントリリース#183",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1537,7 +1537,7 @@
       differnce: true,
     },
     {
-      name: "JornalInfo.exe",
+      module_name: "JornalInfo.exe",
       product_version: "クライアントリリース#184",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1545,7 +1545,7 @@
       differnce: true,
     },
     {
-      name: "JRTBankParallelRemoteControl.dll",
+      module_name: "JRTBankParallelRemoteControl.dll",
       product_version: "クライアントリリース#185",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1553,7 +1553,7 @@
       differnce: true,
     },
     {
-      name: "JRTBankSerialRemoteControl.dll",
+      module_name: "JRTBankSerialRemoteControl.dll",
       product_version: "クライアントリリース#186",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1561,7 +1561,7 @@
       differnce: true,
     },
     {
-      name: "JRTParallelRemoteControl.dll",
+      module_name: "JRTParallelRemoteControl.dll",
       product_version: "クライアントリリース#187",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1569,7 +1569,7 @@
       differnce: true,
     },
     {
-      name: "LAMBDA.dll",
+      module_name: "LAMBDA.dll",
       product_version: "クライアントリリース#188",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1577,7 +1577,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs.dll",
+      module_name: "LambdaCodecs.dll",
       product_version: "クライアントリリース#189",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1585,7 +1585,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2.dll",
+      module_name: "LambdaCodecs2.dll",
       product_version: "クライアントリリース#190",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1593,7 +1593,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs64.dll",
+      module_name: "LambdaCodecs64.dll",
       product_version: "クライアントリリース#191",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1601,7 +1601,7 @@
       differnce: true,
     },
     {
-      name: "LGGRAGNT.dll",
+      module_name: "LGGRAGNT.dll",
       product_version: "クライアントリリース#192",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1609,7 +1609,7 @@
       differnce: true,
     },
     {
-      name: "Lmjpgd32.dll",
+      module_name: "Lmjpgd32.dll",
       product_version: "クライアントリリース#193",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1617,7 +1617,7 @@
       differnce: true,
     },
     {
-      name: "LmNetWork.dll",
+      module_name: "LmNetWork.dll",
       product_version: "クライアントリリース#194",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1625,7 +1625,7 @@
       differnce: true,
     },
     {
-      name: "Lmpio16.dll",
+      module_name: "Lmpio16.dll",
       product_version: "クライアントリリース#195",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1633,7 +1633,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO16PCI.dll",
+      module_name: "LMPIO16PCI.dll",
       product_version: "クライアントリリース#196",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1641,7 +1641,7 @@
       differnce: true,
     },
     {
-      name: "Lmpio32.dll",
+      module_name: "Lmpio32.dll",
       product_version: "クライアントリリース#197",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1649,7 +1649,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO3264.dll",
+      module_name: "LMPIO3264.dll",
       product_version: "クライアントリリース#198",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1657,7 +1657,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO32PCI.dll",
+      module_name: "LMPIO32PCI.dll",
       product_version: "クライアントリリース#199",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1665,7 +1665,7 @@
       differnce: true,
     },
     {
-      name: "LMPIOCONTEC.dll",
+      module_name: "LMPIOCONTEC.dll",
       product_version: "クライアントリリース#200",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1673,7 +1673,7 @@
       differnce: true,
     },
     {
-      name: "lmregsvr32.exe",
+      module_name: "lmregsvr32.exe",
       product_version: "クライアントリリース#201",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1681,7 +1681,7 @@
       differnce: true,
     },
     {
-      name: "Lmsoft.dll",
+      module_name: "Lmsoft.dll",
       product_version: "クライアントリリース#202",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1689,7 +1689,7 @@
       differnce: true,
     },
     {
-      name: "Lmvcbg32hdsdi.dll",
+      module_name: "Lmvcbg32hdsdi.dll",
       product_version: "クライアントリリース#203",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1697,7 +1697,7 @@
       differnce: true,
     },
     {
-      name: "LMVCBG32HRC.dll",
+      module_name: "LMVCBG32HRC.dll",
       product_version: "クライアントリリース#204",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1705,7 +1705,7 @@
       differnce: true,
     },
     {
-      name: "LMVCBG32HS.dll",
+      module_name: "LMVCBG32HS.dll",
       product_version: "クライアントリリース#205",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1713,7 +1713,7 @@
       differnce: true,
     },
     {
-      name: "localSozaiSv.dll",
+      module_name: "localSozaiSv.dll",
       product_version: "クライアントリリース#206",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1721,7 +1721,7 @@
       differnce: true,
     },
     {
-      name: "localSSVIF.dll",
+      module_name: "localSSVIF.dll",
       product_version: "クライアントリリース#207",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1729,7 +1729,7 @@
       differnce: true,
     },
     {
-      name: "LoginDialogComp.dll",
+      module_name: "LoginDialogComp.dll",
       product_version: "クライアントリリース#208",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1737,7 +1737,7 @@
       differnce: true,
     },
     {
-      name: "logoIF.dll",
+      module_name: "logoIF.dll",
       product_version: "クライアントリリース#209",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1745,7 +1745,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#210",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1753,7 +1753,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCode.dll",
+      module_name: "MaterialCode.dll",
       product_version: "クライアントリリース#211",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1761,7 +1761,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeDependPN.dll",
+      module_name: "MaterialCodeDependPN.dll",
       product_version: "クライアントリリース#212",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1769,7 +1769,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeDialogComp.dll",
+      module_name: "MaterialCodeDialogComp.dll",
       product_version: "クライアントリリース#213",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1777,7 +1777,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeJRTBank.dll",
+      module_name: "MaterialCodeJRTBank.dll",
       product_version: "クライアントリリース#214",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1785,7 +1785,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHK.dll",
+      module_name: "MaterialCodeTHK.dll",
       product_version: "クライアントリリース#215",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1793,7 +1793,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHKAssumed.dll",
+      module_name: "MaterialCodeTHKAssumed.dll",
       product_version: "クライアントリリース#216",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1801,7 +1801,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHKProd.dll",
+      module_name: "MaterialCodeTHKProd.dll",
       product_version: "クライアントリリース#217",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1809,7 +1809,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTNCCatalog.dll",
+      module_name: "MaterialCodeTNCCatalog.dll",
       product_version: "クライアントリリース#218",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1817,7 +1817,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTNCOTC.dll",
+      module_name: "MaterialCodeTNCOTC.dll",
       product_version: "クライアントリリース#219",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1825,7 +1825,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeUHBOTC.dll",
+      module_name: "MaterialCodeUHBOTC.dll",
       product_version: "クライアントリリース#220",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1833,7 +1833,7 @@
       differnce: true,
     },
     {
-      name: "MaterialHandlerStd.dll",
+      module_name: "MaterialHandlerStd.dll",
       product_version: "クライアントリリース#221",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1841,7 +1841,7 @@
       differnce: true,
     },
     {
-      name: "MaterialHandlerTHKPrevw.dll",
+      module_name: "MaterialHandlerTHKPrevw.dll",
       product_version: "クライアントリリース#222",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1849,7 +1849,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogCompTHK.dll",
+      module_name: "MaterialPropDialogCompTHK.dll",
       product_version: "クライアントリリース#223",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1857,7 +1857,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN2.dll",
+      module_name: "MATMAN2.dll",
       product_version: "クライアントリリース#224",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1865,7 +1865,7 @@
       differnce: true,
     },
     {
-      name: "MFCUtil.dll",
+      module_name: "MFCUtil.dll",
       product_version: "クライアントリリース#225",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1873,7 +1873,7 @@
       differnce: true,
     },
     {
-      name: "motionGallery.dll",
+      module_name: "motionGallery.dll",
       product_version: "クライアントリリース#226",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1881,7 +1881,7 @@
       differnce: true,
     },
     {
-      name: "MountWindowANB.dll",
+      module_name: "MountWindowANB.dll",
       product_version: "クライアントリリース#227",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1889,7 +1889,7 @@
       differnce: true,
     },
     {
-      name: "MovieExport2.dll",
+      module_name: "MovieExport2.dll",
       product_version: "クライアントリリース#228",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1897,7 +1897,7 @@
       differnce: true,
     },
     {
-      name: "MSPDB60.DLL",
+      module_name: "MSPDB60.DLL",
       product_version: "クライアントリリース#229",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1905,7 +1905,7 @@
       differnce: true,
     },
     {
-      name: "NCKCatPropDialogComp.dll",
+      module_name: "NCKCatPropDialogComp.dll",
       product_version: "クライアントリリース#230",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1913,7 +1913,7 @@
       differnce: true,
     },
     {
-      name: "Neon3DColSlc.dll",
+      module_name: "Neon3DColSlc.dll",
       product_version: "クライアントリリース#231",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1921,7 +1921,7 @@
       differnce: true,
     },
     {
-      name: "NXGPrint.dll",
+      module_name: "NXGPrint.dll",
       product_version: "クライアントリリース#232",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1929,7 +1929,7 @@
       differnce: true,
     },
     {
-      name: "NXGPrintDS.dll",
+      module_name: "NXGPrintDS.dll",
       product_version: "クライアントリリース#233",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1937,7 +1937,7 @@
       differnce: true,
     },
     {
-      name: "OATest.exe",
+      module_name: "OATest.exe",
       product_version: "クライアントリリース#234",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1945,7 +1945,7 @@
       differnce: true,
     },
     {
-      name: "OAtestGL.exe",
+      module_name: "OAtestGL.exe",
       product_version: "クライアントリリース#235",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1953,7 +1953,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#236",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1961,7 +1961,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonEditView.dll",
+      module_name: "OperationButtonEditView.dll",
       product_version: "クライアントリリース#237",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1969,7 +1969,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#238",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1977,7 +1977,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonMonitorView.dll",
+      module_name: "OperationButtonMonitorView.dll",
       product_version: "クライアントリリース#239",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1985,7 +1985,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#240",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -1993,7 +1993,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonVividView.dll",
+      module_name: "OperationButtonVividView.dll",
       product_version: "クライアントリリース#241",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2001,7 +2001,7 @@
       differnce: true,
     },
     {
-      name: "OrderPrintComp.dll",
+      module_name: "OrderPrintComp.dll",
       product_version: "クライアントリリース#242",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2009,7 +2009,7 @@
       differnce: true,
     },
     {
-      name: "ParaTest16.exe",
+      module_name: "ParaTest16.exe",
       product_version: "クライアントリリース#243",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2017,7 +2017,7 @@
       differnce: true,
     },
     {
-      name: "PCSound.dll",
+      module_name: "PCSound.dll",
       product_version: "クライアントリリース#244",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2025,7 +2025,7 @@
       differnce: true,
     },
     {
-      name: "PolyLineTool.dll",
+      module_name: "PolyLineTool.dll",
       product_version: "クライアントリリース#245",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2033,7 +2033,7 @@
       differnce: true,
     },
     {
-      name: "PrismPlayer4.dll",
+      module_name: "PrismPlayer4.dll",
       product_version: "クライアントリリース#246",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2041,7 +2041,7 @@
       differnce: true,
     },
     {
-      name: "ProcLogger2.exe",
+      module_name: "ProcLogger2.exe",
       product_version: "クライアントリリース#247",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2049,7 +2049,7 @@
       differnce: true,
     },
     {
-      name: "ProfileComp.dll",
+      module_name: "ProfileComp.dll",
       product_version: "クライアントリリース#248",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2057,7 +2057,7 @@
       differnce: true,
     },
     {
-      name: "ProgCopySTD.exe",
+      module_name: "ProgCopySTD.exe",
       product_version: "クライアントリリース#249",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2065,7 +2065,7 @@
       differnce: true,
     },
     {
-      name: "ProgEditor.exe",
+      module_name: "ProgEditor.exe",
       product_version: "クライアントリリース#250",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2073,7 +2073,7 @@
       differnce: true,
     },
     {
-      name: "ProgTreeView.dll",
+      module_name: "ProgTreeView.dll",
       product_version: "クライアントリリース#251",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2081,7 +2081,7 @@
       differnce: true,
     },
     {
-      name: "ResourceResolver.dll",
+      module_name: "ResourceResolver.dll",
       product_version: "クライアントリリース#252",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2089,7 +2089,7 @@
       differnce: true,
     },
     {
-      name: "ReviseChecker.exe",
+      module_name: "ReviseChecker.exe",
       product_version: "クライアントリリース#253",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2097,7 +2097,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientATOK.dll",
+      module_name: "ReviseClientATOK.dll",
       product_version: "クライアントリリース#254",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2105,7 +2105,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib.dll",
+      module_name: "ReviseClientLib.dll",
       product_version: "クライアントリリース#255",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2113,7 +2113,7 @@
       differnce: true,
     },
     {
-      name: "ReviseExecuter.exe",
+      module_name: "ReviseExecuter.exe",
       product_version: "クライアントリリース#256",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2121,7 +2121,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFile.dll",
+      module_name: "ReviseFile.dll",
       product_version: "クライアントリリース#257",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2129,7 +2129,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFileViewCtrl.dll",
+      module_name: "ReviseFileViewCtrl.dll",
       product_version: "クライアントリリース#258",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2137,7 +2137,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFileViewCtrl2.dll",
+      module_name: "ReviseFileViewCtrl2.dll",
       product_version: "クライアントリリース#259",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2145,7 +2145,7 @@
       differnce: true,
     },
     {
-      name: ".dll",
+      module_name: ".dll",
       product_version: "クライアントリリース#260",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2153,7 +2153,7 @@
       differnce: true,
     },
     {
-      name: "ReviseInfoView.dll",
+      module_name: "ReviseInfoView.dll",
       product_version: "クライアントリリース#261",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2161,7 +2161,7 @@
       differnce: true,
     },
     {
-      name: "ReviseInfoView2.dll",
+      module_name: "ReviseInfoView2.dll",
       product_version: "クライアントリリース#262",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2169,7 +2169,7 @@
       differnce: true,
     },
     {
-      name: "ReviseStandaloneATOK.dll",
+      module_name: "ReviseStandaloneATOK.dll",
       product_version: "クライアントリリース#263",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2177,7 +2177,7 @@
       differnce: true,
     },
     {
-      name: "s3D_IF.dll",
+      module_name: "s3D_IF.dll",
       product_version: "クライアントリリース#264",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2185,7 +2185,7 @@
       differnce: true,
     },
     {
-      name: "SaveRegistory.exe",
+      module_name: "SaveRegistory.exe",
       product_version: "クライアントリリース#265",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2193,7 +2193,7 @@
       differnce: true,
     },
     {
-      name: "SceneChangeMode.exe",
+      module_name: "SceneChangeMode.exe",
       product_version: "クライアントリリース#266",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2201,7 +2201,7 @@
       differnce: true,
     },
     {
-      name: "SceneEditor5.exe",
+      module_name: "SceneEditor5.exe",
       product_version: "クライアントリリース#267",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2209,7 +2209,7 @@
       differnce: true,
     },
     {
-      name: "SceneMaskMaker.exe",
+      module_name: "SceneMaskMaker.exe",
       product_version: "クライアントリリース#268",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2217,7 +2217,7 @@
       differnce: true,
     },
     {
-      name: "SceneOffsetMover.exe",
+      module_name: "SceneOffsetMover.exe",
       product_version: "クライアントリリース#269",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2225,7 +2225,7 @@
       differnce: true,
     },
     {
-      name: "SceneRollSpeed.exe",
+      module_name: "SceneRollSpeed.exe",
       product_version: "クライアントリリース#270",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2233,7 +2233,7 @@
       differnce: true,
     },
     {
-      name: "SceneTrimmer.exe",
+      module_name: "SceneTrimmer.exe",
       product_version: "クライアントリリース#271",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2241,7 +2241,7 @@
       differnce: true,
     },
     {
-      name: "schemaMan.dll",
+      module_name: "schemaMan.dll",
       product_version: "クライアントリリース#272",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2249,7 +2249,7 @@
       differnce: true,
     },
     {
-      name: "scmmanager.dll",
+      module_name: "scmmanager.dll",
       product_version: "クライアントリリース#273",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2257,7 +2257,7 @@
       differnce: true,
     },
     {
-      name: "scnParse.dll",
+      module_name: "scnParse.dll",
       product_version: "クライアントリリース#274",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2265,7 +2265,7 @@
       differnce: true,
     },
     {
-      name: "SE5Resource.dll",
+      module_name: "SE5Resource.dll",
       product_version: "クライアントリリース#275",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2273,7 +2273,7 @@
       differnce: true,
     },
     {
-      name: "SelectSozaiDialogComp.dll",
+      module_name: "SelectSozaiDialogComp.dll",
       product_version: "クライアントリリース#276",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2281,7 +2281,7 @@
       differnce: true,
     },
     {
-      name: "SelectStageButtonsANB.dll",
+      module_name: "SelectStageButtonsANB.dll",
       product_version: "クライアントリリース#277",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2289,7 +2289,7 @@
       differnce: true,
     },
     {
-      name: "SeparatedStringComp.dll",
+      module_name: "SeparatedStringComp.dll",
       product_version: "クライアントリリース#278",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2297,7 +2297,7 @@
       differnce: true,
     },
     {
-      name: "simpleLogger.dll",
+      module_name: "simpleLogger.dll",
       product_version: "クライアントリリース#279",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2305,7 +2305,7 @@
       differnce: true,
     },
     {
-      name: "SioLocal.dll",
+      module_name: "SioLocal.dll",
       product_version: "クライアントリリース#280",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2313,7 +2313,7 @@
       differnce: true,
     },
     {
-      name: "soccer2viz.dll",
+      module_name: "soccer2viz.dll",
       product_version: "クライアントリリース#281",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2321,7 +2321,7 @@
       differnce: true,
     },
     {
-      name: "SozaiArrayComp.dll",
+      module_name: "SozaiArrayComp.dll",
       product_version: "クライアントリリース#282",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2329,7 +2329,7 @@
       differnce: true,
     },
     {
-      name: "SozaiChgAttrView.dll",
+      module_name: "SozaiChgAttrView.dll",
       product_version: "クライアントリリース#283",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2337,7 +2337,7 @@
       differnce: true,
     },
     {
-      name: "SozaiInfoView.dll",
+      module_name: "SozaiInfoView.dll",
       product_version: "クライアントリリース#284",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2345,7 +2345,7 @@
       differnce: true,
     },
     {
-      name: "SozaiInfoViewStd.dll",
+      module_name: "SozaiInfoViewStd.dll",
       product_version: "クライアントリリース#285",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2353,7 +2353,7 @@
       differnce: true,
     },
     {
-      name: "001.dll",
+      module_name: "001.dll",
       product_version: "クライアントリリース#286",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2361,7 +2361,7 @@
       differnce: true,
     },
     {
-      name: "002.dll",
+      module_name: "002.dll",
       product_version: "クライアントリリース#287",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2369,7 +2369,7 @@
       differnce: true,
     },
     {
-      name: ".dll",
+      module_name: ".dll",
       product_version: "クライアントリリース#288",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2377,7 +2377,7 @@
       differnce: true,
     },
     {
-      name: "003.dll",
+      module_name: "003.dll",
       product_version: "クライアントリリース#289",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2385,7 +2385,7 @@
       differnce: true,
     },
     {
-      name: "003333.dll",
+      module_name: "003333.dll",
       product_version: "クライアントリリース#290",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2393,7 +2393,7 @@
       differnce: true,
     },
     {
-      name: "SozaiListViewCtrl.dll",
+      module_name: "SozaiListViewCtrl.dll",
       product_version: "クライアントリリース#291",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2401,7 +2401,7 @@
       differnce: true,
     },
     {
-      name: "SozaiListViewCtrl2.dll",
+      module_name: "SozaiListViewCtrl2.dll",
       product_version: "クライアントリリース#292",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2409,7 +2409,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#293",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2417,7 +2417,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSvAcc.dll",
+      module_name: "SozaiSvAcc.dll",
       product_version: "クライアントリリース#294",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2425,7 +2425,7 @@
       differnce: true,
     },
     {
-      name: "SozaiThumbnail.dll",
+      module_name: "SozaiThumbnail.dll",
       product_version: "クライアントリリース#295",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2433,7 +2433,7 @@
       differnce: true,
     },
     {
-      name: "SpColSlcU32.dll",
+      module_name: "SpColSlcU32.dll",
       product_version: "クライアントリリース#296",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2441,7 +2441,7 @@
       differnce: true,
     },
     {
-      name: "001.dll",
+      module_name: "001.dll",
       product_version: "クライアントリリース#297",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2449,7 +2449,7 @@
       differnce: true,
     },
     {
-      name: "002.dll",
+      module_name: "002.dll",
       product_version: "クライアントリリース#298",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2457,7 +2457,7 @@
       differnce: true,
     },
     {
-      name: "SportsInputAgent.dll",
+      module_name: "SportsInputAgent.dll",
       product_version: "クライアントリリース#299",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2465,7 +2465,7 @@
       differnce: true,
     },
     {
-      name: "001.dll",
+      module_name: "001.dll",
       product_version: "クライアントリリース#300",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2473,7 +2473,7 @@
       differnce: true,
     },
     {
-      name: "SportsInputUI.dll",
+      module_name: "SportsInputUI.dll",
       product_version: "クライアントリリース#301",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2481,7 +2481,7 @@
       differnce: true,
     },
     {
-      name: "001.dll",
+      module_name: "001.dll",
       product_version: "クライアントリリース#302",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2489,7 +2489,7 @@
       differnce: true,
     },
     {
-      name: "002.dll",
+      module_name: "002.dll",
       product_version: "クライアントリリース#303",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2497,7 +2497,7 @@
       differnce: true,
     },
     {
-      name: "SportsInputView.dll",
+      module_name: "SportsInputView.dll",
       product_version: "クライアントリリース#304",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2505,7 +2505,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#305",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2513,7 +2513,7 @@
       differnce: true,
     },
     {
-      name: "StageSelectorANB.dll",
+      module_name: "StageSelectorANB.dll",
       product_version: "クライアントリリース#306",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2521,7 +2521,7 @@
       differnce: true,
     },
     {
-      name: "StageUtility.dll",
+      module_name: "StageUtility.dll",
       product_version: "クライアントリリース#307",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2529,7 +2529,7 @@
       differnce: true,
     },
     {
-      name: "StageUtilityANB.dll",
+      module_name: "StageUtilityANB.dll",
       product_version: "クライアントリリース#308",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2537,7 +2537,7 @@
       differnce: true,
     },
     {
-      name: "StageUtilityTHK.dll",
+      module_name: "StageUtilityTHK.dll",
       product_version: "クライアントリリース#309",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2545,7 +2545,7 @@
       differnce: true,
     },
     {
-      name: "StateManTHK.dll",
+      module_name: "StateManTHK.dll",
       product_version: "クライアントリリース#310",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2553,7 +2553,7 @@
       differnce: true,
     },
     {
-      name: "StateManUHB.dll",
+      module_name: "StateManUHB.dll",
       product_version: "クライアントリリース#311",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2561,7 +2561,7 @@
       differnce: true,
     },
     {
-      name: "STDParallelRemoteControl.dll",
+      module_name: "STDParallelRemoteControl.dll",
       product_version: "クライアントリリース#312",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2569,7 +2569,7 @@
       differnce: true,
     },
     {
-      name: "StringSel.dll",
+      module_name: "StringSel.dll",
       product_version: "クライアントリリース#313",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2577,7 +2577,7 @@
       differnce: true,
     },
     {
-      name: "StringTool.dll",
+      module_name: "StringTool.dll",
       product_version: "クライアントリリース#314",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2585,7 +2585,7 @@
       differnce: true,
     },
     {
-      name: "SwitchVin.exe",
+      module_name: "SwitchVin.exe",
       product_version: "クライアントリリース#315",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2593,7 +2593,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#316",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2601,7 +2601,7 @@
       differnce: true,
     },
     {
-      name: "SystemButtonOrderView.dll",
+      module_name: "SystemButtonOrderView.dll",
       product_version: "クライアントリリース#317",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2609,7 +2609,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#318",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2617,7 +2617,7 @@
       differnce: true,
     },
     {
-      name: "SystemButtonVividView.dll",
+      module_name: "SystemButtonVividView.dll",
       product_version: "クライアントリリース#319",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2625,7 +2625,7 @@
       differnce: true,
     },
     {
-      name: "TallyParallelRemoteControl.dll",
+      module_name: "TallyParallelRemoteControl.dll",
       product_version: "クライアントリリース#320",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2633,7 +2633,7 @@
       differnce: true,
     },
     {
-      name: "THKParallelRemoteControl.dll",
+      module_name: "THKParallelRemoteControl.dll",
       product_version: "クライアントリリース#321",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2641,7 +2641,7 @@
       differnce: true,
     },
     {
-      name: "THKSerialRemoteControl.dll",
+      module_name: "THKSerialRemoteControl.dll",
       product_version: "クライアントリリース#322",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2649,7 +2649,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompANB.dll",
+      module_name: "ThumbnailPrintCompANB.dll",
       product_version: "クライアントリリース#323",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2657,7 +2657,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompTHK.dll",
+      module_name: "ThumbnailPrintCompTHK.dll",
       product_version: "クライアントリリース#324",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2665,7 +2665,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompUHB.dll",
+      module_name: "ThumbnailPrintCompUHB.dll",
       product_version: "クライアントリリース#325",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2673,7 +2673,7 @@
       differnce: true,
     },
     {
-      name: "TitleWindowOTCView.dll",
+      module_name: "TitleWindowOTCView.dll",
       product_version: "クライアントリリース#326",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2681,7 +2681,7 @@
       differnce: true,
     },
     {
-      name: "TitleWindowProgramView.dll",
+      module_name: "TitleWindowProgramView.dll",
       product_version: "クライアントリリース#327",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2689,7 +2689,7 @@
       differnce: true,
     },
     {
-      name: "TitleWindowStatusView.dll",
+      module_name: "TitleWindowStatusView.dll",
       product_version: "クライアントリリース#328",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2697,7 +2697,7 @@
       differnce: true,
     },
     {
-      name: "TitleWindowVividView.dll",
+      module_name: "TitleWindowVividView.dll",
       product_version: "クライアントリリース#329",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2705,7 +2705,7 @@
       differnce: true,
     },
     {
-      name: "TNCCatPropDialogComp.dll",
+      module_name: "TNCCatPropDialogComp.dll",
       product_version: "クライアントリリース#330",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2713,7 +2713,7 @@
       differnce: true,
     },
     {
-      name: "TNCMatPropDialogComp.dll",
+      module_name: "TNCMatPropDialogComp.dll",
       product_version: "クライアントリリース#331",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2721,7 +2721,7 @@
       differnce: true,
     },
     {
-      name: "TNCSerialRemoteControl.dll",
+      module_name: "TNCSerialRemoteControl.dll",
       product_version: "クライアントリリース#332",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2729,7 +2729,7 @@
       differnce: true,
     },
     {
-      name: "tools4D.dll",
+      module_name: "tools4D.dll",
       product_version: "クライアントリリース#333",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2737,7 +2737,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_Reviser.dll",
+      module_name: "TVAsahi_Reviser.dll",
       product_version: "クライアントリリース#334",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2745,7 +2745,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_StateMan.dll",
+      module_name: "TVAsahi_StateMan.dll",
       product_version: "クライアントリリース#335",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2753,7 +2753,7 @@
       differnce: true,
     },
     {
-      name: "UIManager.dll",
+      module_name: "UIManager.dll",
       product_version: "クライアントリリース#336",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2761,7 +2761,7 @@
       differnce: true,
     },
     {
-      name: "unplug.exe",
+      module_name: "unplug.exe",
       product_version: "クライアントリリース#337",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2769,7 +2769,7 @@
       differnce: true,
     },
     {
-      name: "VCap.dll",
+      module_name: "VCap.dll",
       product_version: "クライアントリリース#338",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2777,7 +2777,7 @@
       differnce: true,
     },
     {
-      name: "VCapApp.exe",
+      module_name: "VCapApp.exe",
       product_version: "クライアントリリース#339",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2785,7 +2785,7 @@
       differnce: true,
     },
     {
-      name: "vcomp90.dll",
+      module_name: "vcomp90.dll",
       product_version: "クライアントリリース#340",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2793,7 +2793,7 @@
       differnce: true,
     },
     {
-      name: "VizIF.dll",
+      module_name: "VizIF.dll",
       product_version: "クライアントリリース#341",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2801,7 +2801,7 @@
       differnce: true,
     },
     {
-      name: "vizloader.dll",
+      module_name: "vizloader.dll",
       product_version: "クライアントリリース#342",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2809,7 +2809,7 @@
       differnce: true,
     },
     {
-      name: "_ImageFactoryComp.dll",
+      module_name: "_ImageFactoryComp.dll",
       product_version: "クライアントリリース#343",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2817,7 +2817,7 @@
       differnce: true,
     },
     {
-      name: "_SozaiArrayComp.dll",
+      module_name: "_SozaiArrayComp.dll",
       product_version: "クライアントリリース#344",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2825,7 +2825,7 @@
       differnce: true,
     },
     {
-      name: "_SozaiListViewCtrl.dll",
+      module_name: "_SozaiListViewCtrl.dll",
       product_version: "クライアントリリース#345",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2833,7 +2833,7 @@
       differnce: true,
     },
     {
-      name: "__MATMAN2.dll",
+      module_name: "__MATMAN2.dll",
       product_version: "クライアントリリース#346",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2841,7 +2841,7 @@
       differnce: true,
     },
     {
-      name: "ConfigPatch.dll",
+      module_name: "ConfigPatch.dll",
       product_version: "クライアントリリース#347",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2849,7 +2849,7 @@
       differnce: true,
     },
     {
-      name: "animBuildIn.dll",
+      module_name: "animBuildIn.dll",
       product_version: "クライアントリリース#348",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2858,7 +2858,7 @@
       differnce: true,
     },
     {
-      name: "animCamera.dll",
+      module_name: "animCamera.dll",
       product_version: "クライアントリリース#349",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2867,7 +2867,7 @@
       differnce: true,
     },
     {
-      name: "animEvalMesh.dll",
+      module_name: "animEvalMesh.dll",
       product_version: "クライアントリリース#350",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2876,7 +2876,7 @@
       differnce: true,
     },
     {
-      name: "animImport.dll",
+      module_name: "animImport.dll",
       product_version: "クライアントリリース#351",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2885,7 +2885,7 @@
       differnce: true,
     },
     {
-      name: "animRefer.dll",
+      module_name: "animRefer.dll",
       product_version: "クライアントリリース#352",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2894,7 +2894,7 @@
       differnce: true,
     },
     {
-      name: "AnimSeed.dll",
+      module_name: "AnimSeed.dll",
       product_version: "クライアントリリース#353",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2903,7 +2903,7 @@
       differnce: true,
     },
     {
-      name: "animSoccer.dll",
+      module_name: "animSoccer.dll",
       product_version: "クライアントリリース#354",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2912,7 +2912,7 @@
       differnce: true,
     },
     {
-      name: "AnimUICamera.dll",
+      module_name: "AnimUICamera.dll",
       product_version: "クライアントリリース#355",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2921,7 +2921,7 @@
       differnce: true,
     },
     {
-      name: "animUIEvalMesh.dll",
+      module_name: "animUIEvalMesh.dll",
       product_version: "クライアントリリース#356",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2930,7 +2930,7 @@
       differnce: true,
     },
     {
-      name: "AnimUIImport.dll",
+      module_name: "AnimUIImport.dll",
       product_version: "クライアントリリース#357",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2939,7 +2939,7 @@
       differnce: true,
     },
     {
-      name: "AnimUIRefer.dll",
+      module_name: "AnimUIRefer.dll",
       product_version: "クライアントリリース#358",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2948,7 +2948,7 @@
       differnce: true,
     },
     {
-      name: "AnimUISeed.dll",
+      module_name: "AnimUISeed.dll",
       product_version: "クライアントリリース#359",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2957,7 +2957,7 @@
       differnce: true,
     },
     {
-      name: "AnimUISoccer.dll",
+      module_name: "AnimUISoccer.dll",
       product_version: "クライアントリリース#360",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2966,7 +2966,7 @@
       differnce: true,
     },
     {
-      name: "BrushBuildIn.dll",
+      module_name: "BrushBuildIn.dll",
       product_version: "クライアントリリース#361",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2975,7 +2975,7 @@
       differnce: true,
     },
     {
-      name: "brushUIBuildIn.dll",
+      module_name: "brushUIBuildIn.dll",
       product_version: "クライアントリリース#362",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2984,7 +2984,7 @@
       differnce: true,
     },
     {
-      name: "simpleIO.dll",
+      module_name: "simpleIO.dll",
       product_version: "クライアントリリース#363",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -2992,7 +2992,7 @@
       differnce: true,
     },
     {
-      name: "device4prismGL.dll",
+      module_name: "device4prismGL.dll",
       product_version: "クライアントリリース#364",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3001,7 +3001,7 @@
       differnce: true,
     },
     {
-      name: "deviceCG.dll",
+      module_name: "deviceCG.dll",
       product_version: "クライアントリリース#365",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3009,7 +3009,7 @@
       differnce: true,
     },
     {
-      name: "deviceCgFBO.dll",
+      module_name: "deviceCgFBO.dll",
       product_version: "クライアントリリース#366",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3018,7 +3018,7 @@
       differnce: true,
     },
     {
-      name: "DeviceConFB.dll",
+      module_name: "DeviceConFB.dll",
       product_version: "クライアントリリース#367",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3027,7 +3027,7 @@
       differnce: true,
     },
     {
-      name: "DeviceEmSDI.dll",
+      module_name: "DeviceEmSDI.dll",
       product_version: "クライアントリリース#368",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3036,7 +3036,7 @@
       differnce: true,
     },
     {
-      name: "deviceFBO.dll",
+      module_name: "deviceFBO.dll",
       product_version: "クライアントリリース#369",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3044,7 +3044,7 @@
       differnce: true,
     },
     {
-      name: "deviceFx4000SDI.dll",
+      module_name: "deviceFx4000SDI.dll",
       product_version: "クライアントリリース#370",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3053,7 +3053,7 @@
       differnce: true,
     },
     {
-      name: "deviceFx4000SDIstub.dll",
+      module_name: "deviceFx4000SDIstub.dll",
       product_version: "クライアントリリース#371",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3062,7 +3062,7 @@
       differnce: true,
     },
     {
-      name: "deviceFx4500SDI.dll",
+      module_name: "deviceFx4500SDI.dll",
       product_version: "クライアントリリース#372",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3071,7 +3071,7 @@
       differnce: true,
     },
     {
-      name: "DeviceFx4600SDI.dll",
+      module_name: "DeviceFx4600SDI.dll",
       product_version: "クライアントリリース#373",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3080,7 +3080,7 @@
       differnce: true,
     },
     {
-      name: "deviceNULL.dll",
+      module_name: "deviceNULL.dll",
       product_version: "クライアントリリース#374",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3089,7 +3089,7 @@
       differnce: true,
     },
     {
-      name: "deviceNvAPI2.dll",
+      module_name: "deviceNvAPI2.dll",
       product_version: "クライアントリリース#375",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3098,7 +3098,7 @@
       differnce: true,
     },
     {
-      name: "DeviceNvApi35.dll",
+      module_name: "DeviceNvApi35.dll",
       product_version: "クライアントリリース#376",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3107,7 +3107,7 @@
       differnce: true,
     },
     {
-      name: "deviceNvApiSDI.dll",
+      module_name: "deviceNvApiSDI.dll",
       product_version: "クライアントリリース#377",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3116,7 +3116,7 @@
       differnce: true,
     },
     {
-      name: "deviceOffScreen.dll",
+      module_name: "deviceOffScreen.dll",
       product_version: "クライアントリリース#378",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3125,7 +3125,7 @@
       differnce: true,
     },
     {
-      name: "ornamentBuildIn.dll",
+      module_name: "ornamentBuildIn.dll",
       product_version: "クライアントリリース#379",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3134,7 +3134,7 @@
       differnce: true,
     },
     {
-      name: "ornamentPolygon.dll",
+      module_name: "ornamentPolygon.dll",
       product_version: "クライアントリリース#380",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3143,7 +3143,7 @@
       differnce: true,
     },
     {
-      name: "ornamentUIBuildIn.dll",
+      module_name: "ornamentUIBuildIn.dll",
       product_version: "クライアントリリース#381",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3152,7 +3152,7 @@
       differnce: true,
     },
     {
-      name: "OrnamentUIPolygon.dll",
+      module_name: "OrnamentUIPolygon.dll",
       product_version: "クライアントリリース#382",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3161,7 +3161,7 @@
       differnce: true,
     },
     {
-      name: "PrimBuildIn.dll",
+      module_name: "PrimBuildIn.dll",
       product_version: "クライアントリリース#383",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3170,7 +3170,7 @@
       differnce: true,
     },
     {
-      name: "primCurve2D.dll",
+      module_name: "primCurve2D.dll",
       product_version: "クライアントリリース#384",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3179,7 +3179,7 @@
       differnce: true,
     },
     {
-      name: "primImport.dll",
+      module_name: "primImport.dll",
       product_version: "クライアントリリース#385",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3188,7 +3188,7 @@
       differnce: true,
     },
     {
-      name: "primParticle.dll",
+      module_name: "primParticle.dll",
       product_version: "クライアントリリース#386",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3197,7 +3197,7 @@
       differnce: true,
     },
     {
-      name: "PrimUIBuildIn.dll",
+      module_name: "PrimUIBuildIn.dll",
       product_version: "クライアントリリース#387",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3206,7 +3206,7 @@
       differnce: true,
     },
     {
-      name: "primUICurve2D.dll",
+      module_name: "primUICurve2D.dll",
       product_version: "クライアントリリース#388",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3215,7 +3215,7 @@
       differnce: true,
     },
     {
-      name: "primUIImport.dll",
+      module_name: "primUIImport.dll",
       product_version: "クライアントリリース#389",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3224,7 +3224,7 @@
       differnce: true,
     },
     {
-      name: "primUIparticle.dll",
+      module_name: "primUIparticle.dll",
       product_version: "クライアントリリース#390",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3233,7 +3233,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe.dll",
+      module_name: "ClientSideDispOpe.dll",
       product_version: "クライアントリリース#391",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3241,7 +3241,7 @@
       differnce: true,
     },
     {
-      name: "EasyOAGridSrv.dll",
+      module_name: "EasyOAGridSrv.dll",
       product_version: "クライアントリリース#392",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3249,7 +3249,7 @@
       differnce: true,
     },
     {
-      name: "EasyPartsRegist.exe",
+      module_name: "EasyPartsRegist.exe",
       product_version: "クライアントリリース#393",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3257,7 +3257,7 @@
       differnce: true,
     },
     {
-      name: "FrontDesk.exe",
+      module_name: "FrontDesk.exe",
       product_version: "クライアントリリース#394",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3265,7 +3265,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs.dll",
+      module_name: "LambdaCodecs.dll",
       product_version: "クライアントリリース#395",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3273,7 +3273,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib.dll",
+      module_name: "ReviseClientLib.dll",
       product_version: "クライアントリリース#396",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3281,7 +3281,7 @@
       differnce: true,
     },
     {
-      name: "Microsoft.WindowsAPICodePack.dll",
+      module_name: "Microsoft.WindowsAPICodePack.dll",
       product_version: "クライアントリリース#397",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3290,7 +3290,7 @@
       differnce: true,
     },
     {
-      name: "Microsoft.WindowsAPICodePack.Shell.dll",
+      module_name: "Microsoft.WindowsAPICodePack.Shell.dll",
       product_version: "クライアントリリース#398",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3299,7 +3299,7 @@
       differnce: true,
     },
     {
-      name: "ProgEditorBudo.exe",
+      module_name: "ProgEditorBudo.exe",
       product_version: "クライアントリリース#399",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3307,7 +3307,7 @@
       differnce: true,
     },
     {
-      name: "AudioMan.dll",
+      module_name: "AudioMan.dll",
       product_version: "クライアントリリース#400",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3315,7 +3315,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#401",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3323,7 +3323,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2.dll",
+      module_name: "LambdaCodecs2.dll",
       product_version: "クライアントリリース#402",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3331,7 +3331,7 @@
       differnce: true,
     },
     {
-      name: "NeonSpCnv.exe",
+      module_name: "NeonSpCnv.exe",
       product_version: "クライアントリリース#403",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3339,7 +3339,7 @@
       differnce: true,
     },
     {
-      name: "RR_Neon.exe",
+      module_name: "RR_Neon.exe",
       product_version: "クライアントリリース#404",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3347,7 +3347,7 @@
       differnce: true,
     },
     {
-      name: "SpNeonCnv.exe",
+      module_name: "SpNeonCnv.exe",
       product_version: "クライアントリリース#405",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3355,7 +3355,7 @@
       differnce: true,
     },
     {
-      name: "AudioMan.dll",
+      module_name: "AudioMan.dll",
       product_version: "クライアントリリース#406",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3363,7 +3363,7 @@
       differnce: true,
     },
     {
-      name: "AutoMatPropDialogComp.dll",
+      module_name: "AutoMatPropDialogComp.dll",
       product_version: "クライアントリリース#407",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3371,7 +3371,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#408",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3379,7 +3379,7 @@
       differnce: true,
     },
     {
-      name: "BBXCTRL.dll",
+      module_name: "BBXCTRL.dll",
       product_version: "クライアントリリース#409",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3387,7 +3387,7 @@
       differnce: true,
     },
     {
-      name: "Binarist.exe",
+      module_name: "Binarist.exe",
       product_version: "クライアントリリース#410",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3395,7 +3395,7 @@
       differnce: true,
     },
     {
-      name: "CatalogOperator.dll",
+      module_name: "CatalogOperator.dll",
       product_version: "クライアントリリース#411",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3403,7 +3403,7 @@
       differnce: true,
     },
     {
-      name: "CellMaster.exe",
+      module_name: "CellMaster.exe",
       product_version: "クライアントリリース#412",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3411,7 +3411,7 @@
       differnce: true,
     },
     {
-      name: "cg.dll",
+      module_name: "cg.dll",
       product_version: "クライアントリリース#413",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3419,7 +3419,7 @@
       differnce: true,
     },
     {
-      name: "cgGL.dll",
+      module_name: "cgGL.dll",
       product_version: "クライアントリリース#414",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3427,7 +3427,7 @@
       differnce: true,
     },
     {
-      name: "CGServerIFComp.exe",
+      module_name: "CGServerIFComp.exe",
       product_version: "クライアントリリース#415",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3435,7 +3435,7 @@
       differnce: true,
     },
     {
-      name: "CGServerIFCompEx.dll",
+      module_name: "CGServerIFCompEx.dll",
       product_version: "クライアントリリース#416",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3443,7 +3443,7 @@
       differnce: true,
     },
     {
-      name: "CharsEdit4.dll",
+      module_name: "CharsEdit4.dll",
       product_version: "クライアントリリース#417",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3451,7 +3451,7 @@
       differnce: true,
     },
     {
-      name: "ChgAttrForm.dll",
+      module_name: "ChgAttrForm.dll",
       product_version: "クライアントリリース#418",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3459,7 +3459,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompSTDInput.dll",
+      module_name: "ClausePropDialogCompSTDInput.dll",
       product_version: "クライアントリリース#419",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3467,7 +3467,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHK.dll",
+      module_name: "ClausePropDialogCompTHK.dll",
       product_version: "クライアントリリース#420",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3475,7 +3475,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHKInput.dll",
+      module_name: "ClausePropDialogCompTHKInput.dll",
       product_version: "クライアントリリース#421",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3483,7 +3483,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHKProd.dll",
+      module_name: "ClausePropDialogCompTHKProd.dll",
       product_version: "クライアントリリース#422",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3491,7 +3491,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe.dll",
+      module_name: "ClientSideDispOpe.dll",
       product_version: "クライアントリリース#423",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3499,7 +3499,7 @@
       differnce: true,
     },
     {
-      name: "ColSlc.dll",
+      module_name: "ColSlc.dll",
       product_version: "クライアントリリース#424",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3507,7 +3507,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrder.exe",
+      module_name: "DisplayOrder.exe",
       product_version: "クライアントリリース#425",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3515,7 +3515,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrgText.exe",
+      module_name: "DisplayOrgText.exe",
       product_version: "クライアントリリース#426",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3523,7 +3523,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrgTextRev2.exe",
+      module_name: "DisplayOrgTextRev2.exe",
       product_version: "クライアントリリース#427",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3531,7 +3531,7 @@
       differnce: true,
     },
     {
-      name: "EasyPartsRegist.exe",
+      module_name: "EasyPartsRegist.exe",
       product_version: "クライアントリリース#428",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3539,7 +3539,7 @@
       differnce: true,
     },
     {
-      name: "001.exe",
+      module_name: "001.exe",
       product_version: "クライアントリリース#429",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3547,7 +3547,7 @@
       differnce: true,
     },
     {
-      name: "EventWatcher.exe",
+      module_name: "EventWatcher.exe",
       product_version: "クライアントリリース#430",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3555,7 +3555,7 @@
       differnce: true,
     },
     {
-      name: "FileBackupper.exe",
+      module_name: "FileBackupper.exe",
       product_version: "クライアントリリース#431",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3563,7 +3563,7 @@
       differnce: true,
     },
     {
-      name: "FileExport2.exe",
+      module_name: "FileExport2.exe",
       product_version: "クライアントリリース#432",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3571,7 +3571,7 @@
       differnce: true,
     },
     {
-      name: "fontSupply.dll",
+      module_name: "fontSupply.dll",
       product_version: "クライアントリリース#433",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3579,7 +3579,7 @@
       differnce: true,
     },
     {
-      name: "FrameInOutSelectDlg.dll",
+      module_name: "FrameInOutSelectDlg.dll",
       product_version: "クライアントリリース#434",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3587,7 +3587,7 @@
       differnce: true,
     },
     {
-      name: "frameManager.dll",
+      module_name: "frameManager.dll",
       product_version: "クライアントリリース#435",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3595,7 +3595,7 @@
       differnce: true,
     },
     {
-      name: "GetResultRevise.dll",
+      module_name: "GetResultRevise.dll",
       product_version: "クライアントリリース#436",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3603,7 +3603,7 @@
       differnce: true,
     },
     {
-      name: "glew32.dll",
+      module_name: "glew32.dll",
       product_version: "クライアントリリース#437",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3611,7 +3611,7 @@
       differnce: true,
     },
     {
-      name: "GridDevice.dll",
+      module_name: "GridDevice.dll",
       product_version: "クライアントリリース#438",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3619,7 +3619,7 @@
       differnce: true,
     },
     {
-      name: "himeEdit.dll",
+      module_name: "himeEdit.dll",
       product_version: "クライアントリリース#439",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3627,7 +3627,7 @@
       differnce: true,
     },
     {
-      name: "himeInput.dll",
+      module_name: "himeInput.dll",
       product_version: "クライアントリリース#440",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3635,7 +3635,7 @@
       differnce: true,
     },
     {
-      name: "hwConfMan.dll",
+      module_name: "hwConfMan.dll",
       product_version: "クライアントリリース#441",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3643,7 +3643,7 @@
       differnce: true,
     },
     {
-      name: "ijl15.dll",
+      module_name: "ijl15.dll",
       product_version: "クライアントリリース#442",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3651,7 +3651,7 @@
       differnce: true,
     },
     {
-      name: "ImageFactoryComp.dll",
+      module_name: "ImageFactoryComp.dll",
       product_version: "クライアントリリース#443",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3659,7 +3659,7 @@
       differnce: true,
     },
     {
-      name: "ImImport.dll",
+      module_name: "ImImport.dll",
       product_version: "クライアントリリース#444",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3667,7 +3667,7 @@
       differnce: true,
     },
     {
-      name: "IniPatch.dll",
+      module_name: "IniPatch.dll",
       product_version: "クライアントリリース#445",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3675,7 +3675,7 @@
       differnce: true,
     },
     {
-      name: "ItemFilterANB.dll",
+      module_name: "ItemFilterANB.dll",
       product_version: "クライアントリリース#446",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3683,7 +3683,7 @@
       differnce: true,
     },
     {
-      name: "ItemFilterOA.dll",
+      module_name: "ItemFilterOA.dll",
       product_version: "クライアントリリース#447",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3691,7 +3691,7 @@
       differnce: true,
     },
     {
-      name: "ItemFinder.dll",
+      module_name: "ItemFinder.dll",
       product_version: "クライアントリリース#448",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3699,7 +3699,7 @@
       differnce: true,
     },
     {
-      name: "JornalInfo.exe",
+      module_name: "JornalInfo.exe",
       product_version: "クライアントリリース#449",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3707,7 +3707,7 @@
       differnce: true,
     },
     {
-      name: "JRTBankParallelRemoteControl.dll",
+      module_name: "JRTBankParallelRemoteControl.dll",
       product_version: "クライアントリリース#450",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3715,7 +3715,7 @@
       differnce: true,
     },
     {
-      name: "JRTBankSerialRemoteControl.dll",
+      module_name: "JRTBankSerialRemoteControl.dll",
       product_version: "クライアントリリース#451",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3723,7 +3723,7 @@
       differnce: true,
     },
     {
-      name: "JRTParallelRemoteControl.dll",
+      module_name: "JRTParallelRemoteControl.dll",
       product_version: "クライアントリリース#452",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3731,7 +3731,7 @@
       differnce: true,
     },
     {
-      name: "LAMBDA.dll",
+      module_name: "LAMBDA.dll",
       product_version: "クライアントリリース#453",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3739,7 +3739,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs.dll",
+      module_name: "LambdaCodecs.dll",
       product_version: "クライアントリリース#454",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3747,7 +3747,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2.dll",
+      module_name: "LambdaCodecs2.dll",
       product_version: "クライアントリリース#455",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3755,7 +3755,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs64.dll",
+      module_name: "LambdaCodecs64.dll",
       product_version: "クライアントリリース#456",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3763,7 +3763,7 @@
       differnce: true,
     },
     {
-      name: "LGGRAGNT.dll",
+      module_name: "LGGRAGNT.dll",
       product_version: "クライアントリリース#457",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3771,7 +3771,7 @@
       differnce: true,
     },
     {
-      name: "Lmjpgd32.dll",
+      module_name: "Lmjpgd32.dll",
       product_version: "クライアントリリース#458",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3779,7 +3779,7 @@
       differnce: true,
     },
     {
-      name: "LmNetWork.dll",
+      module_name: "LmNetWork.dll",
       product_version: "クライアントリリース#459",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3787,7 +3787,7 @@
       differnce: true,
     },
     {
-      name: "Lmpio16.dll",
+      module_name: "Lmpio16.dll",
       product_version: "クライアントリリース#460",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3795,7 +3795,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO16PCI.dll",
+      module_name: "LMPIO16PCI.dll",
       product_version: "クライアントリリース#461",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3803,7 +3803,7 @@
       differnce: true,
     },
     {
-      name: "Lmpio32.dll",
+      module_name: "Lmpio32.dll",
       product_version: "クライアントリリース#462",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3811,7 +3811,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO3264.dll",
+      module_name: "LMPIO3264.dll",
       product_version: "クライアントリリース#463",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3819,7 +3819,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO32PCI.dll",
+      module_name: "LMPIO32PCI.dll",
       product_version: "クライアントリリース#464",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3827,7 +3827,7 @@
       differnce: true,
     },
     {
-      name: "LMPIOCONTEC.dll",
+      module_name: "LMPIOCONTEC.dll",
       product_version: "クライアントリリース#465",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3835,7 +3835,7 @@
       differnce: true,
     },
     {
-      name: "lmregsvr32.exe",
+      module_name: "lmregsvr32.exe",
       product_version: "クライアントリリース#466",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3843,7 +3843,7 @@
       differnce: true,
     },
     {
-      name: "Lmsoft.dll",
+      module_name: "Lmsoft.dll",
       product_version: "クライアントリリース#467",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3851,7 +3851,7 @@
       differnce: true,
     },
     {
-      name: "Lmvcbg32hdsdi.dll",
+      module_name: "Lmvcbg32hdsdi.dll",
       product_version: "クライアントリリース#468",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3859,7 +3859,7 @@
       differnce: true,
     },
     {
-      name: "LMVCBG32HRC.dll",
+      module_name: "LMVCBG32HRC.dll",
       product_version: "クライアントリリース#469",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3867,7 +3867,7 @@
       differnce: true,
     },
     {
-      name: "LMVCBG32HS.dll",
+      module_name: "LMVCBG32HS.dll",
       product_version: "クライアントリリース#470",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3875,7 +3875,7 @@
       differnce: true,
     },
     {
-      name: "localSozaiSv.dll",
+      module_name: "localSozaiSv.dll",
       product_version: "クライアントリリース#471",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3883,7 +3883,7 @@
       differnce: true,
     },
     {
-      name: "localSSVIF.dll",
+      module_name: "localSSVIF.dll",
       product_version: "クライアントリリース#472",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3891,7 +3891,7 @@
       differnce: true,
     },
     {
-      name: "LoginDialogComp.dll",
+      module_name: "LoginDialogComp.dll",
       product_version: "クライアントリリース#473",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3899,7 +3899,7 @@
       differnce: true,
     },
     {
-      name: "logoIF.dll",
+      module_name: "logoIF.dll",
       product_version: "クライアントリリース#474",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3907,7 +3907,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCode.dll",
+      module_name: "MaterialCode.dll",
       product_version: "クライアントリリース#475",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3915,7 +3915,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeDependPN.dll",
+      module_name: "MaterialCodeDependPN.dll",
       product_version: "クライアントリリース#476",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3923,7 +3923,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeDialogComp.dll",
+      module_name: "MaterialCodeDialogComp.dll",
       product_version: "クライアントリリース#477",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3931,7 +3931,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeJRTBank.dll",
+      module_name: "MaterialCodeJRTBank.dll",
       product_version: "クライアントリリース#478",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3939,7 +3939,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHK.dll",
+      module_name: "MaterialCodeTHK.dll",
       product_version: "クライアントリリース#479",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3947,7 +3947,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHKAssumed.dll",
+      module_name: "MaterialCodeTHKAssumed.dll",
       product_version: "クライアントリリース#480",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3955,7 +3955,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHKProd.dll",
+      module_name: "MaterialCodeTHKProd.dll",
       product_version: "クライアントリリース#481",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3963,7 +3963,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTNCCatalog.dll",
+      module_name: "MaterialCodeTNCCatalog.dll",
       product_version: "クライアントリリース#482",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3971,7 +3971,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTNCOTC.dll",
+      module_name: "MaterialCodeTNCOTC.dll",
       product_version: "クライアントリリース#483",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3979,7 +3979,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeUHBOTC.dll",
+      module_name: "MaterialCodeUHBOTC.dll",
       product_version: "クライアントリリース#484",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3987,7 +3987,7 @@
       differnce: true,
     },
     {
-      name: "MaterialHandlerStd.dll",
+      module_name: "MaterialHandlerStd.dll",
       product_version: "クライアントリリース#485",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -3995,7 +3995,7 @@
       differnce: true,
     },
     {
-      name: "MaterialHandlerTHKPrevw.dll",
+      module_name: "MaterialHandlerTHKPrevw.dll",
       product_version: "クライアントリリース#486",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4003,7 +4003,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogCompTHK.dll",
+      module_name: "MaterialPropDialogCompTHK.dll",
       product_version: "クライアントリリース#487",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4011,7 +4011,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN2.dll",
+      module_name: "MATMAN2.dll",
       product_version: "クライアントリリース#488",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4019,7 +4019,7 @@
       differnce: true,
     },
     {
-      name: "MFCUtil.dll",
+      module_name: "MFCUtil.dll",
       product_version: "クライアントリリース#489",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4027,7 +4027,7 @@
       differnce: true,
     },
     {
-      name: "motionGallery.dll",
+      module_name: "motionGallery.dll",
       product_version: "クライアントリリース#490",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4035,7 +4035,7 @@
       differnce: true,
     },
     {
-      name: "MountWindowANB.dll",
+      module_name: "MountWindowANB.dll",
       product_version: "クライアントリリース#491",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4043,7 +4043,7 @@
       differnce: true,
     },
     {
-      name: "MovieExport2.dll",
+      module_name: "MovieExport2.dll",
       product_version: "クライアントリリース#492",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4051,7 +4051,7 @@
       differnce: true,
     },
     {
-      name: "MSPDB60.DLL",
+      module_name: "MSPDB60.DLL",
       product_version: "クライアントリリース#493",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4059,7 +4059,7 @@
       differnce: true,
     },
     {
-      name: "NCKCatPropDialogComp.dll",
+      module_name: "NCKCatPropDialogComp.dll",
       product_version: "クライアントリリース#494",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4067,7 +4067,7 @@
       differnce: true,
     },
     {
-      name: "Neon3DColSlc.dll",
+      module_name: "Neon3DColSlc.dll",
       product_version: "クライアントリリース#495",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4075,7 +4075,7 @@
       differnce: true,
     },
     {
-      name: "NXGPrint.dll",
+      module_name: "NXGPrint.dll",
       product_version: "クライアントリリース#496",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4083,7 +4083,7 @@
       differnce: true,
     },
     {
-      name: "NXGPrintDS.dll",
+      module_name: "NXGPrintDS.dll",
       product_version: "クライアントリリース#497",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4091,7 +4091,7 @@
       differnce: true,
     },
     {
-      name: "OATest.exe",
+      module_name: "OATest.exe",
       product_version: "クライアントリリース#498",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4099,7 +4099,7 @@
       differnce: true,
     },
     {
-      name: "OAtestGL.exe",
+      module_name: "OAtestGL.exe",
       product_version: "クライアントリリース#499",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4107,7 +4107,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#500",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4115,7 +4115,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonEditView.dll",
+      module_name: "OperationButtonEditView.dll",
       product_version: "クライアントリリース#501",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4123,7 +4123,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#502",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4131,7 +4131,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonMonitorView.dll",
+      module_name: "OperationButtonMonitorView.dll",
       product_version: "クライアントリリース#503",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4139,7 +4139,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#504",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4147,7 +4147,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonVividView.dll",
+      module_name: "OperationButtonVividView.dll",
       product_version: "クライアントリリース#505",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4155,7 +4155,7 @@
       differnce: true,
     },
     {
-      name: "OrderPrintComp.dll",
+      module_name: "OrderPrintComp.dll",
       product_version: "クライアントリリース#506",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4163,7 +4163,7 @@
       differnce: true,
     },
     {
-      name: "ParaTest16.exe",
+      module_name: "ParaTest16.exe",
       product_version: "クライアントリリース#507",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4171,7 +4171,7 @@
       differnce: true,
     },
     {
-      name: "PCSound.dll",
+      module_name: "PCSound.dll",
       product_version: "クライアントリリース#508",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4179,7 +4179,7 @@
       differnce: true,
     },
     {
-      name: "PolyLineTool.dll",
+      module_name: "PolyLineTool.dll",
       product_version: "クライアントリリース#509",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4187,7 +4187,7 @@
       differnce: true,
     },
     {
-      name: "PrismPlayer4.dll",
+      module_name: "PrismPlayer4.dll",
       product_version: "クライアントリリース#510",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4195,7 +4195,7 @@
       differnce: true,
     },
     {
-      name: "ProcLogger2.exe",
+      module_name: "ProcLogger2.exe",
       product_version: "クライアントリリース#511",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4203,7 +4203,7 @@
       differnce: true,
     },
     {
-      name: "ProfileComp.dll",
+      module_name: "ProfileComp.dll",
       product_version: "クライアントリリース#512",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4211,7 +4211,7 @@
       differnce: true,
     },
     {
-      name: "ProgCopySTD.exe",
+      module_name: "ProgCopySTD.exe",
       product_version: "クライアントリリース#513",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4219,7 +4219,7 @@
       differnce: true,
     },
     {
-      name: "ProgEditor.exe",
+      module_name: "ProgEditor.exe",
       product_version: "クライアントリリース#514",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4227,7 +4227,7 @@
       differnce: true,
     },
     {
-      name: "ProgTreeView.dll",
+      module_name: "ProgTreeView.dll",
       product_version: "クライアントリリース#515",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4235,7 +4235,7 @@
       differnce: true,
     },
     {
-      name: "ResourceResolver.dll",
+      module_name: "ResourceResolver.dll",
       product_version: "クライアントリリース#516",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4243,7 +4243,7 @@
       differnce: true,
     },
     {
-      name: "ReviseChecker.exe",
+      module_name: "ReviseChecker.exe",
       product_version: "クライアントリリース#517",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4251,7 +4251,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientATOK.dll",
+      module_name: "ReviseClientATOK.dll",
       product_version: "クライアントリリース#518",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4259,7 +4259,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib.dll",
+      module_name: "ReviseClientLib.dll",
       product_version: "クライアントリリース#519",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4267,7 +4267,7 @@
       differnce: true,
     },
     {
-      name: "ReviseExecuter.exe",
+      module_name: "ReviseExecuter.exe",
       product_version: "クライアントリリース#520",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4275,7 +4275,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFile.dll",
+      module_name: "ReviseFile.dll",
       product_version: "クライアントリリース#521",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4283,7 +4283,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFileViewCtrl.dll",
+      module_name: "ReviseFileViewCtrl.dll",
       product_version: "クライアントリリース#522",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4291,7 +4291,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFileViewCtrl2.dll",
+      module_name: "ReviseFileViewCtrl2.dll",
       product_version: "クライアントリリース#523",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4299,7 +4299,7 @@
       differnce: true,
     },
     {
-      name: ".dll",
+      module_name: ".dll",
       product_version: "クライアントリリース#524",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4307,7 +4307,7 @@
       differnce: true,
     },
     {
-      name: "ReviseInfoView.dll",
+      module_name: "ReviseInfoView.dll",
       product_version: "クライアントリリース#525",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4315,7 +4315,7 @@
       differnce: true,
     },
     {
-      name: "ReviseInfoView2.dll",
+      module_name: "ReviseInfoView2.dll",
       product_version: "クライアントリリース#526",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4323,7 +4323,7 @@
       differnce: true,
     },
     {
-      name: "ReviseStandaloneATOK.dll",
+      module_name: "ReviseStandaloneATOK.dll",
       product_version: "クライアントリリース#527",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4331,7 +4331,7 @@
       differnce: true,
     },
     {
-      name: "s3D_IF.dll",
+      module_name: "s3D_IF.dll",
       product_version: "クライアントリリース#528",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4339,7 +4339,7 @@
       differnce: true,
     },
     {
-      name: "SaveRegistory.exe",
+      module_name: "SaveRegistory.exe",
       product_version: "クライアントリリース#529",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4347,7 +4347,7 @@
       differnce: true,
     },
     {
-      name: "SceneChangeMode.exe",
+      module_name: "SceneChangeMode.exe",
       product_version: "クライアントリリース#530",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4355,7 +4355,7 @@
       differnce: true,
     },
     {
-      name: "SceneEditor5.exe",
+      module_name: "SceneEditor5.exe",
       product_version: "クライアントリリース#531",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4363,7 +4363,7 @@
       differnce: true,
     },
     {
-      name: "SceneMaskMaker.exe",
+      module_name: "SceneMaskMaker.exe",
       product_version: "クライアントリリース#532",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4371,7 +4371,7 @@
       differnce: true,
     },
     {
-      name: "SceneOffsetMover.exe",
+      module_name: "SceneOffsetMover.exe",
       product_version: "クライアントリリース#533",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4379,7 +4379,7 @@
       differnce: true,
     },
     {
-      name: "SceneRollSpeed.exe",
+      module_name: "SceneRollSpeed.exe",
       product_version: "クライアントリリース#534",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4387,7 +4387,7 @@
       differnce: true,
     },
     {
-      name: "SceneTrimmer.exe",
+      module_name: "SceneTrimmer.exe",
       product_version: "クライアントリリース#535",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4395,7 +4395,7 @@
       differnce: true,
     },
     {
-      name: "schemaMan.dll",
+      module_name: "schemaMan.dll",
       product_version: "クライアントリリース#536",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4403,7 +4403,7 @@
       differnce: true,
     },
     {
-      name: "scmmanager.dll",
+      module_name: "scmmanager.dll",
       product_version: "クライアントリリース#537",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4411,7 +4411,7 @@
       differnce: true,
     },
     {
-      name: "scnParse.dll",
+      module_name: "scnParse.dll",
       product_version: "クライアントリリース#538",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4419,7 +4419,7 @@
       differnce: true,
     },
     {
-      name: "SE5Resource.dll",
+      module_name: "SE5Resource.dll",
       product_version: "クライアントリリース#539",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4427,7 +4427,7 @@
       differnce: true,
     },
     {
-      name: "SelectSozaiDialogComp.dll",
+      module_name: "SelectSozaiDialogComp.dll",
       product_version: "クライアントリリース#540",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4435,7 +4435,7 @@
       differnce: true,
     },
     {
-      name: "SelectStageButtonsANB.dll",
+      module_name: "SelectStageButtonsANB.dll",
       product_version: "クライアントリリース#541",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4443,7 +4443,7 @@
       differnce: true,
     },
     {
-      name: "SeparatedStringComp.dll",
+      module_name: "SeparatedStringComp.dll",
       product_version: "クライアントリリース#542",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4451,7 +4451,7 @@
       differnce: true,
     },
     {
-      name: "simpleLogger.dll",
+      module_name: "simpleLogger.dll",
       product_version: "クライアントリリース#543",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4459,7 +4459,7 @@
       differnce: true,
     },
     {
-      name: "SioLocal.dll",
+      module_name: "SioLocal.dll",
       product_version: "クライアントリリース#544",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4467,7 +4467,7 @@
       differnce: true,
     },
     {
-      name: "soccer2viz.dll",
+      module_name: "soccer2viz.dll",
       product_version: "クライアントリリース#545",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4475,7 +4475,7 @@
       differnce: true,
     },
     {
-      name: "SozaiArrayComp.dll",
+      module_name: "SozaiArrayComp.dll",
       product_version: "クライアントリリース#546",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4483,7 +4483,7 @@
       differnce: true,
     },
     {
-      name: "SozaiChgAttrView.dll",
+      module_name: "SozaiChgAttrView.dll",
       product_version: "クライアントリリース#547",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4491,7 +4491,7 @@
       differnce: true,
     },
     {
-      name: "SozaiInfoView.dll",
+      module_name: "SozaiInfoView.dll",
       product_version: "クライアントリリース#548",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4499,7 +4499,7 @@
       differnce: true,
     },
     {
-      name: "SozaiInfoViewStd.dll",
+      module_name: "SozaiInfoViewStd.dll",
       product_version: "クライアントリリース#549",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4507,7 +4507,7 @@
       differnce: true,
     },
     {
-      name: "001.dll",
+      module_name: "001.dll",
       product_version: "クライアントリリース#550",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4515,7 +4515,7 @@
       differnce: true,
     },
     {
-      name: "002.dll",
+      module_name: "002.dll",
       product_version: "クライアントリリース#551",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4523,7 +4523,7 @@
       differnce: true,
     },
     {
-      name: ".dll",
+      module_name: ".dll",
       product_version: "クライアントリリース#552",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4531,7 +4531,7 @@
       differnce: true,
     },
     {
-      name: "003.dll",
+      module_name: "003.dll",
       product_version: "クライアントリリース#553",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4539,7 +4539,7 @@
       differnce: true,
     },
     {
-      name: "003333.dll",
+      module_name: "003333.dll",
       product_version: "クライアントリリース#554",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4547,7 +4547,7 @@
       differnce: true,
     },
     {
-      name: "SozaiListViewCtrl.dll",
+      module_name: "SozaiListViewCtrl.dll",
       product_version: "クライアントリリース#555",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4555,7 +4555,7 @@
       differnce: true,
     },
     {
-      name: "SozaiListViewCtrl2.dll",
+      module_name: "SozaiListViewCtrl2.dll",
       product_version: "クライアントリリース#556",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4563,7 +4563,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSvAcc.dll",
+      module_name: "SozaiSvAcc.dll",
       product_version: "クライアントリリース#557",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4571,7 +4571,7 @@
       differnce: true,
     },
     {
-      name: "SozaiThumbnail.dll",
+      module_name: "SozaiThumbnail.dll",
       product_version: "クライアントリリース#558",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4579,7 +4579,7 @@
       differnce: true,
     },
     {
-      name: "SpColSlcU32.dll",
+      module_name: "SpColSlcU32.dll",
       product_version: "クライアントリリース#559",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4587,7 +4587,7 @@
       differnce: true,
     },
     {
-      name: "001.dll",
+      module_name: "001.dll",
       product_version: "クライアントリリース#560",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4595,7 +4595,7 @@
       differnce: true,
     },
     {
-      name: "002.dll",
+      module_name: "002.dll",
       product_version: "クライアントリリース#561",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4603,7 +4603,7 @@
       differnce: true,
     },
     {
-      name: "SportsInputAgent.dll",
+      module_name: "SportsInputAgent.dll",
       product_version: "クライアントリリース#562",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4611,7 +4611,7 @@
       differnce: true,
     },
     {
-      name: "001.dll",
+      module_name: "001.dll",
       product_version: "クライアントリリース#563",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4619,7 +4619,7 @@
       differnce: true,
     },
     {
-      name: "SportsInputUI.dll",
+      module_name: "SportsInputUI.dll",
       product_version: "クライアントリリース#564",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4627,7 +4627,7 @@
       differnce: true,
     },
     {
-      name: "001.dll",
+      module_name: "001.dll",
       product_version: "クライアントリリース#565",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4635,7 +4635,7 @@
       differnce: true,
     },
     {
-      name: "002.dll",
+      module_name: "002.dll",
       product_version: "クライアントリリース#566",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4643,7 +4643,7 @@
       differnce: true,
     },
     {
-      name: "SportsInputView.dll",
+      module_name: "SportsInputView.dll",
       product_version: "クライアントリリース#567",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4651,7 +4651,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#568",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4659,7 +4659,7 @@
       differnce: true,
     },
     {
-      name: "StageSelectorANB.dll",
+      module_name: "StageSelectorANB.dll",
       product_version: "クライアントリリース#569",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4667,7 +4667,7 @@
       differnce: true,
     },
     {
-      name: "StageUtility.dll",
+      module_name: "StageUtility.dll",
       product_version: "クライアントリリース#570",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4675,7 +4675,7 @@
       differnce: true,
     },
     {
-      name: "StageUtilityANB.dll",
+      module_name: "StageUtilityANB.dll",
       product_version: "クライアントリリース#571",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4683,7 +4683,7 @@
       differnce: true,
     },
     {
-      name: "StageUtilityTHK.dll",
+      module_name: "StageUtilityTHK.dll",
       product_version: "クライアントリリース#572",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4691,7 +4691,7 @@
       differnce: true,
     },
     {
-      name: "StateManTHK.dll",
+      module_name: "StateManTHK.dll",
       product_version: "クライアントリリース#573",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4699,7 +4699,7 @@
       differnce: true,
     },
     {
-      name: "StateManUHB.dll",
+      module_name: "StateManUHB.dll",
       product_version: "クライアントリリース#574",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4707,7 +4707,7 @@
       differnce: true,
     },
     {
-      name: "STDParallelRemoteControl.dll",
+      module_name: "STDParallelRemoteControl.dll",
       product_version: "クライアントリリース#575",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4715,7 +4715,7 @@
       differnce: true,
     },
     {
-      name: "StringSel.dll",
+      module_name: "StringSel.dll",
       product_version: "クライアントリリース#576",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4723,7 +4723,7 @@
       differnce: true,
     },
     {
-      name: "StringTool.dll",
+      module_name: "StringTool.dll",
       product_version: "クライアントリリース#577",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4731,7 +4731,7 @@
       differnce: true,
     },
     {
-      name: "SwitchVin.exe",
+      module_name: "SwitchVin.exe",
       product_version: "クライアントリリース#578",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4739,7 +4739,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#579",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4747,7 +4747,7 @@
       differnce: true,
     },
     {
-      name: "SystemButtonOrderView.dll",
+      module_name: "SystemButtonOrderView.dll",
       product_version: "クライアントリリース#580",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4755,7 +4755,7 @@
       differnce: true,
     },
     {
-      name: "new.dll",
+      module_name: "new.dll",
       product_version: "クライアントリリース#581",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4763,7 +4763,7 @@
       differnce: true,
     },
     {
-      name: "SystemButtonVividView.dll",
+      module_name: "SystemButtonVividView.dll",
       product_version: "クライアントリリース#582",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4771,7 +4771,7 @@
       differnce: true,
     },
     {
-      name: "TallyParallelRemoteControl.dll",
+      module_name: "TallyParallelRemoteControl.dll",
       product_version: "クライアントリリース#583",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4779,7 +4779,7 @@
       differnce: true,
     },
     {
-      name: "THKParallelRemoteControl.dll",
+      module_name: "THKParallelRemoteControl.dll",
       product_version: "クライアントリリース#584",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4787,7 +4787,7 @@
       differnce: true,
     },
     {
-      name: "THKSerialRemoteControl.dll",
+      module_name: "THKSerialRemoteControl.dll",
       product_version: "クライアントリリース#585",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4795,7 +4795,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompANB.dll",
+      module_name: "ThumbnailPrintCompANB.dll",
       product_version: "クライアントリリース#586",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4803,7 +4803,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompTHK.dll",
+      module_name: "ThumbnailPrintCompTHK.dll",
       product_version: "クライアントリリース#587",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4811,7 +4811,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompUHB.dll",
+      module_name: "ThumbnailPrintCompUHB.dll",
       product_version: "クライアントリリース#588",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4819,7 +4819,7 @@
       differnce: true,
     },
     {
-      name: "TitleWindowOTCView.dll",
+      module_name: "TitleWindowOTCView.dll",
       product_version: "クライアントリリース#589",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4827,7 +4827,7 @@
       differnce: true,
     },
     {
-      name: "TitleWindowProgramView.dll",
+      module_name: "TitleWindowProgramView.dll",
       product_version: "クライアントリリース#590",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4835,7 +4835,7 @@
       differnce: true,
     },
     {
-      name: "TitleWindowStatusView.dll",
+      module_name: "TitleWindowStatusView.dll",
       product_version: "クライアントリリース#591",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4843,7 +4843,7 @@
       differnce: true,
     },
     {
-      name: "TitleWindowVividView.dll",
+      module_name: "TitleWindowVividView.dll",
       product_version: "クライアントリリース#592",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4851,7 +4851,7 @@
       differnce: true,
     },
     {
-      name: "TNCCatPropDialogComp.dll",
+      module_name: "TNCCatPropDialogComp.dll",
       product_version: "クライアントリリース#593",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4859,7 +4859,7 @@
       differnce: true,
     },
     {
-      name: "TNCMatPropDialogComp.dll",
+      module_name: "TNCMatPropDialogComp.dll",
       product_version: "クライアントリリース#594",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4867,7 +4867,7 @@
       differnce: true,
     },
     {
-      name: "TNCSerialRemoteControl.dll",
+      module_name: "TNCSerialRemoteControl.dll",
       product_version: "クライアントリリース#595",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4875,7 +4875,7 @@
       differnce: true,
     },
     {
-      name: "tools4D.dll",
+      module_name: "tools4D.dll",
       product_version: "クライアントリリース#596",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4883,7 +4883,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_Reviser.dll",
+      module_name: "TVAsahi_Reviser.dll",
       product_version: "クライアントリリース#597",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4891,7 +4891,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_StateMan.dll",
+      module_name: "TVAsahi_StateMan.dll",
       product_version: "クライアントリリース#598",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4899,7 +4899,7 @@
       differnce: true,
     },
     {
-      name: "UIManager.dll",
+      module_name: "UIManager.dll",
       product_version: "クライアントリリース#599",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4907,7 +4907,7 @@
       differnce: true,
     },
     {
-      name: "unplug.exe",
+      module_name: "unplug.exe",
       product_version: "クライアントリリース#600",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4915,7 +4915,7 @@
       differnce: true,
     },
     {
-      name: "VCap.dll",
+      module_name: "VCap.dll",
       product_version: "クライアントリリース#601",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4923,7 +4923,7 @@
       differnce: true,
     },
     {
-      name: "VCapApp.exe",
+      module_name: "VCapApp.exe",
       product_version: "クライアントリリース#602",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4931,7 +4931,7 @@
       differnce: true,
     },
     {
-      name: "vcomp90.dll",
+      module_name: "vcomp90.dll",
       product_version: "クライアントリリース#603",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4939,7 +4939,7 @@
       differnce: true,
     },
     {
-      name: "VizIF.dll",
+      module_name: "VizIF.dll",
       product_version: "クライアントリリース#604",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4947,7 +4947,7 @@
       differnce: true,
     },
     {
-      name: "vizloader.dll",
+      module_name: "vizloader.dll",
       product_version: "クライアントリリース#605",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4955,7 +4955,7 @@
       differnce: true,
     },
     {
-      name: "_ImageFactoryComp.dll",
+      module_name: "_ImageFactoryComp.dll",
       product_version: "クライアントリリース#606",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4963,7 +4963,7 @@
       differnce: true,
     },
     {
-      name: "_SozaiArrayComp.dll",
+      module_name: "_SozaiArrayComp.dll",
       product_version: "クライアントリリース#607",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4971,7 +4971,7 @@
       differnce: true,
     },
     {
-      name: "_SozaiListViewCtrl.dll",
+      module_name: "_SozaiListViewCtrl.dll",
       product_version: "クライアントリリース#608",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4979,7 +4979,7 @@
       differnce: true,
     },
     {
-      name: "__MATMAN2.dll",
+      module_name: "__MATMAN2.dll",
       product_version: "クライアントリリース#609",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4987,7 +4987,7 @@
       differnce: true,
     },
     {
-      name: "FileExport2.exe",
+      module_name: "FileExport2.exe",
       product_version: "クライアントリリース#610",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -4996,7 +4996,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCounter.exe",
+      module_name: "MaterialCounter.exe",
       product_version: "クライアントリリース#611",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5005,7 +5005,7 @@
       differnce: true,
     },
     {
-      name: "VAFPreview.exe",
+      module_name: "VAFPreview.exe",
       product_version: "クライアントリリース#612",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5014,7 +5014,7 @@
       differnce: true,
     },
     {
-      name: "vcredist_x86.exe",
+      module_name: "vcredist_x86.exe",
       product_version: "クライアントリリース#613",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5023,7 +5023,7 @@
       differnce: true,
     },
     {
-      name: "WritePrivateProfile.exe",
+      module_name: "WritePrivateProfile.exe",
       product_version: "クライアントリリース#614",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5031,7 +5031,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#615",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5039,7 +5039,7 @@
       differnce: true,
     },
     {
-      name: "BBXCTRL.dll",
+      module_name: "BBXCTRL.dll",
       product_version: "クライアントリリース#616",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5047,7 +5047,7 @@
       differnce: true,
     },
     {
-      name: "Binarist.exe",
+      module_name: "Binarist.exe",
       product_version: "クライアントリリース#617",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5055,7 +5055,7 @@
       differnce: true,
     },
     {
-      name: "BS_ProgEditor.exe",
+      module_name: "BS_ProgEditor.exe",
       product_version: "クライアントリリース#618",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5063,7 +5063,7 @@
       differnce: true,
     },
     {
-      name: "CacheClear2.exe",
+      module_name: "CacheClear2.exe",
       product_version: "クライアントリリース#619",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5071,7 +5071,7 @@
       differnce: true,
     },
     {
-      name: "CellMaster.exe",
+      module_name: "CellMaster.exe",
       product_version: "クライアントリリース#620",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5079,7 +5079,7 @@
       differnce: true,
     },
     {
-      name: "cg.dll",
+      module_name: "cg.dll",
       product_version: "クライアントリリース#621",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5087,7 +5087,7 @@
       differnce: true,
     },
     {
-      name: "cgGL.dll",
+      module_name: "cgGL.dll",
       product_version: "クライアントリリース#622",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5095,7 +5095,7 @@
       differnce: true,
     },
     {
-      name: "CGServerIFCompEx.dll",
+      module_name: "CGServerIFCompEx.dll",
       product_version: "クライアントリリース#623",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5103,7 +5103,7 @@
       differnce: true,
     },
     {
-      name: "CGServerLib.dll",
+      module_name: "CGServerLib.dll",
       product_version: "クライアントリリース#624",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5111,7 +5111,7 @@
       differnce: true,
     },
     {
-      name: "ChargeDBMan.dll",
+      module_name: "ChargeDBMan.dll",
       product_version: "クライアントリリース#625",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5119,7 +5119,7 @@
       differnce: true,
     },
     {
-      name: "CharsEdit4.dll",
+      module_name: "CharsEdit4.dll",
       product_version: "クライアントリリース#626",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5127,7 +5127,7 @@
       differnce: true,
     },
     {
-      name: "ClaimGroupEdit.exe",
+      module_name: "ClaimGroupEdit.exe",
       product_version: "クライアントリリース#627",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5135,7 +5135,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogComp.dll",
+      module_name: "ClausePropDialogComp.dll",
       product_version: "クライアントリリース#628",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5143,7 +5143,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe.dll",
+      module_name: "ClientSideDispOpe.dll",
       product_version: "クライアントリリース#629",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5151,7 +5151,7 @@
       differnce: true,
     },
     {
-      name: "ClockPropDialogComp.dll",
+      module_name: "ClockPropDialogComp.dll",
       product_version: "クライアントリリース#630",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5159,7 +5159,7 @@
       differnce: true,
     },
     {
-      name: "ColSlc.dll",
+      module_name: "ColSlc.dll",
       product_version: "クライアントリリース#631",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5167,7 +5167,7 @@
       differnce: true,
     },
     {
-      name: "DateUtility.dll",
+      module_name: "DateUtility.dll",
       product_version: "クライアントリリース#632",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5175,7 +5175,7 @@
       differnce: true,
     },
     {
-      name: "DesignerStateCtrl.dll",
+      module_name: "DesignerStateCtrl.dll",
       product_version: "クライアントリリース#633",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5183,7 +5183,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrder.exe",
+      module_name: "DisplayOrder.exe",
       product_version: "クライアントリリース#634",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5191,7 +5191,7 @@
       differnce: true,
     },
     {
-      name: "DrawHistory.exe",
+      module_name: "DrawHistory.exe",
       product_version: "クライアントリリース#635",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5199,7 +5199,7 @@
       differnce: true,
     },
     {
-      name: "DrawHistoryMANTS.exe",
+      module_name: "DrawHistoryMANTS.exe",
       product_version: "クライアントリリース#636",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5207,7 +5207,7 @@
       differnce: true,
     },
     {
-      name: "DrawReviseCheck.exe",
+      module_name: "DrawReviseCheck.exe",
       product_version: "クライアントリリース#637",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5215,7 +5215,7 @@
       differnce: true,
     },
     {
-      name: "DummyVafAPP.exe",
+      module_name: "DummyVafAPP.exe",
       product_version: "クライアントリリース#638",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5223,7 +5223,7 @@
       differnce: true,
     },
     {
-      name: "FDItemSelector.dll",
+      module_name: "FDItemSelector.dll",
       product_version: "クライアントリリース#639",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5231,7 +5231,7 @@
       differnce: true,
     },
     {
-      name: "FeeTotal.exe",
+      module_name: "FeeTotal.exe",
       product_version: "クライアントリリース#640",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5239,7 +5239,7 @@
       differnce: true,
     },
     {
-      name: ".exe",
+      module_name: ".exe",
       product_version: "クライアントリリース#641",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5247,7 +5247,7 @@
       differnce: true,
     },
     {
-      name: "FeeTotalMANTS.exe",
+      module_name: "FeeTotalMANTS.exe",
       product_version: "クライアントリリース#642",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5255,7 +5255,7 @@
       differnce: true,
     },
     {
-      name: "FileBackupper.exe",
+      module_name: "FileBackupper.exe",
       product_version: "クライアントリリース#643",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5263,7 +5263,7 @@
       differnce: true,
     },
     {
-      name: "FindMaterial.exe",
+      module_name: "FindMaterial.exe",
       product_version: "クライアントリリース#644",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5271,7 +5271,7 @@
       differnce: true,
     },
     {
-      name: "FrameInOutSelectDlg.dll",
+      module_name: "FrameInOutSelectDlg.dll",
       product_version: "クライアントリリース#645",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5279,7 +5279,7 @@
       differnce: true,
     },
     {
-      name: "frameManager.dll",
+      module_name: "frameManager.dll",
       product_version: "クライアントリリース#646",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5287,7 +5287,7 @@
       differnce: true,
     },
     {
-      name: "FrontDesk.exe",
+      module_name: "FrontDesk.exe",
       product_version: "クライアントリリース#647",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5295,7 +5295,7 @@
       differnce: true,
     },
     {
-      name: "Fx4000SDIdemo.exe",
+      module_name: "Fx4000SDIdemo.exe",
       product_version: "クライアントリリース#648",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5303,7 +5303,7 @@
       differnce: true,
     },
     {
-      name: "FX4000SDISrv.exe",
+      module_name: "FX4000SDISrv.exe",
       product_version: "クライアントリリース#649",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5311,7 +5311,7 @@
       differnce: true,
     },
     {
-      name: "glew32.dll",
+      module_name: "glew32.dll",
       product_version: "クライアントリリース#650",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5319,7 +5319,7 @@
       differnce: true,
     },
     {
-      name: "GridDevice.dll",
+      module_name: "GridDevice.dll",
       product_version: "クライアントリリース#651",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5327,7 +5327,7 @@
       differnce: true,
     },
     {
-      name: "GridSrv.exe",
+      module_name: "GridSrv.exe",
       product_version: "クライアントリリース#652",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5335,7 +5335,7 @@
       differnce: true,
     },
     {
-      name: "GStyleControl.dll",
+      module_name: "GStyleControl.dll",
       product_version: "クライアントリリース#653",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5343,7 +5343,7 @@
       differnce: true,
     },
     {
-      name: "himeEdit.dll",
+      module_name: "himeEdit.dll",
       product_version: "クライアントリリース#654",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5351,7 +5351,7 @@
       differnce: true,
     },
     {
-      name: "himeInput.dll",
+      module_name: "himeInput.dll",
       product_version: "クライアントリリース#655",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5359,7 +5359,7 @@
       differnce: true,
     },
     {
-      name: "hwConfMan.dll",
+      module_name: "hwConfMan.dll",
       product_version: "クライアントリリース#656",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5367,7 +5367,7 @@
       differnce: true,
     },
     {
-      name: "ijl15.dll",
+      module_name: "ijl15.dll",
       product_version: "クライアントリリース#657",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5375,7 +5375,7 @@
       differnce: true,
     },
     {
-      name: "ImageFactoryComp.dll",
+      module_name: "ImageFactoryComp.dll",
       product_version: "クライアントリリース#658",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5383,7 +5383,7 @@
       differnce: true,
     },
     {
-      name: "ImImport.dll",
+      module_name: "ImImport.dll",
       product_version: "クライアントリリース#659",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5391,7 +5391,7 @@
       differnce: true,
     },
     {
-      name: "Interop.LGGRAGNTLib.dll",
+      module_name: "Interop.LGGRAGNTLib.dll",
       product_version: "クライアントリリース#660",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5399,7 +5399,7 @@
       differnce: true,
     },
     {
-      name: "Interop.MATMANLib.dll",
+      module_name: "Interop.MATMANLib.dll",
       product_version: "クライアントリリース#661",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5407,7 +5407,7 @@
       differnce: true,
     },
     {
-      name: "ItemFilterANB.dll",
+      module_name: "ItemFilterANB.dll",
       product_version: "クライアントリリース#662",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5415,7 +5415,7 @@
       differnce: true,
     },
     {
-      name: "ItemFinder.dll",
+      module_name: "ItemFinder.dll",
       product_version: "クライアントリリース#663",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5423,7 +5423,7 @@
       differnce: true,
     },
     {
-      name: "JHMaintenance.exe",
+      module_name: "JHMaintenance.exe",
       product_version: "クライアントリリース#664",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5431,7 +5431,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs.dll",
+      module_name: "LambdaCodecs.dll",
       product_version: "クライアントリリース#665",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5439,7 +5439,7 @@
       differnce: true,
     },
     {
-      name: "LGGRAGNT.dll",
+      module_name: "LGGRAGNT.dll",
       product_version: "クライアントリリース#666",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5447,7 +5447,7 @@
       differnce: true,
     },
     {
-      name: "LM2GRIDMF32.dll",
+      module_name: "LM2GRIDMF32.dll",
       product_version: "クライアントリリース#667",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5455,7 +5455,7 @@
       differnce: true,
     },
     {
-      name: "LM2GRIDSR.dll",
+      module_name: "LM2GRIDSR.dll",
       product_version: "クライアントリリース#668",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5463,7 +5463,7 @@
       differnce: true,
     },
     {
-      name: "LM2GRIDSR_20110803.dll",
+      module_name: "LM2GRIDSR_20110803.dll",
       product_version: "クライアントリリース#669",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5471,7 +5471,7 @@
       differnce: true,
     },
     {
-      name: "lmregsvr32.exe",
+      module_name: "lmregsvr32.exe",
       product_version: "クライアントリリース#670",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5479,7 +5479,7 @@
       differnce: true,
     },
     {
-      name: "LMXena2K.dll",
+      module_name: "LMXena2K.dll",
       product_version: "クライアントリリース#671",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5487,7 +5487,7 @@
       differnce: true,
     },
     {
-      name: "LoginDialogComp.dll",
+      module_name: "LoginDialogComp.dll",
       product_version: "クライアントリリース#672",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5495,7 +5495,7 @@
       differnce: true,
     },
     {
-      name: "logoIF.dll",
+      module_name: "logoIF.dll",
       product_version: "クライアントリリース#673",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5503,7 +5503,7 @@
       differnce: true,
     },
     {
-      name: "maintainTool.exe",
+      module_name: "maintainTool.exe",
       product_version: "クライアントリリース#674",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5511,7 +5511,7 @@
       differnce: true,
     },
     {
-      name: "MakeLogoThumbnail.exe",
+      module_name: "MakeLogoThumbnail.exe",
       product_version: "クライアントリリース#675",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5519,7 +5519,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCode.dll",
+      module_name: "MaterialCode.dll",
       product_version: "クライアントリリース#676",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5527,7 +5527,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeANB.dll",
+      module_name: "MaterialCodeANB.dll",
       product_version: "クライアントリリース#677",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5535,7 +5535,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeDialogComp.dll",
+      module_name: "MaterialCodeDialogComp.dll",
       product_version: "クライアントリリース#678",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5543,7 +5543,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeEX.dll",
+      module_name: "MaterialCodeEX.dll",
       product_version: "クライアントリリース#679",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5551,7 +5551,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeEXMaster.dll",
+      module_name: "MaterialCodeEXMaster.dll",
       product_version: "クライアントリリース#680",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5559,7 +5559,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCounter.exe",
+      module_name: "MaterialCounter.exe",
       product_version: "クライアントリリース#681",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5567,7 +5567,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCounterEXMas.exe",
+      module_name: "MaterialCounterEXMas.exe",
       product_version: "クライアントリリース#682",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5575,7 +5575,7 @@
       differnce: true,
     },
     {
-      name: "MaterialHandlerANB.dll",
+      module_name: "MaterialHandlerANB.dll",
       product_version: "クライアントリリース#683",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5583,7 +5583,7 @@
       differnce: true,
     },
     {
-      name: "MaterialHandlerEX.dll",
+      module_name: "MaterialHandlerEX.dll",
       product_version: "クライアントリリース#684",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5591,7 +5591,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogCGRegister.dll",
+      module_name: "MaterialPropDialogCGRegister.dll",
       product_version: "クライアントリリース#685",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5599,7 +5599,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogComp.dll",
+      module_name: "MaterialPropDialogComp.dll",
       product_version: "クライアントリリース#686",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5607,7 +5607,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogSpecialSozai.dll",
+      module_name: "MaterialPropDialogSpecialSozai.dll",
       product_version: "クライアントリリース#687",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5616,7 +5616,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogSponserCatalog.dll",
+      module_name: "MaterialPropDialogSponserCatalog.dll",
       product_version: "クライアントリリース#688",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5625,7 +5625,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogSponserCG.dll",
+      module_name: "MaterialPropDialogSponserCG.dll",
       product_version: "クライアントリリース#689",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5633,7 +5633,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogSponserLogo.dll",
+      module_name: "MaterialPropDialogSponserLogo.dll",
       product_version: "クライアントリリース#690",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5642,7 +5642,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN2.dll",
+      module_name: "MATMAN2.dll",
       product_version: "クライアントリリース#691",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5650,7 +5650,7 @@
       differnce: true,
     },
     {
-      name: "MountWindowANB.dll",
+      module_name: "MountWindowANB.dll",
       product_version: "クライアントリリース#692",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5658,7 +5658,7 @@
       differnce: true,
     },
     {
-      name: "MovieExport2.dll",
+      module_name: "MovieExport2.dll",
       product_version: "クライアントリリース#693",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5666,7 +5666,7 @@
       differnce: true,
     },
     {
-      name: "old_MaterialPropDialogSponserCG.dll",
+      module_name: "old_MaterialPropDialogSponserCG.dll",
       product_version: "クライアントリリース#694",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5675,7 +5675,7 @@
       differnce: true,
     },
     {
-      name: "OrderPrintComp.dll",
+      module_name: "OrderPrintComp.dll",
       product_version: "クライアントリリース#695",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5683,7 +5683,7 @@
       differnce: true,
     },
     {
-      name: "PCSound.dll",
+      module_name: "PCSound.dll",
       product_version: "クライアントリリース#696",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5691,7 +5691,7 @@
       differnce: true,
     },
     {
-      name: "PlayerTest.exe",
+      module_name: "PlayerTest.exe",
       product_version: "クライアントリリース#697",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5699,7 +5699,7 @@
       differnce: true,
     },
     {
-      name: "PolyLineTool.dll",
+      module_name: "PolyLineTool.dll",
       product_version: "クライアントリリース#698",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5707,7 +5707,7 @@
       differnce: true,
     },
     {
-      name: "PrismPlayer4.dll",
+      module_name: "PrismPlayer4.dll",
       product_version: "クライアントリリース#699",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5715,7 +5715,7 @@
       differnce: true,
     },
     {
-      name: "ProcLogger2.exe",
+      module_name: "ProcLogger2.exe",
       product_version: "クライアントリリース#700",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5723,7 +5723,7 @@
       differnce: true,
     },
     {
-      name: "ProfileComp.dll",
+      module_name: "ProfileComp.dll",
       product_version: "クライアントリリース#701",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5731,7 +5731,7 @@
       differnce: true,
     },
     {
-      name: "ProgCopyEXMaster.exe",
+      module_name: "ProgCopyEXMaster.exe",
       product_version: "クライアントリリース#702",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5739,7 +5739,7 @@
       differnce: true,
     },
     {
-      name: "ProgramPropDialogComp.dll",
+      module_name: "ProgramPropDialogComp.dll",
       product_version: "クライアントリリース#703",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5747,7 +5747,7 @@
       differnce: true,
     },
     {
-      name: "ProgramTreeSelector.dll",
+      module_name: "ProgramTreeSelector.dll",
       product_version: "クライアントリリース#704",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5755,7 +5755,7 @@
       differnce: true,
     },
     {
-      name: "ProgTreeView.dll",
+      module_name: "ProgTreeView.dll",
       product_version: "クライアントリリース#705",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5763,7 +5763,7 @@
       differnce: true,
     },
     {
-      name: "rempanel.exe",
+      module_name: "rempanel.exe",
       product_version: "クライアントリリース#706",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5771,7 +5771,7 @@
       differnce: true,
     },
     {
-      name: "ResourceResolver.dll",
+      module_name: "ResourceResolver.dll",
       product_version: "クライアントリリース#707",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5779,7 +5779,7 @@
       differnce: true,
     },
     {
-      name: "ReviseChecker.exe",
+      module_name: "ReviseChecker.exe",
       product_version: "クライアントリリース#708",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5787,7 +5787,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib.dll",
+      module_name: "ReviseClientLib.dll",
       product_version: "クライアントリリース#709",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5795,7 +5795,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib2.dll",
+      module_name: "ReviseClientLib2.dll",
       product_version: "クライアントリリース#710",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5803,7 +5803,7 @@
       differnce: true,
     },
     {
-      name: "ReviseCommand.exe",
+      module_name: "ReviseCommand.exe",
       product_version: "クライアントリリース#711",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5811,7 +5811,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFileViewCtrl.dll",
+      module_name: "ReviseFileViewCtrl.dll",
       product_version: "クライアントリリース#712",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5819,7 +5819,7 @@
       differnce: true,
     },
     {
-      name: "RSConfig.exe",
+      module_name: "RSConfig.exe",
       product_version: "クライアントリリース#713",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5827,7 +5827,7 @@
       differnce: true,
     },
     {
-      name: "s3D_IF.dll",
+      module_name: "s3D_IF.dll",
       product_version: "クライアントリリース#714",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5835,7 +5835,7 @@
       differnce: true,
     },
     {
-      name: "SceneXmlAccess.dll",
+      module_name: "SceneXmlAccess.dll",
       product_version: "クライアントリリース#715",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5843,7 +5843,7 @@
       differnce: true,
     },
     {
-      name: "schemaMan.dll",
+      module_name: "schemaMan.dll",
       product_version: "クライアントリリース#716",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5851,7 +5851,7 @@
       differnce: true,
     },
     {
-      name: "scmmanager.dll",
+      module_name: "scmmanager.dll",
       product_version: "クライアントリリース#717",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5859,7 +5859,7 @@
       differnce: true,
     },
     {
-      name: "SelectSozaiDialogComp.dll",
+      module_name: "SelectSozaiDialogComp.dll",
       product_version: "クライアントリリース#718",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5867,7 +5867,7 @@
       differnce: true,
     },
     {
-      name: "SelectSozaiDialogCompEx.dll",
+      module_name: "SelectSozaiDialogCompEx.dll",
       product_version: "クライアントリリース#719",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5875,7 +5875,7 @@
       differnce: true,
     },
     {
-      name: "SelectStageButtonsANB.dll",
+      module_name: "SelectStageButtonsANB.dll",
       product_version: "クライアントリリース#720",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5883,7 +5883,7 @@
       differnce: true,
     },
     {
-      name: "SelectStageButtonsEX.dll",
+      module_name: "SelectStageButtonsEX.dll",
       product_version: "クライアントリリース#721",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5891,7 +5891,7 @@
       differnce: true,
     },
     {
-      name: "SeparatedStringComp.dll",
+      module_name: "SeparatedStringComp.dll",
       product_version: "クライアントリリース#722",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5899,7 +5899,7 @@
       differnce: true,
     },
     {
-      name: "simpleLogger.dll",
+      module_name: "simpleLogger.dll",
       product_version: "クライアントリリース#723",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5907,7 +5907,7 @@
       differnce: true,
     },
     {
-      name: "SioLocal.dll",
+      module_name: "SioLocal.dll",
       product_version: "クライアントリリース#724",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5915,7 +5915,7 @@
       differnce: true,
     },
     {
-      name: "SozaiAccAgentEX.dll",
+      module_name: "SozaiAccAgentEX.dll",
       product_version: "クライアントリリース#725",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5923,7 +5923,7 @@
       differnce: true,
     },
     {
-      name: "SozaiArrayComp.dll",
+      module_name: "SozaiArrayComp.dll",
       product_version: "クライアントリリース#726",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5931,7 +5931,7 @@
       differnce: true,
     },
     {
-      name: "SozaiChargeAttributeAccessor.dll",
+      module_name: "SozaiChargeAttributeAccessor.dll",
       product_version: "クライアントリリース#727",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5939,7 +5939,7 @@
       differnce: true,
     },
     {
-      name: "SozaiDetailView.dll",
+      module_name: "SozaiDetailView.dll",
       product_version: "クライアントリリース#728",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5947,7 +5947,7 @@
       differnce: true,
     },
     {
-      name: "SozaiDetailViewCtrl.dll",
+      module_name: "SozaiDetailViewCtrl.dll",
       product_version: "クライアントリリース#729",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5955,7 +5955,7 @@
       differnce: true,
     },
     {
-      name: "SozaiInfoView.dll",
+      module_name: "SozaiInfoView.dll",
       product_version: "クライアントリリース#730",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5963,7 +5963,7 @@
       differnce: true,
     },
     {
-      name: "SozaiListViewCtrl.dll",
+      module_name: "SozaiListViewCtrl.dll",
       product_version: "クライアントリリース#731",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5971,7 +5971,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSvAcc.dll",
+      module_name: "SozaiSvAcc.dll",
       product_version: "クライアントリリース#732",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5979,7 +5979,7 @@
       differnce: true,
     },
     {
-      name: "SozaiThumbnail.dll",
+      module_name: "SozaiThumbnail.dll",
       product_version: "クライアントリリース#733",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5987,7 +5987,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#734",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -5995,7 +5995,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3.dll",
+      module_name: "SSVIF3.dll",
       product_version: "クライアントリリース#735",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6003,7 +6003,7 @@
       differnce: true,
     },
     {
-      name: "StageSelectorANB.dll",
+      module_name: "StageSelectorANB.dll",
       product_version: "クライアントリリース#736",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6011,7 +6011,7 @@
       differnce: true,
     },
     {
-      name: "StageUtility.dll",
+      module_name: "StageUtility.dll",
       product_version: "クライアントリリース#737",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6019,7 +6019,7 @@
       differnce: true,
     },
     {
-      name: "StageUtilityANB.dll",
+      module_name: "StageUtilityANB.dll",
       product_version: "クライアントリリース#738",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6027,7 +6027,7 @@
       differnce: true,
     },
     {
-      name: "StateManANB.dll",
+      module_name: "StateManANB.dll",
       product_version: "クライアントリリース#739",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6035,7 +6035,7 @@
       differnce: true,
     },
     {
-      name: "StateManEX.dll",
+      module_name: "StateManEX.dll",
       product_version: "クライアントリリース#740",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6043,7 +6043,7 @@
       differnce: true,
     },
     {
-      name: "StateManEXMaster.dll",
+      module_name: "StateManEXMaster.dll",
       product_version: "クライアントリリース#741",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6051,7 +6051,7 @@
       differnce: true,
     },
     {
-      name: "StaticTelopCopy.exe",
+      module_name: "StaticTelopCopy.exe",
       product_version: "クライアントリリース#742",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6059,7 +6059,7 @@
       differnce: true,
     },
     {
-      name: "StaticTelopCtrl.dll",
+      module_name: "StaticTelopCtrl.dll",
       product_version: "クライアントリリース#743",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6067,7 +6067,7 @@
       differnce: true,
     },
     {
-      name: "STelopExecutor.dll",
+      module_name: "STelopExecutor.dll",
       product_version: "クライアントリリース#744",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6075,7 +6075,7 @@
       differnce: true,
     },
     {
-      name: "StereoViewCtrl.exe",
+      module_name: "StereoViewCtrl.exe",
       product_version: "クライアントリリース#745",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6083,7 +6083,7 @@
       differnce: true,
     },
     {
-      name: "StringSel.dll",
+      module_name: "StringSel.dll",
       product_version: "クライアントリリース#746",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6091,7 +6091,7 @@
       differnce: true,
     },
     {
-      name: "StringTool.dll",
+      module_name: "StringTool.dll",
       product_version: "クライアントリリース#747",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6099,7 +6099,7 @@
       differnce: true,
     },
     {
-      name: "TerminalIconView.dll",
+      module_name: "TerminalIconView.dll",
       product_version: "クライアントリリース#748",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6107,7 +6107,7 @@
       differnce: true,
     },
     {
-      name: "Test_DataMake.exe",
+      module_name: "Test_DataMake.exe",
       product_version: "クライアントリリース#749",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6115,7 +6115,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompANB.dll",
+      module_name: "ThumbnailPrintCompANB.dll",
       product_version: "クライアントリリース#750",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6123,7 +6123,7 @@
       differnce: true,
     },
     {
-      name: "tools4D.dll",
+      module_name: "tools4D.dll",
       product_version: "クライアントリリース#751",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6131,7 +6131,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_StateMan.dll",
+      module_name: "TVAsahi_StateMan.dll",
       product_version: "クライアントリリース#752",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6139,7 +6139,7 @@
       differnce: true,
     },
     {
-      name: "UIManager.dll",
+      module_name: "UIManager.dll",
       product_version: "クライアントリリース#753",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6147,7 +6147,7 @@
       differnce: true,
     },
     {
-      name: "UserMaintenance.exe",
+      module_name: "UserMaintenance.exe",
       product_version: "クライアントリリース#754",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6155,7 +6155,7 @@
       differnce: true,
     },
     {
-      name: "VAFPreview.exe",
+      module_name: "VAFPreview.exe",
       product_version: "クライアントリリース#755",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6163,7 +6163,7 @@
       differnce: true,
     },
     {
-      name: "VCap.dll",
+      module_name: "VCap.dll",
       product_version: "クライアントリリース#756",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6171,7 +6171,7 @@
       differnce: true,
     },
     {
-      name: "vcomp90.dll",
+      module_name: "vcomp90.dll",
       product_version: "クライアントリリース#757",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6179,7 +6179,7 @@
       differnce: true,
     },
     {
-      name: "WorkReport.exe",
+      module_name: "WorkReport.exe",
       product_version: "クライアントリリース#758",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6187,7 +6187,7 @@
       differnce: true,
     },
     {
-      name: "WorkReportMANTS.exe",
+      module_name: "WorkReportMANTS.exe",
       product_version: "クライアントリリース#759",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6195,7 +6195,7 @@
       differnce: true,
     },
     {
-      name: "テストデータ作成アプリ.exe",
+      module_name: "テストデータ作成アプリ.exe",
       product_version: "クライアントリリース#760",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6203,7 +6203,7 @@
       differnce: true,
     },
     {
-      name: "地上_ProgEditor.exe",
+      module_name: "地上_ProgEditor.exe",
       product_version: "クライアントリリース#761",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6211,7 +6211,7 @@
       differnce: true,
     },
     {
-      name: "CBCollaborator.exe",
+      module_name: "CBCollaborator.exe",
       product_version: "クライアントリリース#762",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6219,7 +6219,7 @@
       differnce: true,
     },
     {
-      name: "COMRegister.exe",
+      module_name: "COMRegister.exe",
       product_version: "クライアントリリース#763",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6227,7 +6227,7 @@
       differnce: true,
     },
     {
-      name: "TLBINF32.DLL",
+      module_name: "TLBINF32.DLL",
       product_version: "クライアントリリース#764",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6235,7 +6235,7 @@
       differnce: true,
     },
     {
-      name: "AudioMan64.dll",
+      module_name: "AudioMan64.dll",
       product_version: "クライアントリリース#765",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6243,7 +6243,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#766",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6251,7 +6251,7 @@
       differnce: true,
     },
     {
-      name: "BBXCTRL.dll",
+      module_name: "BBXCTRL.dll",
       product_version: "クライアントリリース#767",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6259,7 +6259,7 @@
       differnce: true,
     },
     {
-      name: "bindVideoGPUD.dll",
+      module_name: "bindVideoGPUD.dll",
       product_version: "クライアントリリース#768",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6267,7 +6267,7 @@
       differnce: true,
     },
     {
-      name: "ChargeDBMan.dll",
+      module_name: "ChargeDBMan.dll",
       product_version: "クライアントリリース#769",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6275,7 +6275,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe.dll",
+      module_name: "ClientSideDispOpe.dll",
       product_version: "クライアントリリース#770",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6283,7 +6283,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe64.dll",
+      module_name: "ClientSideDispOpe64.dll",
       product_version: "クライアントリリース#771",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6291,7 +6291,7 @@
       differnce: true,
     },
     {
-      name: "decodeHSA.dll",
+      module_name: "decodeHSA.dll",
       product_version: "クライアントリリース#772",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6299,7 +6299,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrderEx.exe",
+      module_name: "DisplayOrderEx.exe",
       product_version: "クライアントリリース#773",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6307,7 +6307,7 @@
       differnce: true,
     },
     {
-      name: "dvp.dll",
+      module_name: "dvp.dll",
       product_version: "クライアントリリース#774",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6315,7 +6315,7 @@
       differnce: true,
     },
     {
-      name: "fontSupply.dll",
+      module_name: "fontSupply.dll",
       product_version: "クライアントリリース#775",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6323,7 +6323,7 @@
       differnce: true,
     },
     {
-      name: "glew32.dll",
+      module_name: "glew32.dll",
       product_version: "クライアントリリース#776",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6331,7 +6331,7 @@
       differnce: true,
     },
     {
-      name: "glew64.dll",
+      module_name: "glew64.dll",
       product_version: "クライアントリリース#777",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6339,7 +6339,7 @@
       differnce: true,
     },
     {
-      name: "GridDevice.dll",
+      module_name: "GridDevice.dll",
       product_version: "クライアントリリース#778",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6347,7 +6347,7 @@
       differnce: true,
     },
     {
-      name: "gridVideoOut.dll",
+      module_name: "gridVideoOut.dll",
       product_version: "クライアントリリース#779",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6355,7 +6355,7 @@
       differnce: true,
     },
     {
-      name: "ImageFactoryComp.dll",
+      module_name: "ImageFactoryComp.dll",
       product_version: "クライアントリリース#780",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6363,7 +6363,7 @@
       differnce: true,
     },
     {
-      name: "ImageUtility.dll",
+      module_name: "ImageUtility.dll",
       product_version: "クライアントリリース#781",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6371,7 +6371,7 @@
       differnce: true,
     },
     {
-      name: "IPTableAccessor.dll",
+      module_name: "IPTableAccessor.dll",
       product_version: "クライアントリリース#782",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6379,7 +6379,7 @@
       differnce: true,
     },
     {
-      name: "ItemFinder.dll",
+      module_name: "ItemFinder.dll",
       product_version: "クライアントリリース#783",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6387,7 +6387,7 @@
       differnce: true,
     },
     {
-      name: "JournalDecorator.dll",
+      module_name: "JournalDecorator.dll",
       product_version: "クライアントリリース#784",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6395,7 +6395,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2015.dll",
+      module_name: "LambdaCodecs2015.dll",
       product_version: "クライアントリリース#785",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6403,7 +6403,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs3x64.dll",
+      module_name: "LambdaCodecs3x64.dll",
       product_version: "クライアントリリース#786",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6411,7 +6411,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs64.dll",
+      module_name: "LambdaCodecs64.dll",
       product_version: "クライアントリリース#787",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6419,7 +6419,7 @@
       differnce: true,
     },
     {
-      name: "LGGRAGNT64.dll",
+      module_name: "LGGRAGNT64.dll",
       product_version: "クライアントリリース#788",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6427,7 +6427,7 @@
       differnce: true,
     },
     {
-      name: "localSozaiSv3.dll",
+      module_name: "localSozaiSv3.dll",
       product_version: "クライアントリリース#789",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6435,7 +6435,7 @@
       differnce: true,
     },
     {
-      name: "localSSVIF3.dll",
+      module_name: "localSSVIF3.dll",
       product_version: "クライアントリリース#790",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6443,7 +6443,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCode.dll",
+      module_name: "MaterialCode.dll",
       product_version: "クライアントリリース#791",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6451,7 +6451,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeANB.dll",
+      module_name: "MaterialCodeANB.dll",
       product_version: "クライアントリリース#792",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6459,7 +6459,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN3.dll",
+      module_name: "MATMAN3.dll",
       product_version: "クライアントリリース#793",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6467,7 +6467,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN3.net.dll",
+      module_name: "MATMAN3.net.dll",
       product_version: "クライアントリリース#794",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6475,7 +6475,7 @@
       differnce: true,
     },
     {
-      name: "MountWindowANB.dll",
+      module_name: "MountWindowANB.dll",
       product_version: "クライアントリリース#795",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6483,7 +6483,7 @@
       differnce: true,
     },
     {
-      name: "msvcp100.dll",
+      module_name: "msvcp100.dll",
       product_version: "クライアントリリース#796",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6491,7 +6491,7 @@
       differnce: true,
     },
     {
-      name: "msvcr100.dll",
+      module_name: "msvcr100.dll",
       product_version: "クライアントリリース#797",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6499,7 +6499,7 @@
       differnce: true,
     },
     {
-      name: "NeonCalendarCtrl.dll",
+      module_name: "NeonCalendarCtrl.dll",
       product_version: "クライアントリリース#798",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6507,7 +6507,7 @@
       differnce: true,
     },
     {
-      name: "NeonLowResoBGCtrl.dll",
+      module_name: "NeonLowResoBGCtrl.dll",
       product_version: "クライアントリリース#799",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6515,7 +6515,7 @@
       differnce: true,
     },
     {
-      name: "NeonUserManager.dll",
+      module_name: "NeonUserManager.dll",
       product_version: "クライアントリリース#800",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6523,7 +6523,7 @@
       differnce: true,
     },
     {
-      name: "OrderDialog.dll",
+      module_name: "OrderDialog.dll",
       product_version: "クライアントリリース#801",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6531,7 +6531,7 @@
       differnce: true,
     },
     {
-      name: "PrismPlayer64.dll",
+      module_name: "PrismPlayer64.dll",
       product_version: "クライアントリリース#802",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6539,7 +6539,7 @@
       differnce: true,
     },
     {
-      name: "ProcIniManager.dll",
+      module_name: "ProcIniManager.dll",
       product_version: "クライアントリリース#803",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6547,7 +6547,7 @@
       differnce: true,
     },
     {
-      name: "ProcLogger2.exe",
+      module_name: "ProcLogger2.exe",
       product_version: "クライアントリリース#804",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6555,7 +6555,7 @@
       differnce: true,
     },
     {
-      name: "ProfileComp.dll",
+      module_name: "ProfileComp.dll",
       product_version: "クライアントリリース#805",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6563,7 +6563,7 @@
       differnce: true,
     },
     {
-      name: "ProgramTreeSelector.dll",
+      module_name: "ProgramTreeSelector.dll",
       product_version: "クライアントリリース#806",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6571,7 +6571,7 @@
       differnce: true,
     },
     {
-      name: "ProgTreeView.dll",
+      module_name: "ProgTreeView.dll",
       product_version: "クライアントリリース#807",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6579,7 +6579,7 @@
       differnce: true,
     },
     {
-      name: "ReviseChecker.exe",
+      module_name: "ReviseChecker.exe",
       product_version: "クライアントリリース#808",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6587,7 +6587,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib.dll",
+      module_name: "ReviseClientLib.dll",
       product_version: "クライアントリリース#809",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6595,7 +6595,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFileViewCtrl.dll",
+      module_name: "ReviseFileViewCtrl.dll",
       product_version: "クライアントリリース#810",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6603,7 +6603,7 @@
       differnce: true,
     },
     {
-      name: "S3d_IF.dll",
+      module_name: "S3d_IF.dll",
       product_version: "クライアントリリース#811",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6611,7 +6611,7 @@
       differnce: true,
     },
     {
-      name: "SceneXmlAccess.dll",
+      module_name: "SceneXmlAccess.dll",
       product_version: "クライアントリリース#812",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6619,7 +6619,7 @@
       differnce: true,
     },
     {
-      name: "schemaMan.dll",
+      module_name: "schemaMan.dll",
       product_version: "クライアントリリース#813",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6627,7 +6627,7 @@
       differnce: true,
     },
     {
-      name: "SelectSozaiDialogCompEx.dll",
+      module_name: "SelectSozaiDialogCompEx.dll",
       product_version: "クライアントリリース#814",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6635,7 +6635,7 @@
       differnce: true,
     },
     {
-      name: "SelectStageButtonsANB.dll",
+      module_name: "SelectStageButtonsANB.dll",
       product_version: "クライアントリリース#815",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6643,7 +6643,7 @@
       differnce: true,
     },
     {
-      name: "SeparatedStringComp.dll",
+      module_name: "SeparatedStringComp.dll",
       product_version: "クライアントリリース#816",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6651,7 +6651,7 @@
       differnce: true,
     },
     {
-      name: "SozaiAccAgent.dll",
+      module_name: "SozaiAccAgent.dll",
       product_version: "クライアントリリース#817",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6659,7 +6659,7 @@
       differnce: true,
     },
     {
-      name: "SozaiArrayComp.dll",
+      module_name: "SozaiArrayComp.dll",
       product_version: "クライアントリリース#818",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6667,7 +6667,7 @@
       differnce: true,
     },
     {
-      name: "SozaiChargeAttributeAccessor.dll",
+      module_name: "SozaiChargeAttributeAccessor.dll",
       product_version: "クライアントリリース#819",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6676,7 +6676,7 @@
       differnce: true,
     },
     {
-      name: "SozaiDetailViewCtrl.dll",
+      module_name: "SozaiDetailViewCtrl.dll",
       product_version: "クライアントリリース#820",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6684,7 +6684,7 @@
       differnce: true,
     },
     {
-      name: "SozaiInfoView.dll",
+      module_name: "SozaiInfoView.dll",
       product_version: "クライアントリリース#821",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6692,7 +6692,7 @@
       differnce: true,
     },
     {
-      name: "SozaiListViewCtrl.dll",
+      module_name: "SozaiListViewCtrl.dll",
       product_version: "クライアントリリース#822",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6700,7 +6700,7 @@
       differnce: true,
     },
     {
-      name: "SozaiThumbnail.dll",
+      module_name: "SozaiThumbnail.dll",
       product_version: "クライアントリリース#823",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6708,7 +6708,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3.dll",
+      module_name: "SSVIF3.dll",
       product_version: "クライアントリリース#824",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6716,7 +6716,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3net.dll",
+      module_name: "SSVIF3net.dll",
       product_version: "クライアントリリース#825",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6724,7 +6724,7 @@
       differnce: true,
     },
     {
-      name: "StageSelectorANB.dll",
+      module_name: "StageSelectorANB.dll",
       product_version: "クライアントリリース#826",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6732,7 +6732,7 @@
       differnce: true,
     },
     {
-      name: "StageUtility.dll",
+      module_name: "StageUtility.dll",
       product_version: "クライアントリリース#827",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6740,7 +6740,7 @@
       differnce: true,
     },
     {
-      name: "StageUtilityANB.dll",
+      module_name: "StageUtilityANB.dll",
       product_version: "クライアントリリース#828",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6748,7 +6748,7 @@
       differnce: true,
     },
     {
-      name: "StaticTelopCopy.exe",
+      module_name: "StaticTelopCopy.exe",
       product_version: "クライアントリリース#829",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6756,7 +6756,7 @@
       differnce: true,
     },
     {
-      name: "StaticTelopCtrl.dll",
+      module_name: "StaticTelopCtrl.dll",
       product_version: "クライアントリリース#830",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6764,7 +6764,7 @@
       differnce: true,
     },
     {
-      name: "STelopExecutor.dll",
+      module_name: "STelopExecutor.dll",
       product_version: "クライアントリリース#831",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6772,7 +6772,7 @@
       differnce: true,
     },
     {
-      name: "TerminalMan.dll",
+      module_name: "TerminalMan.dll",
       product_version: "クライアントリリース#832",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6780,7 +6780,7 @@
       differnce: true,
     },
     {
-      name: "TERMINALMAN.net.dll",
+      module_name: "TERMINALMAN.net.dll",
       product_version: "クライアントリリース#833",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6788,7 +6788,7 @@
       differnce: true,
     },
     {
-      name: "TextDiffXML.dll",
+      module_name: "TextDiffXML.dll",
       product_version: "クライアントリリース#834",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6796,7 +6796,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailDialog.dll",
+      module_name: "ThumbnailDialog.dll",
       product_version: "クライアントリリース#835",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6804,7 +6804,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_Reviser64.dll",
+      module_name: "TVAsahi_Reviser64.dll",
       product_version: "クライアントリリース#836",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6812,7 +6812,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_StateMan.dll",
+      module_name: "TVAsahi_StateMan.dll",
       product_version: "クライアントリリース#837",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6820,7 +6820,7 @@
       differnce: true,
     },
     {
-      name: "57.dll",
+      module_name: "57.dll",
       product_version: "クライアントリリース#838",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6828,7 +6828,7 @@
       differnce: true,
     },
     {
-      name: "57.dll",
+      module_name: "57.dll",
       product_version: "クライアントリリース#839",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6836,7 +6836,7 @@
       differnce: true,
     },
     {
-      name: "55.dll",
+      module_name: "55.dll",
       product_version: "クライアントリリース#840",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6844,7 +6844,7 @@
       differnce: true,
     },
     {
-      name: "cg.dll",
+      module_name: "cg.dll",
       product_version: "クライアントリリース#841",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6852,7 +6852,7 @@
       differnce: true,
     },
     {
-      name: "cgGL.dll",
+      module_name: "cgGL.dll",
       product_version: "クライアントリリース#842",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6860,7 +6860,7 @@
       differnce: true,
     },
     {
-      name: "FileExport64.exe",
+      module_name: "FileExport64.exe",
       product_version: "クライアントリリース#843",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6868,7 +6868,7 @@
       differnce: true,
     },
     {
-      name: "glew32.dll",
+      module_name: "glew32.dll",
       product_version: "クライアントリリース#844",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6876,7 +6876,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN64.dll",
+      module_name: "MATMAN64.dll",
       product_version: "クライアントリリース#845",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6884,7 +6884,7 @@
       differnce: true,
     },
     {
-      name: "MovieExport64.dll",
+      module_name: "MovieExport64.dll",
       product_version: "クライアントリリース#846",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6892,7 +6892,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF64.dll",
+      module_name: "SSVIF64.dll",
       product_version: "クライアントリリース#847",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6900,7 +6900,7 @@
       differnce: true,
     },
     {
-      name: "2.dll",
+      module_name: "2.dll",
       product_version: "クライアントリリース#848",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6908,7 +6908,7 @@
       differnce: true,
     },
     {
-      name: "4.dll",
+      module_name: "4.dll",
       product_version: "クライアントリリース#849",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6916,7 +6916,7 @@
       differnce: true,
     },
     {
-      name: "ChatListView.dll",
+      module_name: "ChatListView.dll",
       product_version: "クライアントリリース#850",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6924,7 +6924,7 @@
       differnce: true,
     },
     {
-      name: "ChatListViewContainer.exe",
+      module_name: "ChatListViewContainer.exe",
       product_version: "クライアントリリース#851",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6932,7 +6932,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogComp.dll",
+      module_name: "ClausePropDialogComp.dll",
       product_version: "クライアントリリース#852",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6940,7 +6940,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe64.dll",
+      module_name: "ClientSideDispOpe64.dll",
       product_version: "クライアントリリース#853",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6948,7 +6948,7 @@
       differnce: true,
     },
     {
-      name: "ClockPropDialogComp.dll",
+      module_name: "ClockPropDialogComp.dll",
       product_version: "クライアントリリース#854",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6956,7 +6956,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrderEx.exe",
+      module_name: "DisplayOrderEx.exe",
       product_version: "クライアントリリース#855",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6964,7 +6964,7 @@
       differnce: true,
     },
     {
-      name: "FrontDesk.exe",
+      module_name: "FrontDesk.exe",
       product_version: "クライアントリリース#856",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6972,7 +6972,7 @@
       differnce: true,
     },
     {
-      name: "ItemFilterANB.dll",
+      module_name: "ItemFilterANB.dll",
       product_version: "クライアントリリース#857",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6980,7 +6980,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs64.dll",
+      module_name: "LambdaCodecs64.dll",
       product_version: "クライアントリリース#858",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6988,7 +6988,7 @@
       differnce: true,
     },
     {
-      name: "LoginDialogComp.dll",
+      module_name: "LoginDialogComp.dll",
       product_version: "クライアントリリース#859",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -6996,7 +6996,7 @@
       differnce: true,
     },
     {
-      name: "ManagePropDialogComp.dll",
+      module_name: "ManagePropDialogComp.dll",
       product_version: "クライアントリリース#860",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7004,7 +7004,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeDialogComp.dll",
+      module_name: "MaterialCodeDialogComp.dll",
       product_version: "クライアントリリース#861",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7012,7 +7012,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCounter.exe",
+      module_name: "MaterialCounter.exe",
       product_version: "クライアントリリース#862",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7020,7 +7020,7 @@
       differnce: true,
     },
     {
-      name: "MaterialHandlerEX.dll",
+      module_name: "MaterialHandlerEX.dll",
       product_version: "クライアントリリース#863",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7028,7 +7028,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogComp.dll",
+      module_name: "MaterialPropDialogComp.dll",
       product_version: "クライアントリリース#864",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7036,7 +7036,7 @@
       differnce: true,
     },
     {
-      name: "MyLogger.dll",
+      module_name: "MyLogger.dll",
       product_version: "クライアントリリース#865",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7044,7 +7044,7 @@
       differnce: true,
     },
     {
-      name: "MyThread.dll",
+      module_name: "MyThread.dll",
       product_version: "クライアントリリース#866",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7052,7 +7052,7 @@
       differnce: true,
     },
     {
-      name: "NormaMainte.exe",
+      module_name: "NormaMainte.exe",
       product_version: "クライアントリリース#867",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7060,7 +7060,7 @@
       differnce: true,
     },
     {
-      name: "PrintPropertyDialog.dll",
+      module_name: "PrintPropertyDialog.dll",
       product_version: "クライアントリリース#868",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7068,7 +7068,7 @@
       differnce: true,
     },
     {
-      name: "ProgramPropDialogComp.dll",
+      module_name: "ProgramPropDialogComp.dll",
       product_version: "クライアントリリース#869",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7076,7 +7076,7 @@
       differnce: true,
     },
     {
-      name: "SelectStageButtonsEX.dll",
+      module_name: "SelectStageButtonsEX.dll",
       product_version: "クライアントリリース#870",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7084,7 +7084,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSearch.exe",
+      module_name: "SozaiSearch.exe",
       product_version: "クライアントリリース#871",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7092,7 +7092,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailDialog.dll",
+      module_name: "ThumbnailDialog.dll",
       product_version: "クライアントリリース#872",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7100,7 +7100,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompANB.dll",
+      module_name: "ThumbnailPrintCompANB.dll",
       product_version: "クライアントリリース#873",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7108,7 +7108,7 @@
       differnce: true,
     },
     {
-      name: "NormManage.exe",
+      module_name: "NormManage.exe",
       product_version: "クライアントリリース#874",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7116,7 +7116,7 @@
       differnce: true,
     },
     {
-      name: "20180806_NormManage.exe",
+      module_name: "20180806_NormManage.exe",
       product_version: "クライアントリリース#875",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7124,7 +7124,7 @@
       differnce: true,
     },
     {
-      name: "20180806_再接続_NormManage.exe",
+      module_name: "20180806_再接続_NormManage.exe",
       product_version: "クライアントリリース#876",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7133,7 +7133,7 @@
       differnce: true,
     },
     {
-      name: "20180827_NormManage.exe",
+      module_name: "20180827_NormManage.exe",
       product_version: "クライアントリリース#877",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7141,7 +7141,7 @@
       differnce: true,
     },
     {
-      name: "20180829_NormManage.exe",
+      module_name: "20180829_NormManage.exe",
       product_version: "クライアントリリース#878",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7149,7 +7149,7 @@
       differnce: true,
     },
     {
-      name: "20180831_NormManage.exe",
+      module_name: "20180831_NormManage.exe",
       product_version: "クライアントリリース#879",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7157,7 +7157,7 @@
       differnce: true,
     },
     {
-      name: "NormManage.exe",
+      module_name: "NormManage.exe",
       product_version: "クライアントリリース#880",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7165,7 +7165,7 @@
       differnce: true,
     },
     {
-      name: "vc_redist.x86.exe",
+      module_name: "vc_redist.x86.exe",
       product_version: "クライアントリリース#881",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7173,7 +7173,7 @@
       differnce: true,
     },
     {
-      name: "__NormManage.exe",
+      module_name: "__NormManage.exe",
       product_version: "クライアントリリース#882",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7181,7 +7181,7 @@
       differnce: true,
     },
     {
-      name: "HistoryAgent.exe",
+      module_name: "HistoryAgent.exe",
       product_version: "クライアントリリース#883",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7189,7 +7189,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#884",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7197,7 +7197,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#885",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7205,7 +7205,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#886",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7213,7 +7213,7 @@
       differnce: true,
     },
     {
-      name: "watch2Dir.exe",
+      module_name: "watch2Dir.exe",
       product_version: "クライアントリリース#887",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7221,7 +7221,7 @@
       differnce: true,
     },
     {
-      name: "watchDir.exe",
+      module_name: "watchDir.exe",
       product_version: "クライアントリリース#888",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7229,7 +7229,7 @@
       differnce: true,
     },
     {
-      name: "WATCHSOZAISRVERR.exe",
+      module_name: "WATCHSOZAISRVERR.exe",
       product_version: "クライアントリリース#889",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7237,7 +7237,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#890",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7245,7 +7245,7 @@
       differnce: true,
     },
     {
-      name: "HistoryAgent.exe",
+      module_name: "HistoryAgent.exe",
       product_version: "クライアントリリース#891",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7253,7 +7253,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#892",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7261,7 +7261,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#893",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7269,7 +7269,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#894",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7277,7 +7277,7 @@
       differnce: true,
     },
     {
-      name: "watch2Dir.exe",
+      module_name: "watch2Dir.exe",
       product_version: "クライアントリリース#895",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7285,7 +7285,7 @@
       differnce: true,
     },
     {
-      name: "watchDir.exe",
+      module_name: "watchDir.exe",
       product_version: "クライアントリリース#896",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7293,7 +7293,7 @@
       differnce: true,
     },
     {
-      name: "WATCHSOZAISRVERR.exe",
+      module_name: "WATCHSOZAISRVERR.exe",
       product_version: "クライアントリリース#897",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7301,7 +7301,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#898",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7309,7 +7309,7 @@
       differnce: true,
     },
     {
-      name: "ProgCopyEX3.exe",
+      module_name: "ProgCopyEX3.exe",
       product_version: "クライアントリリース#899",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7317,7 +7317,7 @@
       differnce: true,
     },
     {
-      name: "ProgEditor.exe",
+      module_name: "ProgEditor.exe",
       product_version: "クライアントリリース#900",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7325,7 +7325,7 @@
       differnce: true,
     },
     {
-      name: "ProgMeta.exe",
+      module_name: "ProgMeta.exe",
       product_version: "クライアントリリース#901",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7333,7 +7333,7 @@
       differnce: true,
     },
     {
-      name: "SCSLibDbPE.dll",
+      module_name: "SCSLibDbPE.dll",
       product_version: "クライアントリリース#902",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7341,7 +7341,7 @@
       differnce: true,
     },
     {
-      name: "SlnLibPE.dll",
+      module_name: "SlnLibPE.dll",
       product_version: "クライアントリリース#903",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7349,7 +7349,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN3.net.dll",
+      module_name: "MATMAN3.net.dll",
       product_version: "クライアントリリース#904",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7357,7 +7357,7 @@
       differnce: true,
     },
     {
-      name: "ProgEditor.exe",
+      module_name: "ProgEditor.exe",
       product_version: "クライアントリリース#905",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7365,7 +7365,7 @@
       differnce: true,
     },
     {
-      name: "ProgMeta.exe",
+      module_name: "ProgMeta.exe",
       product_version: "クライアントリリース#906",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7373,7 +7373,7 @@
       differnce: true,
     },
     {
-      name: "ProgSrv3.exe",
+      module_name: "ProgSrv3.exe",
       product_version: "クライアントリリース#907",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7381,7 +7381,7 @@
       differnce: true,
     },
     {
-      name: "SCSLibDbPE.dll",
+      module_name: "SCSLibDbPE.dll",
       product_version: "クライアントリリース#908",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7389,7 +7389,7 @@
       differnce: true,
     },
     {
-      name: "SlnLibPE.dll",
+      module_name: "SlnLibPE.dll",
       product_version: "クライアントリリース#909",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7397,7 +7397,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3.dll",
+      module_name: "SSVIF3.dll",
       product_version: "クライアントリリース#910",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7405,7 +7405,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF3net.dll",
+      module_name: "SSVIF3net.dll",
       product_version: "クライアントリリース#911",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7413,7 +7413,7 @@
       differnce: true,
     },
     {
-      name: "TERMINALMAN.net.dll",
+      module_name: "TERMINALMAN.net.dll",
       product_version: "クライアントリリース#912",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7421,7 +7421,7 @@
       differnce: true,
     },
     {
-      name: "vc_redist.x64.exe",
+      module_name: "vc_redist.x64.exe",
       product_version: "クライアントリリース#913",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7429,7 +7429,7 @@
       differnce: true,
     },
     {
-      name: "ProgSrv.exe",
+      module_name: "ProgSrv.exe",
       product_version: "クライアントリリース#914",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7437,7 +7437,7 @@
       differnce: true,
     },
     {
-      name: "ProgSrv.exe",
+      module_name: "ProgSrv.exe",
       product_version: "クライアントリリース#915",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7445,7 +7445,7 @@
       differnce: true,
     },
     {
-      name: "_20180821_bk_YOSHIDA_ProgSrv.exe",
+      module_name: "_20180821_bk_YOSHIDA_ProgSrv.exe",
       product_version: "クライアントリリース#916",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7454,7 +7454,7 @@
       differnce: true,
     },
     {
-      name: "IniFileMaker.exe",
+      module_name: "IniFileMaker.exe",
       product_version: "クライアントリリース#917",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7463,7 +7463,7 @@
       differnce: true,
     },
     {
-      name: "PioTest.exe",
+      module_name: "PioTest.exe",
       product_version: "クライアントリリース#918",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7471,7 +7471,7 @@
       differnce: true,
     },
     {
-      name: "sizech.exe",
+      module_name: "sizech.exe",
       product_version: "クライアントリリース#919",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7479,7 +7479,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe64.dll",
+      module_name: "ClientSideDispOpe64.dll",
       product_version: "クライアントリリース#920",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7487,7 +7487,7 @@
       differnce: true,
     },
     {
-      name: "hwConfMan.dll",
+      module_name: "hwConfMan.dll",
       product_version: "クライアントリリース#921",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7495,7 +7495,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2015.dll",
+      module_name: "LambdaCodecs2015.dll",
       product_version: "クライアントリリース#922",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7503,7 +7503,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO16PCI64.dll",
+      module_name: "LMPIO16PCI64.dll",
       product_version: "クライアントリリース#923",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7511,7 +7511,7 @@
       differnce: true,
     },
     {
-      name: "RemPanel3.exe",
+      module_name: "RemPanel3.exe",
       product_version: "クライアントリリース#924",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7519,7 +7519,7 @@
       differnce: true,
     },
     {
-      name: "simpleLogger.dll",
+      module_name: "simpleLogger.dll",
       product_version: "クライアントリリース#925",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7527,7 +7527,7 @@
       differnce: true,
     },
     {
-      name: "simpleLogger_A.dll",
+      module_name: "simpleLogger_A.dll",
       product_version: "クライアントリリース#926",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7535,7 +7535,7 @@
       differnce: true,
     },
     {
-      name: "simpleLogger_u.dll",
+      module_name: "simpleLogger_u.dll",
       product_version: "クライアントリリース#927",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7543,7 +7543,7 @@
       differnce: true,
     },
     {
-      name: "SE5ResourceJa64.dll",
+      module_name: "SE5ResourceJa64.dll",
       product_version: "クライアントリリース#928",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7552,7 +7552,7 @@
       differnce: true,
     },
     {
-      name: "AudioMan64.dll",
+      module_name: "AudioMan64.dll",
       product_version: "クライアントリリース#929",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7560,7 +7560,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#930",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7568,7 +7568,7 @@
       differnce: true,
     },
     {
-      name: "CharsEdit64.dll",
+      module_name: "CharsEdit64.dll",
       product_version: "クライアントリリース#931",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7576,7 +7576,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe64.dll",
+      module_name: "ClientSideDispOpe64.dll",
       product_version: "クライアントリリース#932",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7584,7 +7584,7 @@
       differnce: true,
     },
     {
-      name: "ColSlc64.dll",
+      module_name: "ColSlc64.dll",
       product_version: "クライアントリリース#933",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7592,7 +7592,7 @@
       differnce: true,
     },
     {
-      name: "ffmpeg64.exe",
+      module_name: "ffmpeg64.exe",
       product_version: "クライアントリリース#934",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7600,7 +7600,7 @@
       differnce: true,
     },
     {
-      name: "FileBackupper.exe",
+      module_name: "FileBackupper.exe",
       product_version: "クライアントリリース#935",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7608,7 +7608,7 @@
       differnce: true,
     },
     {
-      name: "himeEdit64.dll",
+      module_name: "himeEdit64.dll",
       product_version: "クライアントリリース#936",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7616,7 +7616,7 @@
       differnce: true,
     },
     {
-      name: "himeInput64.dll",
+      module_name: "himeInput64.dll",
       product_version: "クライアントリリース#937",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7624,7 +7624,7 @@
       differnce: true,
     },
     {
-      name: "ImImportGS.dll",
+      module_name: "ImImportGS.dll",
       product_version: "クライアントリリース#938",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7632,7 +7632,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2015.dll",
+      module_name: "LambdaCodecs2015.dll",
       product_version: "クライアントリリース#939",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7640,7 +7640,7 @@
       differnce: true,
     },
     {
-      name: "PolyLineTool64.dll",
+      module_name: "PolyLineTool64.dll",
       product_version: "クライアントリリース#940",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7648,7 +7648,7 @@
       differnce: true,
     },
     {
-      name: "ResourceResolver64.dll",
+      module_name: "ResourceResolver64.dll",
       product_version: "クライアントリリース#941",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7656,7 +7656,7 @@
       differnce: true,
     },
     {
-      name: "S3d_IF.dll",
+      module_name: "S3d_IF.dll",
       product_version: "クライアントリリース#942",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7664,7 +7664,7 @@
       differnce: true,
     },
     {
-      name: "S5ReviseFileViewCtrl.dll",
+      module_name: "S5ReviseFileViewCtrl.dll",
       product_version: "クライアントリリース#943",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7672,7 +7672,7 @@
       differnce: true,
     },
     {
-      name: "SceneEditor5.exe",
+      module_name: "SceneEditor5.exe",
       product_version: "クライアントリリース#944",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7680,7 +7680,7 @@
       differnce: true,
     },
     {
-      name: "SE5Resource64.dll",
+      module_name: "SE5Resource64.dll",
       product_version: "クライアントリリース#945",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7688,7 +7688,7 @@
       differnce: true,
     },
     {
-      name: "SioLocal64.dll",
+      module_name: "SioLocal64.dll",
       product_version: "クライアントリリース#946",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7696,7 +7696,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSvAcc64.dll",
+      module_name: "SozaiSvAcc64.dll",
       product_version: "クライアントリリース#947",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7704,7 +7704,7 @@
       differnce: true,
     },
     {
-      name: "StringSel64.dll",
+      module_name: "StringSel64.dll",
       product_version: "クライアントリリース#948",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7712,7 +7712,7 @@
       differnce: true,
     },
     {
-      name: "StringTool64.dll",
+      module_name: "StringTool64.dll",
       product_version: "クライアントリリース#949",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7720,7 +7720,7 @@
       differnce: true,
     },
     {
-      name: "ToolkitPro1730vc140x64U.dll",
+      module_name: "ToolkitPro1730vc140x64U.dll",
       product_version: "クライアントリリース#950",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7729,7 +7729,7 @@
       differnce: true,
     },
     {
-      name: "DiffViewCtrl.dll",
+      module_name: "DiffViewCtrl.dll",
       product_version: "クライアントリリース#951",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7737,7 +7737,7 @@
       differnce: true,
     },
     {
-      name: "SceneEditorAgent.exe",
+      module_name: "SceneEditorAgent.exe",
       product_version: "クライアントリリース#952",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7745,7 +7745,7 @@
       differnce: true,
     },
     {
-      name: "SEAIF.dll",
+      module_name: "SEAIF.dll",
       product_version: "クライアントリリース#953",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7753,7 +7753,7 @@
       differnce: true,
     },
     {
-      name: "SEAPlugin.dll",
+      module_name: "SEAPlugin.dll",
       product_version: "クライアントリリース#954",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7761,7 +7761,7 @@
       differnce: true,
     },
     {
-      name: "SAADebugger.exe",
+      module_name: "SAADebugger.exe",
       product_version: "クライアントリリース#955",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7769,7 +7769,7 @@
       differnce: true,
     },
     {
-      name: "SozaiAccAgentV3.dll",
+      module_name: "SozaiAccAgentV3.dll",
       product_version: "クライアントリリース#956",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7777,7 +7777,7 @@
       differnce: true,
     },
     {
-      name: "HistoryAgent.exe",
+      module_name: "HistoryAgent.exe",
       product_version: "クライアントリリース#957",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7785,7 +7785,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#958",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7793,7 +7793,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSearchAgent.exe",
+      module_name: "SozaiSearchAgent.exe",
       product_version: "クライアントリリース#959",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7801,7 +7801,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#960",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7809,7 +7809,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#961",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7817,7 +7817,7 @@
       differnce: true,
     },
     {
-      name: "watch2Dir.exe",
+      module_name: "watch2Dir.exe",
       product_version: "クライアントリリース#962",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7825,7 +7825,7 @@
       differnce: true,
     },
     {
-      name: "watchDir.exe",
+      module_name: "watchDir.exe",
       product_version: "クライアントリリース#963",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7833,7 +7833,7 @@
       differnce: true,
     },
     {
-      name: "WATCHSOZAISRVERR.exe",
+      module_name: "WATCHSOZAISRVERR.exe",
       product_version: "クライアントリリース#964",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7841,7 +7841,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#965",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7849,7 +7849,7 @@
       differnce: true,
     },
     {
-      name: "HistoryAgent.exe",
+      module_name: "HistoryAgent.exe",
       product_version: "クライアントリリース#966",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7857,7 +7857,7 @@
       differnce: true,
     },
     {
-      name: "MatCache.dll",
+      module_name: "MatCache.dll",
       product_version: "クライアントリリース#967",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7865,7 +7865,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSearchAgent.exe",
+      module_name: "SozaiSearchAgent.exe",
       product_version: "クライアントリリース#968",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7873,7 +7873,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSrv.exe",
+      module_name: "SozaiSrv.exe",
       product_version: "クライアントリリース#969",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7881,7 +7881,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#970",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7889,7 +7889,7 @@
       differnce: true,
     },
     {
-      name: "watch2Dir.exe",
+      module_name: "watch2Dir.exe",
       product_version: "クライアントリリース#971",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7897,7 +7897,7 @@
       differnce: true,
     },
     {
-      name: "watchDir.exe",
+      module_name: "watchDir.exe",
       product_version: "クライアントリリース#972",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7905,7 +7905,7 @@
       differnce: true,
     },
     {
-      name: "WATCHSOZAISRVERR.exe",
+      module_name: "WATCHSOZAISRVERR.exe",
       product_version: "クライアントリリース#973",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7913,7 +7913,7 @@
       differnce: true,
     },
     {
-      name: "WCLNT.dll",
+      module_name: "WCLNT.dll",
       product_version: "クライアントリリース#974",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7921,7 +7921,7 @@
       differnce: true,
     },
     {
-      name: "vc_redist.x64.exe",
+      module_name: "vc_redist.x64.exe",
       product_version: "クライアントリリース#975",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7929,7 +7929,7 @@
       differnce: true,
     },
     {
-      name: "CatalogOperator_UC64.dll",
+      module_name: "CatalogOperator_UC64.dll",
       product_version: "クライアントリリース#976",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7937,7 +7937,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompSTDInput_UC64.dll",
+      module_name: "ClausePropDialogCompSTDInput_UC64.dll",
       product_version: "クライアントリリース#977",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7946,7 +7946,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHKInput_UC64.dll",
+      module_name: "ClausePropDialogCompTHKInput_UC64.dll",
       product_version: "クライアントリリース#978",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7955,7 +7955,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHKProd_UC64.dll",
+      module_name: "ClausePropDialogCompTHKProd_UC64.dll",
       product_version: "クライアントリリース#979",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7964,7 +7964,7 @@
       differnce: true,
     },
     {
-      name: "ClausePropDialogCompTHK_UC64.dll",
+      module_name: "ClausePropDialogCompTHK_UC64.dll",
       product_version: "クライアントリリース#980",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7973,7 +7973,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHKAssumed_UC64.dll",
+      module_name: "MaterialCodeTHKAssumed_UC64.dll",
       product_version: "クライアントリリース#981",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7982,7 +7982,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHKProd_UC64.dll",
+      module_name: "MaterialCodeTHKProd_UC64.dll",
       product_version: "クライアントリリース#982",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7991,7 +7991,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeTHK_UC64.dll",
+      module_name: "MaterialCodeTHK_UC64.dll",
       product_version: "クライアントリリース#983",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -7999,7 +7999,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeUHBOTC_UC64.dll",
+      module_name: "MaterialCodeUHBOTC_UC64.dll",
       product_version: "クライアントリリース#984",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8008,7 +8008,7 @@
       differnce: true,
     },
     {
-      name: "MaterialPropDialogCompTHK_UC64.dll",
+      module_name: "MaterialPropDialogCompTHK_UC64.dll",
       product_version: "クライアントリリース#985",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8017,7 +8017,7 @@
       differnce: true,
     },
     {
-      name: "StageUtilityTHK_UC64.dll",
+      module_name: "StageUtilityTHK_UC64.dll",
       product_version: "クライアントリリース#986",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8025,7 +8025,7 @@
       differnce: true,
     },
     {
-      name: "StateManUHB_UC64.dll",
+      module_name: "StateManUHB_UC64.dll",
       product_version: "クライアントリリース#987",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8033,7 +8033,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompTHK_UC64.dll",
+      module_name: "ThumbnailPrintCompTHK_UC64.dll",
       product_version: "クライアントリリース#988",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8042,7 +8042,7 @@
       differnce: true,
     },
     {
-      name: "ThumbnailPrintCompUHB_UC64.dll",
+      module_name: "ThumbnailPrintCompUHB_UC64.dll",
       product_version: "クライアントリリース#989",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8051,7 +8051,7 @@
       differnce: true,
     },
     {
-      name: "AutoMatPropDialogComp_UC64.dll",
+      module_name: "AutoMatPropDialogComp_UC64.dll",
       product_version: "クライアントリリース#990",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8060,7 +8060,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe_UC64.dll",
+      module_name: "ClientSideDispOpe_UC64.dll",
       product_version: "クライアントリリース#991",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8069,7 +8069,7 @@
       differnce: true,
     },
     {
-      name: "FrontDesk_UC64.exe",
+      module_name: "FrontDesk_UC64.exe",
       product_version: "クライアントリリース#992",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8077,7 +8077,7 @@
       differnce: true,
     },
     {
-      name: "ItemFilterANB_UC64.dll",
+      module_name: "ItemFilterANB_UC64.dll",
       product_version: "クライアントリリース#993",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8085,7 +8085,7 @@
       differnce: true,
     },
     {
-      name: "ItemFilterOA_UC64.dll",
+      module_name: "ItemFilterOA_UC64.dll",
       product_version: "クライアントリリース#994",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8093,7 +8093,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2015.dll",
+      module_name: "LambdaCodecs2015.dll",
       product_version: "クライアントリリース#995",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8101,7 +8101,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeDialogComp_UC64.dll",
+      module_name: "MaterialCodeDialogComp_UC64.dll",
       product_version: "クライアントリリース#996",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8110,7 +8110,7 @@
       differnce: true,
     },
     {
-      name: "MaterialHandlerStd_UC64.dll",
+      module_name: "MaterialHandlerStd_UC64.dll",
       product_version: "クライアントリリース#997",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8119,7 +8119,7 @@
       differnce: true,
     },
     {
-      name: "NCKCatPropDialogComp_UC64.dll",
+      module_name: "NCKCatPropDialogComp_UC64.dll",
       product_version: "クライアントリリース#998",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8128,7 +8128,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonEditView_UC64.dll",
+      module_name: "OperationButtonEditView_UC64.dll",
       product_version: "クライアントリリース#999",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8137,7 +8137,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonMonitorView_UC64.dll",
+      module_name: "OperationButtonMonitorView_UC64.dll",
       product_version: "クライアントリリース#1000",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8146,7 +8146,7 @@
       differnce: true,
     },
     {
-      name: "OperationButtonVividView_UC64.dll",
+      module_name: "OperationButtonVividView_UC64.dll",
       product_version: "クライアントリリース#1001",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8155,7 +8155,7 @@
       differnce: true,
     },
     {
-      name: "SystemButtonOrderView_UC64.dll",
+      module_name: "SystemButtonOrderView_UC64.dll",
       product_version: "クライアントリリース#1002",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8164,7 +8164,7 @@
       differnce: true,
     },
     {
-      name: "SystemButtonVividView_UC64.dll",
+      module_name: "SystemButtonVividView_UC64.dll",
       product_version: "クライアントリリース#1003",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8173,7 +8173,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe_UC64.dll",
+      module_name: "ClientSideDispOpe_UC64.dll",
       product_version: "クライアントリリース#1004",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8181,7 +8181,7 @@
       differnce: true,
     },
     {
-      name: "ffmpeg.exe",
+      module_name: "ffmpeg.exe",
       product_version: "クライアントリリース#1005",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8189,7 +8189,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2015.dll",
+      module_name: "LambdaCodecs2015.dll",
       product_version: "クライアントリリース#1006",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8197,7 +8197,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs64.dll",
+      module_name: "LambdaCodecs64.dll",
       product_version: "クライアントリリース#1007",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8205,7 +8205,7 @@
       differnce: true,
     },
     {
-      name: "LocalSozaiSv_UC64.dll",
+      module_name: "LocalSozaiSv_UC64.dll",
       product_version: "クライアントリリース#1008",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8213,7 +8213,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN_UC64.dll",
+      module_name: "MATMAN_UC64.dll",
       product_version: "クライアントリリース#1009",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8221,7 +8221,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib_UC64.dll",
+      module_name: "ReviseClientLib_UC64.dll",
       product_version: "クライアントリリース#1010",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8229,7 +8229,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF_UC64.dll",
+      module_name: "SSVIF_UC64.dll",
       product_version: "クライアントリリース#1011",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8237,7 +8237,7 @@
       differnce: true,
     },
     {
-      name: "CacheClear2_UC64.exe",
+      module_name: "CacheClear2_UC64.exe",
       product_version: "クライアントリリース#1012",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8245,7 +8245,7 @@
       differnce: true,
     },
     {
-      name: "GridSrv_UC64.exe",
+      module_name: "GridSrv_UC64.exe",
       product_version: "クライアントリリース#1013",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8253,7 +8253,7 @@
       differnce: true,
     },
     {
-      name: "ProgEditor_UC64.exe",
+      module_name: "ProgEditor_UC64.exe",
       product_version: "クライアントリリース#1014",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8261,7 +8261,7 @@
       differnce: true,
     },
     {
-      name: "AudioMan64.dll",
+      module_name: "AudioMan64.dll",
       product_version: "クライアントリリース#1015",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8269,7 +8269,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#1016",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8277,7 +8277,7 @@
       differnce: true,
     },
     {
-      name: "BBXCTRL_UC64.dll",
+      module_name: "BBXCTRL_UC64.dll",
       product_version: "クライアントリリース#1017",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8285,7 +8285,7 @@
       differnce: true,
     },
     {
-      name: "ChgAttrForm_UC64.dll",
+      module_name: "ChgAttrForm_UC64.dll",
       product_version: "クライアントリリース#1018",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8293,7 +8293,7 @@
       differnce: true,
     },
     {
-      name: "DisplayOrder_UC64.exe",
+      module_name: "DisplayOrder_UC64.exe",
       product_version: "クライアントリリース#1019",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8301,7 +8301,7 @@
       differnce: true,
     },
     {
-      name: "EasyPartsRegist_UC64.exe",
+      module_name: "EasyPartsRegist_UC64.exe",
       product_version: "クライアントリリース#1020",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8309,7 +8309,7 @@
       differnce: true,
     },
     {
-      name: "FrameInOutSelectDlg_UC64.dll",
+      module_name: "FrameInOutSelectDlg_UC64.dll",
       product_version: "クライアントリリース#1021",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8317,7 +8317,7 @@
       differnce: true,
     },
     {
-      name: "GridDevice_UC64.dll",
+      module_name: "GridDevice_UC64.dll",
       product_version: "クライアントリリース#1022",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8325,7 +8325,7 @@
       differnce: true,
     },
     {
-      name: "ImageFactoryComp_UC64.dll",
+      module_name: "ImageFactoryComp_UC64.dll",
       product_version: "クライアントリリース#1023",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8333,7 +8333,7 @@
       differnce: true,
     },
     {
-      name: "ItemFinder_UC64.dll",
+      module_name: "ItemFinder_UC64.dll",
       product_version: "クライアントリリース#1024",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8341,7 +8341,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2015.dll",
+      module_name: "LambdaCodecs2015.dll",
       product_version: "クライアントリリース#1025",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8349,7 +8349,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeDependPN_UC64.dll",
+      module_name: "MaterialCodeDependPN_UC64.dll",
       product_version: "クライアントリリース#1026",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8357,7 +8357,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCodeSTD_UC64.dll",
+      module_name: "MaterialCodeSTD_UC64.dll",
       product_version: "クライアントリリース#1027",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8365,7 +8365,7 @@
       differnce: true,
     },
     {
-      name: "MountWindowANB_UC64.dll",
+      module_name: "MountWindowANB_UC64.dll",
       product_version: "クライアントリリース#1028",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8373,7 +8373,7 @@
       differnce: true,
     },
     {
-      name: "NeonCommonUtility.dll",
+      module_name: "NeonCommonUtility.dll",
       product_version: "クライアントリリース#1029",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8381,7 +8381,7 @@
       differnce: true,
     },
     {
-      name: "NXGPrintDS_UC64.dll",
+      module_name: "NXGPrintDS_UC64.dll",
       product_version: "クライアントリリース#1030",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8389,7 +8389,7 @@
       differnce: true,
     },
     {
-      name: "NXGPrint_UC64.dll",
+      module_name: "NXGPrint_UC64.dll",
       product_version: "クライアントリリース#1031",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8397,7 +8397,7 @@
       differnce: true,
     },
     {
-      name: "ProgTreeView_UC64.dll",
+      module_name: "ProgTreeView_UC64.dll",
       product_version: "クライアントリリース#1032",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8405,7 +8405,7 @@
       differnce: true,
     },
     {
-      name: "ReviseChecker_UC64.exe",
+      module_name: "ReviseChecker_UC64.exe",
       product_version: "クライアントリリース#1033",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8413,7 +8413,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib_UC64.dll",
+      module_name: "ReviseClientLib_UC64.dll",
       product_version: "クライアントリリース#1034",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8421,7 +8421,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFileViewCtrl_UC64.dll",
+      module_name: "ReviseFileViewCtrl_UC64.dll",
       product_version: "クライアントリリース#1035",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8429,7 +8429,7 @@
       differnce: true,
     },
     {
-      name: "ReviseInfoView2_UC64.dll",
+      module_name: "ReviseInfoView2_UC64.dll",
       product_version: "クライアントリリース#1036",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8437,7 +8437,7 @@
       differnce: true,
     },
     {
-      name: "ReviseInfoView_UC64.dll",
+      module_name: "ReviseInfoView_UC64.dll",
       product_version: "クライアントリリース#1037",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8445,7 +8445,7 @@
       differnce: true,
     },
     {
-      name: "SelectSozaiDialogComp_UC64.dll",
+      module_name: "SelectSozaiDialogComp_UC64.dll",
       product_version: "クライアントリリース#1038",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8453,7 +8453,7 @@
       differnce: true,
     },
     {
-      name: "SelectStageButtonsANB_UC64.dll",
+      module_name: "SelectStageButtonsANB_UC64.dll",
       product_version: "クライアントリリース#1039",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8461,7 +8461,7 @@
       differnce: true,
     },
     {
-      name: "SozaiArrayComp_UC64.dll",
+      module_name: "SozaiArrayComp_UC64.dll",
       product_version: "クライアントリリース#1040",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8469,7 +8469,7 @@
       differnce: true,
     },
     {
-      name: "SozaiChgAttrView_UC64.dll",
+      module_name: "SozaiChgAttrView_UC64.dll",
       product_version: "クライアントリリース#1041",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8477,7 +8477,7 @@
       differnce: true,
     },
     {
-      name: "SozaiInfoViewStd_UC64.dll",
+      module_name: "SozaiInfoViewStd_UC64.dll",
       product_version: "クライアントリリース#1042",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8485,7 +8485,7 @@
       differnce: true,
     },
     {
-      name: "SozaiInfoView_UC64.dll",
+      module_name: "SozaiInfoView_UC64.dll",
       product_version: "クライアントリリース#1043",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8493,7 +8493,7 @@
       differnce: true,
     },
     {
-      name: "SozaiListViewCtrl_UC64.dll",
+      module_name: "SozaiListViewCtrl_UC64.dll",
       product_version: "クライアントリリース#1044",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8501,7 +8501,7 @@
       differnce: true,
     },
     {
-      name: "SozaiThumbnail_UC64.dll",
+      module_name: "SozaiThumbnail_UC64.dll",
       product_version: "クライアントリリース#1045",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8509,7 +8509,7 @@
       differnce: true,
     },
     {
-      name: "StageSelectorANB_UC64.dll",
+      module_name: "StageSelectorANB_UC64.dll",
       product_version: "クライアントリリース#1046",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8517,7 +8517,7 @@
       differnce: true,
     },
     {
-      name: "StageUtilityANB_UC64.dll",
+      module_name: "StageUtilityANB_UC64.dll",
       product_version: "クライアントリリース#1047",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8525,7 +8525,7 @@
       differnce: true,
     },
     {
-      name: "StageUtility_UC64.dll",
+      module_name: "StageUtility_UC64.dll",
       product_version: "クライアントリリース#1048",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8533,7 +8533,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_Reviser_UC64.dll",
+      module_name: "TVAsahi_Reviser_UC64.dll",
       product_version: "クライアントリリース#1049",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8541,7 +8541,7 @@
       differnce: true,
     },
     {
-      name: "VCap_UC64.dll",
+      module_name: "VCap_UC64.dll",
       product_version: "クライアントリリース#1050",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8549,7 +8549,7 @@
       differnce: true,
     },
     {
-      name: "COMRegister.exe",
+      module_name: "COMRegister.exe",
       product_version: "クライアントリリース#1051",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8557,7 +8557,7 @@
       differnce: true,
     },
     {
-      name: "TLBINF32.DLL",
+      module_name: "TLBINF32.DLL",
       product_version: "クライアントリリース#1052",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8565,7 +8565,7 @@
       differnce: true,
     },
     {
-      name: "Binarist.exe",
+      module_name: "Binarist.exe",
       product_version: "クライアントリリース#1053",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8573,7 +8573,7 @@
       differnce: true,
     },
     {
-      name: "Lmpio16.dll",
+      module_name: "Lmpio16.dll",
       product_version: "クライアントリリース#1054",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8581,7 +8581,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO16PCI.dll",
+      module_name: "LMPIO16PCI.dll",
       product_version: "クライアントリリース#1055",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8589,7 +8589,7 @@
       differnce: true,
     },
     {
-      name: "Lmpio32.dll",
+      module_name: "Lmpio32.dll",
       product_version: "クライアントリリース#1056",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8597,7 +8597,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO3264.dll",
+      module_name: "LMPIO3264.dll",
       product_version: "クライアントリリース#1057",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8605,7 +8605,7 @@
       differnce: true,
     },
     {
-      name: "LMPIO32PCI.dll",
+      module_name: "LMPIO32PCI.dll",
       product_version: "クライアントリリース#1058",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8613,7 +8613,7 @@
       differnce: true,
     },
     {
-      name: "LMPIOCONTEC.dll",
+      module_name: "LMPIOCONTEC.dll",
       product_version: "クライアントリリース#1059",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8621,7 +8621,7 @@
       differnce: true,
     },
     {
-      name: "wrPio.dll",
+      module_name: "wrPio.dll",
       product_version: "クライアントリリース#1060",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8629,7 +8629,7 @@
       differnce: true,
     },
     {
-      name: "SE5ResourceJa64.dll",
+      module_name: "SE5ResourceJa64.dll",
       product_version: "クライアントリリース#1061",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8638,7 +8638,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#1062",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8646,7 +8646,7 @@
       differnce: true,
     },
     {
-      name: "CharsEdit4.dll",
+      module_name: "CharsEdit4.dll",
       product_version: "クライアントリリース#1063",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8654,7 +8654,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe.dll",
+      module_name: "ClientSideDispOpe.dll",
       product_version: "クライアントリリース#1064",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8662,7 +8662,7 @@
       differnce: true,
     },
     {
-      name: "ColSlc.dll",
+      module_name: "ColSlc.dll",
       product_version: "クライアントリリース#1065",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8670,7 +8670,7 @@
       differnce: true,
     },
     {
-      name: "FileBackupper.exe",
+      module_name: "FileBackupper.exe",
       product_version: "クライアントリリース#1066",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8678,7 +8678,7 @@
       differnce: true,
     },
     {
-      name: "himeEdit.dll",
+      module_name: "himeEdit.dll",
       product_version: "クライアントリリース#1067",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8686,7 +8686,7 @@
       differnce: true,
     },
     {
-      name: "himeInput.dll",
+      module_name: "himeInput.dll",
       product_version: "クライアントリリース#1068",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8694,7 +8694,7 @@
       differnce: true,
     },
     {
-      name: "ImImport.dll",
+      module_name: "ImImport.dll",
       product_version: "クライアントリリース#1069",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8702,7 +8702,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2.dll",
+      module_name: "LambdaCodecs2.dll",
       product_version: "クライアントリリース#1070",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8710,7 +8710,7 @@
       differnce: true,
     },
     {
-      name: "LGGRAGNT.dll",
+      module_name: "LGGRAGNT.dll",
       product_version: "クライアントリリース#1071",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8718,7 +8718,7 @@
       differnce: true,
     },
     {
-      name: "OATest.exe",
+      module_name: "OATest.exe",
       product_version: "クライアントリリース#1072",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8726,7 +8726,7 @@
       differnce: true,
     },
     {
-      name: "OAtestGL.exe",
+      module_name: "OAtestGL.exe",
       product_version: "クライアントリリース#1073",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8734,7 +8734,7 @@
       differnce: true,
     },
     {
-      name: "PCSound.dll",
+      module_name: "PCSound.dll",
       product_version: "クライアントリリース#1074",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8742,7 +8742,7 @@
       differnce: true,
     },
     {
-      name: "PolyLineTool.dll",
+      module_name: "PolyLineTool.dll",
       product_version: "クライアントリリース#1075",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8750,7 +8750,7 @@
       differnce: true,
     },
     {
-      name: "ProcLogger2.exe",
+      module_name: "ProcLogger2.exe",
       product_version: "クライアントリリース#1076",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8758,7 +8758,7 @@
       differnce: true,
     },
     {
-      name: "ResourceResolver.dll",
+      module_name: "ResourceResolver.dll",
       product_version: "クライアントリリース#1077",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8766,7 +8766,7 @@
       differnce: true,
     },
     {
-      name: "SaveRegistory.exe",
+      module_name: "SaveRegistory.exe",
       product_version: "クライアントリリース#1078",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8774,7 +8774,7 @@
       differnce: true,
     },
     {
-      name: "SceneEditor5.exe",
+      module_name: "SceneEditor5.exe",
       product_version: "クライアントリリース#1079",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8782,7 +8782,7 @@
       differnce: true,
     },
     {
-      name: "SE5Resource.dll",
+      module_name: "SE5Resource.dll",
       product_version: "クライアントリリース#1080",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8790,7 +8790,7 @@
       differnce: true,
     },
     {
-      name: "SioLocal.dll",
+      module_name: "SioLocal.dll",
       product_version: "クライアントリリース#1081",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8798,7 +8798,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSvAcc.dll",
+      module_name: "SozaiSvAcc.dll",
       product_version: "クライアントリリース#1082",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8806,7 +8806,7 @@
       differnce: true,
     },
     {
-      name: "StringSel.dll",
+      module_name: "StringSel.dll",
       product_version: "クライアントリリース#1083",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8814,7 +8814,7 @@
       differnce: true,
     },
     {
-      name: "StringTool.dll",
+      module_name: "StringTool.dll",
       product_version: "クライアントリリース#1084",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8822,7 +8822,7 @@
       differnce: true,
     },
     {
-      name: "vcomp90.dll",
+      module_name: "vcomp90.dll",
       product_version: "クライアントリリース#1085",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8830,7 +8830,7 @@
       differnce: true,
     },
     {
-      name: "atl90.dll",
+      module_name: "atl90.dll",
       product_version: "クライアントリリース#1086",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8839,7 +8839,7 @@
       differnce: true,
     },
     {
-      name: "msvcm90.dll",
+      module_name: "msvcm90.dll",
       product_version: "クライアントリリース#1087",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8848,7 +8848,7 @@
       differnce: true,
     },
     {
-      name: "msvcp90.dll",
+      module_name: "msvcp90.dll",
       product_version: "クライアントリリース#1088",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8857,7 +8857,7 @@
       differnce: true,
     },
     {
-      name: "msvcr90.dll",
+      module_name: "msvcr90.dll",
       product_version: "クライアントリリース#1089",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8866,7 +8866,7 @@
       differnce: true,
     },
     {
-      name: "mfc90.dll",
+      module_name: "mfc90.dll",
       product_version: "クライアントリリース#1090",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8875,7 +8875,7 @@
       differnce: true,
     },
     {
-      name: "mfc90u.dll",
+      module_name: "mfc90u.dll",
       product_version: "クライアントリリース#1091",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8884,7 +8884,7 @@
       differnce: true,
     },
     {
-      name: "mfcm90.dll",
+      module_name: "mfcm90.dll",
       product_version: "クライアントリリース#1092",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8893,7 +8893,7 @@
       differnce: true,
     },
     {
-      name: "mfcm90u.dll",
+      module_name: "mfcm90u.dll",
       product_version: "クライアントリリース#1093",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8902,7 +8902,7 @@
       differnce: true,
     },
     {
-      name: "MFC90CHS.dll",
+      module_name: "MFC90CHS.dll",
       product_version: "クライアントリリース#1094",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8911,7 +8911,7 @@
       differnce: true,
     },
     {
-      name: "MFC90CHT.dll",
+      module_name: "MFC90CHT.dll",
       product_version: "クライアントリリース#1095",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8920,7 +8920,7 @@
       differnce: true,
     },
     {
-      name: "MFC90DEU.dll",
+      module_name: "MFC90DEU.dll",
       product_version: "クライアントリリース#1096",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8929,7 +8929,7 @@
       differnce: true,
     },
     {
-      name: "MFC90ENU.dll",
+      module_name: "MFC90ENU.dll",
       product_version: "クライアントリリース#1097",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8938,7 +8938,7 @@
       differnce: true,
     },
     {
-      name: "MFC90ESN.dll",
+      module_name: "MFC90ESN.dll",
       product_version: "クライアントリリース#1098",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8947,7 +8947,7 @@
       differnce: true,
     },
     {
-      name: "MFC90ESP.dll",
+      module_name: "MFC90ESP.dll",
       product_version: "クライアントリリース#1099",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8956,7 +8956,7 @@
       differnce: true,
     },
     {
-      name: "MFC90FRA.dll",
+      module_name: "MFC90FRA.dll",
       product_version: "クライアントリリース#1100",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8965,7 +8965,7 @@
       differnce: true,
     },
     {
-      name: "MFC90ITA.dll",
+      module_name: "MFC90ITA.dll",
       product_version: "クライアントリリース#1101",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8974,7 +8974,7 @@
       differnce: true,
     },
     {
-      name: "MFC90JPN.dll",
+      module_name: "MFC90JPN.dll",
       product_version: "クライアントリリース#1102",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8983,7 +8983,7 @@
       differnce: true,
     },
     {
-      name: "MFC90KOR.dll",
+      module_name: "MFC90KOR.dll",
       product_version: "クライアントリリース#1103",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -8992,7 +8992,7 @@
       differnce: true,
     },
     {
-      name: "vcomp90.dll",
+      module_name: "vcomp90.dll",
       product_version: "クライアントリリース#1104",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9001,7 +9001,7 @@
       differnce: true,
     },
     {
-      name: "AudioMan.dll",
+      module_name: "AudioMan.dll",
       product_version: "クライアントリリース#1105",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9009,7 +9009,7 @@
       differnce: true,
     },
     {
-      name: "BaseCurve.dll",
+      module_name: "BaseCurve.dll",
       product_version: "クライアントリリース#1106",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9017,7 +9017,7 @@
       differnce: true,
     },
     {
-      name: "Binarist.exe",
+      module_name: "Binarist.exe",
       product_version: "クライアントリリース#1107",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9025,7 +9025,7 @@
       differnce: true,
     },
     {
-      name: "CacheClear2.exe",
+      module_name: "CacheClear2.exe",
       product_version: "クライアントリリース#1108",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9033,7 +9033,7 @@
       differnce: true,
     },
     {
-      name: "cg.dll",
+      module_name: "cg.dll",
       product_version: "クライアントリリース#1109",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9041,7 +9041,7 @@
       differnce: true,
     },
     {
-      name: "cgGL.dll",
+      module_name: "cgGL.dll",
       product_version: "クライアントリリース#1110",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9049,7 +9049,7 @@
       differnce: true,
     },
     {
-      name: "CharsEdit4.dll",
+      module_name: "CharsEdit4.dll",
       product_version: "クライアントリリース#1111",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9057,7 +9057,7 @@
       differnce: true,
     },
     {
-      name: "ClientSideDispOpe.dll",
+      module_name: "ClientSideDispOpe.dll",
       product_version: "クライアントリリース#1112",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9065,7 +9065,7 @@
       differnce: true,
     },
     {
-      name: "ColSlc.dll",
+      module_name: "ColSlc.dll",
       product_version: "クライアントリリース#1113",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9073,7 +9073,7 @@
       differnce: true,
     },
     {
-      name: "FileBackupper.exe",
+      module_name: "FileBackupper.exe",
       product_version: "クライアントリリース#1114",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9081,7 +9081,7 @@
       differnce: true,
     },
     {
-      name: "glew32.dll",
+      module_name: "glew32.dll",
       product_version: "クライアントリリース#1115",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9089,7 +9089,7 @@
       differnce: true,
     },
     {
-      name: "GridSrv.exe",
+      module_name: "GridSrv.exe",
       product_version: "クライアントリリース#1116",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9097,7 +9097,7 @@
       differnce: true,
     },
     {
-      name: "himeEdit.dll",
+      module_name: "himeEdit.dll",
       product_version: "クライアントリリース#1117",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9105,7 +9105,7 @@
       differnce: true,
     },
     {
-      name: "himeInput.dll",
+      module_name: "himeInput.dll",
       product_version: "クライアントリリース#1118",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9113,7 +9113,7 @@
       differnce: true,
     },
     {
-      name: "ijl15.dll",
+      module_name: "ijl15.dll",
       product_version: "クライアントリリース#1119",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9121,7 +9121,7 @@
       differnce: true,
     },
     {
-      name: "ImageFactoryComp.dll",
+      module_name: "ImageFactoryComp.dll",
       product_version: "クライアントリリース#1120",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9129,7 +9129,7 @@
       differnce: true,
     },
     {
-      name: "ImImport.dll",
+      module_name: "ImImport.dll",
       product_version: "クライアントリリース#1121",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9137,7 +9137,7 @@
       differnce: true,
     },
     {
-      name: "ImImportGS.dll",
+      module_name: "ImImportGS.dll",
       product_version: "クライアントリリース#1122",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9145,7 +9145,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs.dll",
+      module_name: "LambdaCodecs.dll",
       product_version: "クライアントリリース#1123",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9153,7 +9153,7 @@
       differnce: true,
     },
     {
-      name: "LambdaCodecs2.dll",
+      module_name: "LambdaCodecs2.dll",
       product_version: "クライアントリリース#1124",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9161,7 +9161,7 @@
       differnce: true,
     },
     {
-      name: "LambdaThumbnails.dll",
+      module_name: "LambdaThumbnails.dll",
       product_version: "クライアントリリース#1125",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9169,7 +9169,7 @@
       differnce: true,
     },
     {
-      name: "LGGRAGNT.dll",
+      module_name: "LGGRAGNT.dll",
       product_version: "クライアントリリース#1126",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9177,7 +9177,7 @@
       differnce: true,
     },
     {
-      name: "LM2GRIDVEGA.dll",
+      module_name: "LM2GRIDVEGA.dll",
       product_version: "クライアントリリース#1127",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9185,7 +9185,7 @@
       differnce: true,
     },
     {
-      name: "MaterialCode.dll",
+      module_name: "MaterialCode.dll",
       product_version: "クライアントリリース#1128",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9193,7 +9193,7 @@
       differnce: true,
     },
     {
-      name: "MATMAN2.dll",
+      module_name: "MATMAN2.dll",
       product_version: "クライアントリリース#1129",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9201,7 +9201,7 @@
       differnce: true,
     },
     {
-      name: "MovieExport2.dll",
+      module_name: "MovieExport2.dll",
       product_version: "クライアントリリース#1130",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9209,7 +9209,7 @@
       differnce: true,
     },
     {
-      name: "OATest.exe",
+      module_name: "OATest.exe",
       product_version: "クライアントリリース#1131",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9217,7 +9217,7 @@
       differnce: true,
     },
     {
-      name: "OAtestGL.exe",
+      module_name: "OAtestGL.exe",
       product_version: "クライアントリリース#1132",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9225,7 +9225,7 @@
       differnce: true,
     },
     {
-      name: "PA2Lib.dll",
+      module_name: "PA2Lib.dll",
       product_version: "クライアントリリース#1133",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9233,7 +9233,7 @@
       differnce: true,
     },
     {
-      name: "PolyLineTool.dll",
+      module_name: "PolyLineTool.dll",
       product_version: "クライアントリリース#1134",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9241,7 +9241,7 @@
       differnce: true,
     },
     {
-      name: "ProcLogger2.exe",
+      module_name: "ProcLogger2.exe",
       product_version: "クライアントリリース#1135",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9249,7 +9249,7 @@
       differnce: true,
     },
     {
-      name: "ProfileComp.dll",
+      module_name: "ProfileComp.dll",
       product_version: "クライアントリリース#1136",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9257,7 +9257,7 @@
       differnce: true,
     },
     {
-      name: "ResourceResolver.dll",
+      module_name: "ResourceResolver.dll",
       product_version: "クライアントリリース#1137",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9265,7 +9265,7 @@
       differnce: true,
     },
     {
-      name: "ReviseClientLib.dll",
+      module_name: "ReviseClientLib.dll",
       product_version: "クライアントリリース#1138",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9273,7 +9273,7 @@
       differnce: true,
     },
     {
-      name: "ReviseFileViewCtrl.dll",
+      module_name: "ReviseFileViewCtrl.dll",
       product_version: "クライアントリリース#1139",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9281,7 +9281,7 @@
       differnce: true,
     },
     {
-      name: "s3D_IF.dll",
+      module_name: "s3D_IF.dll",
       product_version: "クライアントリリース#1140",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9289,7 +9289,7 @@
       differnce: true,
     },
     {
-      name: "SaveRegistory.exe",
+      module_name: "SaveRegistory.exe",
       product_version: "クライアントリリース#1141",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9297,7 +9297,7 @@
       differnce: true,
     },
     {
-      name: "SceneEditor5.exe",
+      module_name: "SceneEditor5.exe",
       product_version: "クライアントリリース#1142",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9305,7 +9305,7 @@
       differnce: true,
     },
     {
-      name: "SE5Resource.dll",
+      module_name: "SE5Resource.dll",
       product_version: "クライアントリリース#1143",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9313,7 +9313,7 @@
       differnce: true,
     },
     {
-      name: "SioLocal.dll",
+      module_name: "SioLocal.dll",
       product_version: "クライアントリリース#1144",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9321,7 +9321,7 @@
       differnce: true,
     },
     {
-      name: "SozaiSvAcc.dll",
+      module_name: "SozaiSvAcc.dll",
       product_version: "クライアントリリース#1145",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9329,7 +9329,7 @@
       differnce: true,
     },
     {
-      name: "SSVIF2.dll",
+      module_name: "SSVIF2.dll",
       product_version: "クライアントリリース#1146",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9337,7 +9337,7 @@
       differnce: true,
     },
     {
-      name: "StringSel.dll",
+      module_name: "StringSel.dll",
       product_version: "クライアントリリース#1147",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9345,7 +9345,7 @@
       differnce: true,
     },
     {
-      name: "StringTool.dll",
+      module_name: "StringTool.dll",
       product_version: "クライアントリリース#1148",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9353,7 +9353,7 @@
       differnce: true,
     },
     {
-      name: "tools4D.dll",
+      module_name: "tools4D.dll",
       product_version: "クライアントリリース#1149",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9361,7 +9361,7 @@
       differnce: true,
     },
     {
-      name: "TVAsahi_Reviser.dll",
+      module_name: "TVAsahi_Reviser.dll",
       product_version: "クライアントリリース#1150",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9369,7 +9369,7 @@
       differnce: true,
     },
     {
-      name: "VCap.dll",
+      module_name: "VCap.dll",
       product_version: "クライアントリリース#1151",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9377,7 +9377,7 @@
       differnce: true,
     },
     {
-      name: "vcomp90.dll",
+      module_name: "vcomp90.dll",
       product_version: "クライアントリリース#1152",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",
@@ -9385,7 +9385,7 @@
       differnce: true,
     },
     {
-      name: "_SceneEditor5.exe",
+      module_name: "_SceneEditor5.exe",
       product_version: "クライアントリリース#1153",
       file_version: "3.0.1.9",
       download_path: "D:\\lambda\\Bin.v2",

@@ -22,7 +22,8 @@
   white-space: nowrap;
   border-right: 1px solid #999;
   border-bottom: 1px solid #999;
-  background: #a9d08e;
+  /* background: #a9d08e; */
+  background: #6fd491;
   font-weight: bold;
   color: black;
   position: sticky;
