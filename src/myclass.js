@@ -26,17 +26,25 @@ export class Folder {
       this.childs = folder.childs;
       this.ToggleFolder = folder.ToggleFolder;
       this.parentfolderid = folder.parentfolderid;
-      this.Path = folder.Path;
+      this.path = folder.Path;
       this.depth_count = folder.depth_count;
     } else {
       this.type = "folder";
+      //フォルダID
       this.id = id;
+      //フォルダ名
       this.name = name;
+      //開閉フラグ
       this.isOpen = isOpen;
+      //子要素
       this.childs = [];
+      //クリック関数　開閉処理
       this.ToggleFolder = ToggleFolder;
+      //親フォルダID
       this.parentfolderid = parentfolderid;
-      this.Path = Path;
+      //パス
+      this.path = Path;
+      //階層
       this.depth_count = depth_count;
     }
   }
@@ -71,7 +79,7 @@ export class Folder {
       );
     } else {
       return (
-        <ul key={this.Path}>
+        <ul key={this.id}>
           <button
             className="treeview_row_button"
             onClick={() => this.onclickfunc()}
@@ -137,23 +145,45 @@ export class Folder {
   get_depth_count() {
     return this.depth_count;
   }
+
+  get_path() {
+    return this.path;
+  }
+
+  get_id() {
+    return this.id;
+  }
+
+  get_name() {
+    return this.name;
+  }
+
+  get_parentfolderid() {
+    return this.parentfolderid;
+  }
 }
 
 export class File {
-  constructor(name, parentfolderid, Path, file_version, depth_count) {
+  constructor(name, parentfolderid, path, file_version, depth_count) {
     this.type = "file";
+    //ファイル名
     this.name = name;
+    //親フォルダID
     this.parentfolderid = parentfolderid;
-    this.Path = Path;
+    //パス
+    this.path = path;
+    //ファイルバージョン
     this.file_version = file_version;
+    //クリックしたときの処理
     this.onclickfunc = null;
+    //階層の深さ
     this.depth_count = depth_count;
   }
   getscript() {
     const marginleft = (this.depth_count + 1) * row_left_margin;
     if (this.onclickfunc == null) {
       return (
-        <li key={`${this.parentfolderid}${this.name}`}>
+        <li key={`${this.path}`}>
           <button
             className="treeview_row_button"
             style={{ pointerEvents: "none" }}
@@ -169,11 +199,11 @@ export class File {
       );
     } else {
       return (
-        <li key={`${this.parentfolderid}${this.name}`}>
+        <li key={`${this.path}`}>
           <button
-            id={this.Path}
+            id={this.path}
             className={`treeview_row_button file_button`}
-            onClick={() => this.onclickfunc(this.Path)}
+            onClick={() => this.onclickfunc(this.path)}
           >
             <div className="row_div" style={{ marginLeft: `${marginleft}px` }}>
               <img className="folder_or_file_icon" src={file_image}></img>
@@ -187,6 +217,10 @@ export class File {
 
   setfileclickfunc(func) {
     this.onclickfunc = func;
+  }
+
+  get_parentfolderid() {
+    return this.parentfolderid;
   }
 }
 
@@ -239,8 +273,8 @@ export function ModulesToFoders(MODULE_LIST) {
       var isok = true;
       for (var j = 0; j < FolderList.length; j++) {
         if (
-          FolderList[j].Path == FolderFullPath &&
-          FolderList[j].name == FolderName
+          FolderList[j].get_path() == FolderFullPath &&
+          FolderList[j].get_name() == FolderName
         ) {
           isok = false;
           break;
@@ -267,7 +301,7 @@ export function ModulesToFoders(MODULE_LIST) {
         var parentfolderid = 0;
         for (var j = 0; j < FolderList.length; j++) {
           //もしパスから自分を抜いたパスとパスが一致するフォルダの場合
-          if (FolderList[j].Path == ParentFolderPath) {
+          if (FolderList[j].get_path() == ParentFolderPath) {
             parentfolderid = FolderList[j].id;
             break;
           }
@@ -294,7 +328,7 @@ export function ModulesToFoders(MODULE_LIST) {
     //親フォルダ情報を探索
     var parentfolderid, parentfolder_depth_count;
     for (var j = 0; j < FolderList.length; j++) {
-      if (FolderList[j].Path == MODULE.install_path) {
+      if (FolderList[j].get_path() == MODULE.install_path) {
         parentfolderid = FolderList[j].id;
         parentfolder_depth_count = FolderList[j].get_depth_count();
         break;
@@ -315,7 +349,7 @@ export function ModulesToFoders(MODULE_LIST) {
   //フォルダにファイルを入れる
   for (var i = 0; i < FolderList.length; i++) {
     for (var j = 0; j < Files.length; j++) {
-      if (FolderList[i].id == Files[j].parentfolderid) {
+      if (FolderList[i].get_id() == Files[j].get_parentfolderid()) {
         FolderList[i].addchild(Files[j]);
       }
     }
@@ -324,7 +358,7 @@ export function ModulesToFoders(MODULE_LIST) {
   //フォルダにフォルダを入れる
   for (var i = 0; i < FolderList.length; i++) {
     for (var j = 0; j < FolderList.length; j++) {
-      if (FolderList[i].id == FolderList[j].parentfolderid) {
+      if (FolderList[i].get_id() == FolderList[j].get_parentfolderid()) {
         FolderList[i].addchild(FolderList[j]);
       }
     }
@@ -338,7 +372,7 @@ export function ModulesToFoders(MODULE_LIST) {
   //親フォルダが0のみのフォルダをセット
   const ResultArr = [];
   for (var i = 0; i < FolderList.length; i++) {
-    if (FolderList[i].parentfolderid == 0) {
+    if (FolderList[i].get_parentfolderid() == 0) {
       ResultArr.push(FolderList[i]);
     }
   }

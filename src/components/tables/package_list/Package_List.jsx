@@ -5,6 +5,7 @@ import "./Package_List.css";
 export default React.memo(function Package_List({
   isSelectPackageId,
   setIsSelectPackageId,
+  setIsShowLoadingAnimation,
 }) {
   //パッケージのリスト
   const [isPackageList, setIsPackageList] = React.useState([]);
@@ -83,8 +84,7 @@ export default React.memo(function Package_List({
     }
 
     //パッケージ順変更
-    const data = await SET_PACKAGE_ORDER(isPackageList);
-    console.log(data);
+    const ResponceData = await SET_PACKAGE_ORDER(isPackageList);
   }
 
   //行クリック
@@ -96,8 +96,14 @@ export default React.memo(function Package_List({
   //テーブル作成
   //
   async function createlistdata() {
+    //ローディングアニメーション開始
+    setIsShowLoadingAnimation(true);
+
     const ResponseData = await GET_PACKAGE_LIST();
     setIsPackageList(ResponseData.package_list);
+
+    //ローディングアニメーション終了
+    setIsShowLoadingAnimation(false);
   }
 
   React.useEffect(() => {

@@ -16,7 +16,7 @@ export default function Tree_View({ FolderList }) {
     //     ))}
     //   </div>
     // </div>
-    <div className="treeview">
+    <div className="treeview" id="kenta">
       {FolderList.map((Folder) => (
         <div key={Folder.id}>{Folder.getscript()}</div>
       ))}
