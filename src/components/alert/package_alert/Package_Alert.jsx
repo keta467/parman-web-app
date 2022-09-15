@@ -14,7 +14,7 @@ export default function Package_Alert({
     await UPDATE_PACKAGE(isSelectPackageId);
     createtreedata(isSelectPackageId);
     createtabledata(isSelectPackageId);
-    setIsShowAlert(false);
+    setIsShowAlert(false); // いらないかも？一応
   }
 
   return (
