@@ -7,11 +7,15 @@ export default function Package_Alert({
   isShowAlert,
   setIsShowAlert,
   isSelectPackageId,
+  createtreedata,
+  createtabledata,
 }) {
-  const CloseAlert = () => {
-    UPDATE_PACKAGE(isSelectPackageId);
+  async function CloseAlert() {
+    await UPDATE_PACKAGE(isSelectPackageId);
+    createtreedata(isSelectPackageId);
+    createtabledata(isSelectPackageId);
     setIsShowAlert(false);
-  };
+  }
 
   return (
     <>

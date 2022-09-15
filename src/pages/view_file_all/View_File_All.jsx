@@ -6,15 +6,30 @@ import {
   GET_INSTALLED_MODULE,
   UPDATE_TERMINAL_MODULE_VERSION,
 } from "../../api.js";
+import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 
 export default function View_File_All({ TitleText }) {
+  //モジュールリスト
   const [isModulelist, setIsModulelist] = React.useState([]);
+
+  //端末リスト
   const [isTERMINAL_LIST, setIsTerminalList] = React.useState([]);
+
+  //ローディングアニメーションフラグ
+  const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
+    React.useState(false);
 
   //
   //　テーブル用データ作成
   //
   async function createtabledata() {
+    //ローディングアニメーション開始
+    setIsShowLoadingAnimation(true);
+
+    //一回表示を空にする
+    setIsTerminalList([]);
+    setIsModulelist([]);
+
     const ResponceData = await GET_INSTALLED_MODULE();
     const TERMINAL_LIST = ResponceData.terminal_list;
     var modulelist = [];
@@ -39,6 +54,9 @@ export default function View_File_All({ TitleText }) {
 
     setIsTerminalList(TERMINAL_LIST);
     setIsModulelist(modulelist);
+
+    //ローディングアニメーション終了
+    setIsShowLoadingAnimation(false);
   }
 
   //
@@ -56,6 +74,7 @@ export default function View_File_All({ TitleText }) {
   return (
     <>
       <Topbar TitleText={TitleText} />
+
       <div className="viewfileallbuttonwrapper">
         <button id="redobutton" className="mybutton" onClick={createtabledata}>
           再表示
@@ -64,11 +83,18 @@ export default function View_File_All({ TitleText }) {
           最新バージョン取得
         </button>
       </div>
-      <div className="viewfilealltablewrapper">
-        <File_All_Table
-          ModuleList={isModulelist}
-          TERMINAL_LIST={isTERMINAL_LIST}
-        />
+      <div id="view_file_all_table_loading_area">
+        <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
+        {isTERMINAL_LIST.length != 0 ? (
+          <div className="viewfilealltablewrapper">
+            <File_All_Table
+              ModuleList={isModulelist}
+              TERMINAL_LIST={isTERMINAL_LIST}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );

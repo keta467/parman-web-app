@@ -10,22 +10,38 @@ import {
   GET_INSTALLED_MODULE,
   GET_MODULE_INSTALLED_TERMINAL,
 } from "../../api.js";
+import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 
 export default function View_file_Separate({ TitleText }) {
+  //フォルダリスト
   const [isFolderList, setIsFolderList] = React.useState([]);
 
+  //選択されたファイルのインストールパス
   const [isInstallPath, setIsInstallPath] = React.useState("");
 
+  //端末リスト
   const [isTerminalList, setIsTerminalList] = React.useState([]);
 
+  //パス編集モーダルの表示フラグ
   const [isShowModalEditPath, setIsShowModalEditPath] = React.useState(false);
 
+  //パスのリスト
   const [isPathList, setIsPathList] = React.useState([]);
+
+  //ローディングアニメーションフラグ１
+  const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
+    React.useState(false);
+
+  //ローディングアニメーションフラグ２
+  const [isShowLoadingAnimation2, setIsShowLoadingAnimation2] =
+    React.useState(false);
 
   //
   // ツリーデータ作成
   //
   async function createtreedata() {
+    setIsShowLoadingAnimation(true);
+
     const ResponceData = await GET_INSTALLED_MODULE();
     const TERMINAL_LIST = ResponceData.terminal_list;
     var modulelist = [];
@@ -49,15 +65,17 @@ export default function View_file_Separate({ TitleText }) {
     }
 
     //フォルダを取得
-    var result = ModulesToFoders(modulelist);
+    const FolderList = ModulesToFoders(modulelist);
 
-    for (var i = 0; i < result[0].length; i++) {
-      result[0][i].setclickfunc(ToggleFolder);
+    for (var i = 0; i < FolderList.length; i++) {
+      FolderList[i].setclickfunc(ToggleFolder);
     }
-    for (var i = 0; i < result[0].length; i++) {
-      result[0][i].setfileclickfunc(SetFilePath);
+    for (var i = 0; i < FolderList.length; i++) {
+      FolderList[i].setfileclickfunc(SetFilePath);
     }
-    setIsFolderList(result[0]);
+    setIsFolderList(FolderList);
+
+    setIsShowLoadingAnimation(false);
   }
 
   //
@@ -67,9 +85,16 @@ export default function View_file_Separate({ TitleText }) {
     if (isInstallPath == "") {
       return;
     }
+    setIsShowLoadingAnimation2(true);
+
+    //表示をクリア
+    setIsTerminalList([]);
+
     const ResponceData = await GET_MODULE_INSTALLED_TERMINAL(isInstallPath);
     const TERMINAL_LIST = ResponceData.terminal_list;
     setIsTerminalList(TERMINAL_LIST);
+
+    setIsShowLoadingAnimation2(false);
   }
 
   // //フォルダを開閉させる処理
@@ -155,6 +180,7 @@ export default function View_file_Separate({ TitleText }) {
     createtreedata();
   }, []);
 
+  //ファイル選択時
   React.useEffect(() => {
     //テーブル作成
     createtabledata();
@@ -176,6 +202,7 @@ export default function View_file_Separate({ TitleText }) {
       />
       <div id="viewfileseparatewrapper">
         <div id="viewfileseparatebox1">
+          <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
           <div className="widthheightoverflow">
             <Tree_View FolderList={isFolderList} />
           </div>
@@ -187,8 +214,13 @@ export default function View_file_Separate({ TitleText }) {
               収集先編集
             </button>
           </div>
-          <div className="fileseparatetablewrap">
-            <File_Separate_Table TerminalList={isTerminalList} />
+          <div id="view_file_separate_table_loading_area">
+            <Loading_Animation
+              isShowLoadingAnimation={isShowLoadingAnimation2}
+            />
+            <div className="fileseparatetablewrap">
+              <File_Separate_Table TerminalList={isTerminalList} />
+            </div>
           </div>
         </div>
       </div>

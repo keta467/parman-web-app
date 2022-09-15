@@ -12,43 +12,85 @@ import {
   GET_TERMINALS,
   UPDATE_PACKAGE,
 } from "../../api.js";
+import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 
 export default React.memo(function Manage_Package({ TitleText }) {
+  //フォルダリスト
   const [isFolderList, setIsFolderList] = React.useState([]);
+
+  //端末リスト
   const [isTerminalList, setIsTerminalList] = React.useState([]);
+
+  //パッケージアラート表示フラグ
   const [isShowPackageAlert, setIsShowPackageAlert] = React.useState(false);
+
+  //選択しているパッケージID
   const [isSelectPackageId, setIsSelectPackageId] = React.useState(-1);
+
+  //ローディングアニメーション１
+  const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
+    React.useState(false);
+
+  //ローディングアニメーション２
+  const [isShowLoadingAnimation2, setIsShowLoadingAnimation2] =
+    React.useState(false);
+
+  //ローディングアニメーション３
+  const [isShowLoadingAnimation3, setIsShowLoadingAnimation3] =
+    React.useState(false);
 
   //
   // ツリーデータ作成
   //
-  async function createtreedata() {
+  const createtreedata = React.useCallback(async (isSelectPackageId) => {
     if (isSelectPackageId == -1) return;
+    //ローディングアニメーション開始
+    setIsShowLoadingAnimation2(true);
+
+    //表示クリア
+    setIsFolderList([]);
+
+    //ローディングアニメーション終了
+    setIsShowPackageAlert(false);
 
     const ResponseData = await GET_MODULE_LIST_IN_PACKAGE(isSelectPackageId);
     const MODULE_LIST = ResponseData.module_list;
 
     //フォルダと更新情報を取得
-    var result = ModulesToFoders(MODULE_LIST);
-    for (var i = 0; i < result[0].length; i++) {
-      result[0][i].setclickfunc(ToggleFolder);
+    const FolderList = ModulesToFoders(MODULE_LIST);
+    for (var i = 0; i < FolderList.length; i++) {
+      FolderList[i].setclickfunc(ToggleFolder);
     }
 
     //一つでも更新されているファイルがあればアラートを表示
-    if (result[1] == true) {
-      setIsShowPackageAlert(true);
+    for (var i = 0; i < MODULE_LIST.length; i++) {
+      if (MODULE_LIST[i].differnce == true) {
+        setIsShowPackageAlert(true);
+        break;
+      }
     }
+    setIsFolderList(FolderList);
 
-    setIsFolderList(result[0]);
-  }
+    //ローディング終了
+    setIsShowLoadingAnimation2(false);
+  }, []);
 
   //
   // テーブルデータ作成
   //
-  async function createtabledata() {
+  const createtabledata = React.useCallback(async (isSelectPackageId) => {
     if (isSelectPackageId == -1) return;
+    //表示クリア
+    setIsTerminalList([]);
+    document.getElementById("serchtext").value = ""; // 検索ボックスをリセット
+
+    //ローディングアニメーション開始
+    setIsShowLoadingAnimation3(true);
+    //テーブルデータを構築し、セット
     setIsTerminalList(await merge());
-  }
+    //ローディングアニメーション終了
+    setIsShowLoadingAnimation3(false);
+  }, []);
 
   //データをマージする処理
   async function merge() {
@@ -182,9 +224,8 @@ export default React.memo(function Manage_Package({ TitleText }) {
   }, []);
 
   React.useEffect(() => {
-    createtreedata();
-    createtabledata();
-    document.getElementById("serchtext").value = ""; // 検索ボックスをリセット
+    createtreedata(isSelectPackageId);
+    createtabledata(isSelectPackageId);
   }, [isSelectPackageId]);
 
   return (
@@ -205,20 +246,25 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
       <div id="managepackagewrapper">
         <div id="managepackagebox1">
+          <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
           <div className="widthheightoverflow">
             <Package_List
               isSelectPackageId={isSelectPackageId}
               setIsSelectPackageId={setIsSelectPackageId}
+              setIsShowLoadingAnimation={setIsShowLoadingAnimation}
             />
           </div>
         </div>
         <div className="handler" id="managepackagehandler1"></div>
         <div id="managepackagebox2">
+          <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation2} />
           <div className="widthheightoverflow">
             <Package_Alert
               isShowAlert={isShowPackageAlert}
               setIsShowAlert={setIsShowPackageAlert}
               isSelectPackageId={isSelectPackageId}
+              createtreedata={createtreedata}
+              createtabledata={createtabledata}
             />
             <Tree_View FolderList={isFolderList} />
           </div>
@@ -235,11 +281,16 @@ export default React.memo(function Manage_Package({ TitleText }) {
               検索
             </button>
           </div>
-          <div id="managepackagesearchviewtablewrapper">
-            <Manage_Package_Table
-              TerminalList={isTerminalList}
-              isSelectPackageId={isSelectPackageId}
+          <div id="manage_package_table_loding_area">
+            <Loading_Animation
+              isShowLoadingAnimation={isShowLoadingAnimation3}
             />
+            <div id="manage_package_table_wrapper">
+              <Manage_Package_Table
+                TerminalList={isTerminalList}
+                isSelectPackageId={isSelectPackageId}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ export class Folder {
     isOpen,
     parentfolderid,
     Path,
-    kaisou_count,
+    depth_count,
     ToggleFolder,
     folder
   ) {
@@ -26,26 +26,34 @@ export class Folder {
       this.childs = folder.childs;
       this.ToggleFolder = folder.ToggleFolder;
       this.parentfolderid = folder.parentfolderid;
-      this.Path = folder.Path;
-      this.kaisou_count = folder.kaisou_count;
+      this.path = folder.Path;
+      this.depth_count = folder.depth_count;
     } else {
       this.type = "folder";
+      //フォルダID
       this.id = id;
+      //フォルダ名
       this.name = name;
+      //開閉フラグ
       this.isOpen = isOpen;
+      //子要素
       this.childs = [];
+      //クリック関数　開閉処理
       this.ToggleFolder = ToggleFolder;
+      //親フォルダID
       this.parentfolderid = parentfolderid;
-      this.Path = Path;
-      this.kaisou_count = kaisou_count;
+      //パス
+      this.path = Path;
+      //階層
+      this.depth_count = depth_count;
     }
   }
 
   getscript() {
-    const marginleft = (this.kaisou_count - 1) * row_left_margin;
+    const marginleft = this.depth_count * row_left_margin;
     if (this.isOpen) {
       return (
-        <ul key={this.Path}>
+        <ul key={this.id}>
           <button
             className="treeview_row_button"
             onClick={() => this.onclickfunc()}
@@ -71,7 +79,7 @@ export class Folder {
       );
     } else {
       return (
-        <ul key={this.Path}>
+        <ul key={this.id}>
           <button
             className="treeview_row_button"
             onClick={() => this.onclickfunc()}
@@ -119,7 +127,7 @@ export class Folder {
     }
   }
 
-  narabekae() {
+  sort() {
     var newarr = [];
     for (var i = 0; i < this.childs.length; i++) {
       if (this.childs[i].type == "folder") {
@@ -134,26 +142,48 @@ export class Folder {
     this.childs = newarr;
   }
 
-  getkaisou() {
-    return this.kaisou_count;
+  get_depth_count() {
+    return this.depth_count;
+  }
+
+  get_path() {
+    return this.path;
+  }
+
+  get_id() {
+    return this.id;
+  }
+
+  get_name() {
+    return this.name;
+  }
+
+  get_parentfolderid() {
+    return this.parentfolderid;
   }
 }
 
 export class File {
-  constructor(name, parentfolderid, Path, file_version, kaisou_count) {
+  constructor(name, parentfolderid, path, file_version, depth_count) {
     this.type = "file";
+    //ファイル名
     this.name = name;
+    //親フォルダID
     this.parentfolderid = parentfolderid;
-    this.Path = Path;
+    //パス
+    this.path = path;
+    //ファイルバージョン
     this.file_version = file_version;
+    //クリックしたときの処理
     this.onclickfunc = null;
-    this.kaisou_count = kaisou_count;
+    //階層の深さ
+    this.depth_count = depth_count;
   }
   getscript() {
-    const marginleft = this.kaisou_count * row_left_margin;
+    const marginleft = (this.depth_count + 1) * row_left_margin;
     if (this.onclickfunc == null) {
       return (
-        <li key={this.Path}>
+        <li key={`${this.path}`}>
           <button
             className="treeview_row_button"
             style={{ pointerEvents: "none" }}
@@ -169,11 +199,11 @@ export class File {
       );
     } else {
       return (
-        <li key={this.Path}>
+        <li key={`${this.path}`}>
           <button
-            id={this.Path}
+            id={this.path}
             className={`treeview_row_button file_button`}
-            onClick={() => this.onclickfunc(this.Path)}
+            onClick={() => this.onclickfunc(this.path)}
           >
             <div className="row_div" style={{ marginLeft: `${marginleft}px` }}>
               <img className="folder_or_file_icon" src={file_image}></img>
@@ -188,149 +218,163 @@ export class File {
   setfileclickfunc(func) {
     this.onclickfunc = func;
   }
+
+  get_parentfolderid() {
+    return this.parentfolderid;
+  }
 }
 
 export function ModulesToFoders(MODULE_LIST) {
-  //一つでも更新されているファイルがあればアラートを表示
-  var flag = false;
-  for (var i = 0; i < MODULE_LIST.length; i++) {
-    if (MODULE_LIST[i].differnce == true) {
-      flag = true;
-      break;
-    }
-  }
+  // //一つでも更新されているファイルがあればアラートを表示
+  // var flag = false;
+  // for (var i = 0; i < MODULE_LIST.length; i++) {
+  //   if (MODULE_LIST[i].differnce == true) {
+  //     flag = true;
+  //     break;
+  //   }
+  // }
 
   ///
   ///フォルダを全て生成
   ///
-  var folderlist = [];
+  const FolderList = [];
   for (var i = 0; i < MODULE_LIST.length; i++) {
-    const str = MODULE_LIST[i].install_path;
-    const regex = /([^\\]*)\\/g;
-    const foldersInPath = str.match(regex);
-    for (var j = 0; j < foldersInPath.length; j++) {
-      //パス
-      var count = 0;
-      var Path = "";
-      var ParentFolderPath = "";
-      for (var k = 0; k < str.length; k++) {
-        if (count == j + 1) {
-          break;
-        }
+    //例　D:\lambda\Bin.v2\castScenePlugIn\Animation
+    const INSTALL_PATH = MODULE_LIST[i].install_path;
+    //例　D: lambda Bin.v2 castScenePlugIn Animation
+    const FoldersInPath = INSTALL_PATH.split("\\");
 
-        Path += str[k];
-        if (str[k] == "\\") {
-          count = count + 1;
-          if (count == j) {
-            ParentFolderPath = Path;
-          }
-        }
+    //取得したパスを全て生成
+    for (
+      var depth_count = 0;
+      depth_count < FoldersInPath.length;
+      depth_count++
+    ) {
+      //インデックス取得
+      var result;
+      const p = /\\/g;
+      const Indexs = [];
+      while ((result = p.exec(INSTALL_PATH))) {
+        Indexs.push(result.index);
       }
+
+      const FolderName = FoldersInPath[depth_count];
+      const FolderFullPath = INSTALL_PATH.slice(0, Indexs[depth_count]);
+      const ParentFolderPath =
+        depth_count == 0
+          ? "root"
+          : INSTALL_PATH.slice(0, Indexs[depth_count - 1]);
+
+      // console.log(
+      //   `元パス: ${INSTALL_PATH}\nフォルダ名: ${FolderName}\nパス: ${FolderFullPath}\n親パス:${ParentFolderPath}`
+      // );
+
       //重複チェック
       var isok = true;
-      for (var k = 0; k < folderlist.length; k++) {
+      for (var j = 0; j < FolderList.length; j++) {
         if (
-          folderlist[k].Path == Path &&
-          folderlist[k].name == foldersInPath[j].replace("\\", "")
+          FolderList[j].get_path() == FolderFullPath &&
+          FolderList[j].get_name() == FolderName
         ) {
           isok = false;
           break;
         }
       }
-      //新規フォルダの場合
-      if (isok) {
-        if (j == 0) {
-          folderlist.push(
-            new Folder(
-              folderlist.length + 1,
-              foldersInPath[j].replace("\\", ""),
-              true,
-              0,
-              Path,
-              count,
-              null,
-              null
-            )
-          );
-        } else {
-          //親フォルダIDを見つけ出す
-          var parentfolderid = 0;
-          for (var k = 0; k < folderlist.length; k++) {
-            //もしパスから自分を抜いたパスとパスが一致するフォルダの場合
-            if (folderlist[k].Path == ParentFolderPath) {
-              parentfolderid = folderlist[k].id;
-              break;
-            }
+      //重複した場合、次のループへ
+      if (isok == false) continue;
+
+      if (depth_count == 0) {
+        FolderList.push(
+          new Folder(
+            FolderList.length + 1,
+            FolderName,
+            true,
+            0,
+            FolderFullPath,
+            depth_count,
+            null,
+            null
+          )
+        );
+      } else {
+        //親フォルダIDを見つけ出す
+        var parentfolderid = 0;
+        for (var j = 0; j < FolderList.length; j++) {
+          //もしパスから自分を抜いたパスとパスが一致するフォルダの場合
+          if (FolderList[j].get_path() == ParentFolderPath) {
+            parentfolderid = FolderList[j].id;
+            break;
           }
-          folderlist.push(
-            new Folder(
-              folderlist.length + 1,
-              foldersInPath[j].replace("\\", ""),
-              true,
-              parentfolderid,
-              Path,
-              count,
-              null,
-              null
-            )
-          );
         }
+        FolderList.push(
+          new Folder(
+            FolderList.length + 1,
+            FoldersInPath[depth_count].replace("\\", ""),
+            true,
+            parentfolderid,
+            FolderFullPath,
+            depth_count,
+            null,
+            null
+          )
+        );
       }
     }
   }
-  var files = [];
+  const Files = [];
   for (var i = 0; i < MODULE_LIST.length; i++) {
-    const INSTALL_PATH = MODULE_LIST[i].install_path;
-    const MODULE_NAME = MODULE_LIST[i].module_name;
-    const FILE_VERSION = MODULE_LIST[i].file_version;
+    const MODULE = MODULE_LIST[i];
 
-    var parentfolderid, parentfolder_kaisou_count;
-    for (var j = 0; j < folderlist.length; j++) {
-      if (folderlist[j].Path == INSTALL_PATH.replace(MODULE_NAME, "")) {
-        parentfolderid = folderlist[j].id;
-        parentfolder_kaisou_count = folderlist[j].getkaisou();
+    //親フォルダ情報を探索
+    var parentfolderid, parentfolder_depth_count;
+    for (var j = 0; j < FolderList.length; j++) {
+      if (FolderList[j].get_path() == MODULE.install_path) {
+        parentfolderid = FolderList[j].id;
+        parentfolder_depth_count = FolderList[j].get_depth_count();
         break;
       }
     }
 
-    files.push(
+    Files.push(
       new File(
-        MODULE_NAME,
+        MODULE.module_name,
         parentfolderid,
-        INSTALL_PATH,
-        FILE_VERSION,
-        parentfolder_kaisou_count + 1
+        MODULE.install_path + "\\" + MODULE.module_name,
+        MODULE.file_version,
+        parentfolder_depth_count + 1
       )
     );
   }
+
   //フォルダにファイルを入れる
-  for (var i = 0; i < folderlist.length; i++) {
-    for (var j = 0; j < files.length; j++) {
-      if (folderlist[i].id == files[j].parentfolderid) {
-        folderlist[i].addchild(files[j]);
+  for (var i = 0; i < FolderList.length; i++) {
+    for (var j = 0; j < Files.length; j++) {
+      if (FolderList[i].get_id() == Files[j].get_parentfolderid()) {
+        FolderList[i].addchild(Files[j]);
       }
     }
   }
 
   //フォルダにフォルダを入れる
-  for (var i = 0; i < folderlist.length; i++) {
-    for (var j = 0; j < folderlist.length; j++) {
-      if (folderlist[i].id == folderlist[j].parentfolderid) {
-        folderlist[i].addchild(folderlist[j]);
+  for (var i = 0; i < FolderList.length; i++) {
+    for (var j = 0; j < FolderList.length; j++) {
+      if (FolderList[i].get_id() == FolderList[j].get_parentfolderid()) {
+        FolderList[i].addchild(FolderList[j]);
       }
     }
   }
+
   //並べ替え
-  for (var i = 0; i < folderlist.length; i++) {
-    folderlist[i].narabekae();
+  for (var i = 0; i < FolderList.length; i++) {
+    FolderList[i].sort();
   }
 
-  //親フォルダが０のみのフォルダをセット
-  var arrr = [];
-  for (var i = 0; i < folderlist.length; i++) {
-    if (folderlist[i].parentfolderid == 0) {
-      arrr.push(folderlist[i]);
+  //親フォルダが0のみのフォルダをセット
+  const ResultArr = [];
+  for (var i = 0; i < FolderList.length; i++) {
+    if (FolderList[i].get_parentfolderid() == 0) {
+      ResultArr.push(FolderList[i]);
     }
   }
-  return [arrr, flag];
+  return ResultArr;
 }

@@ -4,6 +4,7 @@ import Modal_Edit_Terminal from "../../components/modals/Modal_Edit_Terminal.jsx
 import Topbar from "../../components/topbar/Topbar.jsx";
 import "./Manage_Terminal.css";
 import { GET_TERMINALS, SET_TERMINAL_ORDER } from "../../api.js";
+import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 
 export default React.memo(function Manage_Terminal({ TitleText }) {
   //追加モーダル
@@ -16,6 +17,10 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
 
   //編集端末
   const [isSelectTerminal, setIsSelectTerminal] = React.useState();
+
+  //ローディングアニメーションフラグ
+  const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
+    React.useState(false);
 
   //追加ボタン
   const ClickAdd = () => {
@@ -114,8 +119,15 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
   };
 
   const createtabledata = React.useCallback(async () => {
+    //ローディングアニメーション開始
+    setIsShowLoadingAnimation(true);
+
+    setIsTerminalList([]); // 表示クリア
     const ResponceData = await GET_TERMINALS();
     setIsTerminalList(ResponceData.terminal_list);
+
+    //ローディングアニメーション終了
+    setIsShowLoadingAnimation(false);
   }, []);
 
   //初回レンダリング後
@@ -137,40 +149,44 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
         isSelectTerminal={isSelectTerminal}
         createtabledata={createtabledata}
       />
+
       <div className="managemachinebuttonwrapper">
         <button className="mybutton" onClick={ClickAdd}>
           追加
         </button>
       </div>
-      <div className="managemachinetablewrapper">
-        <table className="managemachinetable colortable">
-          <thead>
-            <tr>
-              <th>端末名</th>
-              <th>端末名称</th>
-              <th>IPアドレス</th>
-            </tr>
-          </thead>
-          <tbody id="managemachinetabletbody">
-            {isTerminalList.map((Terminal, index) => (
-              <tr
-                onClick={() => OpenModal(index)}
-                draggable="true"
-                className="dragitem"
-                id={index}
-                key={Terminal.id}
-                onDrag={mydrag}
-                onDragOver={mydragover}
-                onDragLeave={mydragleave}
-                onDrop={mydrop}
-              >
-                <td id={index}>{Terminal.name}</td>
-                <td id={index}>{Terminal.display_name}</td>
-                <td id={index}>{Terminal.ip_address}</td>
+      <div id="manage_terminal_table_loading_area">
+        <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
+        <div className="managemachinetablewrapper">
+          <table className="managemachinetable colortable">
+            <thead>
+              <tr>
+                <th>端末名</th>
+                <th>端末名称</th>
+                <th>IPアドレス</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody id="managemachinetabletbody">
+              {isTerminalList.map((Terminal, index) => (
+                <tr
+                  onClick={() => OpenModal(index)}
+                  draggable="true"
+                  className="dragitem"
+                  id={index}
+                  key={Terminal.id}
+                  onDrag={mydrag}
+                  onDragOver={mydragover}
+                  onDragLeave={mydragleave}
+                  onDrop={mydrop}
+                >
+                  <td id={index}>{Terminal.name}</td>
+                  <td id={index}>{Terminal.display_name}</td>
+                  <td id={index}>{Terminal.ip_address}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );
