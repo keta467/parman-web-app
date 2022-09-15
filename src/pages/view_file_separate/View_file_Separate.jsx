@@ -49,15 +49,15 @@ export default function View_file_Separate({ TitleText }) {
     }
 
     //フォルダを取得
-    var result = ModulesToFoders(modulelist);
+    const FolderList = ModulesToFoders(modulelist);
 
-    for (var i = 0; i < result[0].length; i++) {
-      result[0][i].setclickfunc(ToggleFolder);
+    for (var i = 0; i < FolderList.length; i++) {
+      FolderList[i].setclickfunc(ToggleFolder);
     }
-    for (var i = 0; i < result[0].length; i++) {
-      result[0][i].setfileclickfunc(SetFilePath);
+    for (var i = 0; i < FolderList.length; i++) {
+      FolderList[i].setfileclickfunc(SetFilePath);
     }
-    setIsFolderList(result[0]);
+    setIsFolderList(FolderList);
   }
 
   //

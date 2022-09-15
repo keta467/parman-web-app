@@ -29,17 +29,20 @@ export default React.memo(function Manage_Package({ TitleText }) {
     const MODULE_LIST = ResponseData.module_list;
 
     //フォルダと更新情報を取得
-    var result = ModulesToFoders(MODULE_LIST);
-    for (var i = 0; i < result[0].length; i++) {
-      result[0][i].setclickfunc(ToggleFolder);
+    const FolderList = ModulesToFoders(MODULE_LIST);
+    for (var i = 0; i < FolderList.length; i++) {
+      FolderList[i].setclickfunc(ToggleFolder);
     }
 
     //一つでも更新されているファイルがあればアラートを表示
-    if (result[1] == true) {
-      setIsShowPackageAlert(true);
+    for (var i = 0; i < MODULE_LIST.length; i++) {
+      if (MODULE_LIST[i].differnce == true) {
+        setIsShowPackageAlert(true);
+        break;
+      }
     }
 
-    setIsFolderList(result[0]);
+    setIsFolderList(FolderList);
   }
 
   //
