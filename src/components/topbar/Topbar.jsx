@@ -48,7 +48,7 @@ export default function Topbar({ TitleText }) {
       </div>
 
       <div className="mode_description">
-        <p>バージョン: v0.0.1</p>
+        <p>更新日: {document.getElementById("app_version").innerHTML}</p>
         {DEBUG_MODE ? (
           <p>デバッグモード: ダミーデータ参照中</p>
         ) : (
