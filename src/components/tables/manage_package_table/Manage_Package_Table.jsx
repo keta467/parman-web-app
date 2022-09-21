@@ -6,31 +6,51 @@ import { SET_PACKAGE_RELEASE_TERMINAL } from "../../../api";
 export default function Manage_Package_Table({
   TerminalList,
   isSelectPackageId,
+  setIsShowLoadingAnimation3,
 }) {
-  function headercheckboxtoggle(event) {
-    var arr = [];
-    if (event.target.checked) {
-      var elems = document.getElementsByClassName("mycheckbox");
-      for (var i = 0; i < elems.length; i++) {
-        elems[i].checked = true;
-        arr.push({ ID: Number(elems[i].id), ENABLE: true });
-      }
-    } else {
-      var elems = document.getElementsByClassName("mycheckbox");
-      for (var i = 0; i < elems.length; i++) {
-        elems[i].checked = false;
-        arr.push({ ID: Number(elems[i].id), ENABLE: false });
-      }
+  async function headercheckboxtoggle(event) {
+    if (isSelectPackageId == -1) return;
+
+    //ローディングスタート
+    setIsShowLoadingAnimation3(true);
+    const NewArr = [];
+    const RowsCheakBox = document.getElementsByClassName("mycheckbox");
+
+    for (var i = 0; i < RowsCheakBox.length; i++) {
+      NewArr.push({
+        ID: Number(RowsCheakBox[i].id),
+        ENABLE: event.target.checked,
+      });
     }
-    //パッケージリリース端末変更
-    SET_PACKAGE_RELEASE_TERMINAL(isSelectPackageId, arr);
+
+    try {
+      //パッケージリリース端末変更
+      await SET_PACKAGE_RELEASE_TERMINAL(isSelectPackageId, NewArr);
+
+      for (var i = 0; i < RowsCheakBox.length; i++) {
+        RowsCheakBox[i].checked = event.target.checked;
+      }
+    } catch {}
+
+    //ローディング終了
+    setIsShowLoadingAnimation3(false);
   }
 
-  function rowcheckboxtoggle(event) {
-    //パッケージリリース端末変更
-    SET_PACKAGE_RELEASE_TERMINAL(isSelectPackageId, [
-      { ID: Number(event.target.id), ENABLE: event.target.checked },
-    ]);
+  async function rowcheckboxtoggle(event) {
+    //ローディングスタート
+    setIsShowLoadingAnimation3(true);
+
+    try {
+      //パッケージリリース端末変更
+      await SET_PACKAGE_RELEASE_TERMINAL(isSelectPackageId, [
+        { ID: Number(event.target.id), ENABLE: event.target.checked },
+      ]);
+    } catch {
+      event.target.checked = !event.target.checked;
+    }
+
+    //ローディング終了
+    setIsShowLoadingAnimation3(false);
   }
 
   return (
@@ -41,6 +61,7 @@ export default function Manage_Package_Table({
             <input
               type="checkbox"
               onChange={(event) => headercheckboxtoggle(event)}
+              id="abc"
             />
           </th>
           <th>端末名</th>

@@ -11,21 +11,25 @@ export default function Modal_Edit_Path({
   setIsPathList,
 }) {
   const CloseModal = () => {
+    if (isShowLoadingAnimation == true) return;
     setIsShowModal(false);
   };
 
   async function UpdateButton() {
-    const elems = document.getElementsByClassName("pathtext");
-    var arr = [];
-    for (var i = 0; i < elems.length; i++) {
-      if (elems[i].value != "") {
-        arr.push(elems[i].value);
+    const Elems = document.getElementsByClassName("pathtext");
+    const NewArr = [];
+    for (var i = 0; i < Elems.length; i++) {
+      if (Elems[i].value != "") {
+        NewArr.push(Elems[i].value);
       }
     }
     setIsShowLoadingAnimation(true);
-    await SET_COLLECT_PATH(arr);
+    try {
+      await SET_COLLECT_PATH(NewArr);
+      setIsShowModal(false);
+    } catch {}
+
     setIsShowLoadingAnimation(false);
-    setIsShowModal(false);
   }
 
   //空欄のテキストエリアを追加
@@ -36,8 +40,10 @@ export default function Modal_Edit_Path({
   const DeletePath = (pathindex) => {
     setIsPathList(isPathList.filter((value, index) => index !== pathindex));
   };
+
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
+
   return (
     <>
       {isShowModal ? (

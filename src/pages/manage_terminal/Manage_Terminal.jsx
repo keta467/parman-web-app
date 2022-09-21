@@ -7,6 +7,9 @@ import { GET_TERMINALS, SET_TERMINAL_ORDER } from "../../api.js";
 import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 
 export default React.memo(function Manage_Terminal({ TitleText }) {
+  //端末リスト
+  const [isTerminalList, setIsTerminalList] = React.useState([]);
+
   //追加モーダル
   const [isShowModalAddTerminal, setIsShowModalAddTerminal] =
     React.useState(false);
@@ -26,9 +29,6 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
   const ClickAdd = () => {
     setIsShowModalAddTerminal(true);
   };
-
-  //端末リスト
-  const [isTerminalList, setIsTerminalList] = React.useState([]);
 
   var startindex = "";
 
@@ -66,51 +66,56 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
 
   async function mydrop(event) {
     event.preventDefault();
-    let elm_drag = isTerminalList[startindex];
+    const NewArr = [];
+    for (var i = 0; i < isTerminalList.length; i++) {
+      NewArr.push(isTerminalList[i]);
+    }
 
-    var toindex = event.target.id;
+    const Elem_Drag = NewArr[startindex];
+    const ToIndex = event.target.id;
 
     const element = document.getElementById(event.target.id);
     let rect = element.getBoundingClientRect();
     if (event.clientY - rect.top < element.clientHeight / 2) {
       //マウスカーソルの位置が要素の半分より上
-      isTerminalList.splice(startindex, 1);
+      NewArr.splice(startindex, 1);
 
-      if (Number(startindex) < Number(toindex)) {
-        isTerminalList.splice(Number(toindex) - 1, 0, elm_drag);
+      if (Number(startindex) < Number(ToIndex)) {
+        NewArr.splice(Number(ToIndex) - 1, 0, Elem_Drag);
       } else {
-        isTerminalList.splice(Number(toindex), 0, elm_drag);
+        NewArr.splice(Number(ToIndex), 0, Elem_Drag);
       }
     } else {
       //マウスカーソルの位置が要素の半分より下
-      isTerminalList.splice(startindex, 1);
+      NewArr.splice(startindex, 1);
 
-      if (Number(startindex) < Number(toindex)) {
-        isTerminalList.splice(Number(toindex), 0, elm_drag);
+      if (Number(startindex) < Number(ToIndex)) {
+        NewArr.splice(Number(ToIndex), 0, Elem_Drag);
       } else {
-        isTerminalList.splice(Number(toindex) + 1, 0, elm_drag);
+        NewArr.splice(Number(ToIndex) + 1, 0, Elem_Drag);
       }
     }
-
-    var newarr = [];
-    for (var i = 0; i < isTerminalList.length; i++) {
-      newarr.push(isTerminalList[i]);
-    }
-    setIsTerminalList(newarr);
 
     for (var i = 0; i < element.children.length; i++) {
       element.children[i].style.borderTop = "1px solid #999";
       element.children[i].style.borderBottom = "1px solid #999";
     }
 
-    //端末順変更
-    var orderarr = [];
-    for (var i = 0; i < isTerminalList.length; i++) {
-      orderarr.push({ ID: isTerminalList[i].id });
-    }
+    //ローディングアニメーション開始
+    setIsShowLoadingAnimation(true);
 
     //端末順変更
-    const ResponceData = await SET_TERMINAL_ORDER(orderarr);
+    try {
+      const PostArr = [];
+      for (var i = 0; i < NewArr.length; i++) {
+        PostArr.push({ ID: NewArr[i].id });
+      }
+      await SET_TERMINAL_ORDER(PostArr);
+      setIsTerminalList(NewArr);
+    } catch {}
+
+    //ローディングアニメーション終了
+    setIsShowLoadingAnimation(false);
   }
 
   const OpenModal = (index) => {
@@ -123,8 +128,11 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
     setIsShowLoadingAnimation(true);
 
     setIsTerminalList([]); // 表示クリア
-    const ResponceData = await GET_TERMINALS();
-    setIsTerminalList(ResponceData.terminal_list);
+
+    try {
+      const ResponceData = await GET_TERMINALS();
+      setIsTerminalList(ResponceData.terminal_list);
+    } catch {}
 
     //ローディングアニメーション終了
     setIsShowLoadingAnimation(false);

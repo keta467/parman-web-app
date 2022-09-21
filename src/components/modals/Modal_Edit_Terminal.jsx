@@ -1,5 +1,6 @@
 import React from "react";
 import { REMOVE_TERMINAL, UPDATE_TERMINAL } from "../../api";
+import { isIPaddress } from "../../lib/myfunction";
 import Loading_Animation from "../alert/loading_animation/Loading_Animation.jsx";
 import "./Modal.css";
 
@@ -13,6 +14,7 @@ export default React.memo(function Modal_Edit_Terminal({
     React.useState(false);
 
   const CloseModal = () => {
+    if (isShowLoadingAnimation == true) return;
     setIsShowModal(false);
   };
 
@@ -25,25 +27,38 @@ export default React.memo(function Modal_Edit_Terminal({
       window.alert("空の項目があります。");
       return;
     }
-    setIsShowLoadingAnimation(true);
-    await UPDATE_TERMINAL(
-      isSelectTerminal.id,
-      text1.value,
-      text2.value,
-      text3.value
-    );
-    setIsShowLoadingAnimation(false);
 
-    createtabledata();
-    CloseModal();
+    if (isIPaddress(text3.value) == false) {
+      window.alert("正しいIPアドレスを記入してください");
+      return;
+    }
+
+    setIsShowLoadingAnimation(true);
+
+    try {
+      await UPDATE_TERMINAL(
+        isSelectTerminal.id,
+        text1.value,
+        text2.value,
+        text3.value
+      );
+      createtabledata();
+      CloseModal();
+    } catch {}
+
+    setIsShowLoadingAnimation(false);
   }
 
   async function Remove() {
     setIsShowLoadingAnimation(true);
-    await REMOVE_TERMINAL(isSelectTerminal.id);
+
+    try {
+      await REMOVE_TERMINAL(isSelectTerminal.id);
+      createtabledata();
+      CloseModal();
+    } catch {}
+
     setIsShowLoadingAnimation(false);
-    createtabledata();
-    CloseModal();
   }
 
   return (

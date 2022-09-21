@@ -19,7 +19,8 @@
 }
 
 .treeview_row_button:hover {
-  background-color: #f0f2f496;
+  background-color: #5c60641c;
+  cursor: pointer;
 }
 
 .treeview_row_button .row_div {
