@@ -42,38 +42,40 @@ export default function View_file_Separate({ TitleText }) {
   async function createtreedata() {
     setIsShowLoadingAnimation(true);
 
-    const ResponceData = await GET_INSTALLED_MODULE();
-    const TERMINAL_LIST = ResponceData.terminal_list;
-    var modulelist = [];
+    try {
+      const ResponceData = await GET_INSTALLED_MODULE();
+      const TERMINAL_LIST = ResponceData.terminal_list;
+      var modulelist = [];
 
-    //モジュールリストの作成
-    for (var i = 0; i < TERMINAL_LIST.length; i++) {
-      var terminal = TERMINAL_LIST[i];
-      for (var j = 0; j < terminal.module_list.length; j++) {
-        var okflag = true;
-        for (var k = 0; k < modulelist.length; k++) {
-          //既にモジュールリストにある場合
-          if (modulelist[k].module_id == terminal.module_list[j].module_id) {
-            okflag = false;
-            break;
+      //モジュールリストの作成
+      for (var i = 0; i < TERMINAL_LIST.length; i++) {
+        var terminal = TERMINAL_LIST[i];
+        for (var j = 0; j < terminal.module_list.length; j++) {
+          var okflag = true;
+          for (var k = 0; k < modulelist.length; k++) {
+            //既にモジュールリストにある場合
+            if (modulelist[k].module_id == terminal.module_list[j].module_id) {
+              okflag = false;
+              break;
+            }
+          }
+          if (okflag == true) {
+            modulelist.push(terminal.module_list[j]);
           }
         }
-        if (okflag == true) {
-          modulelist.push(terminal.module_list[j]);
-        }
       }
-    }
 
-    //フォルダを取得
-    const FolderList = ModulesToFoders(modulelist);
+      //フォルダを取得
+      const FolderList = ModulesToFoders(modulelist);
 
-    for (var i = 0; i < FolderList.length; i++) {
-      FolderList[i].setclickfunc(ToggleFolder);
-    }
-    for (var i = 0; i < FolderList.length; i++) {
-      FolderList[i].setfileclickfunc(SetFilePath);
-    }
-    setIsFolderList(FolderList);
+      for (var i = 0; i < FolderList.length; i++) {
+        FolderList[i].setclickfunc(ToggleFolder);
+      }
+      for (var i = 0; i < FolderList.length; i++) {
+        FolderList[i].setfileclickfunc(SetFilePath);
+      }
+      setIsFolderList(FolderList);
+    } catch {}
 
     setIsShowLoadingAnimation(false);
   }
@@ -90,9 +92,11 @@ export default function View_file_Separate({ TitleText }) {
     //表示をクリア
     setIsTerminalList([]);
 
-    const ResponceData = await GET_MODULE_INSTALLED_TERMINAL(isInstallPath);
-    const TERMINAL_LIST = ResponceData.terminal_list;
-    setIsTerminalList(TERMINAL_LIST);
+    try {
+      const ResponceData = await GET_MODULE_INSTALLED_TERMINAL(isInstallPath);
+      const TERMINAL_LIST = ResponceData.terminal_list;
+      setIsTerminalList(TERMINAL_LIST);
+    } catch {}
 
     setIsShowLoadingAnimation2(false);
   }
@@ -126,10 +130,11 @@ export default function View_file_Separate({ TitleText }) {
 
   //収集先編集ボタン
   async function ClickEditPath() {
-    const RespenceData = await GET_COLLECT_PATH();
-    setIsPathList(RespenceData.collect_path);
-
-    setIsShowModalEditPath(true);
+    try {
+      const RespenceData = await GET_COLLECT_PATH();
+      setIsPathList(RespenceData.collect_path);
+      setIsShowModalEditPath(true);
+    } catch {}
   }
 
   var isHandler1Dragging = false;

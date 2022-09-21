@@ -30,30 +30,32 @@ export default function View_File_All({ TitleText }) {
     setIsTerminalList([]);
     setIsModulelist([]);
 
-    const ResponceData = await GET_INSTALLED_MODULE();
-    const TERMINAL_LIST = ResponceData.terminal_list;
-    var modulelist = [];
+    try {
+      const ResponceData = await GET_INSTALLED_MODULE();
+      const TERMINAL_LIST = ResponceData.terminal_list;
+      var modulelist = [];
 
-    //モジュールリストの作成
-    for (var i = 0; i < TERMINAL_LIST.length; i++) {
-      var terminal = TERMINAL_LIST[i];
-      for (var j = 0; j < terminal.module_list.length; j++) {
-        var okflag = true;
-        for (var k = 0; k < modulelist.length; k++) {
-          //既にモジュールリストにある場合
-          if (modulelist[k].module_id == terminal.module_list[j].module_id) {
-            okflag = false;
-            break;
+      //モジュールリストの作成
+      for (var i = 0; i < TERMINAL_LIST.length; i++) {
+        var terminal = TERMINAL_LIST[i];
+        for (var j = 0; j < terminal.module_list.length; j++) {
+          var okflag = true;
+          for (var k = 0; k < modulelist.length; k++) {
+            //既にモジュールリストにある場合
+            if (modulelist[k].module_id == terminal.module_list[j].module_id) {
+              okflag = false;
+              break;
+            }
+          }
+          if (okflag == true) {
+            modulelist.push(terminal.module_list[j]);
           }
         }
-        if (okflag == true) {
-          modulelist.push(terminal.module_list[j]);
-        }
       }
-    }
 
-    setIsTerminalList(TERMINAL_LIST);
-    setIsModulelist(modulelist);
+      setIsTerminalList(TERMINAL_LIST);
+      setIsModulelist(modulelist);
+    } catch {}
 
     //ローディングアニメーション終了
     setIsShowLoadingAnimation(false);
@@ -62,8 +64,10 @@ export default function View_File_All({ TitleText }) {
   //
   //最新バージョン取得
   //
-  function getnewversion() {
-    UPDATE_TERMINAL_MODULE_VERSION();
+  async function getnewversion() {
+    try {
+      await UPDATE_TERMINAL_MODULE_VERSION();
+    } catch {}
   }
 
   //初回レンダリング後

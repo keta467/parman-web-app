@@ -13,6 +13,7 @@ export default React.memo(function Modal_Edit_Terminal({
     React.useState(false);
 
   const CloseModal = () => {
+    if (isShowLoadingAnimation == true) return;
     setIsShowModal(false);
   };
 
@@ -26,24 +27,31 @@ export default React.memo(function Modal_Edit_Terminal({
       return;
     }
     setIsShowLoadingAnimation(true);
-    await UPDATE_TERMINAL(
-      isSelectTerminal.id,
-      text1.value,
-      text2.value,
-      text3.value
-    );
-    setIsShowLoadingAnimation(false);
 
-    createtabledata();
-    CloseModal();
+    try {
+      await UPDATE_TERMINAL(
+        isSelectTerminal.id,
+        text1.value,
+        text2.value,
+        text3.value
+      );
+      createtabledata();
+      CloseModal();
+    } catch {}
+
+    setIsShowLoadingAnimation(false);
   }
 
   async function Remove() {
     setIsShowLoadingAnimation(true);
-    await REMOVE_TERMINAL(isSelectTerminal.id);
+
+    try {
+      await REMOVE_TERMINAL(isSelectTerminal.id);
+      createtabledata();
+      CloseModal();
+    } catch {}
+
     setIsShowLoadingAnimation(false);
-    createtabledata();
-    CloseModal();
   }
 
   return (

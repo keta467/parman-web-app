@@ -9,6 +9,7 @@ export default React.memo(function Modal_Add_Terminal({
   createtabledata,
 }) {
   const CloseModal = () => {
+    if (isShowLoadingAnimation == true) return;
     setIsShowModal(false);
   };
 
@@ -26,19 +27,23 @@ export default React.memo(function Modal_Add_Terminal({
     }
 
     setIsShowLoadingAnimation(true);
-    await REGISTER_TERMINAL(text1.value, text2.value, text3.value);
+
+    try {
+      await REGISTER_TERMINAL(text1.value, text2.value, text3.value);
+
+      createtabledata();
+
+      //連続で登録の場合
+      if (document.getElementById("checkbox1").checked) {
+        text1.value = "";
+        text2.value = "";
+        text3.value = "";
+      } else {
+        setIsShowModal(false);
+      }
+    } catch {}
+
     setIsShowLoadingAnimation(false);
-
-    createtabledata();
-
-    //連続で登録の場合
-    if (document.getElementById("checkbox1").checked) {
-      text1.value = "";
-      text2.value = "";
-      text3.value = "";
-    } else {
-      setIsShowModal(false);
-    }
   }
 
   return (

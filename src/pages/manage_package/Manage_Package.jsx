@@ -42,8 +42,8 @@ export default React.memo(function Manage_Package({ TitleText }) {
   //
   // ツリーデータ作成
   //
-  const createtreedata = React.useCallback(async (isSelectPackageId) => {
-    if (isSelectPackageId == -1) return;
+  const createtreedata = React.useCallback(async (SelectPackageId) => {
+    if (SelectPackageId == -1) return;
     //ローディングアニメーション開始
     setIsShowLoadingAnimation2(true);
 
@@ -53,23 +53,25 @@ export default React.memo(function Manage_Package({ TitleText }) {
     //ローディングアニメーション終了
     setIsShowPackageAlert(false);
 
-    const ResponseData = await GET_MODULE_LIST_IN_PACKAGE(isSelectPackageId);
-    const MODULE_LIST = ResponseData.module_list;
+    try {
+      const ResponseData = await GET_MODULE_LIST_IN_PACKAGE(SelectPackageId);
+      const MODULE_LIST = ResponseData.module_list;
 
-    //フォルダと更新情報を取得
-    const FolderList = ModulesToFoders(MODULE_LIST);
-    for (var i = 0; i < FolderList.length; i++) {
-      FolderList[i].setclickfunc(ToggleFolder);
-    }
-
-    //一つでも更新されているファイルがあればアラートを表示
-    for (var i = 0; i < MODULE_LIST.length; i++) {
-      if (MODULE_LIST[i].differnce == true) {
-        setIsShowPackageAlert(true);
-        break;
+      //フォルダと更新情報を取得
+      const FolderList = ModulesToFoders(MODULE_LIST);
+      for (var i = 0; i < FolderList.length; i++) {
+        FolderList[i].setclickfunc(ToggleFolder);
       }
-    }
-    setIsFolderList(FolderList);
+
+      //一つでも更新されているファイルがあればアラートを表示
+      for (var i = 0; i < MODULE_LIST.length; i++) {
+        if (MODULE_LIST[i].differnce == true) {
+          setIsShowPackageAlert(true);
+          break;
+        }
+      }
+      setIsFolderList(FolderList);
+    } catch {}
 
     //ローディング終了
     setIsShowLoadingAnimation2(false);
@@ -78,55 +80,59 @@ export default React.memo(function Manage_Package({ TitleText }) {
   //
   // テーブルデータ作成
   //
-  const createtabledata = React.useCallback(async (isSelectPackageId) => {
-    if (isSelectPackageId == -1) return;
+  const createtabledata = React.useCallback(async (SelectPackageId) => {
+    if (SelectPackageId == -1) return;
     //表示クリア
     setIsTerminalList([]);
     document.getElementById("serchtext").value = ""; // 検索ボックスをリセット
+    document.getElementById("abc").checked = false; // ヘッダーのチェックボックスをリセット
 
     //ローディングアニメーション開始
     setIsShowLoadingAnimation3(true);
     //テーブルデータを構築し、セット
-    setIsTerminalList(await merge());
+    setIsTerminalList(await merge(SelectPackageId));
     //ローディングアニメーション終了
     setIsShowLoadingAnimation3(false);
   }, []);
 
   //データをマージする処理
-  async function merge() {
+  async function merge(SelectPackageId) {
     var terminallist = [];
 
-    const ResponceData = await GET_TERMINALS();
-    const ALL_TERMINAL_LIST = ResponceData.terminal_list;
+    try {
+      const ResponceData = await GET_TERMINALS();
+      const ALL_TERMINAL_LIST = ResponceData.terminal_list;
 
-    const ResponceData2 = await GET_PACKAGE_TARGET_TERMINAL(isSelectPackageId);
-    const TERGET_TERMINAL_LIST = ResponceData2.terminal_list;
+      const ResponceData2 = await GET_PACKAGE_TARGET_TERMINAL(SelectPackageId);
+      const TERGET_TERMINAL_LIST = ResponceData2.terminal_list;
 
-    var is_target_terminal;
-    var release_date;
-    var released;
-    for (var i = 0; i < ALL_TERMINAL_LIST.length; i++) {
-      is_target_terminal = false;
-      release_date = "";
-      released = false;
-      for (var j = 0; j < TERGET_TERMINAL_LIST.length; j++) {
-        if (ALL_TERMINAL_LIST[i].id == TERGET_TERMINAL_LIST[j].id) {
-          is_target_terminal = true;
-          release_date = TERGET_TERMINAL_LIST[j].release_date;
-          released = TERGET_TERMINAL_LIST[j].released;
-          break;
+      var is_target_terminal;
+      var release_date;
+      var released;
+      for (var i = 0; i < ALL_TERMINAL_LIST.length; i++) {
+        is_target_terminal = false;
+        release_date = "";
+        released = false;
+        for (var j = 0; j < TERGET_TERMINAL_LIST.length; j++) {
+          if (ALL_TERMINAL_LIST[i].id == TERGET_TERMINAL_LIST[j].id) {
+            is_target_terminal = true;
+            release_date = TERGET_TERMINAL_LIST[j].release_date;
+            released = TERGET_TERMINAL_LIST[j].released;
+            break;
+          }
         }
+        terminallist.push({
+          id: ALL_TERMINAL_LIST[i].id,
+          name: ALL_TERMINAL_LIST[i].name,
+          display_name: ALL_TERMINAL_LIST[i].display_name,
+          ip_address: ALL_TERMINAL_LIST[i].ip_address,
+          is_target_terminal: is_target_terminal,
+          release_date: release_date,
+          released: released,
+        });
       }
-      terminallist.push({
-        id: ALL_TERMINAL_LIST[i].id,
-        name: ALL_TERMINAL_LIST[i].name,
-        display_name: ALL_TERMINAL_LIST[i].display_name,
-        ip_address: ALL_TERMINAL_LIST[i].ip_address,
-        is_target_terminal: is_target_terminal,
-        release_date: release_date,
-        released: released,
-      });
-    }
+    } catch {}
+
     return terminallist;
   }
 
@@ -140,17 +146,22 @@ export default React.memo(function Manage_Package({ TitleText }) {
   });
 
   //一括同期ボタン
-  function doukiclick() {
-    UPDATE_PACKAGE(0);
+  async function doukiclick() {
+    try {
+      await UPDATE_PACKAGE(0);
+    } catch {}
   }
 
   //検索ボタン
   async function searchclick() {
+    //ローディングアニメーション開始
+    setIsShowLoadingAnimation3(true);
+
     var element = document.getElementById("serchtext");
 
     const keyword = element.value.toUpperCase();
     var new_data = [];
-    const terminallist = await merge();
+    const terminallist = await merge(isSelectPackageId);
     for (var i = 0; i < terminallist.length; i++) {
       if (
         terminallist[i].name.toUpperCase().includes(keyword) ||
@@ -162,6 +173,9 @@ export default React.memo(function Manage_Package({ TitleText }) {
       }
     }
     setIsTerminalList(new_data);
+
+    //ローディングアニメーション終了
+    setIsShowLoadingAnimation3(false);
   }
 
   var isHandler1Dragging = false;
@@ -289,6 +303,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
               <Manage_Package_Table
                 TerminalList={isTerminalList}
                 isSelectPackageId={isSelectPackageId}
+                setIsShowLoadingAnimation3={setIsShowLoadingAnimation3}
               />
             </div>
           </div>

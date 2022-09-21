@@ -11,10 +11,15 @@ export default function Package_Alert({
   createtabledata,
 }) {
   async function CloseAlert() {
-    await UPDATE_PACKAGE(isSelectPackageId);
-    createtreedata(isSelectPackageId);
-    createtabledata(isSelectPackageId);
-    setIsShowAlert(false); // いらないかも？一応
+    try {
+      const Responce = await UPDATE_PACKAGE(isSelectPackageId);
+      if (Responce.result == 0) {
+        createtreedata(isSelectPackageId);
+        createtabledata(isSelectPackageId);
+      } else {
+        window.alert("UPDATE_PACKAGE エラー");
+      }
+    } catch {}
   }
 
   return (

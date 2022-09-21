@@ -48,7 +48,9 @@ export async function GET_PACKAGE_LIST() {
     );
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -77,7 +79,9 @@ export async function GET_MODULE_LIST_IN_PACKAGE(PACKAGE_ID) {
     );
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -104,9 +108,14 @@ export async function UPDATE_PACKAGE(PACKAGE_ID) {
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -137,9 +146,14 @@ export async function SET_PACKAGE_RELEASE_TERMINAL(
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -168,7 +182,9 @@ export async function GET_PACKAGE_TARGET_TERMINAL(PACKAGE_ID) {
     );
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -193,7 +209,9 @@ export async function GET_TERMINALS() {
     );
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -219,9 +237,14 @@ export async function SET_TERMINAL_ORDER(TERMINAL_ORDER) {
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -247,9 +270,14 @@ export async function SET_PACKAGE_ORDER(PACKAGE_LIST) {
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -278,9 +306,14 @@ export async function REGISTER_TERMINAL(NAME, DISPLAY_NAME, IP_ADDRESS) {
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -307,9 +340,14 @@ export async function REMOVE_TERMINAL(TERMINAL_ID) {
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -344,9 +382,14 @@ export async function UPDATE_TERMINAL(
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -373,7 +416,9 @@ export async function GET_INSTALLED_MODULE() {
     );
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -401,9 +446,14 @@ export async function UPDATE_TERMINAL_MODULE_VERSION(TERMINAL_ID) {
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -430,7 +480,9 @@ export async function GET_MODULE_INSTALLED_TERMINAL(INSTALL_PATH) {
     );
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -456,7 +508,9 @@ export async function GET_COLLECT_PATH() {
     );
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }
 
@@ -482,8 +536,13 @@ export async function SET_COLLECT_PATH(COLLECT_PATHS) {
       Data,
       response.data
     );
+
+    if (response.data.result != 0) throw new Error(`異常終了`);
+
     return response.data;
   } catch (error) {
-    console.error(error);
+    console.error(`${error.message} : ${Name}`);
+    window.alert(`${error.message} : ${Name}`);
+    throw new Error(`${error.message} : ${Name}`);
   }
 }

@@ -11,9 +11,14 @@ export default React.memo(function Package_List({
   const [isPackageList, setIsPackageList] = React.useState([]);
 
   var startindex = "";
+  var isPackageListLog = [];
 
   function mydrag(event) {
     startindex = event.target.id;
+    isPackageListLog = [];
+    for (var i = 0; i < isPackageList.length; i++) {
+      isPackageListLog.push(isPackageList[i]);
+    }
   }
 
   function mydragover(event) {
@@ -46,45 +51,55 @@ export default React.memo(function Package_List({
 
   async function mydrop(event) {
     event.preventDefault();
-    let elm_drag = isPackageList[startindex];
-
-    var toindex = event.target.id;
+    const NewArr = [];
+    for (var i = 0; i < isPackageList.length; i++) {
+      NewArr.push(isPackageList[i]);
+    }
+    const Elem_Drag = isPackageList[startindex];
+    const ToIndex = event.target.id;
 
     const element = document.getElementById(event.target.id);
     let rect = element.getBoundingClientRect();
     if (event.clientY - rect.top < element.clientHeight / 2) {
       //マウスカーソルの位置が要素の半分より上
-      isPackageList.splice(startindex, 1);
+      NewArr.splice(startindex, 1);
 
-      if (Number(startindex) < Number(toindex)) {
-        isPackageList.splice(Number(toindex) - 1, 0, elm_drag);
+      if (Number(startindex) < Number(ToIndex)) {
+        NewArr.splice(Number(ToIndex) - 1, 0, Elem_Drag);
       } else {
-        isPackageList.splice(Number(toindex), 0, elm_drag);
+        NewArr.splice(Number(ToIndex), 0, Elem_Drag);
       }
     } else {
       //マウスカーソルの位置が要素の半分より下
-      isPackageList.splice(startindex, 1);
+      NewArr.splice(startindex, 1);
 
-      if (Number(startindex) < Number(toindex)) {
-        isPackageList.splice(Number(toindex), 0, elm_drag);
+      if (Number(startindex) < Number(ToIndex)) {
+        NewArr.splice(Number(ToIndex), 0, Elem_Drag);
       } else {
-        isPackageList.splice(Number(toindex) + 1, 0, elm_drag);
+        NewArr.splice(Number(ToIndex) + 1, 0, Elem_Drag);
       }
     }
-
-    var newarr = [];
-    for (var i = 0; i < isPackageList.length; i++) {
-      newarr.push(isPackageList[i]);
-    }
-    setIsPackageList(newarr);
 
     for (var i = 0; i < element.children.length; i++) {
       element.children[i].style.borderTop = "1px solid #999";
       element.children[i].style.borderBottom = "1px solid #999";
     }
 
+    //ローディングアニメーション開始
+    setIsShowLoadingAnimation(true);
+
     //パッケージ順変更
-    const ResponceData = await SET_PACKAGE_ORDER(isPackageList);
+    try {
+      const PostArr = [];
+      for (var i = 0; i < NewArr.length; i++) {
+        PostArr.push({ ID: NewArr[i].id });
+      }
+      await SET_PACKAGE_ORDER(PostArr);
+      setIsPackageList(NewArr);
+    } catch {}
+
+    //ローディングアニメーション終了
+    setIsShowLoadingAnimation(false);
   }
 
   //行クリック
@@ -99,8 +114,10 @@ export default React.memo(function Package_List({
     //ローディングアニメーション開始
     setIsShowLoadingAnimation(true);
 
-    const ResponseData = await GET_PACKAGE_LIST();
-    setIsPackageList(ResponseData.package_list);
+    try {
+      const ResponseData = await GET_PACKAGE_LIST();
+      setIsPackageList(ResponseData.package_list);
+    } catch {}
 
     //ローディングアニメーション終了
     setIsShowLoadingAnimation(false);
