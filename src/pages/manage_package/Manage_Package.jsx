@@ -2,7 +2,7 @@ import React from "react";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import Tree_View from "../../components/tree_view/Tree_View.jsx";
 import "./Manage_Package.css";
-import { Folder, ModulesToFoders } from "../../myclass.js";
+import { Folder, ModulesToFoders } from "../../lib/myclass.js";
 import Manage_Package_Table from "../../components/tables/manage_package_table/Manage_Package_Table.jsx";
 import Package_List from "../../components/tables/package_list/Package_List.jsx";
 import Package_Alert from "../../components/alert/package_alert/Package_Alert.jsx";

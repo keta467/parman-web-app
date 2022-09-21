@@ -9,6 +9,8 @@ export default function Manage_Package_Table({
   setIsShowLoadingAnimation3,
 }) {
   async function headercheckboxtoggle(event) {
+    if (isSelectPackageId == -1) return;
+
     //ローディングスタート
     setIsShowLoadingAnimation3(true);
     const NewArr = [];

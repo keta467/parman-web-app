@@ -1,5 +1,6 @@
 import React from "react";
 import { REMOVE_TERMINAL, UPDATE_TERMINAL } from "../../api";
+import { isIPaddress } from "../../lib/myfunction";
 import Loading_Animation from "../alert/loading_animation/Loading_Animation.jsx";
 import "./Modal.css";
 
@@ -26,6 +27,12 @@ export default React.memo(function Modal_Edit_Terminal({
       window.alert("空の項目があります。");
       return;
     }
+
+    if (isIPaddress(text3.value) == false) {
+      window.alert("正しいIPアドレスを記入してください");
+      return;
+    }
+
     setIsShowLoadingAnimation(true);
 
     try {

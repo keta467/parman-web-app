@@ -66,7 +66,7 @@ export default function View_File_All({ TitleText }) {
   //
   async function getnewversion() {
     try {
-      await UPDATE_TERMINAL_MODULE_VERSION();
+      await UPDATE_TERMINAL_MODULE_VERSION(0);
     } catch {}
   }
 

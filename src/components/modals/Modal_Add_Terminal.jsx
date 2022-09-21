@@ -1,5 +1,6 @@
 import React from "react";
 import { REGISTER_TERMINAL } from "../../api";
+import { isIPaddress } from "../../lib/myfunction";
 import Loading_Animation from "../alert/loading_animation/Loading_Animation.jsx";
 import "./Modal.css";
 
@@ -23,6 +24,11 @@ export default React.memo(function Modal_Add_Terminal({
 
     if (text1.value == "" || text2.value == "" || text3.value == "") {
       window.alert("空の項目があります。");
+      return;
+    }
+
+    if (isIPaddress(text3.value) == false) {
+      window.alert("正しいIPアドレスを記入してください");
       return;
     }
 
