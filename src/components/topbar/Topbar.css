@@ -55,3 +55,6 @@
   justify-content: center;
   font-weight: bold;
 }
+.mode_description * {
+  font-size: 14px;
+}

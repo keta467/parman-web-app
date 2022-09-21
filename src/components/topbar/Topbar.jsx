@@ -48,12 +48,13 @@ export default function Topbar({ TitleText }) {
       </div>
 
       <div className="mode_description">
+        <p>バージョン: v0.0.1</p>
         {DEBUG_MODE ? (
           <p>デバッグモード: ダミーデータ参照中</p>
         ) : (
           <>
             <p>リリースモード: API参照中</p>
-            <p>{BASE_URL}</p>
+            <p>URL: {BASE_URL}</p>
           </>
         )}
       </div>
