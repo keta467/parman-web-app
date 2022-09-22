@@ -75,21 +75,23 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
               key={module.module_id}
               id={"th" + index}
               onMouseOver={() => {
-                document.getElementById(module.install_path).style.display =
-                  "block";
+                document.getElementById(
+                  `${module.install_path}\\${module.module_name}`
+                ).style.display = "block";
               }}
               onMouseOut={() => {
-                document.getElementById(module.install_path).style.display =
-                  "none";
+                document.getElementById(
+                  `${module.install_path}\\${module.module_name}`
+                ).style.display = "none";
               }}
             >
               {module.module_name}
               <div
-                id={module.install_path}
+                id={`${module.install_path}\\${module.module_name}`}
                 className="description"
                 style={{ display: "none" }}
               >
-                {module.install_path}
+                {`${module.install_path}\\${module.module_name}`}
               </div>
             </th>
           ))}

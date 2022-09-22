@@ -1,2 +1,5 @@
 # node_modulesディレクトリ配下の更新をコミットしないようにする
 node_modules/
+
+# log4jsを使う際に必要
+logs/

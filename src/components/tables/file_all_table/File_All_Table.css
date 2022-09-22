@@ -46,20 +46,23 @@
   color: #fff;
   border-radius: 5px;
   background: #000;
-  width: 250px;
   top: 45px;
-  overflow-wrap: break-word;
-  white-space: initial;
+  /* overflow-wrap: break-word; */
+  /* width: 250px; */
+  /* white-space: initial; */
+  left: 50%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
 }
 
 .description:before {
   content: "";
   position: absolute;
   top: -24px;
-  right: 60%;
+  right: 47%;
   border: 15px solid transparent;
   border-top: 15px solid #000;
-  margin-left: -15px;
   transform: rotateZ(180deg);
 }
 
