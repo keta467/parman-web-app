@@ -183,7 +183,7 @@ export class File {
     const marginleft = (this.depth_count + 1) * row_left_margin;
     if (this.onclickfunc == null) {
       return (
-        <li key={`${this.path}`}>
+        <li key={`${this.parentfolderid}${this.path}`}>
           <button
             className="treeview_row_button"
             style={{ pointerEvents: "none" }}
@@ -199,7 +199,7 @@ export class File {
       );
     } else {
       return (
-        <li key={`${this.path}`}>
+        <li key={`${this.parentfolderid}${this.path}`}>
           <button
             id={this.path}
             className={`treeview_row_button file_button`}

@@ -105,17 +105,21 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
             </th>
             {ModuleList.map((module, index2) => (
               <td
-                key={"ddd" + index2}
+                key={index2}
                 className={
                   "mouseeventtarget" + " row" + index2 + " col" + index2
                 }
               >
                 {terminal.module_list.find(
-                  (MODULE) => MODULE.module_id == module.module_id
+                  (MODULE) =>
+                    MODULE.module_name == module.module_name &&
+                    MODULE.install_path == module.install_path
                 ) == undefined
                   ? ""
                   : terminal.module_list.find(
-                      (MODULE) => MODULE.module_id == module.module_id
+                      (MODULE) =>
+                        MODULE.module_name == module.module_name &&
+                        MODULE.install_path == module.install_path
                     ).file_version}
               </td>
             ))}

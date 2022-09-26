@@ -42,7 +42,11 @@ export default function View_File_All({ TitleText }) {
           var okflag = true;
           for (var k = 0; k < modulelist.length; k++) {
             //既にモジュールリストにある場合
-            if (modulelist[k].module_id == terminal.module_list[j].module_id) {
+            if (
+              modulelist[k].module_name ==
+                terminal.module_list[j].module_name &&
+              modulelist[k].install_path == terminal.module_list[j].install_path
+            ) {
               okflag = false;
               break;
             }

@@ -54,7 +54,11 @@ export default function View_file_Separate({ TitleText }) {
           var okflag = true;
           for (var k = 0; k < modulelist.length; k++) {
             //既にモジュールリストにある場合
-            if (modulelist[k].module_id == terminal.module_list[j].module_id) {
+            if (
+              modulelist[k].module_name ==
+                terminal.module_list[j].module_name &&
+              modulelist[k].install_path == terminal.module_list[j].install_path
+            ) {
               okflag = false;
               break;
             }
@@ -64,6 +68,8 @@ export default function View_file_Separate({ TitleText }) {
           }
         }
       }
+
+      console.log("結果　" + modulelist.length);
 
       //フォルダを取得
       const FolderList = ModulesToFoders(modulelist);
