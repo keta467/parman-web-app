@@ -19,6 +19,10 @@ export default function View_File_All({ TitleText }) {
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
 
+  //ローディングアニメーションフラグ
+  const [isShowLoadingAnimation2, setIsShowLoadingAnimation2] =
+    React.useState(false);
+
   //
   //　テーブル用データ作成
   //
@@ -69,9 +73,11 @@ export default function View_File_All({ TitleText }) {
   //最新バージョン取得
   //
   async function getnewversion() {
+    setIsShowLoadingAnimation2(true);
     try {
       await UPDATE_TERMINAL_MODULE_VERSION(0);
     } catch {}
+    setIsShowLoadingAnimation2(false);
   }
 
   //初回レンダリング後
@@ -84,12 +90,34 @@ export default function View_File_All({ TitleText }) {
       <Topbar TitleText={TitleText} />
 
       <div className="viewfileallbuttonwrapper">
-        <button id="redobutton" className="mybutton" onClick={createtabledata}>
-          再表示
-        </button>
-        <button className="mybutton" onClick={getnewversion}>
-          最新バージョン取得
-        </button>
+        <div>
+          <button
+            id="redobutton"
+            className="mybutton"
+            onClick={createtabledata}
+          >
+            再表示
+          </button>
+          <button className="mybutton" onClick={getnewversion}>
+            最新バージョン取得
+          </button>
+        </div>
+        {isShowLoadingAnimation2 ? (
+          <div
+            style={{
+              position: "relative",
+              width: "40px",
+              height: "40px",
+              marginLeft: "5px",
+            }}
+          >
+            <Loading_Animation
+              isShowLoadingAnimation={isShowLoadingAnimation2}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
       <div id="view_file_all_table_loading_area">
         <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />

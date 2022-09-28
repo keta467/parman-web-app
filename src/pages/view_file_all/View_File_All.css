@@ -1,8 +1,9 @@
 .viewfileallbuttonwrapper {
   width: 95%;
-  text-align: right;
+  justify-content: right;
   margin: auto;
   margin-top: 20px;
+  display: flex;
 }
 
 .viewfilealltablewrapper {

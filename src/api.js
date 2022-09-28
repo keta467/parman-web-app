@@ -97,7 +97,7 @@ export async function UPDATE_PACKAGE(PACKAGE_ID) {
   };
 
   // デバッグモードの場合
-  if (DEBUG_MODE) return { API_NAME: UPDATE_PACKAGE.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: UPDATE_PACKAGE.name, result: 0 };
 
   try {
     const response = await axios.get(`/${Name}`, {
@@ -137,7 +137,7 @@ export async function SET_PACKAGE_RELEASE_TERMINAL(
 
   // デバッグモードの場合
   if (DEBUG_MODE)
-    return { API_NAME: SET_PACKAGE_RELEASE_TERMINAL.name, RESULT: 0 };
+    return { API_NAME: SET_PACKAGE_RELEASE_TERMINAL.name, result: 0 };
 
   try {
     const response = await axios.post(`/${Name}`, Data);
@@ -228,7 +228,7 @@ export async function SET_TERMINAL_ORDER(TERMINAL_ORDER) {
   };
 
   // デバッグモードの場合
-  if (DEBUG_MODE) return { API_NAME: SET_TERMINAL_ORDER.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: SET_TERMINAL_ORDER.name, result: 0 };
 
   try {
     const response = await axios.post(`/${Name}`, Data);
@@ -261,7 +261,7 @@ export async function SET_PACKAGE_ORDER(PACKAGE_LIST) {
   };
 
   // デバッグモードの場合
-  if (DEBUG_MODE) return { API_NAME: SET_PACKAGE_ORDER.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: SET_PACKAGE_ORDER.name, result: 0 };
 
   try {
     const response = await axios.post(`/${Name}`, Data);
@@ -295,7 +295,7 @@ export async function REGISTER_TERMINAL(NAME, DISPLAY_NAME, IP_ADDRESS) {
   };
 
   // デバッグモードの場合
-  if (DEBUG_MODE) return { API_NAME: REGISTER_TERMINAL.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: REGISTER_TERMINAL.name, result: 0 };
 
   try {
     const response = await axios.get(`/${Name}`, {
@@ -329,7 +329,7 @@ export async function REMOVE_TERMINAL(TERMINAL_ID) {
   };
 
   // デバッグモードの場合
-  if (DEBUG_MODE) return { API_NAME: REMOVE_TERMINAL.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: REMOVE_TERMINAL.name, result: 0 };
 
   try {
     const response = await axios.get(`/${Name}`, {
@@ -371,7 +371,7 @@ export async function UPDATE_TERMINAL(
   };
 
   // デバッグモードの場合
-  if (DEBUG_MODE) return { API_NAME: UPDATE_TERMINAL.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: UPDATE_TERMINAL.name, result: 0 };
 
   try {
     const response = await axios.get(`/${Name}`, {
@@ -435,7 +435,7 @@ export async function UPDATE_TERMINAL_MODULE_VERSION(TERMINAL_ID) {
 
   // デバッグモードの場合
   if (DEBUG_MODE)
-    return { API_NAME: UPDATE_TERMINAL_MODULE_VERSION.name, RESULT: 0 };
+    return { API_NAME: UPDATE_TERMINAL_MODULE_VERSION.name, result: 0 };
 
   try {
     const response = await axios.get(`/${Name}`, {
@@ -527,7 +527,7 @@ export async function SET_COLLECT_PATH(COLLECT_PATHS) {
   };
 
   // デバッグモードの場合
-  if (DEBUG_MODE) return { API_NAME: SET_COLLECT_PATH.name, RESULT: 0 };
+  if (DEBUG_MODE) return { API_NAME: SET_COLLECT_PATH.name, result: 0 };
 
   try {
     const response = await axios.post(`/${Name}`, Data);

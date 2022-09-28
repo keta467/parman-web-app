@@ -39,6 +39,10 @@ export default React.memo(function Manage_Package({ TitleText }) {
   const [isShowLoadingAnimation3, setIsShowLoadingAnimation3] =
     React.useState(false);
 
+  //ローディングアニメーション３
+  const [isShowLoadingAnimation4, setIsShowLoadingAnimation4] =
+    React.useState(false);
+
   //
   // ツリーデータ作成
   //
@@ -65,7 +69,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
       //一つでも更新されているファイルがあればアラートを表示
       for (var i = 0; i < MODULE_LIST.length; i++) {
-        if (MODULE_LIST[i].differnce == true) {
+        if (MODULE_LIST[i].difference == true) {
           setIsShowPackageAlert(true);
           break;
         }
@@ -147,15 +151,22 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
   //一括同期ボタン
   async function doukiclick() {
+    setIsShowLoadingAnimation4(true);
     try {
       await UPDATE_PACKAGE(0);
+      //画面をリロード
+      window.location.reload();
     } catch {}
+    setIsShowLoadingAnimation4(false);
   }
 
   //検索ボタン
   async function searchclick() {
     //ローディングアニメーション開始
     setIsShowLoadingAnimation3(true);
+
+    //表示クリア
+    setIsTerminalList([]);
 
     var element = document.getElementById("serchtext");
 
@@ -251,11 +262,22 @@ export default React.memo(function Manage_Package({ TitleText }) {
           marginLeft: "auto",
           marginRight: "auto",
           marginTop: "25px",
+          display: "flex",
         }}
       >
         <button className="mybutton" onClick={doukiclick}>
           パッケージ一括同期
         </button>
+        <div
+          style={{
+            position: "relative",
+            width: "40px",
+            height: "40px",
+            marginLeft: "5px",
+          }}
+        >
+          <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation4} />
+        </div>
       </div>
 
       <div id="managepackagewrapper">

@@ -29,7 +29,12 @@ export default React.memo(function Modal_Edit_Terminal({
     }
 
     if (isIPaddress(text3.value) == false) {
-      window.alert("正しいIPアドレスを記入してください");
+      window.alert("正しいIPアドレスを入力してください");
+      return;
+    }
+
+    if (text1.value.length >= 51 || text2.value.length >= 51) {
+      window.alert("50文字以内で入力してください");
       return;
     }
 
