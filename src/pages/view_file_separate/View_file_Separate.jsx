@@ -69,8 +69,6 @@ export default function View_file_Separate({ TitleText }) {
         }
       }
 
-      console.log("結果　" + modulelist.length);
-
       //フォルダを取得
       const FolderList = ModulesToFoders(modulelist);
 

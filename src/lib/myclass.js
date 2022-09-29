@@ -175,8 +175,8 @@ export class File {
     //ファイルバージョン
     this.file_version = `(v${file_version})`;
 
-    //バージョンが空の場合
-    if (this.file_version == "(v)") {
+    //バージョンが空、NULLの場合
+    if (this.file_version == "(v)" || this.file_version == "(vnull)") {
       this.file_version = "";
     }
 

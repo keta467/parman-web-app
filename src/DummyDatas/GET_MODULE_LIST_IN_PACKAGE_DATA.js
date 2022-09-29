@@ -13,7 +13,7 @@
     {
       module_name: "animCamera.dll",
       product_version: "クライアントリリース#2",
-      file_version: "3.0.1.9",
+      file_version: null,
       download_path: "D:\\lambda\\Bin.v2",
       install_path: "D:\\lambda\\Bin.v2\\castScenePlugIn\\Animation",
       difference: true,

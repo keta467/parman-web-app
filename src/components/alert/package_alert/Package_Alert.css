@@ -2,10 +2,7 @@
   background-color: #e74c3c;
   width: 350px;
   height: 45px;
-  position: sticky;
-  z-index: 10;
-  top: 5px;
-  margin: 0px 5px 0px auto;
+  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
