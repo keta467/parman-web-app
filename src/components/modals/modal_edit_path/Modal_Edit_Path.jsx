@@ -4,18 +4,19 @@ import Loading_Animation from "../../alert/loading_animation/Loading_Animation.j
 import "../Modal.css";
 import "./Modal_Edit_Path.css";
 
+// パス編集モーダル
 export default function Modal_Edit_Path({
   isShowModal,
   setIsShowModal,
   isPathList,
   setIsPathList,
 }) {
-  const CloseModal = () => {
+  const closeModal = () => {
     if (isShowLoadingAnimation == true) return;
     setIsShowModal(false);
   };
 
-  async function UpdateButton() {
+  async function updateButton() {
     const Elems = document.getElementsByClassName("pathtext");
     const NewArr = [];
     for (var i = 0; i < Elems.length; i++) {
@@ -33,11 +34,11 @@ export default function Modal_Edit_Path({
   }
 
   //空欄のテキストエリアを追加
-  const AddPath = () => {
+  const addPath = () => {
     setIsPathList([...isPathList, ""]);
   };
 
-  const DeletePath = (pathindex) => {
+  const deletePath = (pathindex) => {
     setIsPathList(isPathList.filter((value, index) => index !== pathindex));
   };
 
@@ -48,7 +49,7 @@ export default function Modal_Edit_Path({
     <>
       {isShowModal ? (
         <>
-          <div className="overlay" onClick={CloseModal}></div>
+          <div className="overlay" onClick={closeModal}></div>
           <div className="modal_centering_div">
             <div className="modal" id="modaleditpathmodal">
               <Loading_Animation
@@ -66,7 +67,7 @@ export default function Modal_Edit_Path({
                       />
                       <button
                         className="pathdeletebutton1"
-                        onClick={(event) => DeletePath(pathindex)}
+                        onClick={(event) => deletePath(pathindex)}
                       >
                         削除
                       </button>
@@ -75,10 +76,10 @@ export default function Modal_Edit_Path({
                 ))}
               </div>
               <div id="pathmodalbuttonsarea">
-                <button className="pathaddbutton1" onClick={AddPath}>
+                <button className="pathaddbutton1" onClick={addPath}>
                   追加
                 </button>
-                <button className="mybutton" onClick={UpdateButton}>
+                <button className="mybutton" onClick={updateButton}>
                   更新
                 </button>
               </div>

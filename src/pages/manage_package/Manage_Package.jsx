@@ -14,6 +14,7 @@ import {
 } from "../../api.js";
 import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 
+// パッケージ管理画面
 export default React.memo(function Manage_Package({ TitleText }) {
   //フォルダリスト
   const [isFolderList, setIsFolderList] = React.useState([]);
@@ -46,7 +47,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
   //
   // ツリーデータ作成
   //
-  const createtreedata = React.useCallback(async (SelectPackageId) => {
+  const createTreeData = React.useCallback(async (SelectPackageId) => {
     if (SelectPackageId == -1) return;
     //ローディングアニメーション開始
     setIsShowLoadingAnimation2(true);
@@ -58,13 +59,16 @@ export default React.memo(function Manage_Package({ TitleText }) {
     setIsShowPackageAlert(false);
 
     try {
+      // 3.パッケージ内モジュール一覧
       const ResponseData = await GET_MODULE_LIST_IN_PACKAGE(SelectPackageId);
+
+      //レスポンスからデータ取得
       const MODULE_LIST = ResponseData.module_list;
 
-      //フォルダと更新情報を取得
+      //フォルダを取得
       const FolderList = ModulesToFoders(MODULE_LIST);
       for (var i = 0; i < FolderList.length; i++) {
-        FolderList[i].setclickfunc(ToggleFolder);
+        FolderList[i].setclickfunc(toggleFolder);
       }
 
       //一つでも更新されているファイルがあればアラートを表示
@@ -74,6 +78,8 @@ export default React.memo(function Manage_Package({ TitleText }) {
           break;
         }
       }
+
+      // フォルダをセット
       setIsFolderList(FolderList);
     } catch {}
 
@@ -84,7 +90,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
   //
   // テーブルデータ作成
   //
-  const createtabledata = React.useCallback(async (SelectPackageId) => {
+  const createTableData = React.useCallback(async (SelectPackageId) => {
     if (SelectPackageId == -1) return;
     //表示クリア
     setIsTerminalList([]);
@@ -101,15 +107,19 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
   //データをマージする処理
   async function merge(SelectPackageId) {
-    var terminallist = [];
+    // 端末リスト
+    const TreminalList = [];
 
     try {
+      //　7.管理端末一覧 からデータを取得
       const ResponceData = await GET_TERMINALS();
       const ALL_TERMINAL_LIST = ResponceData.terminal_list;
 
+      // 6.パッケージ対応管理端末一覧 からデータを取得
       const ResponceData2 = await GET_PACKAGE_TARGET_TERMINAL(SelectPackageId);
       const TERGET_TERMINAL_LIST = ResponceData2.terminal_list;
 
+      // ２つのデータをマージする
       var is_target_terminal;
       var release_date;
       var released;
@@ -118,6 +128,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
         release_date = "";
         released = false;
         for (var j = 0; j < TERGET_TERMINAL_LIST.length; j++) {
+          // パッケージ対応管理端末の場合
           if (ALL_TERMINAL_LIST[i].id == TERGET_TERMINAL_LIST[j].id) {
             is_target_terminal = true;
             release_date = TERGET_TERMINAL_LIST[j].release_date;
@@ -125,7 +136,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
             break;
           }
         }
-        terminallist.push({
+        TreminalList.push({
           id: ALL_TERMINAL_LIST[i].id,
           name: ALL_TERMINAL_LIST[i].name,
           display_name: ALL_TERMINAL_LIST[i].display_name,
@@ -137,11 +148,11 @@ export default React.memo(function Manage_Package({ TitleText }) {
       }
     } catch {}
 
-    return terminallist;
+    return TreminalList;
   }
 
-  // //フォルダを開閉させる処理
-  const ToggleFolder = React.useCallback(() => {
+  // フォルダを開閉させる処理
+  const toggleFolder = React.useCallback(() => {
     setIsFolderList((prevState) =>
       prevState.map(
         (value) => new Folder(null, null, null, null, null, null, null, value)
@@ -150,7 +161,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
   });
 
   //一括同期ボタン
-  async function doukiclick() {
+  async function clickDouki() {
     setIsShowLoadingAnimation4(true);
     try {
       await UPDATE_PACKAGE(0);
@@ -168,31 +179,34 @@ export default React.memo(function Manage_Package({ TitleText }) {
     //表示クリア
     setIsTerminalList([]);
 
-    var element = document.getElementById("serchtext");
+    // 検索ボックス内のテキストを全て大文字変換で取得
+    const KeyWord = document.getElementById("serchtext").value.toUpperCase();
 
-    const keyword = element.value.toUpperCase();
-    var new_data = [];
-    const terminallist = await merge(isSelectPackageId);
-    for (var i = 0; i < terminallist.length; i++) {
+    const New_Data = [];
+    const TreminalList = await merge(isSelectPackageId);
+    for (var i = 0; i < TreminalList.length; i++) {
       if (
-        terminallist[i].name.toUpperCase().includes(keyword) ||
-        terminallist[i].display_name.toUpperCase().includes(keyword) ||
-        terminallist[i].ip_address.toUpperCase().includes(keyword) ||
-        terminallist[i].release_date.toUpperCase().includes(keyword)
+        TreminalList[i].name.toUpperCase().includes(KeyWord) ||
+        TreminalList[i].display_name.toUpperCase().includes(KeyWord) ||
+        TreminalList[i].ip_address.toUpperCase().includes(KeyWord) ||
+        TreminalList[i].release_date.toUpperCase().includes(KeyWord)
       ) {
-        new_data.push(terminallist[i]);
+        New_Data.push(TreminalList[i]);
       }
     }
-    setIsTerminalList(new_data);
+    setIsTerminalList(New_Data);
 
     //ローディングアニメーション終了
     setIsShowLoadingAnimation3(false);
   }
 
+  // 左のリサイズハンドラー用フラグ
   var isHandler1Dragging = false;
+  // 右のリサイズハンドラー用フラグ
   var isHandler2Dragging = false;
+
   ///
-  /// マウスオーバーイベントを追加する
+  /// マウスオーバーイベントを追加する（リサイズ処理）
   ///
   function addMouseOverColoringEvent() {
     var handler1 = document.getElementById("managepackagehandler1");
@@ -220,6 +234,9 @@ export default React.memo(function Manage_Package({ TitleText }) {
         boxA.style.width = NEW_A + "px";
         boxB.style.width = NEW_B + "px";
         boxC.style.width = NEW_C + "px";
+        document.getElementById(
+          "resize_div"
+        ).innerHTML = `${boxA.style.width},${boxB.style.width},${boxC.style.width}`;
       }
 
       if (isHandler2Dragging) {
@@ -232,6 +249,10 @@ export default React.memo(function Manage_Package({ TitleText }) {
         boxC.style.width = NEW_C + "px";
         boxB.style.width = NEW_B + "px";
         boxA.style.width = NEW_A + "px";
+
+        document.getElementById(
+          "resize_div"
+        ).innerHTML = `${boxA.style.width},${boxB.style.width},${boxC.style.width}`;
       }
     });
 
@@ -239,18 +260,24 @@ export default React.memo(function Manage_Package({ TitleText }) {
       isHandler1Dragging = false;
       isHandler2Dragging = false;
     });
-    boxA.style.width = "22%";
-    boxB.style.width = "28%";
-    boxC.style.width = "50%";
+
+    const Resize_Div = document
+      .getElementById("resize_div")
+      .innerHTML.split(",");
+    boxA.style.width = Resize_Div[0];
+    boxB.style.width = Resize_Div[1];
+    boxC.style.width = Resize_Div[2];
   }
 
+  // 最初に描画されたとき
   React.useEffect(() => {
     addMouseOverColoringEvent();
   }, []);
 
+  // 選択中のパッケージが変更されたとき
   React.useEffect(() => {
-    createtreedata(isSelectPackageId);
-    createtabledata(isSelectPackageId);
+    createTreeData(isSelectPackageId);
+    createTableData(isSelectPackageId);
   }, [isSelectPackageId]);
 
   return (
@@ -265,7 +292,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
           display: "flex",
         }}
       >
-        <button className="mybutton" onClick={doukiclick}>
+        <button className="mybutton" onClick={clickDouki}>
           パッケージ一括同期
         </button>
         <div
@@ -297,10 +324,9 @@ export default React.memo(function Manage_Package({ TitleText }) {
           <div className="widthheightoverflow">
             <Package_Alert
               isShowAlert={isShowPackageAlert}
-              setIsShowAlert={setIsShowPackageAlert}
               isSelectPackageId={isSelectPackageId}
-              createtreedata={createtreedata}
-              createtabledata={createtabledata}
+              createtreedata={createTreeData}
+              createTableData={createTableData}
             />
             <Tree_View FolderList={isFolderList} />
           </div>

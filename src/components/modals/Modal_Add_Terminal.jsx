@@ -4,12 +4,13 @@ import { isIPaddress } from "../../lib/myfunction";
 import Loading_Animation from "../alert/loading_animation/Loading_Animation.jsx";
 import "./Modal.css";
 
+// 端末追加モーダル
 export default React.memo(function Modal_Add_Terminal({
   isShowModal,
   setIsShowModal,
-  createtabledata,
+  createTableData,
 }) {
-  const CloseModal = () => {
+  const closeModal = () => {
     if (isShowLoadingAnimation == true) return;
     setIsShowModal(false);
   };
@@ -17,7 +18,7 @@ export default React.memo(function Modal_Add_Terminal({
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
 
-  async function Register() {
+  async function register() {
     const text1 = document.getElementById("textarea1");
     const text2 = document.getElementById("textarea2");
     const text3 = document.getElementById("textarea3");
@@ -42,7 +43,7 @@ export default React.memo(function Modal_Add_Terminal({
     try {
       await REGISTER_TERMINAL(text1.value, text2.value, text3.value);
 
-      createtabledata();
+      createTableData();
 
       //連続で登録の場合
       if (document.getElementById("checkbox1").checked) {
@@ -61,7 +62,7 @@ export default React.memo(function Modal_Add_Terminal({
     <>
       {isShowModal ? (
         <>
-          <div className="overlay" onClick={CloseModal}></div>
+          <div className="overlay" onClick={closeModal}></div>
 
           <div className="modal_centering_div">
             <div className="modal">
@@ -70,12 +71,12 @@ export default React.memo(function Modal_Add_Terminal({
               />
               <div id="textarea">
                 <div>
-                  <p>端末名</p>
-                  <input id="textarea1" type="text" />
+                  <p>名称</p>
+                  <input id="textarea2" type="text" />
                 </div>
                 <div>
-                  <p>端末名称</p>
-                  <input id="textarea2" type="text" />
+                  <p>HostName</p>
+                  <input id="textarea1" type="text" />
                 </div>
                 <div>
                   <p>IPアドレス</p>
@@ -84,13 +85,20 @@ export default React.memo(function Modal_Add_Terminal({
               </div>
               <div id="buttonarea">
                 <input type="checkbox" name="" id="checkbox1" />
-                連続で登録する際はこちらにチェック
+                <span style={{ marginRight: "150px" }}>連続で登録する</span>
                 <button
                   className="mybutton"
                   id="closebutton"
-                  onClick={Register}
+                  onClick={register}
                 >
                   登録
+                </button>
+                <button
+                  className="mybutton"
+                  id="closebutton"
+                  onClick={closeModal}
+                >
+                  キャンセル
                 </button>
               </div>
             </div>

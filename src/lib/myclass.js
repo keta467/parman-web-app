@@ -5,9 +5,13 @@ import line_image from "../assets/line.svg";
 import folder_open_image from "../assets/folder_open.svg";
 import folder_close_image from "../assets/folder_close.svg";
 import file_image from "../assets/file.svg";
+
+// 基本となるマージン値
 const ROW_LEFT_MARGIN = 20;
 
+// フォルダクラス
 export class Folder {
+  // コンストラクタ
   constructor(
     id,
     name,
@@ -49,7 +53,7 @@ export class Folder {
     }
   }
 
-  getscript() {
+  getScript() {
     const marginleft = this.depth_count * ROW_LEFT_MARGIN;
     if (this.isOpen) {
       return (
@@ -73,7 +77,7 @@ export class Folder {
               backgroundSize: "15px",
             }}
           >
-            {this.childs.map((child) => child.getscript())}
+            {this.childs.map((child) => child.getScript())}
           </div>
         </ul>
       );
@@ -163,7 +167,9 @@ export class Folder {
   }
 }
 
+// ファイルクラス
 export class File {
+  // コンストラクタ
   constructor(name, parentfolderid, path, file_version, depth_count) {
     this.type = "file";
     //ファイル名
@@ -179,13 +185,12 @@ export class File {
     if (this.file_version == "(v)" || this.file_version == "(vnull)") {
       this.file_version = "";
     }
-
     //クリックしたときの処理
     this.onclickfunc = null;
     //階層の深さ
     this.depth_count = depth_count;
   }
-  getscript() {
+  getScript() {
     const marginleft = (this.depth_count + 1) * ROW_LEFT_MARGIN;
     if (this.onclickfunc == null) {
       return (

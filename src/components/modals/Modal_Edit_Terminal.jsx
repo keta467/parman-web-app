@@ -4,21 +4,22 @@ import { isIPaddress } from "../../lib/myfunction";
 import Loading_Animation from "../alert/loading_animation/Loading_Animation.jsx";
 import "./Modal.css";
 
+// 端末編集モーダル
 export default React.memo(function Modal_Edit_Terminal({
   isShowModal,
   setIsShowModal,
   isSelectTerminal,
-  createtabledata,
+  createTableData,
 }) {
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
 
-  const CloseModal = () => {
+  const closeModal = () => {
     if (isShowLoadingAnimation == true) return;
     setIsShowModal(false);
   };
 
-  async function Update() {
+  async function update() {
     const text1 = document.getElementById("textarea1");
     const text2 = document.getElementById("textarea2");
     const text3 = document.getElementById("textarea3");
@@ -47,20 +48,20 @@ export default React.memo(function Modal_Edit_Terminal({
         text2.value,
         text3.value
       );
-      createtabledata();
-      CloseModal();
+      createTableData();
+      closeModal();
     } catch {}
 
     setIsShowLoadingAnimation(false);
   }
 
-  async function Remove() {
+  async function remove() {
     setIsShowLoadingAnimation(true);
 
     try {
       await REMOVE_TERMINAL(isSelectTerminal.id);
-      createtabledata();
-      CloseModal();
+      createTableData();
+      closeModal();
     } catch {}
 
     setIsShowLoadingAnimation(false);
@@ -70,7 +71,7 @@ export default React.memo(function Modal_Edit_Terminal({
     <>
       {isShowModal ? (
         <>
-          <div className="overlay" onClick={CloseModal}></div>
+          <div className="overlay" onClick={closeModal}></div>
           <div className="modal_centering_div">
             <div className="modal">
               <Loading_Animation
@@ -78,19 +79,19 @@ export default React.memo(function Modal_Edit_Terminal({
               />
               <div id="textarea">
                 <div>
-                  <p>端末名</p>
-                  <input
-                    id="textarea1"
-                    type="text"
-                    defaultValue={isSelectTerminal.name}
-                  />
-                </div>
-                <div>
-                  <p>端末名称</p>
+                  <p>名称</p>
                   <input
                     id="textarea2"
                     type="text"
                     defaultValue={isSelectTerminal.display_name}
+                  />
+                </div>
+                <div>
+                  <p>HostName</p>
+                  <input
+                    id="textarea1"
+                    type="text"
+                    defaultValue={isSelectTerminal.name}
                   />
                 </div>
                 <div>
@@ -103,11 +104,18 @@ export default React.memo(function Modal_Edit_Terminal({
                 </div>
               </div>
               <div id="buttonarea">
-                <button className="mybutton" onClick={Remove}>
+                <button className="mybutton" onClick={remove}>
                   削除
                 </button>
-                <button className="mybutton" onClick={Update}>
+                <button className="mybutton" onClick={update}>
                   更新
+                </button>
+                <button
+                  className="mybutton"
+                  id="closebutton"
+                  onClick={closeModal}
+                >
+                  キャンセル
                 </button>
               </div>
             </div>

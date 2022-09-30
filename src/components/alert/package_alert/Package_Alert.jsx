@@ -4,26 +4,33 @@ import "./Package_Alert.css";
 import chuui from "../../../assets/chuui.svg";
 import Loading_Animation from "../loading_animation/Loading_Animation.jsx";
 
+// パッケージアラート
 export default function Package_Alert({
   isShowAlert,
-  setIsShowAlert,
   isSelectPackageId,
   createtreedata,
-  createtabledata,
+  createTableData,
 }) {
   //ローディングアニメーションフラグ
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
 
-  async function CloseAlert() {
+  // 同期のクリック
+  async function clickDouki() {
     try {
+      // ローディング開始
       setIsShowLoadingAnimation(true);
+
+      // 4.更新パッケージ取り込み
       const Responce = await UPDATE_PACKAGE(isSelectPackageId);
+
+      // ローディング終了
       setIsShowLoadingAnimation(false);
-      //正常にパッケージが更新された
+
+      //正常にパッケージが更新された場合
       if (Responce.result == 0) {
         createtreedata(isSelectPackageId);
-        createtabledata(isSelectPackageId);
+        createTableData(isSelectPackageId);
       } else {
         window.alert("UPDATE_PACKAGE エラー");
       }
@@ -46,7 +53,7 @@ export default function Package_Alert({
           <div id="packagealert" className="original-box-shadow">
             <img src={chuui} />
             <span>このパッケージは更新されています</span>
-            <button onClick={CloseAlert}>同期</button>
+            <button onClick={clickDouki}>同期</button>
           </div>
           {isShowLoadingAnimation ? (
             <div

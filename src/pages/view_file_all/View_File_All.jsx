@@ -8,6 +8,7 @@ import {
 } from "../../api.js";
 import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 
+// ファイル全体管理画面
 export default function View_File_All({ TitleText }) {
   //モジュールリスト
   const [isModulelist, setIsModulelist] = React.useState([]);
@@ -26,7 +27,7 @@ export default function View_File_All({ TitleText }) {
   //
   //　テーブル用データ作成
   //
-  async function createtabledata() {
+  async function createTableData() {
     //ローディングアニメーション開始
     setIsShowLoadingAnimation(true);
 
@@ -35,34 +36,35 @@ export default function View_File_All({ TitleText }) {
     setIsModulelist([]);
 
     try {
+      // 14.端末モジュール一覧取得からデータを取得
       const ResponceData = await GET_INSTALLED_MODULE();
       const TERMINAL_LIST = ResponceData.terminal_list;
-      var modulelist = [];
+      const ModuleList = [];
 
       //モジュールリストの作成
       for (var i = 0; i < TERMINAL_LIST.length; i++) {
-        var terminal = TERMINAL_LIST[i];
-        for (var j = 0; j < terminal.module_list.length; j++) {
-          var okflag = true;
-          for (var k = 0; k < modulelist.length; k++) {
+        const TERMINAL = TERMINAL_LIST[i];
+        for (var j = 0; j < TERMINAL.module_list.length; j++) {
+          var isOk = true;
+          for (var k = 0; k < ModuleList.length; k++) {
             //既にモジュールリストにある場合
             if (
-              modulelist[k].module_name ==
-                terminal.module_list[j].module_name &&
-              modulelist[k].install_path == terminal.module_list[j].install_path
+              ModuleList[k].module_name ==
+                TERMINAL.module_list[j].module_name &&
+              ModuleList[k].install_path == TERMINAL.module_list[j].install_path
             ) {
-              okflag = false;
+              isOk = false;
               break;
             }
           }
-          if (okflag == true) {
-            modulelist.push(terminal.module_list[j]);
+          if (isOk == true) {
+            ModuleList.push(TERMINAL.module_list[j]);
           }
         }
       }
 
       setIsTerminalList(TERMINAL_LIST);
-      setIsModulelist(modulelist);
+      setIsModulelist(ModuleList);
     } catch {}
 
     //ローディングアニメーション終了
@@ -72,7 +74,7 @@ export default function View_File_All({ TitleText }) {
   //
   //最新バージョン取得
   //
-  async function getnewversion() {
+  async function getNewVersion() {
     setIsShowLoadingAnimation2(true);
     try {
       await UPDATE_TERMINAL_MODULE_VERSION(0);
@@ -82,7 +84,7 @@ export default function View_File_All({ TitleText }) {
 
   //初回レンダリング後
   React.useEffect(() => {
-    createtabledata();
+    createTableData();
   }, []);
 
   return (
@@ -94,11 +96,11 @@ export default function View_File_All({ TitleText }) {
           <button
             id="redobutton"
             className="mybutton"
-            onClick={createtabledata}
+            onClick={createTableData}
           >
             再表示
           </button>
-          <button className="mybutton" onClick={getnewversion}>
+          <button className="mybutton" onClick={getNewVersion}>
             最新バージョン取得
           </button>
         </div>

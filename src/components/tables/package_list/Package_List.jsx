@@ -2,6 +2,7 @@ import React from "react";
 import { GET_PACKAGE_LIST, SET_PACKAGE_ORDER } from "../../../api";
 import "./Package_List.css";
 
+// パッケージリスト（パッケージ管理画面）
 export default React.memo(function Package_List({
   isSelectPackageId,
   setIsSelectPackageId,
@@ -13,7 +14,7 @@ export default React.memo(function Package_List({
   var startindex = "";
   var isPackageListLog = [];
 
-  function mydrag(event) {
+  function myDrag(event) {
     startindex = event.target.id;
     isPackageListLog = [];
     for (var i = 0; i < isPackageList.length; i++) {
@@ -21,7 +22,7 @@ export default React.memo(function Package_List({
     }
   }
 
-  function mydragover(event) {
+  function myDragOver(event) {
     event.preventDefault();
 
     const element = document.getElementById(event.target.id);
@@ -41,7 +42,7 @@ export default React.memo(function Package_List({
     }
   }
 
-  function mydragleave(event) {
+  function myDragLeave(event) {
     const element = document.getElementById(event.target.id);
     for (var i = 0; i < element.children.length; i++) {
       element.children[i].style.borderTop = "1px solid #999";
@@ -49,7 +50,7 @@ export default React.memo(function Package_List({
     }
   }
 
-  async function mydrop(event) {
+  async function myDrop(event) {
     event.preventDefault();
     const NewArr = [];
     for (var i = 0; i < isPackageList.length; i++) {
@@ -90,11 +91,11 @@ export default React.memo(function Package_List({
 
     //パッケージ順変更
     try {
-      const PostArr = [];
+      const postArr = [];
       for (var i = 0; i < NewArr.length; i++) {
-        PostArr.push({ ID: NewArr[i].id });
+        postArr.push({ ID: NewArr[i].id });
       }
-      await SET_PACKAGE_ORDER(PostArr);
+      await SET_PACKAGE_ORDER(postArr);
       setIsPackageList(NewArr);
     } catch {}
 
@@ -103,14 +104,14 @@ export default React.memo(function Package_List({
   }
 
   //行クリック
-  function ClickRow(PackageID) {
+  function clickRow(PackageID) {
     setIsSelectPackageId(PackageID);
   }
 
   //
   //テーブル作成
   //
-  async function createlistdata() {
+  async function createListData() {
     //ローディングアニメーション開始
     setIsShowLoadingAnimation(true);
 
@@ -124,40 +125,38 @@ export default React.memo(function Package_List({
   }
 
   React.useEffect(() => {
-    createlistdata();
+    createListData();
   }, []);
 
-  React.useEffect(() => {}, [isPackageList]);
-
   return (
-    <table className="managepackagetable colortable">
-      <tbody className="managepackagetabletbody">
+    <table className="managepackagelist colortable">
+      <tbody>
         {isPackageList.map((Package, index) =>
           Package.id == isSelectPackageId ? (
             <tr
-              onClick={() => ClickRow(Package.id)}
+              onClick={() => clickRow(Package.id)}
               draggable="true"
               className="dragitem selectpackage"
               id={index}
               key={Package.id}
-              onDrag={mydrag}
-              onDragOver={mydragover}
-              onDragLeave={mydragleave}
-              onDrop={mydrop}
+              onDrag={myDrag}
+              onDragOver={myDragOver}
+              onDragLeave={myDragLeave}
+              onDrop={myDrop}
             >
               <td id={index}>{Package.name}</td>
             </tr>
           ) : (
             <tr
-              onClick={() => ClickRow(Package.id)}
+              onClick={() => clickRow(Package.id)}
               draggable="true"
               className="dragitem"
               id={index}
               key={Package.id}
-              onDrag={mydrag}
-              onDragOver={mydragover}
-              onDragLeave={mydragleave}
-              onDrop={mydrop}
+              onDrag={myDrag}
+              onDragOver={myDragOver}
+              onDragLeave={myDragLeave}
+              onDrop={myDrop}
             >
               <td id={index}>{Package.name}</td>
             </tr>

@@ -1,14 +1,15 @@
-.managepackagetable {
+.managepackagelist {
   white-space: nowrap;
 }
 
-.managepackagetabletbody td {
-  overflow: hidden;
-  text-overflow: ellipsis;
+.managepackagelist tr:hover {
+  font-weight: bold;
 }
 
-.managepackagetable tr:hover {
-  font-weight: bold;
+.managepackagelist td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #999;
 }
 
 .selectpackage {

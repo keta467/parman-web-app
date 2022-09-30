@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./File_All_Table.css";
 
+// ファイル全体管理画面のテーブル
 export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
   ///
   /// マウスオーバーイベントを追加する
