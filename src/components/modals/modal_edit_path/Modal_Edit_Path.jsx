@@ -79,9 +79,18 @@ export default function Modal_Edit_Path({
                 <button className="pathaddbutton1" onClick={addPath}>
                   追加
                 </button>
-                <button className="mybutton" onClick={updateButton}>
-                  更新
-                </button>
+                <div>
+                  <button
+                    style={{ marginRight: "10px" }}
+                    className="mybutton"
+                    onClick={updateButton}
+                  >
+                    更新
+                  </button>
+                  <button className="mybutton" onClick={closeModal}>
+                    キャンセル
+                  </button>
+                </div>
               </div>
             </div>
           </div>

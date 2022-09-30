@@ -61,3 +61,9 @@ export default function Topbar({ TitleText }) {
     </div>
   );
 }
+
+if (DEBUG_MODE) {
+  console.log(`デバッグモード：ダミーデータ参照中`);
+} else {
+  console.log(`リリースモード：API参照中\nURL：${BASE_URL}`);
+}
