@@ -18,6 +18,11 @@
   font-weight: bold;
 }
 
+#managemachinetabletbody td {
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
 #manage_terminal_table_loading_area {
   margin-left: auto;
   margin-right: auto;

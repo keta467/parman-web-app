@@ -12,6 +12,7 @@ import {
 } from "../../api.js";
 import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 
+// ファイル別管理画面
 export default function View_file_Separate({ TitleText }) {
   //フォルダリスト
   const [isFolderList, setIsFolderList] = React.useState([]);
@@ -39,40 +40,44 @@ export default function View_file_Separate({ TitleText }) {
   //
   // ツリーデータ作成
   //
-  async function createtreedata() {
+  async function createTreeData() {
     setIsShowLoadingAnimation(true);
 
     try {
       const ResponceData = await GET_INSTALLED_MODULE();
       const TERMINAL_LIST = ResponceData.terminal_list;
-      var modulelist = [];
+      const ModuleList = [];
 
       //モジュールリストの作成
       for (var i = 0; i < TERMINAL_LIST.length; i++) {
-        var terminal = TERMINAL_LIST[i];
-        for (var j = 0; j < terminal.module_list.length; j++) {
-          var okflag = true;
-          for (var k = 0; k < modulelist.length; k++) {
+        const TERMINAL = TERMINAL_LIST[i];
+        for (var j = 0; j < TERMINAL.module_list.length; j++) {
+          var isOk = true;
+          for (var k = 0; k < ModuleList.length; k++) {
             //既にモジュールリストにある場合
-            if (modulelist[k].module_id == terminal.module_list[j].module_id) {
-              okflag = false;
+            if (
+              ModuleList[k].module_name ==
+                TERMINAL.module_list[j].module_name &&
+              ModuleList[k].install_path == TERMINAL.module_list[j].install_path
+            ) {
+              isOk = false;
               break;
             }
           }
-          if (okflag == true) {
-            modulelist.push(terminal.module_list[j]);
+          if (isOk == true) {
+            ModuleList.push(TERMINAL.module_list[j]);
           }
         }
       }
 
       //フォルダを取得
-      const FolderList = ModulesToFoders(modulelist);
+      const FolderList = ModulesToFoders(ModuleList);
 
       for (var i = 0; i < FolderList.length; i++) {
         FolderList[i].setclickfunc(ToggleFolder);
       }
       for (var i = 0; i < FolderList.length; i++) {
-        FolderList[i].setfileclickfunc(SetFilePath);
+        FolderList[i].setfileclickfunc(setFilePath);
       }
       setIsFolderList(FolderList);
     } catch {}
@@ -83,7 +88,7 @@ export default function View_file_Separate({ TitleText }) {
   //
   // テーブルデータ作成
   //
-  async function createtabledata() {
+  async function createTableData() {
     if (isInstallPath == "") {
       return;
     }
@@ -110,7 +115,7 @@ export default function View_file_Separate({ TitleText }) {
     );
   });
 
-  const SetFilePath = React.useCallback((Path) => {
+  const setFilePath = React.useCallback((Path) => {
     var elems = document.getElementsByClassName("file_button");
     for (var i = 0; i < elems.length; i++) {
       elems[i].style.backgroundColor = "";
@@ -154,9 +159,6 @@ export default function View_file_Separate({ TitleText }) {
 
     document.addEventListener("mousemove", function (e) {
       if (isHandler1Dragging) {
-        // boxA.style.width = e.clientX - wrapper.offsetLeft - 12 + "px";
-        // boxB.style.width = boxB.clientWidth + 8 + "px";
-
         const NEW_A = e.clientX - wrapper.offsetLeft;
         const NEW_B = boxB.clientWidth + (boxA.clientWidth - NEW_A);
 
@@ -164,6 +166,10 @@ export default function View_file_Separate({ TitleText }) {
 
         boxA.style.width = NEW_A + "px";
         boxB.style.width = NEW_B + "px";
+
+        document.getElementById(
+          "resize_div2"
+        ).innerHTML = `${boxA.style.width},${boxB.style.width}`;
       }
     });
 
@@ -172,8 +178,11 @@ export default function View_file_Separate({ TitleText }) {
     });
 
     //初期サイズ
-    boxA.style.width = "35%";
-    boxB.style.width = "65%";
+    const Resize_Div = document
+      .getElementById("resize_div2")
+      .innerHTML.split(",");
+    boxA.style.width = Resize_Div[0];
+    boxB.style.width = Resize_Div[1];
   }
 
   //初回レンダリング時
@@ -182,18 +191,17 @@ export default function View_file_Separate({ TitleText }) {
     addMouseOverColoringEvent();
 
     //ツリー作成
-    createtreedata();
+    createTreeData();
   }, []);
 
   //ファイル選択時
   React.useEffect(() => {
-    //テーブル作成
-    createtabledata();
+    createTableData();
   }, [isInstallPath]);
 
   //フォルダ変更時に実行
   React.useEffect(() => {
-    SetFilePath(isInstallPath);
+    setFilePath(isInstallPath);
   }, [isFolderList]);
 
   return (

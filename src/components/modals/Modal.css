@@ -48,6 +48,7 @@
 }
 
 .modal #buttonarea input[type="checkbox"] {
+  /* margin-right: 5px; */
   margin-right: 5px;
 }
 

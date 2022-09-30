@@ -5,9 +5,13 @@ import line_image from "../assets/line.svg";
 import folder_open_image from "../assets/folder_open.svg";
 import folder_close_image from "../assets/folder_close.svg";
 import file_image from "../assets/file.svg";
-const row_left_margin = 20;
 
+// 基本となるマージン値
+const ROW_LEFT_MARGIN = 20;
+
+// フォルダクラス
 export class Folder {
+  // コンストラクタ
   constructor(
     id,
     name,
@@ -49,8 +53,8 @@ export class Folder {
     }
   }
 
-  getscript() {
-    const marginleft = this.depth_count * row_left_margin;
+  getScript() {
+    const marginleft = this.depth_count * ROW_LEFT_MARGIN;
     if (this.isOpen) {
       return (
         <ul key={this.id}>
@@ -73,7 +77,7 @@ export class Folder {
               backgroundSize: "15px",
             }}
           >
-            {this.childs.map((child) => child.getscript())}
+            {this.childs.map((child) => child.getScript())}
           </div>
         </ul>
       );
@@ -163,7 +167,9 @@ export class Folder {
   }
 }
 
+// ファイルクラス
 export class File {
+  // コンストラクタ
   constructor(name, parentfolderid, path, file_version, depth_count) {
     this.type = "file";
     //ファイル名
@@ -173,17 +179,22 @@ export class File {
     //パス
     this.path = path;
     //ファイルバージョン
-    this.file_version = file_version;
+    this.file_version = `(v${file_version})`;
+
+    //バージョンが空、NULLの場合
+    if (this.file_version == "(v)" || this.file_version == "(vnull)") {
+      this.file_version = "";
+    }
     //クリックしたときの処理
     this.onclickfunc = null;
     //階層の深さ
     this.depth_count = depth_count;
   }
-  getscript() {
-    const marginleft = (this.depth_count + 1) * row_left_margin;
+  getScript() {
+    const marginleft = (this.depth_count + 1) * ROW_LEFT_MARGIN;
     if (this.onclickfunc == null) {
       return (
-        <li key={`${this.path}`}>
+        <li key={`${this.parentfolderid}${this.path}`}>
           <button
             className="treeview_row_button"
             style={{ pointerEvents: "none" }}
@@ -192,14 +203,14 @@ export class File {
               <img className="folder_or_file_icon" src={file_image}></img>
               <div
                 style={{ width: "300px" }}
-              >{`${this.name} (v${this.file_version})`}</div>
+              >{`${this.name} ${this.file_version}`}</div>
             </div>
           </button>
         </li>
       );
     } else {
       return (
-        <li key={`${this.path}`}>
+        <li key={`${this.parentfolderid}${this.path}`}>
           <button
             id={this.path}
             className={`treeview_row_button file_button`}
@@ -225,15 +236,6 @@ export class File {
 }
 
 export function ModulesToFoders(MODULE_LIST) {
-  // //一つでも更新されているファイルがあればアラートを表示
-  // var flag = false;
-  // for (var i = 0; i < MODULE_LIST.length; i++) {
-  //   if (MODULE_LIST[i].differnce == true) {
-  //     flag = true;
-  //     break;
-  //   }
-  // }
-
   ///
   ///フォルダを全て生成
   ///

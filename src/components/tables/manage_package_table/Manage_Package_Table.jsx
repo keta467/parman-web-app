@@ -3,6 +3,7 @@ import "./Manage_Package_Table.css";
 import "../nomaltable.css";
 import { SET_PACKAGE_RELEASE_TERMINAL } from "../../../api";
 
+// パッケージ管理画面のテーブル
 export default function Manage_Package_Table({
   TerminalList,
   isSelectPackageId,
@@ -64,8 +65,8 @@ export default function Manage_Package_Table({
               id="abc"
             />
           </th>
-          <th>端末名</th>
-          <th>端末名称</th>
+          <th>名称</th>
+          <th>HostName</th>
           <th>IPアドレス</th>
           <th>リリース日時</th>
         </tr>
@@ -86,8 +87,8 @@ export default function Manage_Package_Table({
                 />
               </td>
             )}
-            <td>{Terminal.name}</td>
             <td>{Terminal.display_name}</td>
+            <td>{Terminal.name}</td>
             <td>{Terminal.ip_address}</td>
             <td className="releasedatet">{Terminal.release_date}</td>
           </tr>
