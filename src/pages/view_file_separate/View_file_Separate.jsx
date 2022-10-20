@@ -2,7 +2,7 @@ import React from "react";
 import File_Separate_Table from "../../components/tables/file_separate_table/File_Separate_Table.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import "./View_file_Separate.css";
-import { Folder, ModulesToFoders } from "../../lib/myclass.js";
+import { Folder } from "../../lib/myclass.js";
 import Tree_View from "../../components/tree_view/Tree_View.jsx";
 import Modal_Edit_Path from "../../components/modals/modal_edit_path/Modal_Edit_Path.jsx";
 import {
@@ -11,6 +11,7 @@ import {
   GET_MODULE_INSTALLED_TERMINAL,
 } from "../../api.js";
 import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
+import { ModulesToFoders } from "../../lib/myfunction.js";
 
 // ファイル別管理画面
 export default function View_file_Separate({ TitleText }) {

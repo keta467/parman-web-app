@@ -2,7 +2,7 @@ import React from "react";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import Tree_View from "../../components/tree_view/Tree_View.jsx";
 import "./Manage_Package.css";
-import { Folder, ModulesToFoders } from "../../lib/myclass.js";
+import { Folder } from "../../lib/myclass.js";
 import Manage_Package_Table from "../../components/tables/manage_package_table/Manage_Package_Table.jsx";
 import Package_List from "../../components/tables/package_list/Package_List.jsx";
 import Package_Alert from "../../components/alert/package_alert/Package_Alert.jsx";
@@ -13,6 +13,7 @@ import {
   UPDATE_PACKAGE,
 } from "../../api.js";
 import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
+import { ModulesToFoders } from "../../lib/myfunction.js";
 
 // パッケージ管理画面
 export default React.memo(function Manage_Package({ TitleText }) {
@@ -66,7 +67,9 @@ export default React.memo(function Manage_Package({ TitleText }) {
       const MODULE_LIST = ResponseData.module_list;
 
       //フォルダを取得
+      console.log("クリエイトツリーでーた");
       const FolderList = ModulesToFoders(MODULE_LIST);
+
       for (var i = 0; i < FolderList.length; i++) {
         FolderList[i].setclickfunc(toggleFolder);
       }
