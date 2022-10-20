@@ -7,6 +7,10 @@ import View_file_Separate from "./pages/view_file_separate/View_file_Separate.js
 import { HashRouter as Router, Route, Routes } from "react-router-dom"; //BrowserRouter HashRouter
 import Home from "./pages/home/Home.jsx";
 
+//アイコン画像を読む
+import favicon1 from "./assets/favicon.ico";
+import favicon2 from "./assets/favicon.png";
+
 function App() {
   return (
     <Router>
