@@ -23,7 +23,7 @@ export default function Modal_Edit_Path({
     for (var i = 0; i < Elems.length; i++) {
       if (Elems[i].value != "") {
         NewArr.push(Elems[i].value);
-        message += "\n" + Elems[i].value;
+        message += `\n${i + 1}. ${Elems[i].value}`;
       }
     }
 
@@ -46,23 +46,26 @@ export default function Modal_Edit_Path({
     setIsPathList([...isPathList, ""]);
   };
 
-  const deletePath = () => {
-    setIsPathList(
-      isPathList.filter((value, index) => index !== isPathList.length - 1)
-    );
+  const deletePath = (pathindex, path) => {
+    setIsPathList(isPathList.filter((value, index) => index !== pathindex));
   };
+
+  function buttonMouseOver() {
+    setIsShowLoadingAnimation(true);
+
+    //画面上のデータを配列にいれる
+    const Elems = document.getElementsByClassName("pathtext");
+    const NewArr = [];
+    for (var i = 0; i < Elems.length; i++) {
+      NewArr.push(Elems[i].value);
+    }
+    setIsPathList(NewArr);
+
+    setIsShowLoadingAnimation(false);
+  }
 
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
-
-  function searchclick(event, _index) {
-    console.log(event.target.children[0].value);
-    setIsPathList(
-      isPathList.map((value, index) =>
-        index === _index ? event.target.children[0].value : value
-      )
-    );
-  }
 
   return (
     <>
@@ -78,29 +81,27 @@ export default function Modal_Edit_Path({
                 {isPathList.map((path, pathindex) => (
                   <div key={path + pathindex}>
                     <p>収集先パス{pathindex + 1}</p>
-                    <form
-                      className="df"
-                      onSubmit={(event) => searchclick(event, pathindex)}
-                    >
+                    <div className="df">
                       <input
                         className="pathtext"
                         type="text"
                         defaultValue={path}
                       />
-                    </form>
+                      <button
+                        className="pathdeletebutton1"
+                        onMouseOver={buttonMouseOver}
+                        onClick={(event) => deletePath(pathindex, path)}
+                      >
+                        削除
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
               <div id="pathmodalbuttonsarea">
-                <div>
-                  <button className="pathaddbutton1" onClick={addPath}>
-                    追加
-                  </button>
-                  <button className="pathaddbutton2" onClick={deletePath}>
-                    削除
-                  </button>
-                </div>
-
+                <button className="pathaddbutton1" onClick={addPath}>
+                  追加
+                </button>
                 <div>
                   <button
                     style={{ marginRight: "10px" }}
