@@ -225,7 +225,7 @@ export default function View_file_Separate({ TitleText }) {
         <div id="viewfileseparatebox2">
           <div id="shuushuusakibutton">
             <button className="mybutton" onClick={ClickEditPath}>
-              収集先編集
+              収集先パス編集
             </button>
           </div>
           <div id="view_file_separate_table_loading_area">

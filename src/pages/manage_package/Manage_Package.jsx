@@ -201,6 +201,8 @@ export default React.memo(function Manage_Package({ TitleText }) {
 
     //ローディングアニメーション終了
     setIsShowLoadingAnimation3(false);
+
+    return false;
   }
 
   // 左のリサイズハンドラー用フラグ
@@ -337,10 +339,18 @@ export default React.memo(function Manage_Package({ TitleText }) {
         <div className="handler" id="managepackagehandler2"></div>
         <div id="managepackagebox3">
           <div id="searchareawrapper">
-            <input type="text" name="" id="serchtext" />
+            <input
+              type="text"
+              name=""
+              id="serchtext"
+              onKeyDown={(e) => {
+                if (e.code == "Enter") searchclick();
+              }}
+            />
             <button
-              className="mybutton"
               onClick={searchclick}
+              type="button"
+              className="mybutton"
               style={{ userSelect: "none" }}
             >
               検索

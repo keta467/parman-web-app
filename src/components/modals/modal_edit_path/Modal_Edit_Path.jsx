@@ -19,11 +19,19 @@ export default function Modal_Edit_Path({
   async function updateButton() {
     const Elems = document.getElementsByClassName("pathtext");
     const NewArr = [];
+    var message = "";
     for (var i = 0; i < Elems.length; i++) {
       if (Elems[i].value != "") {
         NewArr.push(Elems[i].value);
+        message += `\n${i + 1}. ${Elems[i].value}`;
       }
     }
+
+    var res = window.confirm(
+      `以下の内容で更新します。よろしいですか？${message}`
+    );
+    if (res == false) return;
+
     setIsShowLoadingAnimation(true);
     try {
       await SET_COLLECT_PATH(NewArr);
@@ -38,9 +46,23 @@ export default function Modal_Edit_Path({
     setIsPathList([...isPathList, ""]);
   };
 
-  const deletePath = (pathindex) => {
+  const deletePath = (pathindex, path) => {
     setIsPathList(isPathList.filter((value, index) => index !== pathindex));
   };
+
+  function buttonMouseOver() {
+    setIsShowLoadingAnimation(true);
+
+    //画面上のデータを配列にいれる
+    const Elems = document.getElementsByClassName("pathtext");
+    const NewArr = [];
+    for (var i = 0; i < Elems.length; i++) {
+      NewArr.push(Elems[i].value);
+    }
+    setIsPathList(NewArr);
+
+    setIsShowLoadingAnimation(false);
+  }
 
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
@@ -58,7 +80,7 @@ export default function Modal_Edit_Path({
               <div id="modaleditpathbuttonareatextarea">
                 {isPathList.map((path, pathindex) => (
                   <div key={path + pathindex}>
-                    <p>収集先{pathindex + 1}</p>
+                    <p>収集先パス{pathindex + 1}</p>
                     <div className="df">
                       <input
                         className="pathtext"
@@ -67,7 +89,8 @@ export default function Modal_Edit_Path({
                       />
                       <button
                         className="pathdeletebutton1"
-                        onClick={(event) => deletePath(pathindex)}
+                        onMouseOver={buttonMouseOver}
+                        onClick={(event) => deletePath(pathindex, path)}
                       >
                         削除
                       </button>
