@@ -37,6 +37,19 @@
   cursor: pointer;
 }
 
+.pathaddbutton2 {
+  background-color: rgb(236, 59, 59);
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 8px;
+  height: 30px;
+  margin-top: 5px;
+  padding: 0 5px 0 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
 #pathmodalbuttonsarea {
   width: 80%;
   margin-left: auto;

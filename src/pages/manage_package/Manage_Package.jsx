@@ -337,14 +337,16 @@ export default React.memo(function Manage_Package({ TitleText }) {
         <div className="handler" id="managepackagehandler2"></div>
         <div id="managepackagebox3">
           <div id="searchareawrapper">
-            <input type="text" name="" id="serchtext" />
-            <button
-              className="mybutton"
-              onClick={searchclick}
-              style={{ userSelect: "none" }}
-            >
-              検索
-            </button>
+            <form onSubmit={searchclick}>
+              <input type="text" name="" id="serchtext" />
+              <button
+                type="submit"
+                className="mybutton"
+                style={{ userSelect: "none" }}
+              >
+                検索
+              </button>
+            </form>
           </div>
           <div id="manage_package_table_loding_area">
             <Loading_Animation

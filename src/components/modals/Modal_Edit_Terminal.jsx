@@ -56,6 +56,11 @@ export default React.memo(function Modal_Edit_Terminal({
   }
 
   async function remove() {
+    var res = window.confirm(
+      `以下の端末を削除しますか？\n名称: ${isSelectTerminal.display_name}\nHostName: ${isSelectTerminal.name}\nIPアドレス: ${isSelectTerminal.ip_address}\n\n削除するには「OK」を中止するには「キャンセル」をクリックしてください。`
+    );
+    if (res == false) return;
+
     setIsShowLoadingAnimation(true);
 
     try {
