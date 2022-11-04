@@ -3,6 +3,7 @@ import "./Topbar.css";
 import { Link } from "react-router-dom";
 import { BASE_URL, DEBUG_MODE } from "../../api";
 
+//トップバー
 export default function Topbar({ TitleText }) {
   return (
     <div className="topbarContainer">

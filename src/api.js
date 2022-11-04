@@ -7,6 +7,7 @@ import { GET_TERMINALS_DATA } from "./DummyDatas/GET_TERMINALS_DATA";
 import { GET_COLLECT_PATH_DATA } from "./DummyDatas/GET_COLLECT_PATH_DATA";
 import axios from "axios";
 
+//デバッグモードの取得
 export const DEBUG_MODE = (() => {
   const str = document.getElementById("debugmode_div").innerHTML;
   if (typeof str != "string") {
