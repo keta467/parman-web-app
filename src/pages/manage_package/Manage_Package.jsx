@@ -301,7 +301,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
           パッケージ一括同期2
         </button> */}
         <div class="container" onClick={clickDouki}>
-          <a href="#" class="button button--1">
+          <a class="button button--1">
             <div class="button_reflecton"></div>
             <div class="button__wrapper">
               <div class="button__wave">パッケージ一括同期</div>
