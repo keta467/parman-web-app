@@ -9,14 +9,18 @@ export default function Manage_Package_Table({
   isSelectPackageId,
   setIsShowLoadingAnimation3,
 }) {
+  //チェックボックス（ヘッダー）
   async function headercheckboxtoggle(event) {
     if (isSelectPackageId == -1) return;
 
     //ローディングスタート
     setIsShowLoadingAnimation3(true);
-    const NewArr = [];
+
+    //チェックボックス（行）要素を取得
     const RowsCheakBox = document.getElementsByClassName("mycheckbox");
 
+    //apiに送るデータを作成
+    const NewArr = [];
     for (var i = 0; i < RowsCheakBox.length; i++) {
       NewArr.push({
         ID: Number(RowsCheakBox[i].id),
@@ -28,6 +32,7 @@ export default function Manage_Package_Table({
       //パッケージリリース端末変更
       await SET_PACKAGE_RELEASE_TERMINAL(isSelectPackageId, NewArr);
 
+      //全てのcチェックボックスのデータを更新
       for (var i = 0; i < RowsCheakBox.length; i++) {
         RowsCheakBox[i].checked = event.target.checked;
       }

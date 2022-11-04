@@ -10,39 +10,49 @@ export default React.memo(function Modal_Add_Terminal({
   setIsShowModal,
   createTableData,
 }) {
+  //モーダルを閉じる
   const closeModal = () => {
     if (isShowLoadingAnimation == true) return;
     setIsShowModal(false);
   };
 
+  //ローディングアニメーション
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
 
+  //登録
   async function register() {
+    //要素を取得
     const text1 = document.getElementById("textarea1");
     const text2 = document.getElementById("textarea2");
     const text3 = document.getElementById("textarea3");
 
+    //空の項目がある場合
     if (text1.value == "" || text2.value == "" || text3.value == "") {
       window.alert("空の項目があります。");
       return;
     }
 
+    //IPアドレスの書式が違う場合
     if (isIPaddress(text3.value) == false) {
       window.alert("正しいIPアドレスを入力してください");
       return;
     }
 
+    //文字数制限を超える場合
     if (text1.value.length >= 51 || text2.value.length >= 51) {
       window.alert("50文字以内で入力してください");
       return;
     }
 
+    //ローディングアニメーション開始
     setIsShowLoadingAnimation(true);
 
     try {
+      //apiをたたく
       await REGISTER_TERMINAL(text1.value, text2.value, text3.value);
 
+      //テーブルを作成
       createTableData();
 
       //連続で登録の場合
@@ -51,10 +61,12 @@ export default React.memo(function Modal_Add_Terminal({
         text2.value = "";
         text3.value = "";
       } else {
-        setIsShowModal(false);
+        // モーダルを閉じる
+        closeModal();
       }
     } catch {}
 
+    //ローディングアニメーション終了
     setIsShowLoadingAnimation(false);
   }
 

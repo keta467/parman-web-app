@@ -11,13 +11,19 @@ export default function Modal_Edit_Path({
   isPathList,
   setIsPathList,
 }) {
+  //モーダルを閉じる
   const closeModal = () => {
+    //ローディング中の場合
     if (isShowLoadingAnimation == true) return;
+    //モーダルを閉じる
     setIsShowModal(false);
   };
 
+  //更新
   async function updateButton() {
+    //要素を取得
     const Elems = document.getElementsByClassName("pathtext");
+    //配列に格納
     const NewArr = [];
     var message = "";
     for (var i = 0; i < Elems.length; i++) {
@@ -27,17 +33,22 @@ export default function Modal_Edit_Path({
       }
     }
 
+    //確認アラートを表示
     var res = window.confirm(
       `以下の内容で更新します。よろしいですか？${message}`
     );
+    //キャンセルが推された場合
     if (res == false) return;
 
+    //ローディング開始
     setIsShowLoadingAnimation(true);
     try {
+      //apiをたたく
       await SET_COLLECT_PATH(NewArr);
-      setIsShowModal(false);
+      //モーダルを閉じる
+      closeModal();
     } catch {}
-
+    //ローディング終了
     setIsShowLoadingAnimation(false);
   }
 
@@ -46,11 +57,14 @@ export default function Modal_Edit_Path({
     setIsPathList([...isPathList, ""]);
   };
 
+  //削除
   const deletePath = (pathindex, path) => {
     setIsPathList(isPathList.filter((value, index) => index !== pathindex));
   };
 
+  //ボタンにホバーされたとき
   function buttonMouseOver() {
+    //ローディング開始
     setIsShowLoadingAnimation(true);
 
     //画面上のデータを配列にいれる
@@ -61,9 +75,11 @@ export default function Modal_Edit_Path({
     }
     setIsPathList(NewArr);
 
+    //ローディング終了
     setIsShowLoadingAnimation(false);
   }
 
+  //ローディングアニメーション
   const [isShowLoadingAnimation, setIsShowLoadingAnimation] =
     React.useState(false);
 

@@ -42,6 +42,7 @@ export default function View_file_Separate({ TitleText }) {
   // ツリーデータ作成
   //
   async function createTreeData() {
+    //ローディング開始
     setIsShowLoadingAnimation(true);
 
     try {
@@ -83,6 +84,7 @@ export default function View_file_Separate({ TitleText }) {
       setIsFolderList(FolderList);
     } catch {}
 
+    //ローディング終了
     setIsShowLoadingAnimation(false);
   }
 
