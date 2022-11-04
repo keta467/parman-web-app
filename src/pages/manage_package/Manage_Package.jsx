@@ -298,7 +298,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
         }}
       >
         <button className="mybutton" onClick={clickDouki}>
-          パッケージ一括同期
+          パッケージ一括同期2
         </button>
         <div
           style={{
