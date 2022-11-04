@@ -297,9 +297,27 @@ export default React.memo(function Manage_Package({ TitleText }) {
           display: "flex",
         }}
       >
-        <button className="mybutton" onClick={clickDouki}>
+        {/* <button className="mybutton" onClick={clickDouki}>
           パッケージ一括同期2
-        </button>
+        </button> */}
+        <div class="container" onClick={clickDouki}>
+          <a href="#" class="button button--1">
+            <div class="button_reflecton"></div>
+            <div class="button__wrapper">
+              <div class="button__wave">パッケージ一括同期</div>
+              <div class="button__box">
+                <span class="text">C</span>
+                <span class="text">O</span>
+                <span class="text">N</span>
+                <span class="text">T</span>
+                <span class="text">I</span>
+                <span class="text">N</span>
+                <span class="text">U</span>
+                <span class="text">E</span>
+              </div>
+            </div>
+          </a>
+        </div>
         <div
           style={{
             position: "relative",
