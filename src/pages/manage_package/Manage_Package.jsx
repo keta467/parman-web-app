@@ -306,14 +306,15 @@ export default React.memo(function Manage_Package({ TitleText }) {
             <div class="button__wrapper">
               <div class="button__wave">パッケージ一括同期</div>
               <div class="button__box">
-                <span class="text">C</span>
-                <span class="text">O</span>
-                <span class="text">N</span>
-                <span class="text">T</span>
-                <span class="text">I</span>
-                <span class="text">N</span>
+                <span class="text">B</span>
                 <span class="text">U</span>
-                <span class="text">E</span>
+                <span class="text">L</span>
+                <span class="text">K</span>
+                <span class="text"> </span>
+                <span class="text">S</span>
+                <span class="text">Y</span>
+                <span class="text">N</span>
+                <span class="text">C</span>
               </div>
             </div>
           </a>
