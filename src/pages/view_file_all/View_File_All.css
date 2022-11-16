@@ -14,8 +14,8 @@
   border: 1px solid rgba(153, 153, 153, 0.6);
 }
 
-#redobutton {
-  margin-right: 10px;
+.marginleft10 {
+  margin-left: 10px;
 }
 
 #view_file_all_table_loading_area {

@@ -24,6 +24,10 @@ export default function View_File_All({ TitleText }) {
   const [isShowLoadingAnimation2, setIsShowLoadingAnimation2] =
     React.useState(false);
 
+  //ローディングアニメーションフラグ
+  const [isShowLoadingAnimation3, setIsShowLoadingAnimation3] =
+    React.useState(false);
+
   //
   //　テーブル用データ作成
   //
@@ -72,14 +76,25 @@ export default function View_File_All({ TitleText }) {
   }
 
   //
-  //最新バージョン取得
+  //端末別バージョン取得
   //
-  async function getNewVersion() {
+  async function getSeparateTerminalVersion() {
     setIsShowLoadingAnimation2(true);
     try {
       await UPDATE_TERMINAL_MODULE_VERSION(0);
     } catch {}
     setIsShowLoadingAnimation2(false);
+  }
+
+  //
+  //最新バージョン取得
+  //
+  async function getNewVersion() {
+    setIsShowLoadingAnimation3(true);
+    try {
+      await UPDATE_TERMINAL_MODULE_VERSION(0);
+    } catch {}
+    setIsShowLoadingAnimation3(false);
   }
 
   //初回レンダリング後
@@ -92,18 +107,15 @@ export default function View_File_All({ TitleText }) {
       <Topbar TitleText={TitleText} />
 
       <div className="viewfileallbuttonwrapper">
-        <div>
-          <button
-            id="redobutton"
-            className="mybutton"
-            onClick={createTableData}
-          >
-            再表示
-          </button>
-          <button className="mybutton" onClick={getNewVersion}>
-            最新バージョン取得
-          </button>
-        </div>
+        <button className="mybutton marginleft10" onClick={createTableData}>
+          再表示
+        </button>
+        <button
+          className="mybutton marginleft10"
+          onClick={getSeparateTerminalVersion}
+        >
+          端末別バージョン取得
+        </button>
         {isShowLoadingAnimation2 ? (
           <div
             style={{
@@ -115,6 +127,25 @@ export default function View_File_All({ TitleText }) {
           >
             <Loading_Animation
               isShowLoadingAnimation={isShowLoadingAnimation2}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
+        <button className="mybutton marginleft10" onClick={getNewVersion}>
+          全端末バージョン取得
+        </button>
+        {isShowLoadingAnimation3 ? (
+          <div
+            style={{
+              position: "relative",
+              width: "40px",
+              height: "40px",
+              marginLeft: "5px",
+            }}
+          >
+            <Loading_Animation
+              isShowLoadingAnimation={isShowLoadingAnimation3}
             />
           </div>
         ) : (

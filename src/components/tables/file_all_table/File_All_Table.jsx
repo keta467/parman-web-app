@@ -59,6 +59,9 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     <table id="filealltable">
       <thead id="module_list_header">
         <tr>
+          {/* <th>
+            <input type="checkbox" />
+          </th> */}
           <th id="machinenameth" className="machinename">
             <div
               style={{ width: "200px", textAlign: "right", fontSize: "14px" }}
@@ -71,6 +74,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
               マシン名
             </div>
           </th>
+
           {ModuleList.map((module, index) => (
             <th
               key={module.module_id}
@@ -101,9 +105,13 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
       <tbody id="module_list_body">
         {TERMINAL_LIST.map((terminal, index) => (
           <tr key={index}>
+            {/* <th>
+              <input className="machinenametext" type="checkbox" />
+            </th> */}
             <th className="machinename">
               <div className="machinenametext">{terminal.terminal_name}</div>
             </th>
+
             {ModuleList.map((module, index2) => (
               <td
                 key={index2}
