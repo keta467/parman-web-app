@@ -22,19 +22,15 @@ export default function Package_Alert({
       setIsShowLoadingAnimation(true);
 
       // 4.更新パッケージ取り込み
-      const Responce = await UPDATE_PACKAGE(isSelectPackageId);
+      await UPDATE_PACKAGE(isSelectPackageId);
 
-      // ローディング終了
-      setIsShowLoadingAnimation(false);
-
-      //正常にパッケージが更新された場合
-      if (Responce.result == 0) {
-        createtreedata(isSelectPackageId);
-        createTableData(isSelectPackageId);
-      } else {
-        window.alert("UPDATE_PACKAGE エラー");
-      }
+      //正常にパッケージが更新された場合のみここまでくる
+      createtreedata(isSelectPackageId);
+      createTableData(isSelectPackageId);
     } catch {}
+
+    // ローディング終了
+    setIsShowLoadingAnimation(false);
   }
 
   return (
