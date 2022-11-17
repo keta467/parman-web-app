@@ -1,0 +1,27 @@
+.buttonwrapper {
+  width: 95%;
+  justify-content: right;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+}
+
+.tablewrapper {
+  overflow: scroll;
+  width: 100%;
+  max-height: 81vh;
+  margin-top: 15px;
+  border: 1px solid rgba(153, 153, 153, 0.6);
+}
+
+.table_loading_area {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  height: 81vh;
+  position: relative;
+}
+
+.marginleft10 {
+  margin-left: 10px;
+}

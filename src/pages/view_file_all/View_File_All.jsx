@@ -1,7 +1,7 @@
 import React from "react";
 import File_All_Table from "../../components/tables/file_all_table/File_All_Table.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
-import "./View_File_All.css";
+import style from "./View_File_All.module.css";
 import {
   GET_INSTALLED_MODULE,
   UPDATE_TERMINAL_MODULE_VERSION,
@@ -146,12 +146,15 @@ export default function View_File_All({ TitleText }) {
     <>
       <Topbar TitleText={TitleText} />
 
-      <div className="viewfileallbuttonwrapper">
-        <button className="mybutton marginleft10" onClick={createTableData}>
+      <div className={style.buttonwrapper}>
+        <button
+          className={`mybutton ${style.marginleft10}`}
+          onClick={createTableData}
+        >
           再表示
         </button>
         <button
-          className="mybutton marginleft10"
+          className={`mybutton ${style.marginleft10}`}
           onClick={getSeparateTerminalVersion}
         >
           端末別バージョン取得
@@ -172,7 +175,10 @@ export default function View_File_All({ TitleText }) {
         ) : (
           <></>
         )}
-        <button className="mybutton marginleft10" onClick={getNewVersion}>
+        <button
+          className={`mybutton ${style.marginleft10}`}
+          onClick={getNewVersion}
+        >
           全端末バージョン取得
         </button>
         {isShowLoadingAnimation3 ? (
@@ -192,10 +198,10 @@ export default function View_File_All({ TitleText }) {
           <></>
         )}
       </div>
-      <div id="view_file_all_table_loading_area">
+      <div className={style.table_loading_area}>
         <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
         {isTERMINAL_LIST.length != 0 ? (
-          <div className="viewfilealltablewrapper">
+          <div className={style.tablewrapper}>
             <File_All_Table
               ModuleList={isModulelist}
               TERMINAL_LIST={isTERMINAL_LIST}

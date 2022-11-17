@@ -1,6 +1,7 @@
 import React from "react";
 import { GET_PACKAGE_LIST, SET_PACKAGE_ORDER } from "../../../api";
-import "./Package_List.css";
+import style from "./Package_List.module.css";
+import colorTableStyle from "../colortable.module.css";
 
 // パッケージリスト（パッケージ管理画面）
 export default React.memo(function Package_List({
@@ -129,14 +130,16 @@ export default React.memo(function Package_List({
   }, []);
 
   return (
-    <table className="managepackagelist colortable">
+    <table
+      className={`${style.managepackagelist} ${colorTableStyle.colortable}`}
+    >
       <tbody>
         {isPackageList.map((Package, index) =>
           Package.id == isSelectPackageId ? (
             <tr
               onClick={() => clickRow(Package.id)}
               draggable="true"
-              className="dragitem selectpackage"
+              className={style.selectpackage}
               id={index}
               key={Package.id}
               onDrag={myDrag}
@@ -150,7 +153,6 @@ export default React.memo(function Package_List({
             <tr
               onClick={() => clickRow(Package.id)}
               draggable="true"
-              className="dragitem"
               id={index}
               key={Package.id}
               onDrag={myDrag}

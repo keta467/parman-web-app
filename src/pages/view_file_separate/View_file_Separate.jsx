@@ -1,7 +1,7 @@
 import React from "react";
 import File_Separate_Table from "../../components/tables/file_separate_table/File_Separate_Table.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
-import "./View_file_Separate.css";
+// import "./View_file_Separate.css";
 import { Folder } from "../../lib/myclass.js";
 import Tree_View from "../../components/tree_view/Tree_View.jsx";
 import Modal_Edit_Path from "../../components/modals/modal_edit_path/Modal_Edit_Path.jsx";
@@ -12,6 +12,8 @@ import {
 } from "../../api.js";
 import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
 import { ModulesToFoders } from "../../lib/myfunction.js";
+import TreeViewStyle from "../../components/tree_view/Tree_View.module.css";
+import style from "./View_file_Separate.module.css";
 
 // ファイル別管理画面
 export default function View_file_Separate({ TitleText }) {
@@ -119,7 +121,7 @@ export default function View_file_Separate({ TitleText }) {
   });
 
   const setFilePath = React.useCallback((Path) => {
-    var elems = document.getElementsByClassName("file_button");
+    var elems = document.getElementsByClassName(TreeViewStyle.file_button);
     for (var i = 0; i < elems.length; i++) {
       elems[i].style.backgroundColor = "";
       elems[i].firstElementChild.style.color = "";
@@ -216,25 +218,25 @@ export default function View_file_Separate({ TitleText }) {
         isPathList={isPathList}
         setIsPathList={setIsPathList}
       />
-      <div id="viewfileseparatewrapper">
-        <div id="viewfileseparatebox1">
+      <div id="viewfileseparatewrapper" className={style.wrapper}>
+        <div id="viewfileseparatebox1" className={style.boxA}>
           <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
-          <div className="widthheightoverflow">
+          <div className={style.treeviewwrapper}>
             <Tree_View FolderList={isFolderList} />
           </div>
         </div>
-        <div className="handler" id="viewfileseparatehandler1"></div>
-        <div id="viewfileseparatebox2">
-          <div id="shuushuusakibutton">
+        <div id="viewfileseparatehandler1" className={style.handler}></div>
+        <div id="viewfileseparatebox2" className={style.boxB}>
+          <div className={style.button1}>
             <button className="mybutton" onClick={ClickEditPath}>
               収集先パス編集
             </button>
           </div>
-          <div id="view_file_separate_table_loading_area">
+          <div className={style.table_loading_area}>
             <Loading_Animation
               isShowLoadingAnimation={isShowLoadingAnimation2}
             />
-            <div className="fileseparatetablewrap">
+            <div className={style.tablewraper}>
               <File_Separate_Table TerminalList={isTerminalList} />
             </div>
           </div>

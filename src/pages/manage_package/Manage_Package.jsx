@@ -1,7 +1,7 @@
 import React from "react";
 import Topbar from "../../components/topbar/Topbar.jsx";
 import Tree_View from "../../components/tree_view/Tree_View.jsx";
-import "./Manage_Package.css";
+import style from "./Manage_Package.module.css";
 import { Folder } from "../../lib/myclass.js";
 import Manage_Package_Table from "../../components/tables/manage_package_table/Manage_Package_Table.jsx";
 import Package_List from "../../components/tables/package_list/Package_List.jsx";
@@ -67,7 +67,6 @@ export default React.memo(function Manage_Package({ TitleText }) {
       const MODULE_LIST = ResponseData.module_list;
 
       //フォルダを取得
-      console.log("クリエイトツリーでーた");
       const FolderList = ModulesToFoders(MODULE_LIST);
 
       for (var i = 0; i < FolderList.length; i++) {
@@ -98,7 +97,7 @@ export default React.memo(function Manage_Package({ TitleText }) {
     //表示クリア
     setIsTerminalList([]);
     document.getElementById("serchtext").value = ""; // 検索ボックスをリセット
-    document.getElementById("abc").checked = false; // ヘッダーのチェックボックスをリセット
+    document.getElementById("checkbox_header").checked = false; // ヘッダーのチェックボックスをリセット
 
     //ローディングアニメーション開始
     setIsShowLoadingAnimation3(true);
@@ -312,10 +311,10 @@ export default React.memo(function Manage_Package({ TitleText }) {
         </div>
       </div>
 
-      <div id="managepackagewrapper">
-        <div id="managepackagebox1">
+      <div id="managepackagewrapper" className={style.wrapper}>
+        <div id="managepackagebox1" className={style.boxA}>
           <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
-          <div className="widthheightoverflow">
+          <div className={style.widthheightoverflow}>
             <Package_List
               isSelectPackageId={isSelectPackageId}
               setIsSelectPackageId={setIsSelectPackageId}
@@ -323,10 +322,10 @@ export default React.memo(function Manage_Package({ TitleText }) {
             />
           </div>
         </div>
-        <div className="handler" id="managepackagehandler1"></div>
-        <div id="managepackagebox2">
+        <div className={style.handler} id="managepackagehandler1"></div>
+        <div id="managepackagebox2" className={style.boxB}>
           <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation2} />
-          <div className="widthheightoverflow">
+          <div className={style.widthheightoverflow}>
             <Package_Alert
               isShowAlert={isShowPackageAlert}
               isSelectPackageId={isSelectPackageId}
@@ -336,9 +335,9 @@ export default React.memo(function Manage_Package({ TitleText }) {
             <Tree_View FolderList={isFolderList} />
           </div>
         </div>
-        <div className="handler" id="managepackagehandler2"></div>
-        <div id="managepackagebox3">
-          <div id="searchareawrapper">
+        <div className={style.handler} id="managepackagehandler2"></div>
+        <div id="managepackagebox3" className={style.boxC}>
+          <div className={style.searchareawrapper}>
             <input
               type="text"
               name=""
@@ -356,11 +355,11 @@ export default React.memo(function Manage_Package({ TitleText }) {
               検索
             </button>
           </div>
-          <div id="manage_package_table_loding_area">
+          <div className={style.manage_package_table_loding_area}>
             <Loading_Animation
               isShowLoadingAnimation={isShowLoadingAnimation3}
             />
-            <div id="manage_package_table_wrapper">
+            <div className={style.manage_package_table_wrapper}>
               <Manage_Package_Table
                 TerminalList={isTerminalList}
                 isSelectPackageId={isSelectPackageId}

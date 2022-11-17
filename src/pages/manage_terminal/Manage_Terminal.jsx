@@ -1,10 +1,11 @@
 import React from "react";
-import Modal_Add_Terminal from "../../components/modals/Modal_Add_Terminal.jsx";
-import Modal_Edit_Terminal from "../../components/modals/Modal_Edit_Terminal.jsx";
+import Modal_Add_Terminal from "../../components/modals/modal_add_terminal/Modal_Add_Terminal.jsx";
+import Modal_Edit_Terminal from "../../components/modals/modal_edit_terminal/Modal_Edit_Terminal.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
-import "./Manage_Terminal.css";
+import style from "./Manage_Terminal.module.css";
 import { GET_TERMINALS, SET_TERMINAL_ORDER } from "../../api.js";
 import Loading_Animation from "../../components/alert/loading_animation/Loading_Animation.jsx";
+import colorTableStyle from "../../components/tables/colortable.module.css";
 
 // 端末管理画面
 export default React.memo(function Manage_Terminal({ TitleText }) {
@@ -169,15 +170,15 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
         createTableData={createTableData}
       />
 
-      <div className="managemachinebuttonwrapper">
+      <div className={style.buttonwrapper}>
         <button className="mybutton" onClick={ClickAdd}>
           追加
         </button>
       </div>
-      <div id="manage_terminal_table_loading_area">
+      <div className={style.table_loading_area}>
         <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
-        <div className="managemachinetablewrapper">
-          <table className="managemachinetable colortable">
+        <div className={style.tablewrapper}>
+          <table className={colorTableStyle.colortable}>
             <thead>
               <tr>
                 <th>名称</th>
@@ -185,12 +186,11 @@ export default React.memo(function Manage_Terminal({ TitleText }) {
                 <th>IPアドレス</th>
               </tr>
             </thead>
-            <tbody id="managemachinetabletbody">
+            <tbody className={style.managemachinetabletbody}>
               {isTerminalList.map((Terminal, index) => (
                 <tr
                   onClick={() => openModal(index)}
                   draggable="true"
-                  className="dragitem"
                   id={index}
                   key={Terminal.id}
                   onDrag={myDrag}

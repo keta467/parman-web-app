@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./File_All_Table.css";
+import style from "./File_All_Table.module.css";
 
 // ファイル全体管理画面のテーブル
 export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
@@ -71,7 +71,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     fixedCorner2.style.left = fixedCorner.clientWidth + BorderWidth + "px";
 
     //上を固定
-    const fixedTops = document.getElementsByClassName("fixedTop");
+    const fixedTops = document.getElementsByClassName(style.fixedTop);
     for (var i = 0; i < fixedTops.length; i++) {
       fixedTops[i].style.position = "sticky";
       fixedTops[i].style.zIndex = 9;
@@ -79,7 +79,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     }
 
     //左を固定1
-    const fixedLeft1 = document.getElementsByClassName("fixedLeft1");
+    const fixedLeft1 = document.getElementsByClassName(style.fixedLeft1);
     for (var i = 0; i < fixedLeft1.length; i++) {
       fixedLeft1[i].style.position = "sticky";
       fixedLeft1[i].style.zIndex = 8;
@@ -87,7 +87,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     }
 
     //左を固定2
-    const fixedLeft2 = document.getElementsByClassName("fixedLeft2");
+    const fixedLeft2 = document.getElementsByClassName(style.fixedLeft2);
     for (var i = 0; i < fixedLeft2.length; i++) {
       fixedLeft2[i].style.position = "sticky";
       fixedLeft2[i].style.zIndex = 7;
@@ -115,7 +115,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
   }, []);
 
   return (
-    <table id="filealltable">
+    <table id="filealltable" className={style.table}>
       <thead>
         <tr>
           <th id="fixedCorner">
@@ -125,7 +125,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
               type="checkbox"
             />
           </th>
-          <th id="fixedCorner2">
+          <th id="fixedCorner2" className={style.fixedCorner2}>
             <div
               style={{ width: "200px", textAlign: "right", fontSize: "14px" }}
             >
@@ -142,7 +142,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
             <th
               key={module.module_id}
               id={"th" + index}
-              className="fixedTop"
+              className={style.fixedTop}
               onMouseOver={() => {
                 document.getElementById(
                   `${module.install_path}\\${module.module_name}`
@@ -157,7 +157,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
               {module.module_name}
               <div
                 id={`${module.install_path}\\${module.module_name}`}
-                className="description"
+                className={style.description}
                 style={{ display: "none" }}
               >
                 {`${module.install_path}\\${module.module_name}`}
@@ -169,14 +169,14 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
       <tbody>
         {TERMINAL_LIST.map((terminal, index) => (
           <tr key={index}>
-            <th className="fixedLeft1">
+            <th className={style.fixedLeft1}>
               <input
                 id={`${terminal.terminal_id}_${terminal.terminal_name}`}
                 className="mycheckbox"
                 type="checkbox"
               />
             </th>
-            <th className="fixedLeft2" style={{ overflow: "auto" }}>
+            <th className={style.fixedLeft2} style={{ overflow: "auto" }}>
               <div style={{ width: "200px" }}>{terminal.terminal_name}</div>
             </th>
 

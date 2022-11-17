@@ -1,12 +1,11 @@
 import React from "react";
-import "./Loading_Animation.css";
-
+import style from "./Loading_Animation.module.css";
 export default function Loading_Animation({ isShowLoadingAnimation }) {
   return (
     <>
       {isShowLoadingAnimation ? (
-        <div className="loading_animation">
-          <svg className="ring" viewBox="25 25 50 50" strokeWidth="5">
+        <div className={style.loading_animation}>
+          <svg className={style.ring} viewBox="25 25 50 50" strokeWidth="5">
             <circle cx="50" cy="50" r="20" />
           </svg>
         </div>

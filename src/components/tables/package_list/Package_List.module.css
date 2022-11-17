@@ -1,0 +1,19 @@
+.managepackagelist {
+  white-space: nowrap;
+}
+
+.managepackagelist tr:hover {
+  font-weight: bold;
+}
+
+.managepackagelist td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #999;
+}
+
+.selectpackage {
+  background-color: #f06060 !important;
+  color: white !important;
+  font-weight: bold !important;
+}

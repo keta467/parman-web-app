@@ -1,6 +1,6 @@
 import React from "react";
 import { UPDATE_PACKAGE } from "../../../api";
-import "./Package_Alert.css";
+import style from "./Package_Alert.module.css";
 import chuui from "../../../assets/chuui.svg";
 import Loading_Animation from "../loading_animation/Loading_Animation.jsx";
 
@@ -50,7 +50,7 @@ export default function Package_Alert({
             marginRight: "5px",
           }}
         >
-          <div id="packagealert" className="original-box-shadow">
+          <div className={style.packagealert}>
             <img src={chuui} />
             <span>このパッケージは更新されています</span>
             <button onClick={clickDouki}>同期</button>
