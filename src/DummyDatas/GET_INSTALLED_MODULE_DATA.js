@@ -28,7 +28,7 @@
     },
     {
       terminal_id: 28,
-      terminal_name: "テレ朝テスト環境",
+      terminal_name: "テレ朝テスト環境テレ朝テスト",
       module_count: 336,
       module_list: [
         {

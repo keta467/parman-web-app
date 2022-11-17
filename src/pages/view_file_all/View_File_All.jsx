@@ -79,9 +79,42 @@ export default function View_File_All({ TitleText }) {
   //端末別バージョン取得
   //
   async function getSeparateTerminalVersion() {
+    //チェックボックス（行）要素を取得
+    const RowsCheakBox = document.getElementsByClassName("mycheckbox");
+
+    //apiに送るデータを作成
+    const NewArr = [];
+    var message = "";
+    for (var i = 0; i < RowsCheakBox.length; i++) {
+      if (RowsCheakBox[i].checked == false) continue;
+      console.log(RowsCheakBox[i].id.split("_"));
+      NewArr.push({
+        ID: Number(RowsCheakBox[i].id.split("_")[0]),
+      });
+      message += "・" + RowsCheakBox[i].id.split("_")[1] + "\n";
+    }
+    console.log(NewArr);
+
+    //対象端末がない場合
+    if (NewArr.length == 0) {
+      window.alert(
+        "対象の端末がありません。\nバージョン取得を行う端末にチェックを入れてください。"
+      );
+      return;
+    }
+
+    //確認アラート
+    var res = window.confirm(
+      `以下端末のバージョン取得を行います。よろしいですか？\n${message}\nよろしければ「OK」を、中止するには「キャンセル」をクリックしてください。`
+    );
+    //キャンセルが選択されたとき
+    if (res == false) return;
+
     setIsShowLoadingAnimation2(true);
     try {
-      await UPDATE_TERMINAL_MODULE_VERSION(0);
+      for (var i = 0; i < NewArr.length; i++) {
+        await UPDATE_TERMINAL_MODULE_VERSION(NewArr[i].ID);
+      }
     } catch {}
     setIsShowLoadingAnimation2(false);
   }
@@ -90,6 +123,13 @@ export default function View_File_All({ TitleText }) {
   //最新バージョン取得
   //
   async function getNewVersion() {
+    //確認アラートの表示
+    var res = window.confirm(
+      `全端末バージョン取得を行います。よろしいですか？\n\nよろしければ「OK」を、中止するには「キャンセル」をクリックしてください。`
+    );
+    //キャンセルが選択されたとき
+    if (res == false) return;
+
     setIsShowLoadingAnimation3(true);
     try {
       await UPDATE_TERMINAL_MODULE_VERSION(0);
