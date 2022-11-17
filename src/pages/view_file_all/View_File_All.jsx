@@ -67,8 +67,26 @@ export default function View_File_All({ TitleText }) {
         }
       }
 
+      //モジュールリストをソートする
+      let ModuleList2 = ModuleList.sort((a, b) => {
+        const la = a.module_name.toLowerCase();
+        const lb = b.module_name.toLowerCase();
+        if (la < lb) {
+          return -1;
+        }
+        if (la > lb) {
+          return 1;
+        }
+        if (a < b) {
+          return -1;
+        }
+        if (b < a) {
+          return 1;
+        }
+      });
+
       setIsTerminalList(TERMINAL_LIST);
-      setIsModulelist(ModuleList);
+      setIsModulelist(ModuleList2);
     } catch {}
 
     //ローディングアニメーション終了
