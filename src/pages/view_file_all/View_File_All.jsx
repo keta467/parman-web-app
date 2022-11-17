@@ -67,8 +67,8 @@ export default function View_File_All({ TitleText }) {
         }
       }
 
-      //モジュールリストをソートする
-      let ModuleList2 = ModuleList.sort((a, b) => {
+      //モジュールリストをソートする abc順
+      ModuleList.sort((a, b) => {
         const la = a.module_name.toLowerCase();
         const lb = b.module_name.toLowerCase();
         if (la < lb) {
@@ -86,7 +86,7 @@ export default function View_File_All({ TitleText }) {
       });
 
       setIsTerminalList(TERMINAL_LIST);
-      setIsModulelist(ModuleList2);
+      setIsModulelist(ModuleList);
     } catch {}
 
     //ローディングアニメーション終了
