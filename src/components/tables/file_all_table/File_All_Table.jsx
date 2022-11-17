@@ -175,7 +175,6 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
                 className="mycheckbox"
                 type="checkbox"
               />
-              {terminal.terminal_id}
             </th>
             <th className="fixedLeft2" style={{ overflow: "auto" }}>
               <div style={{ width: "200px" }}>{terminal.terminal_name}</div>
