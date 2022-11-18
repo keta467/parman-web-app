@@ -1,7 +1,6 @@
 import React from "react";
-import "./Manage_Package_Table.css";
-import "../nomaltable.css";
 import { SET_PACKAGE_RELEASE_TERMINAL } from "../../../api";
+import nomalTableStyle from "../nomaltable.module.css";
 
 // パッケージ管理画面のテーブル
 export default function Manage_Package_Table({
@@ -60,14 +59,14 @@ export default function Manage_Package_Table({
   }
 
   return (
-    <table className="nomaltable">
+    <table className={nomalTableStyle.nomaltable}>
       <thead>
         <tr>
-          <th id="checkboxth">
+          <th style={{ width: "6%" }}>
             <input
+              id="checkbox_header"
               type="checkbox"
               onChange={(event) => headercheckboxtoggle(event)}
-              id="abc"
             />
           </th>
           <th>名称</th>
@@ -95,7 +94,9 @@ export default function Manage_Package_Table({
             <td>{Terminal.display_name}</td>
             <td>{Terminal.name}</td>
             <td>{Terminal.ip_address}</td>
-            <td className="releasedatet">{Terminal.release_date}</td>
+            <td className={nomalTableStyle.releasedate}>
+              {Terminal.release_date}
+            </td>
           </tr>
         ))}
       </tbody>

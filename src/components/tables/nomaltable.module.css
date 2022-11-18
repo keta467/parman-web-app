@@ -1,0 +1,37 @@
+.nomaltable {
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.nomaltable td {
+  word-wrap: break-word;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  text-align: center;
+}
+
+.nomaltable tr {
+  background-color: white;
+}
+
+.nomaltable th {
+  white-space: nowrap;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background: #9adbaf;
+  font-weight: bold;
+  color: black;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.nomaltable th,
+.nomaltable td {
+  padding: 4px 4px 2px 4px;
+}
+
+.releasedate {
+  font-size: 15px;
+}

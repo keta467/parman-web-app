@@ -1,0 +1,64 @@
+.topbarContainer {
+  background-color: #5ad382;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.topbarContainer * {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.topbartab {
+  display: flex;
+  margin-top: 29px;
+  margin-right: 20px;
+  margin-left: 50px;
+}
+
+.topbartab a {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.topbartabbutton {
+  padding: 3px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-left: 1px dashed black;
+  width: 200px;
+  text-align: center;
+}
+
+.toptabbuttonright {
+  border-right: 1px dashed black;
+}
+
+.selecttopbartabbutton {
+  border-bottom: 4px solid rgb(231, 135, 90);
+}
+
+.title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  padding: 3px 8px 3px 8px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.version {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  padding: 3px 8px 3px 8px;
+}

@@ -5,6 +5,7 @@ import line_image from "../assets/line.svg";
 import folder_open_image from "../assets/folder_open.svg";
 import folder_close_image from "../assets/folder_close.svg";
 import file_image from "../assets/file.svg";
+import style from "../components/tree_view/Tree_View.module.css";
 
 // 基本となるマージン値
 const ROW_LEFT_MARGIN = 20;
@@ -59,13 +60,16 @@ export class Folder {
       return (
         <ul key={this.id}>
           <button
-            className="treeview_row_button"
+            className={style.treeview_row_button}
             onClick={() => this.onclickfunc()}
           >
-            <div className="row_div" style={{ marginLeft: `${marginleft}px` }}>
-              <img className="arrow_icon" src={arrow_down_image}></img>
+            <div
+              className={style.row_div}
+              style={{ marginLeft: `${marginleft}px` }}
+            >
+              <img className={style.arrow_icon} src={arrow_down_image}></img>
               <img
-                className="folder_or_file_icon"
+                className={style.folder_or_file_icon}
                 src={folder_open_image}
               ></img>
               {this.name}
@@ -85,13 +89,16 @@ export class Folder {
       return (
         <ul key={this.id}>
           <button
-            className="treeview_row_button"
+            className={style.treeview_row_button}
             onClick={() => this.onclickfunc()}
           >
-            <div className="row_div" style={{ marginLeft: `${marginleft}px` }}>
-              <img className="arrow_icon" src={arrow_right_image}></img>
+            <div
+              className={style.row_div}
+              style={{ marginLeft: `${marginleft}px` }}
+            >
+              <img className={style.arrow_icon} src={arrow_right_image}></img>
               <img
-                className="folder_or_file_icon"
+                className={style.folder_or_file_icon}
                 src={folder_close_image}
               ></img>
               {this.name}
@@ -196,11 +203,14 @@ export class File {
       return (
         <li key={`${this.parentfolderid}${this.path}`}>
           <button
-            className="treeview_row_button"
+            className={style.treeview_row_button}
             style={{ pointerEvents: "none" }}
           >
-            <div className="row_div" style={{ marginLeft: `${marginleft}px` }}>
-              <img className="folder_or_file_icon" src={file_image}></img>
+            <div
+              className={style.row_div}
+              style={{ marginLeft: `${marginleft}px` }}
+            >
+              <img className={style.folder_or_file_icon} src={file_image}></img>
               <div
                 style={{ width: "300px" }}
               >{`${this.name} ${this.file_version}`}</div>
@@ -213,11 +223,14 @@ export class File {
         <li key={`${this.parentfolderid}${this.path}`}>
           <button
             id={this.path}
-            className={`treeview_row_button file_button`}
+            className={`${style.treeview_row_button} ${style.file_button}`}
             onClick={() => this.onclickfunc(this.path)}
           >
-            <div className="row_div" style={{ marginLeft: `${marginleft}px` }}>
-              <img className="folder_or_file_icon" src={file_image}></img>
+            <div
+              className={style.row_div}
+              style={{ marginLeft: `${marginleft}px` }}
+            >
+              <img className={style.folder_or_file_icon} src={file_image}></img>
               {this.name}
             </div>
           </button>

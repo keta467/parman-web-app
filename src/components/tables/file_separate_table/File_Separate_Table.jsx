@@ -1,11 +1,10 @@
 import React from "react";
-import "./File_Separate_Table.css";
-import "..//colortable.css";
+import nomalTableStyle from "../nomaltable.module.css";
 
 // ファイル別管理画面のテーブル
 export default function File_Separate_Table({ TerminalList }) {
   return (
-    <table className="nomaltable">
+    <table className={nomalTableStyle.nomaltable}>
       <thead>
         <tr>
           <th>名称</th>
@@ -22,7 +21,9 @@ export default function File_Separate_Table({ TerminalList }) {
             <td>{Terminal.name}</td>
             <td>{Terminal.ip_address}</td>
             <td>{Terminal.file_version}</td>
-            <td className="releasedatet">{Terminal.update_date_time}</td>
+            <td className={nomalTableStyle.releasedate}>
+              {Terminal.update_date_time}
+            </td>
           </tr>
         ))}
       </tbody>

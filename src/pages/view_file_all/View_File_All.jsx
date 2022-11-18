@@ -1,7 +1,7 @@
 import React from "react";
 import File_All_Table from "../../components/tables/file_all_table/File_All_Table.jsx";
 import Topbar from "../../components/topbar/Topbar.jsx";
-import "./View_File_All.css";
+import style from "./View_File_All.module.css";
 import {
   GET_INSTALLED_MODULE,
   UPDATE_TERMINAL_MODULE_VERSION,
@@ -22,6 +22,10 @@ export default function View_File_All({ TitleText }) {
 
   //ローディングアニメーションフラグ
   const [isShowLoadingAnimation2, setIsShowLoadingAnimation2] =
+    React.useState(false);
+
+  //ローディングアニメーションフラグ
+  const [isShowLoadingAnimation3, setIsShowLoadingAnimation3] =
     React.useState(false);
 
   //
@@ -63,6 +67,24 @@ export default function View_File_All({ TitleText }) {
         }
       }
 
+      //モジュールリストをソートする abc順
+      ModuleList.sort((a, b) => {
+        const la = a.module_name.toLowerCase();
+        const lb = b.module_name.toLowerCase();
+        if (la < lb) {
+          return -1;
+        }
+        if (la > lb) {
+          return 1;
+        }
+        if (a < b) {
+          return -1;
+        }
+        if (b < a) {
+          return 1;
+        }
+      });
+
       setIsTerminalList(TERMINAL_LIST);
       setIsModulelist(ModuleList);
     } catch {}
@@ -72,14 +94,65 @@ export default function View_File_All({ TitleText }) {
   }
 
   //
+  //端末別バージョン取得
+  //
+  async function getSeparateTerminalVersion() {
+    //チェックボックス（行）要素を取得
+    const RowsCheakBox = document.getElementsByClassName("mycheckbox");
+
+    //apiに送るデータを作成
+    const NewArr = [];
+    var message = "";
+    for (var i = 0; i < RowsCheakBox.length; i++) {
+      if (RowsCheakBox[i].checked == false) continue;
+      console.log(RowsCheakBox[i].id.split("_"));
+      NewArr.push({
+        ID: Number(RowsCheakBox[i].id.split("_")[0]),
+      });
+      message += "・" + RowsCheakBox[i].id.split("_")[1] + "\n";
+    }
+    console.log(NewArr);
+
+    //対象端末がない場合
+    if (NewArr.length == 0) {
+      window.alert(
+        "対象の端末がありません。\nバージョン取得を行う端末にチェックを入れてください。"
+      );
+      return;
+    }
+
+    //確認アラート
+    var res = window.confirm(
+      `以下端末のバージョン取得を行います。よろしいですか？\n${message}\nよろしければ「OK」を、中止するには「キャンセル」をクリックしてください。`
+    );
+    //キャンセルが選択されたとき
+    if (res == false) return;
+
+    setIsShowLoadingAnimation2(true);
+    try {
+      for (var i = 0; i < NewArr.length; i++) {
+        await UPDATE_TERMINAL_MODULE_VERSION(NewArr[i].ID);
+      }
+    } catch {}
+    setIsShowLoadingAnimation2(false);
+  }
+
+  //
   //最新バージョン取得
   //
   async function getNewVersion() {
-    setIsShowLoadingAnimation2(true);
+    //確認アラートの表示
+    var res = window.confirm(
+      `全端末バージョン取得を行います。よろしいですか？\n\nよろしければ「OK」を、中止するには「キャンセル」をクリックしてください。`
+    );
+    //キャンセルが選択されたとき
+    if (res == false) return;
+
+    setIsShowLoadingAnimation3(true);
     try {
       await UPDATE_TERMINAL_MODULE_VERSION(0);
     } catch {}
-    setIsShowLoadingAnimation2(false);
+    setIsShowLoadingAnimation3(false);
   }
 
   //初回レンダリング後
@@ -91,19 +164,19 @@ export default function View_File_All({ TitleText }) {
     <>
       <Topbar TitleText={TitleText} />
 
-      <div className="viewfileallbuttonwrapper">
-        <div>
-          <button
-            id="redobutton"
-            className="mybutton"
-            onClick={createTableData}
-          >
-            再表示
-          </button>
-          <button className="mybutton" onClick={getNewVersion}>
-            最新バージョン取得
-          </button>
-        </div>
+      <div className={style.buttonwrapper}>
+        <button
+          className={`mybutton ${style.marginleft10}`}
+          onClick={createTableData}
+        >
+          再表示
+        </button>
+        <button
+          className={`mybutton ${style.marginleft10}`}
+          onClick={getSeparateTerminalVersion}
+        >
+          端末別バージョン取得
+        </button>
         {isShowLoadingAnimation2 ? (
           <div
             style={{
@@ -120,11 +193,33 @@ export default function View_File_All({ TitleText }) {
         ) : (
           <></>
         )}
+        <button
+          className={`mybutton ${style.marginleft10}`}
+          onClick={getNewVersion}
+        >
+          全端末バージョン取得
+        </button>
+        {isShowLoadingAnimation3 ? (
+          <div
+            style={{
+              position: "relative",
+              width: "40px",
+              height: "40px",
+              marginLeft: "5px",
+            }}
+          >
+            <Loading_Animation
+              isShowLoadingAnimation={isShowLoadingAnimation3}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
-      <div id="view_file_all_table_loading_area">
+      <div className={style.table_loading_area}>
         <Loading_Animation isShowLoadingAnimation={isShowLoadingAnimation} />
         {isTERMINAL_LIST.length != 0 ? (
-          <div className="viewfilealltablewrapper">
+          <div className={style.tablewrapper}>
             <File_All_Table
               ModuleList={isModulelist}
               TERMINAL_LIST={isTERMINAL_LIST}

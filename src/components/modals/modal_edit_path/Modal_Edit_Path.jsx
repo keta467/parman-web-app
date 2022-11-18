@@ -1,8 +1,8 @@
 import React from "react";
 import { SET_COLLECT_PATH } from "../../../api";
 import Loading_Animation from "../../alert/loading_animation/Loading_Animation.jsx";
-import "../Modal.css";
-import "./Modal_Edit_Path.css";
+import modalStyle from "../Modal.module.css";
+import style from "./Modal_Edit_Path.module.css";
 
 // パス編集モーダル
 export default function Modal_Edit_Path({
@@ -22,7 +22,7 @@ export default function Modal_Edit_Path({
   //更新
   async function updateButton() {
     //要素を取得
-    const Elems = document.getElementsByClassName("pathtext");
+    const Elems = document.getElementsByClassName(style.pathtext);
     //配列に格納
     const NewArr = [];
     var message = "";
@@ -68,7 +68,7 @@ export default function Modal_Edit_Path({
     setIsShowLoadingAnimation(true);
 
     //画面上のデータを配列にいれる
-    const Elems = document.getElementsByClassName("pathtext");
+    const Elems = document.getElementsByClassName(style.pathtext);
     const NewArr = [];
     for (var i = 0; i < Elems.length; i++) {
       NewArr.push(Elems[i].value);
@@ -87,24 +87,24 @@ export default function Modal_Edit_Path({
     <>
       {isShowModal ? (
         <>
-          <div className="overlay" onClick={closeModal}></div>
-          <div className="modal_centering_div">
-            <div className="modal" id="modaleditpathmodal">
+          <div className={modalStyle.overlay} onClick={closeModal}></div>
+          <div className={modalStyle.modal_centering_div}>
+            <div className={style.modal}>
               <Loading_Animation
                 isShowLoadingAnimation={isShowLoadingAnimation}
               />
-              <div id="modaleditpathbuttonareatextarea">
+              <div className={style.modaleditpathbuttonareatextarea}>
                 {isPathList.map((path, pathindex) => (
                   <div key={path + pathindex}>
                     <p>収集先パス{pathindex + 1}</p>
-                    <div className="df">
+                    <div className={style.df}>
                       <input
-                        className="pathtext"
+                        className={style.pathtext}
                         type="text"
                         defaultValue={path}
                       />
                       <button
-                        className="pathdeletebutton1"
+                        className={style.pathdeletebutton1}
                         onMouseOver={buttonMouseOver}
                         onClick={(event) => deletePath(pathindex, path)}
                       >
@@ -114,8 +114,8 @@ export default function Modal_Edit_Path({
                   </div>
                 ))}
               </div>
-              <div id="pathmodalbuttonsarea">
-                <button className="pathaddbutton1" onClick={addPath}>
+              <div className={style.pathmodalbuttonsarea}>
+                <button className={style.pathaddbutton1} onClick={addPath}>
                   追加
                 </button>
                 <div>
