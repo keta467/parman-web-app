@@ -7,6 +7,10 @@ import { BASE_URL, DEBUG_MODE } from "../../api";
 export default function Topbar({ TitleText }) {
   return (
     <div className={style.topbarContainer}>
+      <p className={style.title}>リリースパッケージ管理システム</p>
+      <p className={style.version}>
+        version {document.getElementById("app_version").innerHTML}
+      </p>
       <div className={style.topbartab}>
         <Link to="/manage_package">
           {TitleText == "パッケージ管理" ? (
@@ -57,9 +61,6 @@ export default function Topbar({ TitleText }) {
           )}
         </Link>
       </div>
-      <p className={style.version}>
-        version {document.getElementById("app_version").innerHTML}
-      </p>
     </div>
   );
 }

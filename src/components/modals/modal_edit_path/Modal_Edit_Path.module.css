@@ -10,6 +10,8 @@
   justify-content: space-around;
   margin: 15.5vh auto 0 auto;
   position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 6px black;
 }
 
 .df {

@@ -11,8 +11,8 @@
 }
 
 .modal {
-  width: 650px;
-  height: 270px;
+  width: 630px;
+  height: 250px;
   padding-top: 35px;
   padding-bottom: 20px;
   background-color: white;
@@ -22,6 +22,8 @@
   justify-content: space-around;
   margin: 200px auto 0 auto;
   position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 6px black;
 }
 
 .modal p {
