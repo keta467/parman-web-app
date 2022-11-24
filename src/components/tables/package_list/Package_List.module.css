@@ -2,14 +2,15 @@
   white-space: nowrap;
 }
 
-.managepackagelist tr:hover {
+.managepackagelist tbody tr:hover {
   font-weight: bold;
 }
 
-.managepackagelist td {
+.managepackagelist tbody tr td {
   overflow: hidden;
   text-overflow: ellipsis;
   border: 1px solid #999;
+  text-align: left;
 }
 
 .selectpackage {
