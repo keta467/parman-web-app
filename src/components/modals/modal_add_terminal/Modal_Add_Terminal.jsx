@@ -96,22 +96,26 @@ export default React.memo(function Modal_Add_Terminal({
                 </div>
               </div>
               <div className={style.buttonarea}>
-                <input type="checkbox" name="" id="checkbox1" />
-                <span style={{ marginRight: "150px" }}>連続で登録する</span>
-                <button
-                  className="mybutton"
-                  id="closebutton"
-                  onClick={register}
-                >
-                  登録
-                </button>
-                <button
-                  className="mybutton"
-                  id="closebutton"
-                  onClick={closeModal}
-                >
-                  キャンセル
-                </button>
+                <div>
+                  <input type="checkbox" name="" id="checkbox1" />
+                  <span style={{ marginRight: "150px" }}>連続で登録する</span>
+                </div>
+                <div>
+                  <button
+                    className="mybutton"
+                    id="closebutton"
+                    onClick={register}
+                  >
+                    登録
+                  </button>
+                  <button
+                    className="mybutton"
+                    id="closebutton"
+                    onClick={closeModal}
+                  >
+                    キャンセル
+                  </button>
+                </div>
               </div>
             </div>
           </div>

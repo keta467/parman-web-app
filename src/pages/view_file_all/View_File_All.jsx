@@ -167,7 +167,7 @@ export default function View_File_All({ TitleText }) {
       <div className={style.buttonwrapper}>
         <button
           className={`mybutton ${style.marginleft10}`}
-          onClick={createTableData}
+          onClick={() => window.location.reload()}
         >
           再表示
         </button>

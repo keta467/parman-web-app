@@ -7,11 +7,7 @@
 }
 
 .tablewrapper {
-  overflow: scroll;
-  width: 100%;
-  max-height: 81vh;
   margin-top: 15px;
-  border: 1px solid rgba(153, 153, 153, 0.6);
 }
 
 .table_loading_area {

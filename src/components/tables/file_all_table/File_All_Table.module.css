@@ -3,69 +3,118 @@
   border-spacing: 0;
 }
 
-.table thead tr th,
-.table tbody tr th,
-.table tbody tr td {
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
-  padding: 2px 4px 2px 4px;
+.table input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 7px;
 }
 
-table thead tr th {
+.table tr th,
+.table tr td {
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding: 4px 4px 2px 4px;
+
+  background-color: white;
+  overflow: hidden;
+}
+
+.boxA div .table tr th {
   background-color: #9adbaf;
 }
 
-table tbody tr th {
+.boxB div:nth-child(1) .table tr th {
   background-color: #f2f2f2;
 }
 
-.fixedTop {
-  /* 変数として使用中 */
+.boxA div:nth-child(1) .table tr th:nth-child(1),
+.boxB div:nth-child(1) .table tr th:nth-child(1) {
+  border-left: 1px solid #999;
+  padding: 0px;
+  margin: 0px;
 }
 
-.fixedLeft1 {
-  /* 変数として使用中 */
+.boxA div:nth-child(1) .table tr th,
+.boxA div:nth-child(2) .table tr th {
+  border-top: 1px solid #999;
 }
 
-.fixedLeft2 {
-  /* 変数として使用中 */
+.boxA div:nth-child(1) table tr th:nth-child(2),
+.boxB div:nth-child(1) table tr th:nth-child(2) {
+  min-width: 250px;
+  max-width: 250px;
 }
 
-/* 斜め線 */
-.fixedCorner2 {
-  background-image: linear-gradient(
-    12deg,
-    transparent 48%,
-    black 50%,
-    black 50%,
-    transparent 48%,
-    transparent
-  ) !important; /* 右下がりの斜線 */
+.boxA div:nth-child(2) table tr th,
+.boxB div:nth-child(2) table tr td {
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.boxA div:nth-child(2) table tr th {
+  cursor: default;
+}
+
+.boxA,
+.boxB {
+  border-right: 1px solid #999;
+  display: flex;
+}
+
+.boxB {
+  max-height: 78vh;
+  border-bottom: 1px solid #999;
+}
+
+.boxA div:nth-child(2),
+.boxB div:nth-child(1),
+.boxB div:nth-child(2) {
+  overflow: auto;
+}
+
+/* Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード */
+.boxA div:nth-child(2)::-webkit-scrollbar,
+.boxB div:nth-child(1)::-webkit-scrollbar {
+  display: none;
+}
+
+.boxA div:nth-child(2),
+.boxB div:nth-child(1) {
+  scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
+  -ms-overflow-style: none; /*Internet Explore対応のスクロールバー非表示コード*/
+}
+
+.overlay {
+  position: relative;
+  /* background-color: rgb(221, 50, 50); */
+}
+
+.moveTable {
+  position: absolute;
 }
 
 /* ホバーしたときの吹き出し */
-.description {
-  display: none;
-  position: absolute;
-  padding: 10px;
+.discription {
+  position: fixed;
+  background-color: black;
+  color: white;
   font-size: 12px;
+  padding: 10px;
   line-height: 1.6em;
-  color: #fff;
-  border-radius: 5px;
-  background: #000;
   top: 50px;
   left: 50%;
+  z-index: 100;
   transform: translate(-50%, 0%);
   -webkit-transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
 }
 
-.description:before {
+.discription:before {
   content: "";
   position: absolute;
-  top: -24px;
+  top: 37px;
   right: 47%;
   border: 15px solid transparent;
   border-top: 15px solid #000;
-  transform: rotateZ(180deg);
+  transform: rotateZ(360deg);
 }

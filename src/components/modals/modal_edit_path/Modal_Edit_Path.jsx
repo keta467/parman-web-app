@@ -22,7 +22,7 @@ export default function Modal_Edit_Path({
   //更新
   async function updateButton() {
     //要素を取得
-    const Elems = document.getElementsByClassName(style.pathtext);
+    const Elems = document.getElementsByClassName("pathtext");
     //配列に格納
     const NewArr = [];
     var message = "";
@@ -68,7 +68,7 @@ export default function Modal_Edit_Path({
     setIsShowLoadingAnimation(true);
 
     //画面上のデータを配列にいれる
-    const Elems = document.getElementsByClassName(style.pathtext);
+    const Elems = document.getElementsByClassName("pathtext");
     const NewArr = [];
     for (var i = 0; i < Elems.length; i++) {
       NewArr.push(Elems[i].value);
@@ -93,18 +93,18 @@ export default function Modal_Edit_Path({
               <Loading_Animation
                 isShowLoadingAnimation={isShowLoadingAnimation}
               />
-              <div className={style.modaleditpathbuttonareatextarea}>
+              <div className={style.area1}>
                 {isPathList.map((path, pathindex) => (
                   <div key={path + pathindex}>
                     <p>収集先パス{pathindex + 1}</p>
                     <div className={style.df}>
                       <input
-                        className={style.pathtext}
+                        className="pathtext"
                         type="text"
                         defaultValue={path}
                       />
                       <button
-                        className={style.pathdeletebutton1}
+                        className={style.deleteButton}
                         onMouseOver={buttonMouseOver}
                         onClick={(event) => deletePath(pathindex, path)}
                       >
@@ -114,8 +114,8 @@ export default function Modal_Edit_Path({
                   </div>
                 ))}
               </div>
-              <div className={style.pathmodalbuttonsarea}>
-                <button className={style.pathaddbutton1} onClick={addPath}>
+              <div className={style.area2}>
+                <button className={style.addbutton} onClick={addPath}>
                   追加
                 </button>
                 <div>
