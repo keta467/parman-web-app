@@ -7,20 +7,6 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
   // セットアップ
   //
   function setUp() {
-    // スクロール禁止
-    function handle(event) {
-      event.preventDefault();
-    }
-    window.onload = function () {
-      const boxB = document.getElementsByClassName(styles.boxB)[0];
-      boxB.children[0].addEventListener("touchmove", handle, {
-        passive: false,
-      });
-      boxB.children[0].addEventListener("mousewheel", handle, {
-        passive: false,
-      });
-    };
-
     //参考データ
     const table = document.getElementsByClassName(styles.table)[3];
     var tr = document.createElement("tr");
@@ -165,6 +151,17 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     const divB = boxB.children[0];
     divB.style.minWidth = divA.clientWidth + "px";
     divB.style.overflow = "auto";
+
+    // スクロール禁止
+    function handle(event) {
+      event.preventDefault();
+    }
+    boxB.children[0].addEventListener("touchmove", handle, {
+      passive: false,
+    });
+    boxB.children[0].addEventListener("mousewheel", handle, {
+      passive: false,
+    });
   }
 
   //
