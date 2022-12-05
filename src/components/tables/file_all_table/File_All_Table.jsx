@@ -102,10 +102,12 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
       tr.appendChild(th);
     }
     // 一番右に行ったときにずれるのを防ぐ
+    var divth = document.createElement("th");
     var div = document.createElement("div");
     div.style.width = "30px";
+    divth.appendChild(div);
 
-    tr.appendChild(div);
+    tr.appendChild(divth);
 
     table.appendChild(tr);
   }
@@ -180,23 +182,25 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     var numHeight = Math.floor(sTop / height);
 
     //テーブル作成
+    const table4Tate = 28;
+    const table4Yoko = 12;
     var script = `<table class="${styles.table} ${styles.moveTable}">`;
     for (
       var terminalIndex = numHeight;
-      terminalIndex < numHeight + 30;
+      terminalIndex < numHeight + table4Tate;
       terminalIndex++
     ) {
       if (terminalIndex >= TERMINAL_LIST.length) break;
       script += "<tr>";
       for (
         var moduleIndex = numWidth;
-        moduleIndex < numWidth + 12;
+        moduleIndex < numWidth + table4Yoko;
         moduleIndex++
       ) {
         if (moduleIndex >= ModuleList.length) break;
 
         //バージョン情報をもっているかの判断
-        var file_version = "　";
+        var file_version = "";
         for (
           var k = 0;
           k < TERMINAL_LIST[terminalIndex].module_list.length;
@@ -212,6 +216,9 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
               TERMINAL_LIST[terminalIndex].module_list[k].file_version;
             break;
           }
+        }
+        if (file_version == "" || file_version == " ") {
+          file_version = "　";
         }
         if (file_version.length > 15) {
           script += `<td style="font-size: 10px;">${file_version}</td>`;
@@ -231,6 +238,8 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     moveTable.style.left = sLeft - (sLeft % width) + "px";
 
     addMouseOverColoringEvent();
+
+    if (lastTarget != undefined) setColorIn(lastTarget);
   }
 
   //文字サイズ調整
@@ -277,6 +286,9 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     boxB.children[1].scrollLeft = sLeft;
   }
 
+  //最後にホバーしたセル
+  var lastTarget;
+
   // マウスオーバーイベントを追加する
   function addMouseOverColoringEvent() {
     var materialTd = document.getElementsByClassName("mouseeventtarget");
@@ -285,6 +297,16 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
       materialNumber < materialTd.length;
       materialNumber++
     ) {
+      //ホバーしたセルに色を付ける
+      materialTd[materialNumber].addEventListener(
+        "mouseover",
+        function (event) {
+          setColorIn(event.target);
+          lastTarget = event.target; //記録
+        }
+      );
+
+      //ホバーしたセルに色を付ける
       materialTd[materialNumber].addEventListener("mouseout", function (event) {
         var classList = event.target.className.split(" ");
 
@@ -297,28 +319,28 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
         for (var colNumber = 0; colNumber < colList.length; colNumber++) {
           colList[colNumber].style.backgroundColor = "white";
         }
+
+        lastTarget = undefined; //記録を消す
       });
+    }
+  }
 
-      materialTd[materialNumber].addEventListener(
-        "mouseover",
-        function (event) {
-          var classList = event.target.className.split(" ");
-          var rowList = document.getElementsByClassName(classList[1]);
-          for (var rowNumber = 0; rowNumber < rowList.length; rowNumber++) {
-            rowList[rowNumber].style.backgroundColor = "aqua";
-          }
+  //ホバーしたセルに色を付ける
+  function setColorIn(target) {
+    var classList = target.className.split(" ");
+    var rowList = document.getElementsByClassName(classList[1]);
+    for (var rowNumber = 0; rowNumber < rowList.length; rowNumber++) {
+      rowList[rowNumber].style.backgroundColor = "aqua";
+    }
 
-          var innerText = event.target.innerHTML;
-          var colList = document.getElementsByClassName(classList[2]);
-          for (var colNumber = 0; colNumber < colList.length; colNumber++) {
-            if (innerText == colList[colNumber].innerHTML) {
-              colList[colNumber].style.backgroundColor = "aqua";
-            } else {
-              colList[colNumber].style.backgroundColor = "yellow";
-            }
-          }
-        }
-      );
+    var innerText = target.innerHTML;
+    var colList = document.getElementsByClassName(classList[2]);
+    for (var colNumber = 0; colNumber < colList.length; colNumber++) {
+      if (innerText == colList[colNumber].innerHTML) {
+        colList[colNumber].style.backgroundColor = "aqua";
+      } else {
+        colList[colNumber].style.backgroundColor = "yellow";
+      }
     }
   }
 

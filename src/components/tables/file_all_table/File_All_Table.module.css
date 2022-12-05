@@ -51,6 +51,10 @@
   max-width: 180px;
 }
 
+.boxA div:nth-child(2) table tr th {
+  cursor: default;
+}
+
 .boxA,
 .boxB {
   border-right: 1px solid #999;
