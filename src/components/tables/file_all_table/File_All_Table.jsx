@@ -8,11 +8,11 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
   //
   function setUp() {
     // スクロール禁止
-    const boxB = document.getElementsByClassName(styles.boxB)[0];
     function handle(event) {
       event.preventDefault();
     }
     window.onload = function () {
+      const boxB = document.getElementsByClassName(styles.boxB)[0];
       boxB.children[0].addEventListener("touchmove", handle, {
         passive: false,
       });
