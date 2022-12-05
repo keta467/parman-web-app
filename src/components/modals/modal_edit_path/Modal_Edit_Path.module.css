@@ -16,69 +16,33 @@
 
 .df {
   display: flex;
-}
-.pathtext {
-  display: block;
-  width: 400px;
-  height: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-.pathdeletebutton1 {
+.deleteButton {
   background-color: red;
   color: white;
   border: none;
-  font-size: 18px;
   border-radius: 8px;
   height: 30px;
-  margin-top: 6px;
+  margin-left: 8px;
   margin-right: 5px;
-  padding: 2px 5px 0 5px;
+  padding: 4px 8px 3px 8px;
   cursor: pointer;
 }
 
-.pathaddbutton1 {
+.addbutton {
   background-color: rgb(59, 62, 236);
   color: white;
   border: none;
-  font-size: 20px;
   border-radius: 8px;
-  padding: 3px 5px 2px 5px;
+  padding: 4px 8px 3px 8px;
   cursor: pointer;
 }
 
-.pathaddbutton2 {
-  background-color: rgb(236, 59, 59);
-  color: white;
-  border: none;
-  font-size: 20px;
-  border-radius: 8px;
-  height: 30px;
-  margin-top: 5px;
-  padding: 0 5px 0 5px;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
-.pathmodalbuttonsarea {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: end;
-  color: red;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#modaleditpathbuttonarea1 {
-  flex: 0.6;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: end;
-}
-
-.modaleditpathbuttonareatextarea {
+.area1 {
   overflow: auto;
   flex: 5;
   width: 80%;
@@ -88,8 +52,15 @@
   margin-bottom: 10px;
 }
 
-.modaleditpathbuttonareatextarea input[type="text"] {
+.area1 input[type="text"] {
   flex: 1;
-  margin-bottom: 10px;
-  margin-right: 10px;
+}
+
+.area2 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

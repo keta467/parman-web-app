@@ -382,8 +382,8 @@
         {
           module_id: 78002,
           module_name: "AudioMan64.dll",
-          product_version: "1, 0, 0, 21",
-          file_version: "1, 0, 0, 21",
+          product_version: "1, 0, 0, 3004",
+          file_version: "1, 0, 0, 3004",
           install_path:
             "D:\\Lambda\\BinV3\\Backup\\Common_Backup_20190306142453",
           update_datetime: "2017/10/18 10:14:44",
@@ -15368,7 +15368,7 @@
           module_id: 79698,
           module_name: "AudioMan64.dll",
           product_version: "1, 0, 0, 25",
-          file_version: "1, 0, 0, 25",
+          file_version: "1, 0, 0, 25218",
           install_path: "D:\\Lambda\\BinV3\\RealtimeMaterial",
           update_datetime: "2018/11/21 10:55:32",
         },
