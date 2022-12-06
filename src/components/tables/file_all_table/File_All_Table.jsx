@@ -50,7 +50,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
     tr.appendChild(th);
 
     var th2 = document.createElement("th");
-    th2.innerHTML = "端末名";
+    th2.innerHTML = "HostName";
     tr.appendChild(th2);
     table.appendChild(tr);
   }
