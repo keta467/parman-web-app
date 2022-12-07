@@ -218,7 +218,7 @@ export default function File_All_Table({ ModuleList, TERMINAL_LIST }) {
           file_version = "　";
         }
         if (file_version.length > 15) {
-          script += `<td style="font-size: 10px;">${file_version}</td>`;
+          script += `<td class="mouseeventtarget row${moduleIndex} col${moduleIndex}" style="font-size: 10px;">${file_version}</td>`;
         } else {
           script += `<td class="mouseeventtarget row${moduleIndex} col${moduleIndex}">${file_version}</td>`;
         }
